@@ -1,0 +1,1178 @@
+[gd_scene load_steps=52 format=3 uid="uid://c0x5rbk7rn3vx"]
+
+[ext_resource type="Script" path="res://scenes/player_hud.gd" id="1_0hmm0"]
+[ext_resource type="Texture2D" uid="uid://7ey4i1pllc66" path="res://assets/img/e_letter.png" id="1_got0o"]
+[ext_resource type="Texture2D" uid="uid://qpe2kxrfywvg" path="res://assets/img/lewd0.jpg" id="3_jcxqd"]
+[ext_resource type="Texture2D" uid="uid://hvifgmt0wmvu" path="res://assets/img/d_letter.png" id="3_qkaau"]
+[ext_resource type="Texture2D" uid="uid://dh5dp02saablo" path="res://assets/img/c_letter.png" id="4_v25qv"]
+[ext_resource type="Texture2D" uid="uid://bqv7s4a0opxdl" path="res://assets/img/cloudy.png" id="5_one12"]
+[ext_resource type="Texture2D" uid="uid://d1nolcfy77xsl" path="res://assets/img/b_letter.png" id="5_y2r2u"]
+[ext_resource type="Texture2D" uid="uid://dipajkpfpjcdt" path="res://assets/img/wallet.png" id="6_8hteg"]
+[ext_resource type="Texture2D" uid="uid://btlbrdrfq1166" path="res://assets/img/a_letter.png" id="6_qrkbe"]
+[ext_resource type="Texture2D" uid="uid://bssgkgnc40qjk" path="res://assets/img/hunger.png" id="7_unqn1"]
+[ext_resource type="Texture2D" uid="uid://bs1piq3wsbp2t" path="res://assets/img/lewd1.jpg" id="8_g853i"]
+[ext_resource type="Texture2D" uid="uid://clx0rp1daelnb" path="res://assets/img/lewd2.jpg" id="9_0ih6o"]
+[ext_resource type="PackedScene" uid="uid://ddt6312dvtjhg" path="res://scenes/settings.tscn" id="9_tyb7q"]
+[ext_resource type="Texture2D" uid="uid://dhxgr5tc1s6hb" path="res://assets/img/lewd3.jpg" id="10_mfx4m"]
+[ext_resource type="Texture2D" uid="uid://utg7x1mcg34m" path="res://assets/img/lewd4.jpg" id="11_r3bf1"]
+[ext_resource type="Texture2D" uid="uid://cid4677lit5nq" path="res://assets/img/sanity2.jpg" id="12_kb37i"]
+[ext_resource type="Texture2D" uid="uid://c4xltvv2ck211" path="res://assets/img/sanity1.jpg" id="13_j8is8"]
+[ext_resource type="Texture2D" uid="uid://b7ra4v2n3idm" path="res://assets/img/sanity0.jpg" id="14_p180w"]
+[ext_resource type="Texture2D" uid="uid://bsjoxpueb5cy3" path="res://assets/img/sanity3.png" id="15_wii6g"]
+[ext_resource type="Texture2D" uid="uid://c0trlvp01ppw7" path="res://assets/img/sanity4.png" id="16_w38km"]
+[ext_resource type="Texture2D" uid="uid://beex4cwtvitol" path="res://assets/img/room.jpg" id="17_npv7f"]
+[ext_resource type="Texture2D" uid="uid://bunppy7big6un" path="res://assets/img/gears.png" id="21_8v10w"]
+[ext_resource type="Texture2D" uid="uid://ctigr7scd0wk4" path="res://assets/img/vesper test.png" id="22_qk86i"]
+[ext_resource type="Texture2D" uid="uid://beb5ygwro1my3" path="res://assets/img/notebook.png" id="24_7eyg5"]
+[ext_resource type="Texture2D" uid="uid://c3sqhlo7ahfgy" path="res://assets/img/studying.png" id="25_13td8"]
+[ext_resource type="Texture2D" uid="uid://blhrb7v4w2scj" path="res://assets/img/travel-map.png" id="25_r50m7"]
+[ext_resource type="Texture2D" uid="uid://cv4y7c7vo1qwx" path="res://assets/img/work.png" id="26_4gmca"]
+[ext_resource type="Texture2D" uid="uid://c3tfdx5pdxx0m" path="res://assets/img/prostitution.png" id="27_88ghq"]
+[ext_resource type="Texture2D" uid="uid://dfpl5xt3000k6" path="res://assets/img/barista.png" id="27_o2cwu"]
+[ext_resource type="Texture2D" uid="uid://c7uk7ffer724d" path="res://assets/img/park.png" id="28_8c580"]
+[ext_resource type="Texture2D" uid="uid://8mjtpg1rms3i" path="res://assets/img/masturbation.png" id="29_e0nol"]
+[ext_resource type="Texture2D" uid="uid://cpt7nxnc3lsgf" path="res://assets/img/hospital.png" id="30_w4jdo"]
+[ext_resource type="Texture2D" uid="uid://c0swrla7qa084" path="res://assets/img/sleep.png" id="31_agijj"]
+[ext_resource type="Texture2D" uid="uid://dradn3eqvine0" path="res://assets/img/hunt.png" id="32_nkllr"]
+[ext_resource type="Texture2D" uid="uid://owqp8jct2dck" path="res://assets/img/boxing.png" id="34_u3ti2"]
+[ext_resource type="Texture2D" uid="uid://dw1587p7wc00y" path="res://assets/img/swim.png" id="35_sn1dq"]
+[ext_resource type="Texture2D" uid="uid://cgevy6m7kf6sf" path="res://assets/img/jogging.png" id="36_mye0o"]
+[ext_resource type="Texture2D" uid="uid://b60o0n5nnanvb" path="res://assets/img/boutique.png" id="37_t4y25"]
+[ext_resource type="Texture2D" uid="uid://cyrk81oj852xl" path="res://assets/img/knife.png" id="38_4bsfw"]
+[ext_resource type="Texture2D" uid="uid://dnixs2jb0pso5" path="res://assets/img/bar-counter.png" id="39_s1gy7"]
+[ext_resource type="Texture2D" uid="uid://tymchsirfqm" path="res://assets/img/liquor.png" id="40_s5uon"]
+[ext_resource type="Texture2D" uid="uid://ctngtyheo4tns" path="res://assets/img/mirror.png" id="41_gff0o"]
+[ext_resource type="Texture2D" uid="uid://hlw4g3c5e74l" path="res://assets/img/gamble.png" id="43_aqrjq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3bu17"]
+bg_color = Color(0.431373, 0.121569, 0.121569, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ygiyt"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_e0spj"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_gqgl8"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_fvjr3"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_5kb0o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_npcay"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u4l27"]
+bg_color = Color(0.329412, 0.137255, 0.133333, 1)
+
+[node name="PlayerHUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0hmm0")
+e_texture = ExtResource("1_got0o")
+d_texture = ExtResource("3_qkaau")
+c_texture = ExtResource("4_v25qv")
+b_texture = ExtResource("5_y2r2u")
+a_texture = ExtResource("6_qrkbe")
+lewdness_0 = ExtResource("3_jcxqd")
+lewdness_1 = ExtResource("8_g853i")
+lewdness_2 = ExtResource("9_0ih6o")
+lewdness_3 = ExtResource("10_mfx4m")
+lewdness_4 = ExtResource("11_r3bf1")
+sanity_0 = ExtResource("14_p180w")
+sanity_1 = ExtResource("13_j8is8")
+sanity_2 = ExtResource("12_kb37i")
+sanity_3 = ExtResource("15_wii6g")
+sanity_4 = ExtResource("16_w38km")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("17_npv7f")
+expand_mode = 1
+
+[node name="AttributesPanel" type="Panel" parent="."]
+layout_mode = 2
+offset_left = 55.0
+offset_top = 824.0
+offset_right = 383.0
+offset_bottom = 1069.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_3bu17")
+
+[node name="AttributesGrid" type="GridContainer" parent="AttributesPanel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 4.0
+offset_right = 328.0
+offset_bottom = 245.0
+columns = 3
+
+[node name="VitLabel" type="Label" parent="AttributesPanel/AttributesGrid"]
+layout_mode = 2
+size_flags_vertical = 0
+tooltip_text = "Vitality"
+mouse_filter = 1
+theme_override_font_sizes/font_size = 30
+text = "VIT"
+vertical_alignment = 1
+
+[node name="VitBar" type="HSlider" parent="AttributesPanel/AttributesGrid"]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/center_grabber = 1
+theme_override_icons/grabber_disabled = SubResource("CanvasTexture_ygiyt")
+min_value = 1.0
+value = 1.0
+rounded = true
+editable = false
+scrollable = false
+tick_count = 6
+ticks_on_borders = true
+
+[node name="VitTexture" type="TextureRect" parent="AttributesPanel/AttributesGrid"]
+custom_minimum_size = Vector2(50, 40)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("1_got0o")
+expand_mode = 1
+
+[node name="StrLabel" type="Label" parent="AttributesPanel/AttributesGrid"]
+layout_mode = 2
+size_flags_vertical = 0
+tooltip_text = "Strength"
+mouse_filter = 1
+theme_override_font_sizes/font_size = 30
+text = "STR "
+vertical_alignment = 1
+
+[node name="StrBar" type="HSlider" parent="AttributesPanel/AttributesGrid"]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/center_grabber = 1
+theme_override_icons/grabber_disabled = SubResource("CanvasTexture_e0spj")
+min_value = 1.0
+value = 1.0
+rounded = true
+editable = false
+scrollable = false
+tick_count = 6
+ticks_on_borders = true
+
+[node name="StrTexture" type="TextureRect" parent="AttributesPanel/AttributesGrid"]
+custom_minimum_size = Vector2(50, 40)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("1_got0o")
+expand_mode = 1
+
+[node name="IntLabel" type="Label" parent="AttributesPanel/AttributesGrid"]
+layout_mode = 2
+size_flags_vertical = 0
+tooltip_text = "Intelligence"
+mouse_filter = 1
+theme_override_font_sizes/font_size = 30
+text = "INT"
+vertical_alignment = 1
+
+[node name="IntBar" type="HSlider" parent="AttributesPanel/AttributesGrid"]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_icons/grabber_disabled = SubResource("CanvasTexture_gqgl8")
+min_value = 1.0
+value = 1.0
+rounded = true
+editable = false
+scrollable = false
+tick_count = 6
+ticks_on_borders = true
+
+[node name="IntTexture" type="TextureRect" parent="AttributesPanel/AttributesGrid"]
+custom_minimum_size = Vector2(50, 40)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("1_got0o")
+expand_mode = 1
+
+[node name="SpeedLabel" type="Label" parent="AttributesPanel/AttributesGrid"]
+layout_mode = 2
+size_flags_vertical = 0
+tooltip_text = "Speed"
+mouse_filter = 1
+theme_override_font_sizes/font_size = 30
+text = "SPD"
+vertical_alignment = 1
+
+[node name="SpeedBar" type="HSlider" parent="AttributesPanel/AttributesGrid"]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/center_grabber = 1
+theme_override_icons/grabber_disabled = SubResource("CanvasTexture_fvjr3")
+min_value = 1.0
+value = 1.0
+rounded = true
+editable = false
+scrollable = false
+tick_count = 6
+ticks_on_borders = true
+
+[node name="SpeedTexture" type="TextureRect" parent="AttributesPanel/AttributesGrid"]
+custom_minimum_size = Vector2(50, 40)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("1_got0o")
+expand_mode = 1
+
+[node name="ChaLabel" type="Label" parent="AttributesPanel/AttributesGrid"]
+layout_mode = 2
+size_flags_vertical = 0
+tooltip_text = "Charisma"
+mouse_filter = 1
+theme_override_font_sizes/font_size = 30
+text = "CHA"
+vertical_alignment = 1
+
+[node name="ChaBar" type="HSlider" parent="AttributesPanel/AttributesGrid"]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/center_grabber = 1
+theme_override_icons/grabber_disabled = SubResource("CanvasTexture_5kb0o")
+min_value = 1.0
+value = 1.0
+rounded = true
+editable = false
+scrollable = false
+tick_count = 6
+ticks_on_borders = true
+
+[node name="ChaTexture" type="TextureRect" parent="AttributesPanel/AttributesGrid"]
+custom_minimum_size = Vector2(50, 40)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("1_got0o")
+expand_mode = 1
+
+[node name="StatusGrid" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 633.0
+offset_right = 409.0
+offset_bottom = 809.0
+columns = 2
+
+[node name="SanityTexture" type="TextureRect" parent="StatusGrid"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("12_kb37i")
+expand_mode = 1
+
+[node name="LewdnessTexture" type="TextureRect" parent="StatusGrid"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_jcxqd")
+expand_mode = 1
+
+[node name="SanityLabel" type="Label" parent="StatusGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Sanity: 50
+Shaken
+"
+horizontal_alignment = 1
+
+[node name="LewdnessLabel" type="Label" parent="StatusGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Lewdness: 0
+Innocent"
+horizontal_alignment = 1
+
+[node name="Calendar" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 3.0
+offset_right = 336.0
+offset_bottom = 195.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_npcay")
+
+[node name="WeatherTexture" type="TextureRect" parent="Calendar"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 37.0
+offset_right = 244.0
+offset_bottom = 179.0
+texture = ExtResource("5_one12")
+expand_mode = 1
+
+[node name="DayLabel" type="Label" parent="Calendar"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 4.0
+offset_right = 274.0
+offset_bottom = 49.0
+theme_override_font_sizes/font_size = 30
+text = "March  2 - Cloudy"
+
+[node name="Money" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 629.0
+offset_top = -2.0
+offset_right = 754.0
+offset_bottom = 123.0
+texture = ExtResource("6_8hteg")
+expand_mode = 1
+
+[node name="MoneyLabel" type="Label" parent="Money"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 119.0
+offset_right = 113.0
+offset_bottom = 209.0
+theme_override_font_sizes/font_size = 40
+text = "$10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hunger" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 422.0
+offset_top = -12.0
+offset_right = 547.0
+offset_bottom = 113.0
+texture = ExtResource("7_unqn1")
+expand_mode = 1
+
+[node name="HungerLabel" type="Label" parent="Hunger"]
+layout_mode = 0
+offset_left = -43.0
+offset_top = 76.0
+offset_right = 166.0
+offset_bottom = 166.0
+theme_override_font_sizes/font_size = 40
+text = "Hunger"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HungerBar" type="ProgressBar" parent="Hunger"]
+layout_mode = 0
+offset_left = -53.0
+offset_top = 157.0
+offset_right = 175.0
+offset_bottom = 203.0
+theme_override_font_sizes/font_size = 30
+step = 1.0
+value = 50.0
+rounded = true
+
+[node name="GearButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1738.0
+offset_top = 26.0
+offset_right = 1880.0
+offset_bottom = 168.0
+texture_normal = ExtResource("21_8v10w")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="GearButton"]
+layout_mode = 0
+offset_top = 135.0
+offset_right = 117.0
+offset_bottom = 180.0
+theme_override_colors/font_color = Color(0.870588, 0.752941, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.137255, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Settings"
+
+[node name="Settings" parent="." instance=ExtResource("9_tyb7q")]
+visible = false
+layout_mode = 1
+offset_left = 1557.0
+offset_top = 191.0
+offset_right = -5.0
+offset_bottom = -575.0
+
+[node name="Save" type="Button" parent="Settings"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 306.0
+offset_right = 310.0
+offset_bottom = 407.0
+theme_override_font_sizes/font_size = 30
+text = "Save"
+
+[node name="TestButton" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 467.0
+offset_top = 776.0
+offset_right = 735.0
+offset_bottom = 826.0
+theme_override_font_sizes/font_size = 30
+text = "Increase VIT by 10"
+
+[node name="TestButton2" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 467.0
+offset_top = 833.0
+offset_right = 743.0
+offset_bottom = 883.0
+theme_override_font_sizes/font_size = 30
+text = "Increase STR by 10"
+
+[node name="TestButton3" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 467.0
+offset_top = 890.0
+offset_right = 740.0
+offset_bottom = 940.0
+theme_override_font_sizes/font_size = 30
+text = "Increase INT by 10"
+
+[node name="TestButton4" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 467.0
+offset_top = 952.0
+offset_right = 747.0
+offset_bottom = 1002.0
+theme_override_font_sizes/font_size = 30
+text = "Increase SPD by 10"
+
+[node name="TestButton5" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 467.0
+offset_top = 1009.0
+offset_right = 735.0
+offset_bottom = 1059.0
+theme_override_font_sizes/font_size = 30
+text = "Increase CHA by 10"
+
+[node name="DecButton0" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 778.0
+offset_top = 776.0
+offset_right = 1057.0
+offset_bottom = 826.0
+theme_override_font_sizes/font_size = 30
+text = "Decrease VIT by 10"
+
+[node name="DecButton1" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 778.0
+offset_top = 829.0
+offset_right = 1057.0
+offset_bottom = 879.0
+theme_override_font_sizes/font_size = 30
+text = "Decrease STR by 10"
+
+[node name="DecButton2" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 778.0
+offset_top = 888.0
+offset_right = 1057.0
+offset_bottom = 938.0
+theme_override_font_sizes/font_size = 30
+text = "Decrease INT by 10"
+
+[node name="DecButton3" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 778.0
+offset_top = 941.0
+offset_right = 1057.0
+offset_bottom = 991.0
+theme_override_font_sizes/font_size = 30
+text = "Decrease SPD by 10"
+
+[node name="DecButton4" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 778.0
+offset_top = 1005.0
+offset_right = 1057.0
+offset_bottom = 1055.0
+theme_override_font_sizes/font_size = 30
+text = "Decrease CHA by 10"
+
+[node name="IncreaseHunger" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 367.0
+offset_top = 217.0
+offset_right = 613.0
+offset_bottom = 267.0
+theme_override_font_sizes/font_size = 30
+text = "Increase Hunger"
+
+[node name="DecreaseHunger" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 365.0
+offset_top = 283.0
+offset_right = 622.0
+offset_bottom = 333.0
+theme_override_font_sizes/font_size = 30
+text = "Decrease Hunger"
+
+[node name="IncreaseLewdness" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 401.0
+offset_top = 626.0
+offset_right = 682.0
+offset_bottom = 676.0
+theme_override_font_sizes/font_size = 30
+text = "Increase Lewdness"
+
+[node name="IncreaseSanity" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 25.0
+offset_top = 478.0
+offset_right = 252.0
+offset_bottom = 528.0
+theme_override_font_sizes/font_size = 30
+text = "Increase Sanity"
+
+[node name="DecreaseSanity" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 23.0
+offset_top = 551.0
+offset_right = 261.0
+offset_bottom = 601.0
+theme_override_font_sizes/font_size = 30
+text = "Decrease Sanity"
+
+[node name="Vesper" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 686.0
+offset_top = 177.0
+offset_right = 1285.0
+offset_bottom = 1076.0
+mouse_filter = 2
+texture = ExtResource("22_qk86i")
+expand_mode = 1
+
+[node name="ScheduleButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 578.0
+offset_top = -524.0
+offset_right = 752.0
+offset_bottom = -364.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("24_7eyg5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ScheduleLabel" type="Label" parent="ScheduleButton"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 145.0
+offset_right = 156.0
+offset_bottom = 190.0
+theme_override_colors/font_color = Color(0.792157, 0.611765, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.129412, 0.0941176, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Schedule"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ActivitiesPanel" type="Panel" parent="ScheduleButton"]
+layout_mode = 0
+offset_left = -122.0
+offset_top = 188.0
+offset_right = 346.0
+offset_bottom = 350.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_u4l27")
+
+[node name="GridContainer" type="GridContainer" parent="ScheduleButton/ActivitiesPanel"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 464.0
+offset_bottom = 156.0
+theme_override_constants/h_separation = 5
+columns = 3
+
+[node name="TextureRect" type="TextureRect" parent="ScheduleButton/ActivitiesPanel/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+expand_mode = 1
+
+[node name="Panel1" type="Panel" parent="ScheduleButton/ActivitiesPanel/GridContainer/TextureRect"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect2" type="TextureRect" parent="ScheduleButton/ActivitiesPanel/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+expand_mode = 1
+
+[node name="Panel2" type="Panel" parent="ScheduleButton/ActivitiesPanel/GridContainer/TextureRect2"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect3" type="TextureRect" parent="ScheduleButton/ActivitiesPanel/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+expand_mode = 1
+
+[node name="Panel3" type="Panel" parent="ScheduleButton/ActivitiesPanel/GridContainer/TextureRect3"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="ScheduleButton/ActivitiesPanel"]
+layout_mode = 0
+offset_top = 167.0
+offset_right = 476.0
+offset_bottom = 193.0
+text = "Left-click to select activities below (right click above to cancel)"
+
+[node name="Apply" type="Button" parent="ScheduleButton/ActivitiesPanel"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 0
+offset_left = 258.0
+offset_top = 196.0
+offset_right = 467.0
+offset_bottom = 246.0
+theme_override_font_sizes/font_size = 25
+disabled = true
+text = "Apply"
+
+[node name="Cancel" type="Button" parent="ScheduleButton/ActivitiesPanel"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 0
+offset_left = 21.0
+offset_top = 196.0
+offset_right = 230.0
+offset_bottom = 246.0
+theme_override_font_sizes/font_size = 25
+text = "Cancel"
+
+[node name="Activities" type="Control" parent="ScheduleButton/ActivitiesPanel"]
+anchors_preset = 0
+offset_left = 99.0
+offset_top = 182.0
+offset_right = 319.0
+offset_bottom = 182.0
+
+[node name="ActivitiesContainer" type="GridContainer" parent="ScheduleButton/ActivitiesPanel/Activities"]
+layout_mode = 0
+offset_left = -42.0
+offset_top = 83.0
+offset_right = 238.0
+offset_bottom = 663.0
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 3
+
+[node name="Study2" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture_normal = ExtResource("25_13td8")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="StudyLabel" type="Label" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Study2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.0
+offset_top = -6.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+text = "Study"
+
+[node name="Work" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture_normal = ExtResource("26_4gmca")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="WorkLabel" type="Label" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Work"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 73.0
+offset_right = 65.0
+offset_bottom = 104.0
+theme_override_font_sizes/font_size = 20
+text = "Work"
+
+[node name="Barista" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture_normal = ExtResource("27_o2cwu")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BaristaLabel" type="Label" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Barista"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -34.0
+offset_top = -7.0
+offset_right = 35.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+text = "Barista"
+
+[node name="Park" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture_normal = ExtResource("28_8c580")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ParkLabel" type="Label" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Park"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -9.0
+offset_right = 24.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+text = "Park"
+
+[node name="Sleep" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture_normal = ExtResource("31_agijj")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Sleep"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 71.0
+offset_right = 62.0
+offset_bottom = 102.0
+theme_override_font_sizes/font_size = 20
+text = "Rest"
+
+[node name="Hunt" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture_normal = ExtResource("32_nkllr")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Hunt"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 70.0
+offset_right = 66.0
+offset_bottom = 101.0
+theme_override_font_sizes/font_size = 20
+text = "Hunt"
+
+[node name="Run" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture_normal = ExtResource("36_mye0o")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="RunLabel" type="Label" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Run"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -34.0
+offset_top = -10.0
+offset_right = 47.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+text = "Running"
+
+[node name="Swim" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture_normal = ExtResource("35_sn1dq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Swim"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -49.0
+offset_top = -11.0
+offset_right = 52.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+text = "Swimming"
+
+[node name="Boxing" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture_normal = ExtResource("34_u3ti2")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Boxing"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -39.0
+offset_top = -12.0
+offset_right = 27.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+text = "Boxing"
+
+[node name="Drink" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture_normal = ExtResource("40_s5uon")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="RunLabel" type="Label" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Drink"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -27.0
+offset_top = -6.0
+offset_right = 63.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+text = "Drink"
+
+[node name="Masturbation" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture_normal = ExtResource("29_e0nol")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Masturbation"]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 73.0
+offset_right = 80.0
+offset_bottom = 104.0
+theme_override_font_sizes/font_size = 20
+text = "Pleasure"
+
+[node name="Prostitution" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture_normal = ExtResource("27_88ghq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Prostitution"]
+layout_mode = 0
+offset_left = -13.0
+offset_top = 73.0
+offset_right = 103.0
+offset_bottom = 104.0
+theme_override_font_sizes/font_size = 20
+text = "Prostitution"
+
+[node name="Hospital" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture_normal = ExtResource("30_w4jdo")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Hospital"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 71.0
+offset_right = 80.0
+offset_bottom = 102.0
+theme_override_font_sizes/font_size = 20
+text = "Hospital"
+
+[node name="Boutique" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture_normal = ExtResource("37_t4y25")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="RunLabel" type="Label" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Boutique"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -44.0
+offset_top = -7.0
+offset_right = 45.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+text = "Boutique"
+
+[node name="WeaponsShop" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture_normal = ExtResource("38_4bsfw")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="WeaponsLabel" type="Label" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/WeaponsShop"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -45.0
+offset_top = -6.0
+offset_right = 45.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+text = "Weapons"
+
+[node name="Speaking" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture_normal = ExtResource("41_gff0o")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SpeakingLabel" type="Label" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Speaking"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -35.0
+offset_top = -7.0
+offset_right = 55.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+text = "Speech"
+
+[node name="Bar" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture_normal = ExtResource("39_s1gy7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BarLabel" type="Label" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Bar"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -17.0
+offset_top = -6.0
+offset_right = 17.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+text = "Bar"
+
+[node name="Gamble" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture_normal = ExtResource("43_aqrjq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BarLabel" type="Label" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Gamble"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -17.0
+offset_top = -6.0
+offset_right = 17.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+text = "Gamble"
+
+[node name="ActivitiesLabel" type="Label" parent="ScheduleButton/ActivitiesPanel/Activities"]
+layout_mode = 0
+offset_left = 238.0
+offset_top = 552.0
+offset_right = 587.0
+offset_bottom = 665.0
+rotation = 4.71239
+theme_override_font_sizes/font_size = 70
+text = "Activities"
+
+[node name="MapButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 396.0
+offset_top = -524.0
+offset_right = 570.0
+offset_bottom = -364.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("25_r50m7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MapLabel" type="Label" parent="MapButton"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 145.0
+offset_right = 156.0
+offset_bottom = 190.0
+theme_override_colors/font_color = Color(0.792157, 0.611765, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.129412, 0.0941176, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Map"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="GearButton" to="." method="_on_gear_button_pressed"]
+[connection signal="pressed" from="Settings/Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="TestButton" to="." method="_on_test_button_pressed"]
+[connection signal="pressed" from="TestButton2" to="." method="_on_test_button_2_pressed"]
+[connection signal="pressed" from="TestButton3" to="." method="_on_test_button_3_pressed"]
+[connection signal="pressed" from="TestButton4" to="." method="_on_test_button_4_pressed"]
+[connection signal="pressed" from="TestButton5" to="." method="_on_test_button_5_pressed"]
+[connection signal="pressed" from="DecButton0" to="." method="_on_dec_button_0_pressed"]
+[connection signal="pressed" from="DecButton1" to="." method="_on_dec_button_1_pressed"]
+[connection signal="pressed" from="DecButton2" to="." method="_on_dec_button_2_pressed"]
+[connection signal="pressed" from="DecButton3" to="." method="_on_dec_button_3_pressed"]
+[connection signal="pressed" from="DecButton4" to="." method="_on_dec_button_4_pressed"]
+[connection signal="pressed" from="IncreaseHunger" to="." method="_on_increase_hunger_pressed"]
+[connection signal="pressed" from="DecreaseHunger" to="." method="_on_decrease_hunger_pressed"]
+[connection signal="pressed" from="IncreaseLewdness" to="." method="_on_increase_lewdness_pressed"]
+[connection signal="pressed" from="IncreaseSanity" to="." method="_on_increase_sanity_pressed"]
+[connection signal="pressed" from="DecreaseSanity" to="." method="_on_decrease_sanity_pressed"]
+[connection signal="pressed" from="ScheduleButton" to="." method="_on_schedule_button_pressed"]
+[connection signal="gui_input" from="ScheduleButton/ActivitiesPanel/GridContainer/TextureRect" to="." method="_on_texture_rect_gui_input"]
+[connection signal="gui_input" from="ScheduleButton/ActivitiesPanel/GridContainer/TextureRect2" to="." method="_on_texture_rect_2_gui_input"]
+[connection signal="gui_input" from="ScheduleButton/ActivitiesPanel/GridContainer/TextureRect3" to="." method="_on_texture_rect_3_gui_input"]
+[connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Apply" to="." method="_on_apply_pressed"]
+[connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Study2" to="." method="_on_study_2_pressed"]
+[connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Work" to="." method="_on_work_pressed"]
+[connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Barista" to="." method="_on_barista_pressed"]
+[connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Park" to="." method="_on_park_pressed"]
+[connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Sleep" to="." method="_on_sleep_pressed"]
+[connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Hunt" to="." method="_on_hunt_pressed"]
+[connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Run" to="." method="_on_run_pressed"]
+[connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Swim" to="." method="_on_swim_pressed"]
+[connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Boxing" to="." method="_on_boxing_pressed"]
+[connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Drink" to="." method="_on_drink_pressed"]
+[connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Masturbation" to="." method="_on_masturbation_pressed"]
+[connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Prostitution" to="." method="_on_prostitution_pressed"]
+[connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Hospital" to="." method="_on_hospital_pressed"]
+[connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Boutique" to="." method="_on_boutique_pressed"]
+[connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/WeaponsShop" to="." method="_on_weapons_shop_pressed"]
+[connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Speaking" to="." method="_on_speaking_pressed"]
+[connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Bar" to="." method="_on_bar_pressed"]
+[connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Gamble" to="." method="_on_gamble_pressed"]

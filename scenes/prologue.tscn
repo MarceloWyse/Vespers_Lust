@@ -1,0 +1,113 @@
+[gd_scene load_steps=6 format=3 uid="uid://ce7cy11ca5lrg"]
+
+[ext_resource type="Script" path="res://scenes/prologue.gd" id="1_5l4ht"]
+[ext_resource type="Texture2D" uid="uid://bsvpac2tpm48x" path="res://assets/img/city.png" id="1_y0hyy"]
+[ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="2_ikcb3"]
+[ext_resource type="Texture2D" uid="uid://ctigr7scd0wk4" path="res://assets/img/vesper test.png" id="4_pl851"]
+[ext_resource type="Texture2D" uid="uid://dxmwgxeb6ltky" path="res://assets/img/taxi_driver.png" id="5_8dpcr"]
+
+[node name="Prologue" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5l4ht")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.835294)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_y0hyy")
+expand_mode = 2
+
+[node name="DialogueLabel" parent="." instance=ExtResource("2_ikcb3")]
+layout_mode = 0
+offset_left = 101.0
+offset_top = 828.0
+offset_right = 1810.0
+offset_bottom = 1048.0
+theme_override_font_sizes/normal_font_size = 50
+text = "Text Message"
+autowrap_mode = 2
+messages = Array[String](["With a population of approximately half a million town residents, you have arrived in Grimshire. ", "After being offered a part-time job as a  writer for the community paper, you left the small town you called home to be here.", "A few months in and you have gotten used to the pace of the big city.", "Your boss is indifferent when it comes to clock-punching rules, as long as you can meet his deadlines.", " It's a perfect situation for an introverted, reclusive writer like yourself.", "However, writing brief essays and articles is not your dream job, so you begin to dive into the world of investigative journalism.", "That's when it comes to your knowledge that Grimshire has been experiencing unusual kidnappings during the past few months.", "All of the victims were girls in their mid-twenties, and they all vanished without a trace.", " The police tried to tie the girls' cases together - the places they had gone to and the people they knew - [spd 0.2] but it all came up empty. ", "Several days after their disappearance, the families were devastated to learn that most of their loved ones had been discovered lifeless in different locations throughout the town.", "The physicians performed exhaustive evaluations of the corpses; however, they could not account for the inexplicable absence of blood, as the corpses showed no signs of injuries or cuts.", "These last weeks, you have plunged yourself deep into this research.", "Fortunately, your supervisor has given you carte blanche to investigate.", "You’ve done your homework and left no stone unturned, but the police weren’t slacking in this case either.", "The reason you strongly believe is that the first victim to disappear was Helena Bergson.", "Who happens to be the former mayor's daughter. ", "Her disappearance is the most mysterious of all.", "While the other victims vanished without a trace while walking the streets at night, ", "Helena was actually last seen leaving the family's property willingly in broad daylight, carrying nothing but a suitcase with her favorite clothes.", " On further investigation, it was discovered that all her bank accounts had also been wiped clean.", "It didn't come as a surprise to anyone, as the Bergson family had been at the center of a major scandal involving Helena's father, ", "which had made headlines and ultimately forced him to step down from office.", "Helena finally gathered the courage to come forward as a victim of her father's sexual abuse.", "Her family, including her mother, alleged that the girl had mental health issues and that such incidents never occurred in their house.", "Nonetheless, the damage was done, and the people of Grimshire could imagine life in that house was tough.", "You ask yourself the same questions the police have asked themselves a thousand times:", "Where is Helena? How did she manage to disappear into thin air without leaving any trace? Is the girls' disappearance linked to hers?", "Ultimately, the police were forced to file Helena's case as a missing person rather than a kidnapping, ", "and her family hasn't shown any interest in offering a reward for information concerning her whereabouts.", "But, something tells you to keep investigating, keep asking around, someone must have seen her.", "You know from experience that a tall, good-looking, blond woman is going to call attention.", "Instead of guessing where she could be now, you spent your time retracing her steps and asking around. ", "By all accounts, Helena was smart, funny, and beautiful, people gathered around her, and it was nearly impossible to track her movements because she was everywhere and talked to everyone.", "So you forced yourself to go undercover to the same parties.", "You imagined that young people would be more open to sharing information with a young girl like yourself than with the police.", "You even asked Helena's family to visit her bedroom at the newspaper’s behest.", "As you had expected, her mom was cold and distant.
+
+", "Helena's wide, luxurious room felt lifeless and still without her presence.", "One day as you arrive home, you find a handwritten letter in your mailbox that reads,", "'Oak Bridge, 10 PM'", "It seems your efforts finally paid off.", "You know for sure it isn’t Helena’s handwriting. ", "In your search for clues, you skimmed through an old notebook of hers while her mother wasn’t looking.", "So, whoever left this message could be potentially dangerous, it could be a trap.", "But still, it isn’t enough to go to the police.", "And even if you did go to the police, it’s just a piece of paper, in a missing person case.", "", "", "You call a taxi and anxiously travel to the designated meeting place.", "As you look out the windows, your thoughts are consumed by Helena.
+
+", "Where is she? Is the letter I received even related to her?", "You can't shake the feeling that you'll find out soon enough... [wait 30]", "After a long drive you arrive at the bridge a little before 10 PM.", "You find the bridge quiet.", "-", "You call a taxi, get in the car, and close your eyes in the backseat.", "You think about Helena, the murders, all the parties, and the people you’ve met recently.", "You recall Helena’s mother and her indifference towards her daughter.", "You try to remember your mother’s face, to imagine what it would have been like to have had a family, even one as fucked up as Helena’s.", "Were you the lucky one to have an absent father?", "-"])
+text_speed = 0.3
+
+[node name="GunButton" type="Button" parent="."]
+process_mode = 3
+visible = false
+offset_left = 903.0
+offset_top = 432.0
+offset_right = 1233.0
+offset_bottom = 509.0
+theme_override_font_sizes/font_size = 50
+text = "Take the gun"
+
+[node name="GunButton2" type="Button" parent="."]
+process_mode = 3
+visible = false
+offset_left = 834.0
+offset_top = 566.0
+offset_right = 1301.0
+offset_bottom = 643.0
+theme_override_font_sizes/font_size = 50
+text = "Don't take the gun"
+
+[node name="DialogueBox" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 179.0
+offset_top = 799.0
+offset_right = 1765.0
+offset_bottom = 1060.0
+
+[node name="CharPortrait1" type="TextureRect" parent="DialogueBox"]
+layout_mode = 0
+offset_left = -262.0
+offset_top = -137.0
+offset_right = 280.0
+offset_bottom = 676.0
+texture = ExtResource("4_pl851")
+expand_mode = 1
+
+[node name="CharPortrait2" type="TextureRect" parent="DialogueBox"]
+layout_mode = 0
+offset_left = 1401.0
+offset_top = -140.0
+offset_right = 1680.0
+offset_bottom = 279.0
+texture = ExtResource("5_8dpcr")
+expand_mode = 1
+
+[node name="DialogueLabel2" parent="DialogueBox" instance=ExtResource("2_ikcb3")]
+layout_mode = 0
+offset_left = 167.0
+offset_top = 16.0
+offset_right = 1388.0
+offset_bottom = 240.0
+theme_override_font_sizes/normal_font_size = 40
+text = "Vesper Text"
+messages = Array[String](["Well, after weeks without luck, I guess I should go meet this mysterious someone.", "After all the murders my boss gave me this gun for protection, ", "he warned me not to carry it around though… ", "should I take the gun with me?", "", "What good is a gun stashed at home anyway?", "Going unarmed to the middle of nowhere to meet god knows whom? No, thanks.", "I guess I could get in trouble carrying this around, I should leave it at home.", "I don’t have a register for this, plus, I barely know how to use it.", "", "There's no one nearby.", "I guess he or she is going to be late...", "You wait 30 minutes...", "...", "......", "You look at your clock; it's past 11 PM.
+
+", "Okay, I’m beginning to think this was just a prank.", "You wait until midnight...", "...", ".........", "You hear some noises in the woods…", "It's just raccoons rummaging about...", "nothing out of the ordinary.", "It's already close to 1AM...", "I’m getting tired of waiting, this was a waste of time.", "I should head home.", "-", "Sure it beats being touched by that creepy mayor.", "I’m sorry, did you say something?", "It's nothing.", "You close your eyes again.", "There must be a clue here somewhere, something I’m missing.", "As you begin to drift away, there’s a loud noise and the car swirls violently to the left.", "Fortunately, at this hour there wasn’t any incoming traffic.", "WHAT was that?", "Relax, it’s just a flat tire.", "Alright, if you say so…", "The cab driver goes outside to fix it… "])
+
+[node name="Label" type="Label" parent="DialogueBox"]
+layout_mode = 0
+offset_left = 167.0
+offset_top = -62.0
+offset_right = 320.0
+offset_bottom = 10.0
+theme_override_font_sizes/font_size = 40
+text = "Vesper"
+
+[connection signal="pressed" from="GunButton" to="." method="_on_gun_button_pressed"]
+[connection signal="pressed" from="GunButton2" to="." method="_on_gun_button_2_pressed"]

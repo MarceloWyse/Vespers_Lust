@@ -1,0 +1,69 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbei67gb3vnp"]
+
+[ext_resource type="Script" path="res://scenes/work.gd" id="1_i3dp3"]
+[ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face_test.png" id="2_one65"]
+[ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="3_6eub8"]
+
+[node name="Work" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i3dp3")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 747.0
+offset_right = 1688.0
+offset_bottom = 1053.0
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 5.0
+offset_right = 204.0
+offset_bottom = 250.0
+texture = ExtResource("2_one65")
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="Panel/TextureRect"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HSeparator" type="HSeparator" parent="Panel/TextureRect/Panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 244.0
+offset_right = 193.0
+offset_bottom = 248.0
+
+[node name="CharacterName" type="Label" parent="Panel/TextureRect/Panel"]
+layout_mode = 2
+offset_left = 42.0
+offset_top = 245.0
+offset_right = 142.0
+offset_bottom = 290.0
+theme_override_font_sizes/font_size = 30
+text = "Vesper"
+
+[node name="DialogueLabel" parent="Panel" instance=ExtResource("3_6eub8")]
+layout_mode = 0
+offset_left = 228.0
+offset_top = 38.0
+offset_right = 429.0
+offset_bottom = 82.0
+text = "My message here"
+messages = Array[String](["HELLO_WORLD", "qfdsafsafsafas", "safdsafasfasdfasfa"])
+
+[connection signal="gui_input" from="Panel" to="." method="_on_panel_gui_input"]

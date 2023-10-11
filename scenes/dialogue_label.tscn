@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://728fnim4yyl8"]
+
+[ext_resource type="Script" path="res://scenes/dialogue_label.gd" id="1_eo40x"]
+
+[node name="DialogueLabel" type="RichTextLabel" node_paths=PackedStringArray("dialogue_timer")]
+offset_right = 201.0
+offset_bottom = 44.0
+script = ExtResource("1_eo40x")
+dialogue_timer = NodePath("DialogueTimer")
+
+[node name="DialogueTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
