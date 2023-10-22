@@ -1,4 +1,8 @@
-[gd_scene format=3 uid="uid://ddqaw1hxmaoy4"]
+[gd_scene load_steps=4 format=3 uid="uid://ddqaw1hxmaoy4"]
+
+[ext_resource type="Script" path="res://scenes/masturbation.gd" id="1_iv2vv"]
+[ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="2_2m4em"]
+[ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="2_b16x2"]
 
 [node name="Masturbation" type="Control"]
 layout_mode = 3
@@ -7,3 +11,76 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_iv2vv")
+
+[node name="SceneImage" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogBox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 223.0
+offset_top = -338.0
+offset_right = -219.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CharPortrait" type="TextureRect" parent="DialogBox"]
+visible = false
+layout_mode = 0
+offset_left = -178.0
+offset_top = -79.0
+offset_right = 166.0
+offset_bottom = 303.0
+texture = ExtResource("2_2m4em")
+expand_mode = 1
+
+[node name="DialogueLabel" parent="DialogBox" instance=ExtResource("2_b16x2")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 148.0
+offset_top = 21.0
+offset_right = -55.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 40
+text = "Type here"
+messages = Array[String](["I feel so hot like my whole body is on fire…", "You come to realize now why Helena was moaning so hard when you first met.", "Your vampiric state seems to have heightened all your senses.", "You never felt this way before. This primal urge to touch yourself, to be touched.", "I have always plunged myself into my work, never losing focus. Mocking people who debased themselves to such standards.", "But now, look at me, acting like an animal, giving into my most basic instincts.. when there’s so much more important stuff to do!", "I’m better than this… I have to fight it…", "But you can smell Helena’s sweet smell like she was standing next to you.", "I must be going crazy… Helenaa… I need to resist.", "But you can’t. A part of you doesn’t want to.", "The monster you’ve become has consumed your thoughts, before you know it you have your hands inside your pants.", "Ahhhnn…", "You’re unbelievably wet…", "You don’t want to acknowledge but you know your clit is harder than ever…", "You finally give up realizing that resisting is pointless. ", "I’ll go insane with lust… if I don’t do it, right now.", "You spread your legs, slowly giving into your inner beast.", "You start rubbing yourself over your underwear, a thousand thoughts running into your head, this is the first time you’ve done this as a vampire.", "Becoming a vampire was insane, but this is ludicrous!", "Why does it feel SO good!?", "Aaaahhh…", "Aaaaaahhhhh!!", "As you reach climax your fangs protrude as if they were going to burst out of your mouth.", "You feel hungrier than ever, you need blood, fresh blood.", "--- END OF FIRST MASTURBATION ---", "-- MASTURBATION E --", "The more you rub yourself, the hungrier you feel.", "But the hungrier you get the more you want to touch yourself.", "This is madness!", "You’ve promised yourself you wouldn’t give in to your carnal desires once again. ", "But here you are, thinking about nothing else but reaching climax.", "You don’t even need to touch inside your panties, you’re so sensitive that the slightest touch excites you to the core…", "A few moments later you orgasm. ", "You feel yourself becoming more lewd every time you do it.", "-- END OF MASTURBATION E --", "--- MASTURBATION D ---", "You’ve lost count of how many times you’ve done this.", "Every time you masturbate it feels better than the last time. You never thought you could feel so much pleasure in your life.", "Your whole life was dictated by your work schedule, but now… this seems much more important.", "You slide your hand inside your panties, feeling your clit with your index finger.", "You move it in a circular motion while moaning and squirming.", "You can’t stop now, not until you orgasm.", "At this rate it won’t take long!", "I can feel it coming! Ahhhnn!!!", "It doesn't take long until you climax.", "You're less stressed, but your lewdness and hunger both rise significantly.", "-- END OF MASTURBATION D ---", "You’re on the brink of madness.", "Your fingers feel too good.", "Stopping isn’t an option.", "You’re not ashamed anymore, if it feels good, why stop?", "You’ve worked your entire life, and look where it got you. You deserve a break.", "If I continue like this I might lose myself.", "DYNAMIC", "", ""])
+
+[node name="NamePanel" type="Panel" parent="DialogBox"]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 129.0
+offset_top = -197.0
+offset_right = -1132.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameLabel" type="Label" parent="DialogBox/NamePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Vesper"
+horizontal_alignment = 1
+vertical_alignment = 1

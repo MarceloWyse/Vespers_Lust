@@ -5,6 +5,7 @@ class_name DialogueLabel
 @export var sound_files:Array[AudioStream] = []
 @export var text_speed = 0.5
 @export var dialogue_timer : Timer
+#@onready var test_button = $"../../TestButton"
 
 signal dialogue_started
 signal message_next
@@ -13,6 +14,7 @@ signal message_finished
 
 var active = false
 var message_id = 0
+var can_type = true
 
 var chars_to_display = 0.0
 var tags = []
@@ -23,7 +25,7 @@ func _init():
 	bbcode_enabled = true
 
 func _ready():
-	text = ''
+	text = ""
 	add_child(audio_player)
 	
 	if messages.is_empty():
@@ -36,6 +38,15 @@ func stop_dialogue():
 	text = ""
 	
 	emit_signal("dialogue_ended")
+
+func create_message(message : String):
+	messages[message_id + 1] = message
+
+func create_message_ahead(message : String):
+	messages[message_id + 2] = message
+
+func create_message_ahead_ahead(message : String):
+	messages[message_id + 3] = message
 
 func change_messages(new_array:Array):
 	messages = new_array.duplicate()
@@ -157,10 +168,14 @@ func _advance_text():
 
 func _process(delta):
 	_advance_text()
-	if Input.is_action_just_pressed("ui_accept"):
-		next_message()
-	if Input.is_action_pressed("ui_cancel"):
-		if dialogue_timer.is_stopped():
-			dialogue_timer.start()
-			skip_message()
+	if can_type:
+#		if Input.is_action_just_pressed("ui_accept") or Input.is_action_just_pressed("left_click"):
+		if Input.is_action_just_pressed("left_click") or \
+		Input.is_action_just_pressed("ui_accept"):
+#		and not test_button.has_focus():
 			next_message()
+		if Input.is_action_pressed("skip"):
+			if dialogue_timer.is_stopped():
+				dialogue_timer.start()
+				skip_message()
+				next_message()

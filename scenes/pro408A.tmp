@@ -1,0 +1,229 @@
+[gd_scene load_steps=6 format=3 uid="uid://dk244euyfs4no"]
+
+[ext_resource type="Script" path="res://scenes/prologue.gd" id="1_5l4ht"]
+[ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="2_ikcb3"]
+[ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="3_rnfcg"]
+[ext_resource type="Texture2D" uid="uid://ctigr7scd0wk4" path="res://assets/img/vesper test.png" id="4_pl851"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4t0yw"]
+bg_color = Color(0.623529, 0.164706, 0.152941, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.388235, 0, 0, 1)
+
+[node name="Prologue" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5l4ht")
+
+[node name="SceneTexture" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CharScene" type="TextureRect" parent="."]
+visible = false
+show_behind_parent = true
+layout_mode = 0
+offset_left = 451.0
+offset_top = 5.0
+offset_right = 1516.0
+offset_bottom = 1604.0
+texture = ExtResource("4_pl851")
+expand_mode = 1
+
+[node name="DialogBox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 223.0
+offset_top = -338.0
+offset_right = -219.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CharPortrait" type="TextureRect" parent="DialogBox"]
+visible = false
+layout_mode = 0
+offset_left = -178.0
+offset_top = -79.0
+offset_right = 166.0
+offset_bottom = 303.0
+texture = ExtResource("3_rnfcg")
+expand_mode = 1
+
+[node name="DialogueLabel" parent="DialogBox" instance=ExtResource("2_ikcb3")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 148.0
+offset_top = 21.0
+offset_right = -55.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 40
+text = "Type here"
+messages = Array[String](["After being offered a part-time job as a  writer for the community paper, you left the small town you called home to be here.", "A few months in and you have gotten used to the pace of the big city.", "Your boss is indifferent when it comes to clock-punching rules, as long as you can meet his deadlines.", " It's a perfect situation for an introverted, reclusive writer like yourself.", "However, writing brief essays and articles is not your dream job, so you begin to dive into the world of investigative journalism.", "That's when it comes to your knowledge that Grimshire has been experiencing unusual kidnappings during the past few months.", "All of the victims were girls in their mid-twenties, and they all vanished without a trace.", " The police tried to tie the girls' cases together - the places they had gone to and the people they knew, but it all came up empty. ", "Several days after their disappearance, the families were devastated to learn that most of their loved ones had been discovered lifeless in different locations throughout the town.", "The physicians performed exhaustive evaluations of the corpses;", "however, they could not account for the inexplicable absence of blood, as the corpses showed no signs of injuries or cuts.", "These last weeks, you have plunged yourself deep into this research.
+Fortunately, your supervisor has given you carte blanche to investigate.", "You’ve done your homework and left no stone unturned, but the police weren’t slacking in this case either.", "The reason you strongly believe is that the first victim to disappear was Helena Bergson.", "Who happens to be the former mayor's daughter. ", "Her disappearance is the most mysterious of all.", "While the other victims vanished without a trace while walking the streets at night, ", "Helena was actually last seen leaving the family's property willingly in broad daylight, carrying nothing but a suitcase with her favorite clothes.", " On further investigation, it was discovered that all her bank accounts had also been wiped clean.", "It didn't come as a surprise to anyone, as the Bergson family had been at the center of a major scandal involving Helena's father, ", "which had made headlines and ultimately forced him to step down from office.", "Helena finally gathered the courage to come forward as a victim of her father's sexual abuse.", "Her family, including her mother, alleged that the girl had mental health issues and that such incidents never occurred in their household.", "Nonetheless, the damage was done, and the people of Grimshire could imagine life in that house was tough.", "You ask yourself the same questions the police have asked themselves a thousand times:", "Where is Helena? How did she manage to disappear into thin air without leaving any trace? Is the girls' disappearance linked to hers?", "But, you know asking the wind won't get you any results...", "Ultimately, the police were forced to file Helena's case as a missing person rather than a kidnapping,", "and her family hasn't shown any interest in offering a reward for information concerning her whereabouts.", "Something tells you to keep investigating, keep asking around, someone must have seen her.", "You know from experience that a tall, good-looking, blond woman is going to call attention.", "Instead of guessing where she is now, you spent your time retracing her steps and asking around. ", "By all accounts, Helena was smart, funny, and beautiful.", "People gathered around her. It would be nearly impossible to track all her movements.", " She was everywhere, she talked to everyone.", "However, a small thing like that wouldn't stop you.", "Once you're driven to do something, you see it to the end.", "So you forced yourself to go undercover to the same parties.", "You imagined that young people would be more open to sharing information with a young girl like yourself than with the police.", "And you were right.", "You met lots of people who knew Helena. And they all had splendid things to say about her.", "You felt closer to her as each day closed by.", "You even asked Helena's family to visit her bedroom at the newspaper’s behest.", "As you had expected, her mom was cold and distant.", "Helena's wide, luxurious room felt lifeless and still without her presence.", "One day as you arrive home, you find a handwritten letter in your mailbox that reads,", "Oak Bridge 10 PM", "Since you began investigating, you always felt like you were being watched.", "You dismissed it as a case of mild paranoia. ", "Bushes move, windows open by themselves, people stare.", "But now here is proof that you aren't going insane.", "Someone's been watching you, and they know where you live.", "Who could it be? ", "You know for sure it isn’t Helena’s handwriting.", "In your search for clues, you skimmed through an old notebook of hers while her mother wasn’t looking.", "If I go to the police I could lose the only lead I have. Plus, it's just a piece of paper, who's to say it has anything to do with Helena's case?", "Well, after weeks without luck, I guess I should go meet this mysterious someone.", "But, whoever left this message could be potentially dangerous, it could be a trap.", "With all the murders going on  my boss gave me a gun for protection, he warned me not to carry it around though…", "Should I take the gun with me?", "- TAKE GUN -
+- DON'T TAKE GUN
+- FAIL", "- TAKE GUN -
+- DON'T TAKE GUN
+- FAIL", "You call a taxi and anxiously travel to the designated meeting place.", "As you look out the windows, your thoughts are consumed by Helena.", "Where is she? Is the letter I received even related to her?", "You can't shake the feeling that you'll find out soon enough...", "After a long drive you arrive at the bridge a little before 10 PM.", "You find the bridge quiet.", "There's no one nearby.", "I guess he or she is going to be late...", "Why am I not surprised? ", "I'll wait for a while...", "...", "......", "You look at your cellphone, it's past 11 PM.", "I’m beginning to think this was just a prank.", "You decide to  wait until midnight...", "...", "......", "You hear some noises in the woods…", "It's just raccoons rummaging about...", "My paranoia is starting to get the best of me.", "... you look at your cellphone hopelessly", "it's already close to 1 AM.", "I give up. no one's coming. ", "This was a waste of time.", "I'm heading home.", "You call a taxi, get in the car, and close your eyes in the backseat.", "thoughts about Helena start to rise up once again, the murders, all the parties, and the people you’ve met recently.", "As you start to drift away you recall Helena’s mother and her indifference towards her daughter.", "You try to remember your mother’s face, to imagine what it would have been like to have had a family, even one as fucked up as Helena’s.", "Were you the lucky one to have an absent father?", "Sure it beats being touched by that creepy mayor.", "I’m sorry, did you say something?", "It's nothing.", "You close your eyes again.", "There must be a clue here somewhere, something I’m missing.", "Suddenly, there’s a loud noise and the car swirls violently to the left.", "Fortunately, at this hour there wasn’t any incoming traffic.", "WHAT was that?", "Relax, it’s just a flat tire.", "Alright, if you say so…", "The cab driver goes outside mumbling something incoherent… ", "God dammit… this is worse than I thought.", "What is?", "Both tires are busted.", "Oh, just my luck.", "Why did you come to this part of town anyway? ", "There’s nothing to see here since that  bridge was shut down.", "…I keep asking myself that as well.", "You know, cellphone reception here sucks. We could be here all night.", "I don’t have all night.", "Neither do I, Mrs... ?", "Vesper. ", "What an unusual name.", "Well, I'm an unusual person.", "So... what do you suggest?", "It’s not like we have many options. ", "Reception should be better a few miles down the road, I’ll call us a tow truck.", "Hey, you’re not leaving me here alone are you?", "Do you wanna tag along?", "Not really.", "I thought so… I should be back in 40 minutes or so.", "Alright, be careful.", "Don't worry, there ain't no bears around these parts.", "The taxi driver leaves.", "......", ".........", "An hour has passed and there’s no sign of the taxi driver.", "Where is he anyway?", "............", "...............", "You look at your cellphone praying for reception.", "There's none. Your cellphone is as good as a paperweight.", "It's been 3 hours since he left. I'm starting to freak out just waiting here.", "Do I look for him or stay in the car?"])
+
+[node name="NamePanel" type="Panel" parent="DialogBox"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 129.0
+offset_top = -197.0
+offset_right = -1132.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameLabel" type="Label" parent="DialogBox/NamePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "Vesper"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GunOption" type="CenterContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -232.0
+offset_right = 100.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GunOption"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="TakeGun" type="Button" parent="GunOption/VBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Take the gun"
+
+[node name="DontTakeGun" type="Button" parent="GunOption/VBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Don't take the gun"
+
+[node name="ProgressBarControl" type="Control" parent="GunOption/VBoxContainer/DontTakeGun"]
+anchors_preset = 0
+offset_left = -81.0
+offset_top = -126.0
+offset_right = -41.0
+offset_bottom = -86.0
+
+[node name="ProgressBar" type="ProgressBar" parent="GunOption/VBoxContainer/DontTakeGun/ProgressBarControl"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+offset_left = 1.0
+offset_top = 258.0
+offset_right = 301.0
+offset_bottom = 288.0
+rotation = 4.71239
+theme_override_styles/fill = SubResource("StyleBoxFlat_4t0yw")
+max_value = 8.0
+step = 1.0
+value = 8.0
+show_percentage = false
+
+[node name="GunOptionTimer" type="Timer" parent="GunOption"]
+wait_time = 8.0
+one_shot = true
+
+[node name="CarOption" type="CenterContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -232.0
+offset_right = 100.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CarOption"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="GotOutside" type="Button" parent="CarOption/VBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Go Outside"
+
+[node name="DontGo" type="Button" parent="CarOption/VBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Stay in the car"
+
+[node name="ProgressBarControl" type="Control" parent="CarOption/VBoxContainer/DontGo"]
+anchors_preset = 0
+offset_left = -81.0
+offset_top = -126.0
+offset_right = -41.0
+offset_bottom = -86.0
+
+[node name="ProgressBar" type="ProgressBar" parent="CarOption/VBoxContainer/DontGo/ProgressBarControl"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+offset_left = 1.0
+offset_top = 258.0
+offset_right = 301.0
+offset_bottom = 288.0
+rotation = 4.71239
+theme_override_styles/fill = SubResource("StyleBoxFlat_4t0yw")
+max_value = 8.0
+step = 1.0
+value = 8.0
+show_percentage = false
+
+[node name="OptionTimer" type="Timer" parent="CarOption"]
+wait_time = 8.0
+one_shot = true
+
+[connection signal="pressed" from="GunOption/VBoxContainer/TakeGun" to="." method="_on_take_gun_pressed"]
+[connection signal="pressed" from="GunOption/VBoxContainer/DontTakeGun" to="." method="_on_dont_take_gun_pressed"]
+[connection signal="timeout" from="GunOption/GunOptionTimer" to="." method="_on_gun_option_timer_timeout"]
+[connection signal="pressed" from="CarOption/VBoxContainer/GotOutside" to="." method="_on_take_gun_pressed"]
+[connection signal="pressed" from="CarOption/VBoxContainer/DontGo" to="." method="_on_dont_take_gun_pressed"]
+[connection signal="timeout" from="CarOption/OptionTimer" to="." method="_on_gun_option_timer_timeout"]

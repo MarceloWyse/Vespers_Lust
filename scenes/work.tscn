@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bbei67gb3vnp"]
 
 [ext_resource type="Script" path="res://scenes/work.gd" id="1_i3dp3"]
-[ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face_test.png" id="2_one65"]
+[ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="2_one65"]
 [ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="3_6eub8"]
 
 [node name="Work" type="Control"]
