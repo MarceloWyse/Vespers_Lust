@@ -2,9 +2,11 @@ extends Control
 
 var scene_finished = false
 @onready var dialogue_label = $DialogBox/DialogueLabel as DialogueLabel
+@onready var scene_texture = $SceneTexture
 
 func _ready():
 	if not SaveManager.save.visited_activities["sleep"]:
+		scene_texture.texture = load("res://assets/thumbnails/SLEEP_vesper.png")
 		dialogue_label.start_dialogue()
 		SaveManager.save.visited_activities["sleep"] = true
 	elif SaveManager.save.visited_activities["sleep"]:

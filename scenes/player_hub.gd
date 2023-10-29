@@ -53,8 +53,8 @@ extends Control
 @export var sanity_2 : Texture
 @export var sanity_3 : Texture
 @export var sanity_4 : Texture
-@onready var day_label = $Calendar/DayLabel
 
+@onready var day_label = $Calendar/DayLabel
 @onready var hunger_label = $Hunger/HungerLabel
 @onready var hunger_bar = $Hunger/HungerBar
 @onready var sanity_texture = $StatusGrid/SanityTexture
@@ -113,6 +113,8 @@ func _process(delta):
 	and texture_rect_3.texture != null:
 		apply.disabled = false
 	
+	
+	lwd_bar.tooltip_text = str(lwd_bar.value)
 	
 	if sanity >= 0 and not sanity >= 20:
 		sanity_texture.texture = sanity_0
