@@ -17,7 +17,7 @@ extends Control
 @onready var texture_rect_3 = $ScheduleButton/ActivitiesPanel/GridContainer/TextureRect3
 @onready var texture_rect = $ScheduleButton/ActivitiesPanel/GridContainer/TextureRect
 @onready var work = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Work
-@onready var barista = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Barista
+@onready var bartender = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Bartender
 @onready var park = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Park
 @onready var sleep = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Sleep
 @onready var hunt = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Hunt
@@ -37,6 +37,7 @@ extends Control
 @onready var weather_texture = $Calendar/WeatherTexture
 @onready var transition = $Transition
 @onready var lwd_bar = $AttributesPanel/AttributesGrid/LwdBar
+@onready var transitions = $Transitions
 
 @export var e_texture : Texture 
 @export var d_texture : Texture 
@@ -100,10 +101,11 @@ func _ready():
 	cha_bar.value = cha
 	lwd_bar.value = lewdness
 	
-	transition.show()
-	var my_tween = get_tree().create_tween()
-	my_tween.tween_property(transition, "modulate", Color(0, 0, 0, 0), 2)
-	await my_tween.finished
+#	transition.show()
+#	var my_tween = get_tree().create_tween()
+#	my_tween.tween_property(transition, "modulate", Color(0, 0, 0, 0), 2)
+#	await my_tween.finished
+	transitions.fade_to_image()
 
 func _process(delta):
 	if texture_rect.texture == null or texture_rect_2.texture == null \
@@ -157,55 +159,64 @@ func _process(delta):
 	if hunger_bar.value >= 80 and not hunger_bar.value >= 100:
 		hunger_label.text = "Famine"
 	
-	if vit_bar.value >= 0 and not vit_bar.value >= 20:
+	#Vit bar
+	if vit_bar.value >= 0 and vit_bar.value < 20:
 		vit_texture.texture = e_texture
-	if vit_bar.value >= 20 and not vit_bar.value >= 30:
+	if vit_bar.value >= 20 and vit_bar.value < 40:
 		vit_texture.texture = d_texture
-	if vit_bar.value >= 40 and not vit_bar.value >= 60:
+	if vit_bar.value >= 40 and vit_bar.value < 60:
 		vit_texture.texture = c_texture
-	if vit_bar.value >= 60 and not vit_bar.value >= 80:
+	if vit_bar.value >= 60 and vit_bar.value < 80:
 		vit_texture.texture = b_texture
-	if vit_bar.value >= 80 and not vit_bar.value >= 100:
+	if vit_bar.value >= 80:
 		vit_texture.texture = a_texture
-	if str_bar.value >= 0 and not str_bar.value >= 20:
+	
+	#Strength Bar:	
+	if str_bar.value >= 0 and str_bar.value < 20:
 		str_texture.texture = e_texture
-	if str_bar.value >= 20 and not str_bar.value >= 30:
+	if str_bar.value >= 20 and str_bar.value < 40:
 		str_texture.texture = d_texture
-	if str_bar.value >= 40 and not str_bar.value >= 60:
+	if str_bar.value >= 40 and str_bar.value < 60:
 		str_texture.texture = c_texture
-	if str_bar.value >= 60 and not str_bar.value >= 80:
+	if str_bar.value >= 60 and str_bar.value < 80:
 		str_texture.texture = b_texture
-	if str_bar.value >= 80 and not str_bar.value >= 100:
+	if str_bar.value >= 80:
 		str_texture.texture = a_texture
-	if int_bar.value >= 0 and not int_bar.value >= 20:
+	
+	#Intelligence Bar
+	if int_bar.value >= 0 and int_bar.value < 20:
 		int_texture.texture = e_texture
-	if int_bar.value >= 20 and not int_bar.value >= 30:
+	if int_bar.value >= 20 and int_bar.value < 40:
 		int_texture.texture = d_texture
-	if int_bar.value >= 40 and not int_bar.value >= 60:
+	if int_bar.value >= 40 and int_bar.value < 60:
 		int_texture.texture = c_texture
-	if int_bar.value >= 60 and not int_bar.value >= 80:
+	if int_bar.value >= 60 and int_bar.value < 80:
 		int_texture.texture = b_texture
-	if int_bar.value >= 80 and not int_bar.value >= 100:
+	if int_bar.value >= 80:
 		int_texture.texture = a_texture
-	if speed_bar.value >= 0 and not speed_bar.value >= 20:
+		
+	#Speed Bar:
+	if speed_bar.value >= 0 and speed_bar.value < 20:
 		speed_texture.texture = e_texture
-	if speed_bar.value >= 20 and not speed_bar.value >= 30:
+	if speed_bar.value >= 20 and speed_bar.value < 40:
 		speed_texture.texture = d_texture
-	if speed_bar.value >= 40 and not speed_bar.value >= 60:
+	if speed_bar.value >= 40 and speed_bar.value < 60:
 		speed_texture.texture = c_texture
-	if speed_bar.value >= 60 and not speed_bar.value >= 80:
+	if speed_bar.value >= 60 and speed_bar.value < 80:
 		speed_texture.texture = b_texture
-	if speed_bar.value >= 80 and not speed_bar.value >= 100:
+	if speed_bar.value >= 80:
 		speed_texture.texture = a_texture
-	if cha_bar.value >= 0 and not cha_bar.value >= 20:
+	
+	#Charisma Bar:
+	if cha_bar.value >= 0 and cha_bar.value < 20:
 		cha_texture.texture = e_texture
-	if cha_bar.value >= 20 and not cha_bar.value >= 30:
+	if cha_bar.value >= 20 and cha_bar.value < 40:
 		cha_texture.texture = d_texture
-	if cha_bar.value >= 40 and not cha_bar.value >= 60:
+	if cha_bar.value >= 40 and cha_bar.value < 60:
 		cha_texture.texture = c_texture
-	if cha_bar.value >= 60 and not cha_bar.value >= 80:
+	if cha_bar.value >= 60 and cha_bar.value < 80:
 		cha_texture.texture = b_texture
-	if cha_bar.value >= 80 and not cha_bar.value >= 100:
+	if cha_bar.value >= 80:
 		cha_texture.texture = a_texture
 
 func _on_gear_button_pressed():
@@ -319,10 +330,11 @@ func _on_work_pressed():
 		if child.texture == null:
 			child.texture = work.texture_normal
 			return
-func _on_barista_pressed():
+
+func _on_bartender_pressed():
 	for child in grid_container.get_children():
 		if child.texture == null:
-			child.texture = barista.texture_normal
+			child.texture = bartender.texture_normal
 			return
 
 func _on_park_pressed():
@@ -423,10 +435,10 @@ func _on_apply_pressed():
 					SceneTracker.scene_1 = load("res://scenes/studying.tscn")
 				if child.texture.resource_path.contains("work"):
 					SceneTracker.scene_1 = load("res://scenes/work.tscn")
-				if child.texture.resource_path.contains("barista"):
-					SceneTracker.scene_1 = load("res://scenes/barista.tscn")
-				if child.texture.resource_path.contains("barista"):
-					SceneTracker.scene_1 = load("res://scenes/barista.tscn")
+				if child.texture.resource_path.contains("bartender"):
+					SceneTracker.scene_1 = load("res://scenes/bartender.tscn")
+				if child.texture.resource_path.contains("bartender"):
+					SceneTracker.scene_1 = load("res://scenes/bartender.tscn")
 				if child.texture.resource_path.contains("park"):
 					SceneTracker.scene_1 = load("res://scenes/park.tscn")
 				if child.texture.resource_path.contains("sleep"):
@@ -462,10 +474,10 @@ func _on_apply_pressed():
 					SceneTracker.scene_2 = load("res://scenes/studying.tscn")
 				if child.texture.resource_path.contains("work"):
 					SceneTracker.scene_2 = load("res://scenes/work.tscn")
-				if child.texture.resource_path.contains("barista"):
-					SceneTracker.scene_2 = load("res://scenes/barista.tscn")
-				if child.texture.resource_path.contains("barista"):
-					SceneTracker.scene_2 = load("res://scenes/barista.tscn")
+				if child.texture.resource_path.contains("bartender"):
+					SceneTracker.scene_2 = load("res://scenes/bartender.tscn")
+				if child.texture.resource_path.contains("bartender"):
+					SceneTracker.scene_2 = load("res://scenes/bartender.tscn")
 				if child.texture.resource_path.contains("park"):
 					SceneTracker.scene_2 = load("res://scenes/park.tscn")
 				if child.texture.resource_path.contains("sleep"):
@@ -501,10 +513,10 @@ func _on_apply_pressed():
 					SceneTracker.scene_3 = load("res://scenes/studying.tscn")
 				if child.texture.resource_path.contains("work"):
 					SceneTracker.scene_3 = load("res://scenes/work.tscn")
-				if child.texture.resource_path.contains("barista"):
-					SceneTracker.scene_3 = load("res://scenes/barista.tscn")
-				if child.texture.resource_path.contains("barista"):
-					SceneTracker.scene_3 = load("res://scenes/barista.tscn")
+				if child.texture.resource_path.contains("bartender"):
+					SceneTracker.scene_3 = load("res://scenes/bartender.tscn")
+				if child.texture.resource_path.contains("bartender"):
+					SceneTracker.scene_3 = load("res://scenes/bartender.tscn")
 				if child.texture.resource_path.contains("park"):
 					SceneTracker.scene_3 = load("res://scenes/park.tscn")
 				if child.texture.resource_path.contains("sleep"):

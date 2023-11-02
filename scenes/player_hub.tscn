@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://c0x5rbk7rn3vx"]
+[gd_scene load_steps=54 format=3 uid="uid://c0x5rbk7rn3vx"]
 
 [ext_resource type="Script" path="res://scenes/player_hub.gd" id="1_0hmm0"]
 [ext_resource type="Texture2D" uid="uid://7ey4i1pllc66" path="res://assets/img/e_letter.png" id="1_got0o"]
@@ -43,6 +43,7 @@
 [ext_resource type="Texture2D" uid="uid://tymchsirfqm" path="res://assets/img/liquor.png" id="40_s5uon"]
 [ext_resource type="Texture2D" uid="uid://ctngtyheo4tns" path="res://assets/img/mirror.png" id="41_gff0o"]
 [ext_resource type="Texture2D" uid="uid://hlw4g3c5e74l" path="res://assets/img/gamble.png" id="43_aqrjq"]
+[ext_resource type="PackedScene" uid="uid://m47064cxfa3k" path="res://scenes/transitions.tscn" id="44_0gk0u"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3bu17"]
 bg_color = Color(0.431373, 0.121569, 0.121569, 1)
@@ -793,14 +794,14 @@ offset_bottom = 104.0
 theme_override_font_sizes/font_size = 20
 text = "Work"
 
-[node name="Barista" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
+[node name="Bartender" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 texture_normal = ExtResource("27_o2cwu")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="BaristaLabel" type="Label" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Barista"]
+[node name="BartenderLabel" type="Label" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Bartender"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -1179,6 +1180,9 @@ grow_vertical = 2
 mouse_filter = 2
 texture = SubResource("CanvasTexture_doxj7")
 
+[node name="Transitions" parent="." instance=ExtResource("44_0gk0u")]
+layout_mode = 1
+
 [connection signal="pressed" from="GearButton" to="." method="_on_gear_button_pressed"]
 [connection signal="pressed" from="Settings/Save" to="." method="_on_save_pressed"]
 [connection signal="pressed" from="TestButton" to="." method="_on_test_button_pressed"]
@@ -1204,7 +1208,7 @@ texture = SubResource("CanvasTexture_doxj7")
 [connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Cancel" to="." method="_on_cancel_pressed"]
 [connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Study2" to="." method="_on_study_2_pressed"]
 [connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Work" to="." method="_on_work_pressed"]
-[connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Barista" to="." method="_on_barista_pressed"]
+[connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Bartender" to="." method="_on_bartender_pressed"]
 [connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Park" to="." method="_on_park_pressed"]
 [connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Sleep" to="." method="_on_sleep_pressed"]
 [connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Hunt" to="." method="_on_hunt_pressed"]

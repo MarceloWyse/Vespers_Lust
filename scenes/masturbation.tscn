@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ddqaw1hxmaoy4"]
+[gd_scene load_steps=5 format=3 uid="uid://ddqaw1hxmaoy4"]
 
 [ext_resource type="Script" path="res://scenes/masturbation.gd" id="1_iv2vv"]
 [ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="2_2m4em"]
 [ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="2_b16x2"]
+[ext_resource type="PackedScene" uid="uid://m47064cxfa3k" path="res://scenes/transitions.tscn" id="4_lstac"]
 
 [node name="Masturbation" type="Control"]
 layout_mode = 3
@@ -84,3 +85,6 @@ theme_override_font_sizes/font_size = 30
 text = "Vesper"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Transitions" parent="." instance=ExtResource("4_lstac")]
+layout_mode = 1

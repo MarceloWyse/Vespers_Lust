@@ -23,9 +23,8 @@ extends Control
 @onready var helenas_offer = $HelenasOffer
 @onready var drive_option = $DriveOption
 @onready var eat_food_option = $EatFoodOption
-@onready var transition_test = $TransitionTest
-@onready var fade_in_trans = $FadeInTrans
 @onready var black_screen = $BlackScreen
+@onready var transitions = $Transitions
 
 var taxi_driver = preload("res://assets/img/taxi_driver.png")
 var vesper = preload("res://assets/img/vesper_face.png")
@@ -41,12 +40,13 @@ var call_help_clicked = false
 var can_make_invisible = true
 
 func _ready():
-	fade_in_trans.show()
-	var my_tween = get_tree().create_tween()
-	my_tween.tween_property(fade_in_trans, "modulate", Color(0, 0, 0, 0), 2)
-	await my_tween.finished
-	dialogue_label.jump_to(75)
-#	dialogue_label.start_dialogue()
+#	fade_in_trans.show()
+#	var my_tween = get_tree().create_tween()
+#	my_tween.tween_property(fade_in_trans, "modulate", Color(0, 0, 0, 0), 2)
+#	await my_tween.finished
+#	dialogue_label.jump_to(75)
+	dialogue_label.start_dialogue()
+	transitions.fade_to_image()
 
 func _process(delta):
 	
@@ -62,7 +62,7 @@ func _process(delta):
 	
 	if dialogue_label.message_id == 0:
 		scene_texture.texture = load("res://assets/thumbnails/thumb_grimshire.png")
-	
+		
 	if dialogue_label.message_id == 3:
 		scene_texture.texture = load("res://assets/thumbnails/thumb_desk_02.png")
 
@@ -183,6 +183,9 @@ func _process(delta):
 		name_panel.hide()
 		char_portrait.hide()
 	
+	if dialogue_label.message_id == 97:
+		scene_texture.texture = load("res://assets/thumbnails/thumb_tireexplode_18.png")
+	
 	if dialogue_label.message_id == 99:
 		name_panel.show()
 		char_portrait.show()
@@ -196,6 +199,7 @@ func _process(delta):
 		char_portrait.texture = vesper
 
 	if dialogue_label.message_id == 102:
+		scene_texture.texture = load("res://assets/thumbnails/thumb_taxiBG_19.png")
 		hide_names()
 		
 	if dialogue_label.message_id == 103:
@@ -276,9 +280,15 @@ func _process(delta):
 			option_timer = true
 		car_progress_bar.value = car_option_timer.time_left
 	
+	if dialogue_label.message_id == 138:
+		scene_texture.texture = load("res://assets/thumbnails/thumb_taxi_lock_20.png")
+	
 	if dialogue_label.message_id == 139:
 		during_choice = false
 		hide_names()
+	
+	if dialogue_label.message_id == 140:
+		scene_texture.texture = load("res://assets/thumbnails/thumb_taxiBG_19.png")
 	
 	if dialogue_label.message_id == 144:
 		show_speaker("vesper", vesper)
@@ -294,15 +304,26 @@ func _process(delta):
 		show_speaker("vesper", vesper)
 		
 	if dialogue_label.message_id == 150:
+		scene_texture.texture = load("res://assets/thumbnails/thumb_taxiwindow_21.png")
 		hide_names()
 		
+	if dialogue_label.message_id == 151:
+		scene_texture.texture = load("res://assets/thumbnails/thumb_handstrangle_22.png")
+	
 	if dialogue_label.message_id == 154:
 		dialogue_label.jump_to(211)
+	
+	if dialogue_label.message_id == 155:
+		scene_texture.texture = load("res://assets/thumbnails/thumb_taxiBG_19.png")
 	
 	if dialogue_label.message_id == 156:
 		dialogue_label.jump_to(140)
 	
+	if dialogue_label.message_id == 157:
+		scene_texture.texture = load("res://assets/thumbnails/thumb_darkroad_23.png")
+	
 	if dialogue_label.message_id == 160:
+		scene_texture.texture = load("res://assets/thumbnails/thumb_darkroad_24.png")
 		hide_names()
 	
 	if dialogue_label.message_id == 161:
@@ -310,6 +331,12 @@ func _process(delta):
 	
 	if dialogue_label.message_id == 162:
 		hide_names()
+	
+	if dialogue_label.message_id == 164:
+		scene_texture.texture = load("res://assets/thumbnails/thumb_head_25.png")
+	
+	if dialogue_label.message_id == 165:
+		scene_texture.texture = load("res://assets/thumbnails/thumb_shock_26.png")
 	
 	if dialogue_label.message_id == 168:
 		show_speaker("vesper", vesper)
@@ -330,12 +357,14 @@ func _process(delta):
 		dialogue_label.jump_to(211)
 	
 	if dialogue_label.message_id == 179:
+		scene_texture.texture = load("res://assets/thumbnails/thumb_darkroad_23.png")
 		hide_names()
 	
 	if dialogue_label.message_id == 182:
 		show_speaker("vesper", vesper)
 	
 	if dialogue_label.message_id == 183:
+		scene_texture.texture = load("res://assets/thumbnails/thumb_darkroad_24.png")
 		hide_names()
 	
 	if dialogue_label.message_id == 187:
@@ -348,7 +377,14 @@ func _process(delta):
 		show_speaker("vesper", vesper)
 	
 	if dialogue_label.message_id == 192:
+		scene_texture.texture = load("res://assets/thumbnails/thumb_head_25.png")
 		hide_names()
+	
+	if dialogue_label.message_id == 193:
+		scene_texture.texture = load("res://assets/thumbnails/thumb_shock_26.png")
+	
+	if dialogue_label.message_id == 195:
+		scene_texture.texture = load("res://assets/thumbnails/thumb_run_28.png")
 	
 	if dialogue_label.message_id == 197:
 		name_label.text = "???"
@@ -368,8 +404,14 @@ func _process(delta):
 	if dialogue_label.message_id == 202:
 		hide_names()
 	
+	if dialogue_label.message_id == 209:
+		scene_texture.texture = load("res://assets/thumbnails/thumb_faint_run_shot.png")
+	
 	if dialogue_label.message_id == 210:
 		dialogue_label.jump_to(211)
+	
+	if dialogue_label.message_id == 211:
+		scene_texture.texture = load("res://assets/thumbnails/thumb_chair.png")
 	
 	#Kidnapped Day 1:
 	if dialogue_label.message_id == 213:
@@ -389,6 +431,9 @@ func _process(delta):
 
 	if dialogue_label.message_id == 221:
 		hide_names()
+	
+	if dialogue_label.message_id == 226:
+		scene_texture.texture = load("res://assets/thumbnails/thumb_sex_riding_30.png")
 	
 	if dialogue_label.message_id == 230:
 		show_speaker("vesper", vesper)
@@ -832,9 +877,9 @@ func _process(delta):
 	
 	if dialogue_label.message_id == 477:
 		dialogue_label.can_type = false
-		await get_tree().create_timer(2).timeout
-		var my_tween = get_tree().create_tween()
-		my_tween.tween_property(transition_test, "modulate", Color(0, 0, 0), 2)
+#		await get_tree().create_timer(2).timeout
+#		var my_tween = get_tree().create_tween()
+#		my_tween.tween_property(transition_test, "modulate", Color(0, 0, 0), 2)
 		await get_tree().create_timer(3).timeout
 #		await my_tween.finished
 #		print("oie")
@@ -933,6 +978,7 @@ func _on_fire_option_timer_timeout():
 	dialogue_label.jump_to(175)
 
 func _on_fire_btn_pressed():
+	scene_texture.texture = load("res://assets/thumbnails/thumb_shoot_27.png")
 	during_choice = false
 	fire_option_timer.stop()
 	fired_gun = true 
@@ -946,6 +992,7 @@ func _on_fire_btn_pressed():
 	dialogue_label.jump_to(175)
 
 func _on_run_btn_pressed():
+	scene_texture.texture = load("res://assets/thumbnails/thumb_run_28.png")
 	during_choice = false
 	fire_option_timer.stop()
 	fired_gun = true 

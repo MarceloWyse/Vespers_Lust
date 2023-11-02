@@ -2,25 +2,29 @@ extends Control
 
 @onready var dialogue_label = $DialogBox/DialogueLabel as DialogueLabel
 @onready var scene_image = $SceneImage
+@onready var transitions = $Transitions
 
 var scene_finished = false
 
 func _enter_tree():
 	if SaveManager.save.player_status["lewdness"] >= 100:
-		SaveManager.save.player_status["lewdness"]
+		SaveManager.save.player_status["lewdness"] = 100
 
 func _ready():
 	#first time - fully clothed
 	if not SaveManager.save.visited_activities["masturbation"]:
 		scene_image.texture = load("res://assets/img/tenkousei134.jpg")
+		transitions.fade_to_image()
 		SaveManager.save.visited_activities["masturbation"] = true
 		dialogue_label.start_dialogue()
 		SaveManager.save.player_status["lewdness"] += 6
 		SaveManager.save.player_status["hunger"] += 20
+
 	#lewdness E - fully clothed
 	elif SaveManager.save.player_status["lewdness"] > 0 \
 	and SaveManager.save.player_status["lewdness"] < 20:
 		scene_image.texture = load("res://assets/img/tenkousei133.jpg")
+		transitions.fade_to_image()
 		dialogue_label.jump_to(26)
 		SaveManager.save.player_status["lewdness"] += 6
 		SaveManager.save.player_status["hunger"] += 20
@@ -28,6 +32,7 @@ func _ready():
 	elif SaveManager.save.player_status["lewdness"] >= 20 \
 	and SaveManager.save.player_status["lewdness"] < 40:
 		scene_image.texture = load("res://assets/img/ref7.jpg")
+		transitions.fade_to_image()
 		dialogue_label.jump_to(36)
 		SaveManager.save.player_status["lewdness"] += 6
 		SaveManager.save.player_status["hunger"] += 20
@@ -36,6 +41,7 @@ func _ready():
 	elif SaveManager.save.player_status["lewdness"] >= 40 \
 	and SaveManager.save.player_status["lewdness"] < 60:
 		scene_image.texture = load("res://assets/img/ref6.jpg")
+		transitions.fade_to_image()
 		dialogue_label.jump_to(47)
 		SaveManager.save.player_status["lewdness"] += 6
 		SaveManager.save.player_status["hunger"] += 20
@@ -45,6 +51,7 @@ func _ready():
 	and SaveManager.save.player_status["lewdness"] < 80 \
 	and not SaveManager.save.prostitute:
 		scene_image.texture = load("res://assets/img/ref8.jpg")
+		transitions.fade_to_image()
 		dialogue_label.jump_to(56)
 		SaveManager.save.player_status["hunger"] += 10
 	
@@ -53,6 +60,7 @@ func _ready():
 	and SaveManager.save.player_status["lewdness"] < 80 \
 	and SaveManager.save.prostitute:
 		scene_image.texture = load("res://assets/img/topless_masturb.jpg")
+		transitions.fade_to_image()
 		dialogue_label.jump_to(62)
 		SaveManager.save.player_status["lewdness"] += 6
 		SaveManager.save.player_status["hunger"] += 20
@@ -60,6 +68,7 @@ func _ready():
 	elif SaveManager.save.player_status["lewdness"] >= 80: 
 #	\ and SaveManager.save.player_status["lewdness"] <= 100:
 		scene_image.texture = load("res://assets/img/akane_naked.jpg")
+		transitions.fade_to_image()
 		dialogue_label.jump_to(70)
 		SaveManager.save.player_status["lewdness"] += 6
 		SaveManager.save.player_status["hunger"] += 20
@@ -96,6 +105,7 @@ func _process(delta):
 		if SceneTracker.scene_2 == null and SceneTracker.scene_3 != null:
 			get_tree().change_scene_to_packed(SceneTracker.scene_3)
 		if SceneTracker.scene_3 == null:
+			SaveManager.save.day += 1
 			get_tree().change_scene_to_file("res://scenes/player_hub.tscn")
 
 func _exit_tree():

@@ -3,6 +3,7 @@ extends Control
 
 var scene_finished = false
 @onready var choice_fred = $ChoiceFred
+@onready var transitions = $Transitions
 
 func _ready():
 #	dialogue_label.jump_to(385)
@@ -17,44 +18,60 @@ func _ready():
 	SaveManager.save.first_prostitution:
 		dialogue_label.jump_to(21)
 		SaveManager.save.first_prostitution = false
-		SaveManager.save.player_status["lewdness"] += 3
+		SaveManager.save.player_status["lewdness"] += 6
 	elif not SaveManager.save.first_prostitution and \
 	SaveManager.save.player_status["lewdness"] > 0 \
 	and SaveManager.save.player_status["lewdness"] < 20:
 		dialogue_label.jump_to(83)
-		SaveManager.save.player_status["lewdness"] += 3
+		SaveManager.save.player_status["lewdness"] += 6
 	elif not SaveManager.save.second_prostitution and \
 	SaveManager.save.player_status["lewdness"] >= 20 \
 	and SaveManager.save.player_status["lewdness"] < 40:
 		SaveManager.save.second_prostitution = true
 		dialogue_label.jump_to(91)
+		SaveManager.save.player_status["lewdness"] += 6
 	elif SaveManager.save.second_prostitution and \
 	SaveManager.save.player_status["lewdness"] >= 20 \
 	and SaveManager.save.player_status["lewdness"] < 40:
 		dialogue_label.jump_to(137)
+		SaveManager.save.player_status["lewdness"] += 6
 	elif not SaveManager.save.third_prostitution and \
 	SaveManager.save.player_status["lewdness"] >= 40 \
 	and SaveManager.save.player_status["lewdness"] < 60:
 		SaveManager.save.third_prostitution = true
 		dialogue_label.jump_to(143)
+		SaveManager.save.player_status["lewdness"] += 6
 	elif SaveManager.save.third_prostitution and \
 	SaveManager.save.player_status["lewdness"] >= 40 \
 	and SaveManager.save.player_status["lewdness"] < 60:
 		dialogue_label.jump_to(218)
+		SaveManager.save.player_status["lewdness"] += 6
 	elif not SaveManager.save.fourth_prostitution and \
 	SaveManager.save.player_status["lewdness"] >= 60 \
 	and SaveManager.save.player_status["lewdness"] < 80:
 		SaveManager.save.prostitute = true
 		SaveManager.save.fourth_prostitution = true
 		dialogue_label.jump_to(223)
+		SaveManager.save.player_status["lewdness"] += 6
 	elif SaveManager.save.fourth_prostitution and \
 	SaveManager.save.player_status["lewdness"] >= 60 \
 	and SaveManager.save.player_status["lewdness"] < 80:
 		dialogue_label.jump_to(381)
+		SaveManager.save.player_status["lewdness"] += 6
 	elif not SaveManager.save.fifth_prostitution and \
-	SaveManager.save.player_status["lewdness"] >= 80:
-#	\ and SaveManager.save.player_status["lewdness"] < 100:
+	SaveManager.save.player_status["lewdness"] >= 80 \
+	and SaveManager.save.player_status["lewdness"] < 100:
+		SaveManager.save.fifth_prostitution = true
 		dialogue_label.jump_to(385)
+		SaveManager.save.player_status["lewdness"] += 6
+	elif SaveManager.save.fifth_prostitution and \
+	SaveManager.save.player_status["lewdness"] >= 80 \
+	and SaveManager.save.player_status["lewdness"] < 100:
+		dialogue_label.jump_to(498)
+		SaveManager.save.player_status["lewdness"] += 6
+	elif SaveManager.save.player_status["lewdness"] >= 100:
+		SaveManager.save.anal_whore = true
+		dialogue_label.jump_to(502)
 
 func _process(delta):
 	
@@ -92,13 +109,19 @@ func _process(delta):
 	
 	if dialogue_label.message_id == 379:
 		scene_finished = true
-	
+
 	if dialogue_label.message_id == 384:
 		scene_finished = true
 
 	if dialogue_label.message_id == 496:
 		scene_finished = true
-	
+
+	if dialogue_label.message_id == 501:
+		scene_finished = true
+
+	if dialogue_label.message_id == 507:
+		scene_finished = true
+
 	if scene_finished:
 		if SceneTracker.scene_1 == null and SceneTracker.scene_2 != null:
 			get_tree().change_scene_to_packed(SceneTracker.scene_2)
