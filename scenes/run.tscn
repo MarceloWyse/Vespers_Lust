@@ -1,4 +1,9 @@
-[gd_scene format=3 uid="uid://c2e6mxprqa6d5"]
+[gd_scene load_steps=5 format=3 uid="uid://c2e6mxprqa6d5"]
+
+[ext_resource type="Script" path="res://scenes/run.gd" id="1_aso7o"]
+[ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="2_og88b"]
+[ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="3_ms6cy"]
+[ext_resource type="PackedScene" uid="uid://m47064cxfa3k" path="res://scenes/transitions.tscn" id="4_7dw3e"]
 
 [node name="Run" type="Control"]
 layout_mode = 3
@@ -7,3 +12,80 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_aso7o")
+
+[node name="SceneTexture" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogBox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 223.0
+offset_top = -338.0
+offset_right = -219.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CharPortrait" type="TextureRect" parent="DialogBox"]
+visible = false
+layout_mode = 0
+offset_left = -178.0
+offset_top = -79.0
+offset_right = 166.0
+offset_bottom = 303.0
+texture = ExtResource("2_og88b")
+expand_mode = 1
+
+[node name="DialogueLabel" parent="DialogBox" node_paths=PackedStringArray("dialogue_timer") instance=ExtResource("3_ms6cy")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 148.0
+offset_top = 21.0
+offset_right = -55.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 40
+text = "Type here"
+messages = Array[String](["You`ve been curious recently. You were never truly into sports or anything, but what are the limits of this new body you`ve got?", "Can you run as fast as vampires do in the movies? If so, what movies are we talking about? What about turning into a bat, or rats? Umm.. that might be just over the top.", "You realize trying to base yourself off literature and movies is a waste of time. You’re gonna have to do this the hard way, with trial and error.", "Running at the speed of a car seems insane, but… Clive did manage to slash both of the taxi’s tires while it was moving.", "You dig up your old sneakers, put on some shorts and a tank top. You haven’t worn these since you had P.E. in high school. You seem to have gained some weight since then, they barely fit.", "Vesper: I should go to a less crowded place….", "You decide to head for an abandoned path in the woods.", "Here you can explore your speed without fear of being spotted.", "Your mind keeps trying to convince you that what you’re trying to do is impossible.", "You run as fast as you can, by the end of it, you’re not about to call yourself Vesper Bolt, just yet.", "As you had predicted you don’t tire easily, but to your dismay you’re not much faster than before you turned.", "Vesper: I guess It will take some time getting used to this new body. ", "-- END OF RUNNING INTRO ---", "-- BEGIN RUNNING LOOP --", "You’re back to the same abandoned path, but this time you’ve remembered to bring a watch to time yourself. ", "Every lap you manage to improve a few seconds.", "You feel your body getting faster.", "-- END OF RUNNING LOOP --"])
+dialogue_timer = NodePath("")
+
+[node name="NamePanel" type="Panel" parent="DialogBox"]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 129.0
+offset_top = -197.0
+offset_right = -1132.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameLabel" type="Label" parent="DialogBox/NamePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Vesper"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Transitions" parent="." instance=ExtResource("4_7dw3e")]
+layout_mode = 1

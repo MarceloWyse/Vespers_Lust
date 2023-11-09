@@ -16,7 +16,7 @@ extends Control
 @onready var activities_panel = $ScheduleButton/ActivitiesPanel
 @onready var texture_rect_3 = $ScheduleButton/ActivitiesPanel/GridContainer/TextureRect3
 @onready var texture_rect = $ScheduleButton/ActivitiesPanel/GridContainer/TextureRect
-@onready var work = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Work
+@onready var journalist = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Journalist
 @onready var bartender = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Bartender
 @onready var park = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Park
 @onready var sleep = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Sleep
@@ -55,6 +55,7 @@ extends Control
 @export var sanity_3 : Texture
 @export var sanity_4 : Texture
 
+@onready var money_label = $Money/MoneyLabel
 @onready var day_label = $Calendar/DayLabel
 @onready var hunger_label = $Hunger/HungerLabel
 @onready var hunger_bar = $Hunger/HungerBar
@@ -78,17 +79,21 @@ var weather = ["cloudy", "rainy", "sunny"]
 var can_go_out = true
 var day = SaveManager.save.day
 
-func _ready():	
-	var chosen_weather = weather.pick_random()
-	if chosen_weather == "sunny":
-		texture_rect.texture = sleep.texture_normal
-		can_go_out = false
-		weather_texture.texture = load("res://assets/img/sunny.webp")
-	if chosen_weather == "cloudy":
-		weather_texture.texture = load("res://assets/img/cloudy.png")
-	if chosen_weather == "rainy":
-		weather_texture.texture = load("res://assets/img/rainy.png")
-	day_label.text = "March %s - %s" %[day, chosen_weather]
+func _ready():
+	if SaveManager.save.same_day == false:
+		var chosen_weather = weather.pick_random()
+		SaveManager.save.weather = chosen_weather
+		if chosen_weather == "sunny":
+			texture_rect.texture = sleep.texture_normal
+			can_go_out = false
+			weather_texture.texture = load("res://assets/img/sunny.webp")
+		if chosen_weather == "cloudy":
+			weather_texture.texture = load("res://assets/img/cloudy.png")
+		if chosen_weather == "rainy":
+			weather_texture.texture = load("res://assets/img/rainy.png")
+		day_label.text = "March %s - %s" %[day, chosen_weather]
+	else:
+		day_label.text = "March %s - %s" %[day, SaveManager.save.weather]	
 	
 	SceneTracker.scene_1 = null
 	SceneTracker.scene_2 = null
@@ -100,6 +105,7 @@ func _ready():
 	speed_bar.value = spd
 	cha_bar.value = cha
 	lwd_bar.value = lewdness
+	money_label.text = str(money)
 	
 #	transition.show()
 #	var my_tween = get_tree().create_tween()
@@ -325,10 +331,10 @@ func _on_cancel_pressed():
 		texture_rect_2.texture = null
 		texture_rect_3.texture = null
 
-func _on_work_pressed():
+func _on_journalist_pressed():
 	for child in grid_container.get_children():
 		if child.texture == null:
-			child.texture = work.texture_normal
+			child.texture = journalist.texture_normal
 			return
 
 func _on_bartender_pressed():
@@ -433,10 +439,8 @@ func _on_apply_pressed():
 			if child.name == "TextureRect":
 				if child.texture.resource_path.contains("studying"):
 					SceneTracker.scene_1 = load("res://scenes/studying.tscn")
-				if child.texture.resource_path.contains("work"):
-					SceneTracker.scene_1 = load("res://scenes/work.tscn")
-				if child.texture.resource_path.contains("bartender"):
-					SceneTracker.scene_1 = load("res://scenes/bartender.tscn")
+				if child.texture.resource_path.contains("journalist"):
+					SceneTracker.scene_1 = load("res://scenes/journalist.tscn")
 				if child.texture.resource_path.contains("bartender"):
 					SceneTracker.scene_1 = load("res://scenes/bartender.tscn")
 				if child.texture.resource_path.contains("park"):
@@ -472,10 +476,8 @@ func _on_apply_pressed():
 			if child.name == "TextureRect2":
 				if child.texture.resource_path.contains("studying"):
 					SceneTracker.scene_2 = load("res://scenes/studying.tscn")
-				if child.texture.resource_path.contains("work"):
-					SceneTracker.scene_2 = load("res://scenes/work.tscn")
-				if child.texture.resource_path.contains("bartender"):
-					SceneTracker.scene_2 = load("res://scenes/bartender.tscn")
+				if child.texture.resource_path.contains("journalist"):
+					SceneTracker.scene_2 = load("res://scenes/journalist.tscn")
 				if child.texture.resource_path.contains("bartender"):
 					SceneTracker.scene_2 = load("res://scenes/bartender.tscn")
 				if child.texture.resource_path.contains("park"):
@@ -511,10 +513,8 @@ func _on_apply_pressed():
 			if child.name == "TextureRect3":
 				if child.texture.resource_path.contains("studying"):
 					SceneTracker.scene_3 = load("res://scenes/studying.tscn")
-				if child.texture.resource_path.contains("work"):
-					SceneTracker.scene_3 = load("res://scenes/work.tscn")
-				if child.texture.resource_path.contains("bartender"):
-					SceneTracker.scene_3 = load("res://scenes/bartender.tscn")
+				if child.texture.resource_path.contains("journalist"):
+					SceneTracker.scene_3 = load("res://scenes/journalist.tscn")
 				if child.texture.resource_path.contains("bartender"):
 					SceneTracker.scene_3 = load("res://scenes/bartender.tscn")
 				if child.texture.resource_path.contains("park"):
@@ -549,3 +549,6 @@ func _on_apply_pressed():
 					SceneTracker.scene_3 = load("res://scenes/gamble.tscn")
 	get_tree().change_scene_to_packed(SceneTracker.scene_1)
 
+
+func _on_map_button_pressed():
+	get_tree().change_scene_to_file("res://scenes/map_room.tscn")

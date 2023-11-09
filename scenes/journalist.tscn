@@ -1,0 +1,87 @@
+[gd_scene load_steps=5 format=3 uid="uid://djjh0culu0gh1"]
+
+[ext_resource type="Script" path="res://scenes/journalist.gd" id="1_a6xqq"]
+[ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="1_ucb8p"]
+[ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="2_ndpck"]
+[ext_resource type="PackedScene" uid="uid://m47064cxfa3k" path="res://scenes/transitions.tscn" id="4_phu6u"]
+
+[node name="Journalist" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a6xqq")
+
+[node name="SceneImage" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogBox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 223.0
+offset_top = -338.0
+offset_right = -219.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CharPortrait" type="TextureRect" parent="DialogBox"]
+visible = false
+layout_mode = 0
+offset_left = -178.0
+offset_top = -79.0
+offset_right = 166.0
+offset_bottom = 303.0
+texture = ExtResource("1_ucb8p")
+expand_mode = 1
+
+[node name="DialogueLabel" parent="DialogBox" instance=ExtResource("2_ndpck")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 148.0
+offset_top = 21.0
+offset_right = -55.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 40
+text = "Type here"
+messages = Array[String](["Who would’ve thought you would still have to go to work after becoming a creature of the night? ", "A lot has changed with your body, but not much has changed in your financial life. You’re still broke as hell.", "Will your supervisor even notice your absence? Or the unnatural paleness of your skin?", "You somehow doubt it.", "You sit down at your appointed cubicle and turn on the computer.", "Vesper: Another day at work, huh.", "You don’t really get along with your colleagues, most of them just keep it to themselves anyway. Everyone’s too busy minding their own business to notice your presence.", "You see your boss coming over, he waves you hello and soon after comes over to your desk.", "Boss: Oh, great, Vesper. You’re here. Any leads on that Helena case?", "You’re at a loss for words.", "Vesper: Ahn...", "You can’t actually tell the truth, so... you make something up.", "Vesper: It turns out she probably left town. I couldn’t dig up anything new about her. Sorry to disappoint you, Steve.", "Steve: To tell you the truth, it was a shot in the dark to begin with. At least we can treat this as a case closed.", "As always he’s very understanding. You’re lucky to have such a cool boss.", "Steve: So this means you’ll be needing extra work then?", "Vesper: I’ll take whatever you’ve got.", "Steve: Great, I’ll have someone carry the files to your desk. l’ll be needing you in the office for this, though, I can’t let you take these home, same hourly rate. Agreed?", "Vesper: Thanks, I appreciate it.", "Steve: Alright.", "Steve leaves for his desk, signals someone and points to you. The man acknowledges with a nod, and sooner than expected you’re buried under a pile of documents, ", "Vesper: This is going to take a long time…", "Ad thus begins your tedious work routine… once again.", "--- END OF FIRST JOURNALIST ---", "You miss your investigative reporter days. But at least this helps you pay the bills. ", "You’re not about to complain, though, this might not be the most interesting assignment, but at least you get paid. ", "-- END OF GRADE E --", "You’re not used coming to the office all the time.", "Is it just your imagination or is the pile getting bigger?", "--- END OF GRADE D ---", "The pile is definitely getting bigger.", "However, you`re getting used to the workflow, so you finish things quicker.", "--- END OF GRADE C ---", "You`ve been coming to the office so often that people are starting to remember your name. And what surprises you even more, is that you are actually beginning to remember theirs.", "There`s Bob and Lisa from accounting, Beth from HR, Richard from… where whas Richard from again? Well it doesn`t matter.", "Whenever they need something they come to your desk to ask for help or sometimes just to chat, at least you`re kind of making friends…", "--- END OF GRADE B ---", "You never thought of yourself as a people magnet before becoming a vampire, but now people seem drawn to you. Whenever they have something they need done you`re their first choice.", "Steve is also very pleased with you, talks about a raise have been circulating around the office, and your name is in everyone`s lips. Your hard work is paying off.", "--- END OF GRADE A ---"])
+
+[node name="NamePanel" type="Panel" parent="DialogBox"]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 129.0
+offset_top = -197.0
+offset_right = -1132.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameLabel" type="Label" parent="DialogBox/NamePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Vesper"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Transitions" parent="." instance=ExtResource("4_phu6u")]
+layout_mode = 1

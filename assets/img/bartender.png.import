@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv4y7c7vo1qwx"
-path="res://.godot/imported/work.png-a1dc1fbdf66d5a39c2950409ad541944.ctex"
+uid="uid://dfpl5xt3000k6"
+path="res://.godot/imported/bartender.png-c8d77815890726ffe373cba87d77fe08.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/img/work.png"
-dest_files=["res://.godot/imported/work.png-a1dc1fbdf66d5a39c2950409ad541944.ctex"]
+source_file="res://assets/img/bartender.png"
+dest_files=["res://.godot/imported/bartender.png-c8d77815890726ffe373cba87d77fe08.ctex"]
 
 [params]
 

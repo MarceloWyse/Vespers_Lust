@@ -128,6 +128,8 @@ func _process(delta):
 		if SceneTracker.scene_2 == null and SceneTracker.scene_3 != null:
 			get_tree().change_scene_to_packed(SceneTracker.scene_3)
 		if SceneTracker.scene_3 == null:
+			SaveManager.save.day += 1
+			SaveManager.save.same_day = false
 			get_tree().change_scene_to_file("res://scenes/player_hub.tscn")
 
 func _exit_tree():

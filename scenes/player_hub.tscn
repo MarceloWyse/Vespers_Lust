@@ -20,15 +20,15 @@
 [ext_resource type="Texture2D" uid="uid://b7ra4v2n3idm" path="res://assets/img/sanity0.jpg" id="14_p180w"]
 [ext_resource type="Texture2D" uid="uid://bsjoxpueb5cy3" path="res://assets/img/sanity3.png" id="15_wii6g"]
 [ext_resource type="Texture2D" uid="uid://c0trlvp01ppw7" path="res://assets/img/sanity4.png" id="16_w38km"]
-[ext_resource type="Texture2D" uid="uid://beex4cwtvitol" path="res://assets/img/room.jpg" id="17_npv7f"]
+[ext_resource type="Texture2D" uid="uid://bpm1nvh5rdf10" path="res://assets/img/graybox_hubtest_V3.png" id="17_lq77n"]
 [ext_resource type="Texture2D" uid="uid://bunppy7big6un" path="res://assets/img/gears.png" id="21_8v10w"]
 [ext_resource type="Texture2D" uid="uid://ctigr7scd0wk4" path="res://assets/img/vesper test.png" id="22_qk86i"]
 [ext_resource type="Texture2D" uid="uid://beb5ygwro1my3" path="res://assets/img/notebook.png" id="24_7eyg5"]
 [ext_resource type="Texture2D" uid="uid://c3sqhlo7ahfgy" path="res://assets/img/studying.png" id="25_13td8"]
 [ext_resource type="Texture2D" uid="uid://blhrb7v4w2scj" path="res://assets/img/travel-map.png" id="25_r50m7"]
-[ext_resource type="Texture2D" uid="uid://cv4y7c7vo1qwx" path="res://assets/img/work.png" id="26_4gmca"]
+[ext_resource type="Texture2D" uid="uid://cv4y7c7vo1qwx" path="res://assets/img/journalist.png" id="26_fb58q"]
 [ext_resource type="Texture2D" uid="uid://c3tfdx5pdxx0m" path="res://assets/img/prostitution.png" id="27_88ghq"]
-[ext_resource type="Texture2D" uid="uid://dfpl5xt3000k6" path="res://assets/img/barista.png" id="27_o2cwu"]
+[ext_resource type="Texture2D" uid="uid://dfpl5xt3000k6" path="res://assets/img/bartender.png" id="27_lyrfm"]
 [ext_resource type="Texture2D" uid="uid://c7uk7ffer724d" path="res://assets/img/park.png" id="28_8c580"]
 [ext_resource type="Texture2D" uid="uid://8mjtpg1rms3i" path="res://assets/img/masturbation.png" id="29_e0nol"]
 [ext_resource type="Texture2D" uid="uid://cpt7nxnc3lsgf" path="res://assets/img/hospital.png" id="30_w4jdo"]
@@ -79,7 +79,7 @@ bg_color = Color(0.329412, 0.137255, 0.133333, 1)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_doxj7"]
 
-[node name="PlayerHUD" type="Control"]
+[node name="PlayerHUB" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -110,7 +110,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("17_npv7f")
+texture = ExtResource("17_lq77n")
 expand_mode = 1
 
 [node name="AttributesPanel" type="Panel" parent="."]
@@ -610,10 +610,10 @@ text = "Decrease Sanity"
 
 [node name="Vesper" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 686.0
-offset_top = 177.0
-offset_right = 1285.0
-offset_bottom = 1076.0
+offset_left = 704.0
+offset_top = 189.0
+offset_right = 1303.0
+offset_bottom = 1088.0
 mouse_filter = 2
 texture = ExtResource("22_qk86i")
 expand_mode = 1
@@ -778,26 +778,26 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 20
 text = "Study"
 
-[node name="Work" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
+[node name="Journalist" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
-texture_normal = ExtResource("26_4gmca")
+texture_normal = ExtResource("26_fb58q")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="WorkLabel" type="Label" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Work"]
+[node name="WorkLabel" type="Label" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Journalist"]
 layout_mode = 0
-offset_left = 13.0
+offset_left = -6.0
 offset_top = 73.0
-offset_right = 65.0
+offset_right = 87.0
 offset_bottom = 104.0
 theme_override_font_sizes/font_size = 20
-text = "Work"
+text = "Journalist"
 
 [node name="Bartender" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
-texture_normal = ExtResource("27_o2cwu")
+texture_normal = ExtResource("27_lyrfm")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -815,7 +815,7 @@ offset_bottom = 24.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 20
-text = "Barista"
+text = "Bartender"
 
 [node name="Park" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
 custom_minimum_size = Vector2(80, 80)
@@ -994,7 +994,7 @@ offset_top = 73.0
 offset_right = 103.0
 offset_bottom = 104.0
 theme_override_font_sizes/font_size = 20
-text = "Prostitution"
+text = "Prostitute"
 
 [node name="Hospital" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
 custom_minimum_size = Vector2(80, 80)
@@ -1181,6 +1181,7 @@ mouse_filter = 2
 texture = SubResource("CanvasTexture_doxj7")
 
 [node name="Transitions" parent="." instance=ExtResource("44_0gk0u")]
+visible = false
 layout_mode = 1
 
 [connection signal="pressed" from="GearButton" to="." method="_on_gear_button_pressed"]
@@ -1207,7 +1208,7 @@ layout_mode = 1
 [connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Apply" to="." method="_on_apply_pressed"]
 [connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Cancel" to="." method="_on_cancel_pressed"]
 [connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Study2" to="." method="_on_study_2_pressed"]
-[connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Work" to="." method="_on_work_pressed"]
+[connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Journalist" to="." method="_on_journalist_pressed"]
 [connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Bartender" to="." method="_on_bartender_pressed"]
 [connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Park" to="." method="_on_park_pressed"]
 [connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Sleep" to="." method="_on_sleep_pressed"]
@@ -1224,3 +1225,4 @@ layout_mode = 1
 [connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Speaking" to="." method="_on_speaking_pressed"]
 [connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Bar" to="." method="_on_bar_pressed"]
 [connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Gamble" to="." method="_on_gamble_pressed"]
+[connection signal="pressed" from="MapButton" to="." method="_on_map_button_pressed"]

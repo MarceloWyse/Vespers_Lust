@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfpl5xt3000k6"
-path="res://.godot/imported/barista.png-5ef85269b1a288a82bf6a48db4a06a56.ctex"
+uid="uid://c84ivfanrv0lp"
+path="res://.godot/imported/bartender_gradeB.png-3e204338d2cafcf7e6f97c7816eafc89.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/img/barista.png"
-dest_files=["res://.godot/imported/barista.png-5ef85269b1a288a82bf6a48db4a06a56.ctex"]
+source_file="res://assets/thumbnails/bartender_gradeB.png"
+dest_files=["res://.godot/imported/bartender_gradeB.png-3e204338d2cafcf7e6f97c7816eafc89.ctex"]
 
 [params]
 

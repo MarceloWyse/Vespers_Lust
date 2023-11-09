@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqcp4trm0v60f"]
+
+[ext_resource type="Texture2D" uid="uid://wh8dgq8nnq2n" path="res://assets/img/graybox_hub_maptest.png" id="1_1katc"]
+[ext_resource type="Script" path="res://scenes/map_room.gd" id="1_yvt5v"]
+[ext_resource type="PackedScene" uid="uid://m47064cxfa3k" path="res://scenes/transitions.tscn" id="2_fo1lu"]
+
+[node name="MapRoom" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yvt5v")
+
+[node name="SceneImage" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1katc")
+
+[node name="Transitions" parent="." instance=ExtResource("2_fo1lu")]
+layout_mode = 1
+
+[node name="BackBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 978.0
+offset_top = 891.0
+offset_right = 1218.0
+offset_bottom = 954.0
+theme_override_font_sizes/font_size = 40
+text = "Back to Hub"
+
+[connection signal="pressed" from="BackBtn" to="." method="_on_back_btn_pressed"]

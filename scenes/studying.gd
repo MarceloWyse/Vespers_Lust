@@ -9,9 +9,8 @@ var scene_finished = false
 func _ready():
 	#First Study
 	if not SaveManager.save.visited_activities["studying"]:
-#		scene_image.texture = load("res://assets/img/tenkousei134.jpg")
 		SaveManager.save.visited_activities["studying"] = true
-		scene_image.texture = load("res://assets/thumbnails/thumb_study_gradeE.png")
+		scene_image.texture = load("res://assets/thumbnails/thumb_study_intro.png")
 		transitions.fade_to_image()
 		dialogue_label.start_dialogue()
 	#Study Grade E
@@ -65,6 +64,7 @@ func _process(delta):
 			get_tree().change_scene_to_packed(SceneTracker.scene_3)
 		if SceneTracker.scene_3 == null:
 			SaveManager.save.day += 1
+			SaveManager.save.same_day = false
 			get_tree().change_scene_to_file("res://scenes/player_hub.tscn")
 			
 func _exit_tree():

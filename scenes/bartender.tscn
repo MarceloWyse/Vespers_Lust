@@ -1,9 +1,92 @@
-[gd_scene format=3 uid="uid://bp32f30vg2riu"]
+[gd_scene load_steps=5 format=3 uid="uid://bp32f30vg2riu"]
 
-[node name="Barista" type="Control"]
+[ext_resource type="Script" path="res://scenes/bartender.gd" id="1_a2ccg"]
+[ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="2_g0sm2"]
+[ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="3_5cppa"]
+[ext_resource type="PackedScene" uid="uid://m47064cxfa3k" path="res://scenes/transitions.tscn" id="4_gjsdl"]
+
+[node name="Bartender" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_a2ccg")
+
+[node name="SceneImage" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogBox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 223.0
+offset_top = -338.0
+offset_right = -219.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CharPortrait" type="TextureRect" parent="DialogBox"]
+visible = false
+layout_mode = 0
+offset_left = -178.0
+offset_top = -79.0
+offset_right = 166.0
+offset_bottom = 303.0
+texture = ExtResource("2_g0sm2")
+expand_mode = 1
+
+[node name="DialogueLabel" parent="DialogBox" instance=ExtResource("3_5cppa")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 148.0
+offset_top = 21.0
+offset_right = -55.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 40
+text = "Type here"
+messages = Array[String](["Unfortunately, even after becoming a vampire you still have to work.", "Actually, you’ve got to work double now, to make up for all the wasted money you spent investigating Helena…", "and to make up for your new found need for fresh blood.", "You figure a job serving drinks couldn’t be that bad. The owner said he could always use a hand, and that a good-looking girl behind the bar is good for business.", "It might take a while to get used to all the fancy cocktails, though.", "With that in mind you decide to go to the bar and ask to fill in for the day.", "-- END OF BARTENDER INTRO ---", "Being a Bartender seemed easier in the movies than it is in real life…", "You feel quite out of place… ", "--- END OF BARTENDER E ---", "Maybe you should’ve tried for a Barista position, instead? ", "Juggling bottles doesn’t seem to be your forte.", "--- END OF BARTENDER D ---", "You’re getting the hang of it… and starting to feel like those girls on Show Bar.", "That’s all the reference you have for bartender movies…  you fell asleep during Cocktail.", "--- END OF BARTENDER C ---", "As they say, practice makes perfection. You’re far from perfect, but much better than when you started.", "Occasionally dropping a tray or two doesn’t count, does it?", "--- END OF BARTENDER B ---", "After some trial and error you think you got the gist of it.", "Not mixing up people’s drinks and dropping things is a success, but doing that while juggling stuff around is perfection at its best.", "-- END OF BARTENDER A ---"])
+
+[node name="NamePanel" type="Panel" parent="DialogBox"]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 129.0
+offset_top = -197.0
+offset_right = -1132.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameLabel" type="Label" parent="DialogBox/NamePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Vesper"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Transitions" parent="." instance=ExtResource("4_gjsdl")]
+layout_mode = 1
+
+[editable path="Transitions"]
