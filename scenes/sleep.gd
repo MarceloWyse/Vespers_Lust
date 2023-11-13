@@ -27,6 +27,10 @@ func _process(delta):
 			get_tree().change_scene_to_packed(SceneTracker.scene_3)
 		if SceneTracker.scene_3 == null:
 			SaveManager.save.day += 1
+			SaveManager.save.bar["visited"] = false
+			SaveManager.save.park["visited"] = false
+			SaveManager.save.boutique["visited"] = false
+			SaveManager.save.hospital["visited"] = false
 			SaveManager.save.same_day = false
 			get_tree().change_scene_to_file("res://scenes/player_hub.tscn")
 

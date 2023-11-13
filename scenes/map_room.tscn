@@ -1,8 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://dqcp4trm0v60f"]
+[gd_scene load_steps=17 format=3 uid="uid://dqcp4trm0v60f"]
 
 [ext_resource type="Texture2D" uid="uid://wh8dgq8nnq2n" path="res://assets/img/graybox_hub_maptest.png" id="1_1katc"]
 [ext_resource type="Script" path="res://scenes/map_room.gd" id="1_yvt5v"]
 [ext_resource type="PackedScene" uid="uid://m47064cxfa3k" path="res://scenes/transitions.tscn" id="2_fo1lu"]
+[ext_resource type="Texture2D" uid="uid://cpt7nxnc3lsgf" path="res://assets/img/hospital.png" id="4_w44ao"]
+[ext_resource type="Texture2D" uid="uid://c7uk7ffer724d" path="res://assets/img/park.png" id="5_b15bp"]
+[ext_resource type="Texture2D" uid="uid://dnixs2jb0pso5" path="res://assets/img/bar-counter.png" id="6_wkxly"]
+[ext_resource type="Texture2D" uid="uid://b60o0n5nnanvb" path="res://assets/img/boutique.png" id="7_ulbgg"]
+[ext_resource type="Texture2D" uid="uid://c0q8ieig5loky" path="res://assets/img/vesper_map.png" id="8_24sup"]
+[ext_resource type="Texture2D" uid="uid://ba5hgdk27xpnu" path="res://assets/img/hospital_placeholder.jpg" id="9_lamwb"]
+[ext_resource type="Texture2D" uid="uid://bvxfgsig0s231" path="res://assets/img/vesper_map_clothing1.png" id="9_u3dq1"]
+[ext_resource type="Texture2D" uid="uid://ok2vpqukmrrb" path="res://assets/img/woman_s2.png" id="10_3jetj"]
+[ext_resource type="Texture2D" uid="uid://be31rtvj42cch" path="res://assets/img/man_s1.png" id="11_gwpx3"]
+[ext_resource type="Texture2D" uid="uid://7hr5cnfim6ub" path="res://assets/img/woman_silhuette.png" id="12_sso8l"]
+[ext_resource type="Texture2D" uid="uid://bshw7uv6wgkbp" path="res://assets/img/buteco.jpg" id="13_lolhe"]
+[ext_resource type="Texture2D" uid="uid://dhvowlh0tnrny" path="res://assets/img/park.jpg" id="14_cjrlw"]
+[ext_resource type="Texture2D" uid="uid://b4uk42uji5goo" path="res://assets/img/boutique.webp" id="15_0y3o8"]
 
 [node name="MapRoom" type="Control"]
 layout_mode = 3
@@ -22,16 +35,538 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_1katc")
 
-[node name="Transitions" parent="." instance=ExtResource("2_fo1lu")]
-layout_mode = 1
-
-[node name="BackBtn" type="Button" parent="."]
+[node name="BackBtn2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 978.0
-offset_top = 891.0
-offset_right = 1218.0
-offset_bottom = 954.0
+offset_left = 1036.0
+offset_top = 894.0
+offset_right = 1276.0
+offset_bottom = 957.0
 theme_override_font_sizes/font_size = 40
 text = "Back to Hub"
 
-[connection signal="pressed" from="BackBtn" to="." method="_on_back_btn_pressed"]
+[node name="HospitalMap" type="TextureRect" parent="."]
+modulate = Color(0.537255, 0.537255, 0.537255, 1)
+layout_mode = 0
+offset_left = 785.0
+offset_top = 239.0
+offset_right = 989.0
+offset_bottom = 439.0
+texture = ExtResource("4_w44ao")
+expand_mode = 1
+
+[node name="HospitalGoBtn" type="Button" parent="HospitalMap"]
+visible = false
+layout_mode = 0
+offset_left = 6.0
+offset_top = 200.0
+offset_right = 199.0
+offset_bottom = 292.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 40
+text = "Visit"
+
+[node name="Park" type="TextureRect" parent="."]
+modulate = Color(0.537255, 0.537255, 0.537255, 1)
+layout_mode = 0
+offset_left = 773.0
+offset_top = 628.0
+offset_right = 936.0
+offset_bottom = 791.0
+texture = ExtResource("5_b15bp")
+expand_mode = 1
+
+[node name="ParkGoBtn" type="Button" parent="Park"]
+visible = false
+layout_mode = 0
+offset_left = -14.0
+offset_top = 153.0
+offset_right = 179.0
+offset_bottom = 245.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 40
+text = "Visit"
+
+[node name="Bar" type="TextureRect" parent="."]
+modulate = Color(0.537255, 0.537255, 0.537255, 1)
+layout_mode = 0
+offset_left = 1173.0
+offset_top = 131.0
+offset_right = 1336.0
+offset_bottom = 294.0
+texture = ExtResource("6_wkxly")
+expand_mode = 1
+
+[node name="BarGoBtn" type="Button" parent="Bar"]
+visible = false
+layout_mode = 0
+offset_left = -14.0
+offset_top = 163.0
+offset_right = 179.0
+offset_bottom = 255.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 40
+text = "Visit"
+
+[node name="Boutique" type="TextureRect" parent="."]
+modulate = Color(0.537255, 0.537255, 0.537255, 1)
+layout_mode = 0
+offset_left = 1260.0
+offset_top = 596.0
+offset_right = 1423.0
+offset_bottom = 759.0
+texture = ExtResource("7_ulbgg")
+expand_mode = 1
+
+[node name="BoutiqueGoBtn" type="Button" parent="Boutique"]
+visible = false
+layout_mode = 0
+offset_left = -13.0
+offset_top = 163.0
+offset_right = 180.0
+offset_bottom = 255.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 40
+text = "Visit"
+
+[node name="VesperMap" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("8_24sup")
+
+[node name="VesperClothing" type="TextureRect" parent="VesperMap"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("9_u3dq1")
+
+[node name="HospitalPanel" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_left = 57.0
+offset_top = 49.0
+offset_right = 544.0
+offset_bottom = 1025.0
+
+[node name="Panel" type="Panel" parent="HospitalPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -35.0
+offset_top = -35.0
+offset_right = 38.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HospitalLabel" type="Label" parent="HospitalPanel"]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 333.0
+offset_right = 369.0
+offset_bottom = 405.0
+theme_override_font_sizes/font_size = 50
+text = "Hospital"
+horizontal_alignment = 1
+
+[node name="PlaceTexture" type="TextureRect" parent="HospitalPanel"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = -1.0
+offset_right = 452.0
+offset_bottom = 337.0
+texture = ExtResource("9_lamwb")
+expand_mode = 1
+
+[node name="Activities" type="Label" parent="HospitalPanel"]
+layout_mode = 2
+offset_left = 57.0
+offset_top = 423.0
+offset_right = 491.0
+offset_bottom = 481.0
+theme_override_font_sizes/font_size = 40
+text = "Activities:"
+
+[node name="PersonContainer" type="HBoxContainer" parent="HospitalPanel"]
+layout_mode = 2
+offset_left = -7.0
+offset_top = 811.0
+offset_right = 535.0
+offset_bottom = 972.0
+
+[node name="Person1" type="TextureRect" parent="HospitalPanel/PersonContainer"]
+layout_mode = 2
+texture = ExtResource("10_3jetj")
+expand_mode = 2
+
+[node name="Person2" type="TextureRect" parent="HospitalPanel/PersonContainer"]
+layout_mode = 2
+texture = ExtResource("11_gwpx3")
+expand_mode = 2
+
+[node name="Person3" type="TextureRect" parent="HospitalPanel/PersonContainer"]
+layout_mode = 2
+texture = ExtResource("12_sso8l")
+expand_mode = 2
+
+[node name="ActivityContainer" type="VBoxContainer" parent="HospitalPanel"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 490.0
+offset_right = 471.0
+offset_bottom = 672.0
+
+[node name="hact1" type="Label" parent="HospitalPanel/ActivityContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "- Activity 1"
+
+[node name="hact2" type="Label" parent="HospitalPanel/ActivityContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "- Activity 2"
+
+[node name="hact3" type="Label" parent="HospitalPanel/ActivityContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "- Activity 3"
+
+[node name="PeoplePlace" type="Label" parent="HospitalPanel"]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 724.0
+offset_right = 410.0
+offset_bottom = 782.0
+theme_override_font_sizes/font_size = 40
+text = "People of Interest"
+
+[node name="BarPanel" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_left = 57.0
+offset_top = 49.0
+offset_right = 544.0
+offset_bottom = 1025.0
+
+[node name="Panel" type="Panel" parent="BarPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -35.0
+offset_top = -35.0
+offset_right = 38.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BarlLabel" type="Label" parent="BarPanel"]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 333.0
+offset_right = 369.0
+offset_bottom = 405.0
+theme_override_font_sizes/font_size = 50
+text = "Bar"
+horizontal_alignment = 1
+
+[node name="PlaceTexture" type="TextureRect" parent="BarPanel"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = -1.0
+offset_right = 452.0
+offset_bottom = 337.0
+texture = ExtResource("13_lolhe")
+expand_mode = 1
+
+[node name="Activities" type="Label" parent="BarPanel"]
+layout_mode = 2
+offset_left = 57.0
+offset_top = 423.0
+offset_right = 491.0
+offset_bottom = 481.0
+theme_override_font_sizes/font_size = 40
+text = "Activities:"
+
+[node name="PersonContainer" type="HBoxContainer" parent="BarPanel"]
+layout_mode = 2
+offset_left = -7.0
+offset_top = 811.0
+offset_right = 535.0
+offset_bottom = 972.0
+
+[node name="Person1" type="TextureRect" parent="BarPanel/PersonContainer"]
+layout_mode = 2
+texture = ExtResource("10_3jetj")
+expand_mode = 2
+
+[node name="Person2" type="TextureRect" parent="BarPanel/PersonContainer"]
+layout_mode = 2
+texture = ExtResource("11_gwpx3")
+expand_mode = 2
+
+[node name="Person3" type="TextureRect" parent="BarPanel/PersonContainer"]
+layout_mode = 2
+texture = ExtResource("12_sso8l")
+expand_mode = 2
+
+[node name="ActivityContainer" type="VBoxContainer" parent="BarPanel"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 490.0
+offset_right = 471.0
+offset_bottom = 672.0
+
+[node name="baract1" type="Label" parent="BarPanel/ActivityContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "- Activity 1"
+
+[node name="baract2" type="Label" parent="BarPanel/ActivityContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "- Activity 2"
+
+[node name="baract3" type="Label" parent="BarPanel/ActivityContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "- Activity 3"
+
+[node name="PeoplePlace" type="Label" parent="BarPanel"]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 724.0
+offset_right = 410.0
+offset_bottom = 782.0
+theme_override_font_sizes/font_size = 40
+text = "People of Interest"
+
+[node name="BoutiquePanel" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_left = 57.0
+offset_top = 49.0
+offset_right = 544.0
+offset_bottom = 1025.0
+
+[node name="Panel" type="Panel" parent="BoutiquePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -35.0
+offset_top = -35.0
+offset_right = 38.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BoutiqueLabel" type="Label" parent="BoutiquePanel"]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 333.0
+offset_right = 369.0
+offset_bottom = 405.0
+theme_override_font_sizes/font_size = 50
+text = "Boutique"
+horizontal_alignment = 1
+
+[node name="PlaceTexture" type="TextureRect" parent="BoutiquePanel"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = -1.0
+offset_right = 452.0
+offset_bottom = 337.0
+texture = ExtResource("15_0y3o8")
+expand_mode = 1
+
+[node name="Activities" type="Label" parent="BoutiquePanel"]
+layout_mode = 2
+offset_left = 57.0
+offset_top = 423.0
+offset_right = 491.0
+offset_bottom = 481.0
+theme_override_font_sizes/font_size = 40
+text = "Activities:"
+
+[node name="PersonContainer" type="HBoxContainer" parent="BoutiquePanel"]
+layout_mode = 2
+offset_left = 73.0
+offset_top = 822.0
+offset_right = 615.0
+offset_bottom = 983.0
+
+[node name="Person1" type="TextureRect" parent="BoutiquePanel/PersonContainer"]
+layout_mode = 2
+texture = ExtResource("10_3jetj")
+expand_mode = 2
+
+[node name="Person3" type="TextureRect" parent="BoutiquePanel/PersonContainer"]
+layout_mode = 2
+texture = ExtResource("12_sso8l")
+expand_mode = 2
+
+[node name="ActivityContainer" type="VBoxContainer" parent="BoutiquePanel"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 490.0
+offset_right = 471.0
+offset_bottom = 672.0
+
+[node name="boutiqueact1" type="Label" parent="BoutiquePanel/ActivityContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "- Activity 1"
+
+[node name="boutiqueact2" type="Label" parent="BoutiquePanel/ActivityContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "- Activity 2"
+
+[node name="boutiqueact3" type="Label" parent="BoutiquePanel/ActivityContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "- Activity 3"
+
+[node name="boutiqueact4" type="Label" parent="BoutiquePanel/ActivityContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "- Activity 4"
+
+[node name="PeoplePlace" type="Label" parent="BoutiquePanel"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 745.0
+offset_right = 409.0
+offset_bottom = 803.0
+theme_override_font_sizes/font_size = 40
+text = "People of Interest"
+
+[node name="ParkPanel" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_left = 57.0
+offset_top = 49.0
+offset_right = 544.0
+offset_bottom = 1025.0
+
+[node name="Panel" type="Panel" parent="ParkPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -35.0
+offset_top = -35.0
+offset_right = 38.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ParkLabel" type="Label" parent="ParkPanel"]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 333.0
+offset_right = 369.0
+offset_bottom = 405.0
+theme_override_font_sizes/font_size = 50
+text = "Park"
+horizontal_alignment = 1
+
+[node name="PlaceTexture" type="TextureRect" parent="ParkPanel"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = -1.0
+offset_right = 452.0
+offset_bottom = 337.0
+texture = ExtResource("14_cjrlw")
+expand_mode = 1
+
+[node name="Activities" type="Label" parent="ParkPanel"]
+layout_mode = 2
+offset_left = 57.0
+offset_top = 423.0
+offset_right = 491.0
+offset_bottom = 481.0
+theme_override_font_sizes/font_size = 40
+text = "Activities:"
+
+[node name="PersonContainer" type="HBoxContainer" parent="ParkPanel"]
+layout_mode = 2
+offset_left = -7.0
+offset_top = 811.0
+offset_right = 535.0
+offset_bottom = 972.0
+
+[node name="Person1" type="TextureRect" parent="ParkPanel/PersonContainer"]
+layout_mode = 2
+texture = ExtResource("10_3jetj")
+expand_mode = 2
+
+[node name="Person2" type="TextureRect" parent="ParkPanel/PersonContainer"]
+layout_mode = 2
+texture = ExtResource("11_gwpx3")
+expand_mode = 2
+
+[node name="Person3" type="TextureRect" parent="ParkPanel/PersonContainer"]
+layout_mode = 2
+texture = ExtResource("12_sso8l")
+expand_mode = 2
+
+[node name="ActivityContainer" type="VBoxContainer" parent="ParkPanel"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 490.0
+offset_right = 471.0
+offset_bottom = 672.0
+
+[node name="parkact1" type="Label" parent="ParkPanel/ActivityContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "- Activity 1"
+
+[node name="parkact2" type="Label" parent="ParkPanel/ActivityContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "- Activity 2"
+
+[node name="parkact3" type="Label" parent="ParkPanel/ActivityContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "- Activity 3"
+
+[node name="PeoplePlace" type="Label" parent="ParkPanel"]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 724.0
+offset_right = 410.0
+offset_bottom = 782.0
+theme_override_font_sizes/font_size = 40
+text = "People of Interest"
+
+[node name="Transitions" parent="." instance=ExtResource("2_fo1lu")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="BackBtn2" to="." method="_on_back_btn_pressed"]
+[connection signal="mouse_entered" from="HospitalMap" to="." method="_on_hospital_map_mouse_entered"]
+[connection signal="mouse_exited" from="HospitalMap" to="." method="_on_hospital_map_mouse_exited"]
+[connection signal="pressed" from="HospitalMap/HospitalGoBtn" to="." method="_on_hospital_go_btn_pressed"]
+[connection signal="mouse_entered" from="Park" to="." method="_on_park_mouse_entered"]
+[connection signal="mouse_exited" from="Park" to="." method="_on_park_mouse_exited"]
+[connection signal="pressed" from="Park/ParkGoBtn" to="." method="_on_park_go_btn_pressed"]
+[connection signal="mouse_entered" from="Bar" to="." method="_on_bar_mouse_entered"]
+[connection signal="mouse_exited" from="Bar" to="." method="_on_bar_mouse_exited"]
+[connection signal="pressed" from="Bar/BarGoBtn" to="." method="_on_bar_go_btn_pressed"]
+[connection signal="mouse_entered" from="Boutique" to="." method="_on_boutique_mouse_entered"]
+[connection signal="mouse_exited" from="Boutique" to="." method="_on_boutique_mouse_exited"]
+[connection signal="pressed" from="Boutique/BoutiqueGoBtn" to="." method="_on_boutique_go_btn_pressed"]

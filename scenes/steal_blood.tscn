@@ -1,0 +1,91 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8sl1seq0sl2u"]
+
+[ext_resource type="Script" path="res://scenes/steal_blood.gd" id="1_ps47y"]
+[ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="2_jimm1"]
+[ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="3_knmkr"]
+[ext_resource type="PackedScene" uid="uid://m47064cxfa3k" path="res://scenes/transitions.tscn" id="4_6tcat"]
+
+[node name="StealBlood" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ps47y")
+
+[node name="SceneBg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogBox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 223.0
+offset_top = -338.0
+offset_right = -219.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CharPortrait" type="TextureRect" parent="DialogBox"]
+visible = false
+layout_mode = 0
+offset_left = -178.0
+offset_top = -79.0
+offset_right = 166.0
+offset_bottom = 303.0
+texture = ExtResource("2_jimm1")
+expand_mode = 1
+
+[node name="DialogueLabel" parent="DialogBox" instance=ExtResource("3_knmkr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 148.0
+offset_top = 21.0
+offset_right = -55.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 40
+text = "Type here"
+messages = Array[String](["You’re out of options. You never thought you’d find yourself in this situation, but here you are about to steal blood from a hospital.", "No matter the reason, stealing is stealing, if you’re caught it won’t end well for you.", "Going towards room 304, you realize it’s not the same as in the movies, you don’t have an elaborate plan or disguise, a noble motive, or anything like that.", "It’s just you, with your own selfish reasons, hungry and desperate for food. ", "You try not to stand out but everyone seems to be staring at you. Maybe it’s just your imagination, your paranoia kicking in.", "You peek into the room, nobody’s inside. You see a bag full of blood lying on top of a table.", "You enter the room surreptitiously, grab the bag and in a hurry put it under your shirt.", "As you exit the room you cross eyes with the security guard. He takes a good look at you from top to bottom. You avert his gaze and rush to the exit.", "From the corner of your eye, you see him enter the room. A few moments later you hear him shout, “Hey, miss, wait for a second!”.", "But you’re far beyond his reach, you take the stairs and don’t look back.", "-- END OF FIRST TIME STEALING ---", "-- START OF SECOND TIME STEALING ---", "You know it could be dangerous trying to steal blood again, but you can’t thing of any other way to get your hands on that sweet red juice.", "You make your way to room 304 trying not to call attention to yourself.", "You peek inside to see if anyone's aorund.", "There's no one.", "Unfortunately this time there doesn’t seem to be any bags lying around.", "Vesper: There must be at least a vial lying around. I've come too far to go home empty-handed.", "You open a closet at the far end of the room, there’s only a syringe with some blood on it.", "Vesper: It’s not much, but this will do for a quick fix.", "As you reach for the syringe you hear a loud noise behind you.", "The door jams shut.", "The security guard's staring at you with a smirk on his face.", "You’re caught red-handed, there’s no denying it.", "???: Well, well, well… isn’t this my lucky day. Who would’ve thought you’d come back here.", "They say a criminal always comes back to the scene of the crime, but I didn’t think you would actually show up this soon.", "You don’t know what to say, you just look at him, petrified.", "Deckard: Now, now… old Deckard here never forgets a face. 30 years on the force, I knew you were guilty of something the moment I laid my eyes on you.", "I can explain…", "I swear, I...", "Oh, save it. You’re stealing blood, for whatever reason you youngsters have for doing that.   ", "Now why would a pretty little thing like yourself be needing all that blood, I wonder?", "Probably some satanic rite, or maybe one of those internet dares? ", "It’s not like that.", "Isn’t it? ", "Then maybe you should tell your story to my friends at the station, see what they think about it.", "He puts a hand on his holster.", "You don’t see any hesitation, he’s ready to shoot you if you make a wrong move.", "I introduced myself, now it’s only polite that you tell me your name.", "Or would you prefer I keep calling you what you are, a blood thief?", "He’s interested in you, and he doesn’t seem too eager on hitting that call button, maybe you can talk your way out of this.", "Vesper: My name’s Vesper.", "Deckard: I see, Miss Vesper. And now, would you like me to call the police or are you going to be a good girl and make old Deckard here happy?", "Vesper: It depends… I guess. What do you have in mind?", " You see, since I retired from the force I’ve been missing some action. Before it was all about drinking and smoking, going to strip clubs after work, and taking the occasional bribe. ", "But now with the internet and those damn cellphones everywhere, one can’t have any fun. I got alimonies to pay, I can’t be losing my job over trivial stuff like that.", " Tell you what, you make me happy, I’ll even throw in one of those syringes in the deal. Money is always welcome, and I couldn’t help but notice that killer body of yours.", "Now, I was a stud in my age, but nowadays, all you pretty girls want is some old rich guy.", "I’m not some pervert you see, I’m a father of three, two girls and a boy.", "I’m not about to rape you or anything, you do whatever you think is worth not spending some time in prison.", "Deckard: So, having heard that, what do you have in mind? ", "-- OPTIONS ---", "-- THIRD TIME STEALING ---", "As you enter the room, the door closes behind you. You know who it is.", "Deckard: And we’re back here, again.", "Deckard: Are you even trying not to get caught?", "Deckard: Or have you missed me?", "Deckard: I hope you remember our deal.", "Vesper: I do.", "Deckard: Great, then what will it be today?", "-- END OF REPETITION --"])
+
+[node name="NamePanel" type="Panel" parent="DialogBox"]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 129.0
+offset_top = -197.0
+offset_right = -1132.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameLabel" type="Label" parent="DialogBox/NamePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Vesper"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Transitions" parent="." instance=ExtResource("4_6tcat")]
+visible = false
+layout_mode = 1

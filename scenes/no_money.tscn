@@ -1,0 +1,157 @@
+[gd_scene load_steps=5 format=3 uid="uid://e88a2hbla4wb"]
+
+[ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="1_fr38d"]
+[ext_resource type="Script" path="res://scenes/no_money.gd" id="1_v3uw3"]
+[ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="2_ie3aj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yjieb"]
+bg_color = Color(0.623529, 0.164706, 0.152941, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.388235, 0, 0, 1)
+
+[node name="NoMoney" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v3uw3")
+
+[node name="SceneBg" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DeckardOption" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 399.0
+offset_top = -518.0
+offset_right = 699.0
+offset_bottom = 232.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DeckardOption"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Tits" type="Button" parent="DeckardOption/VBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Flash Tits"
+
+[node name="Pussy" type="Button" parent="DeckardOption/VBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Flash crotch"
+
+[node name="Ass" type="Button" parent="DeckardOption/VBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Flash butt"
+
+[node name="ProgressBarControl" type="Control" parent="DeckardOption/VBoxContainer/Ass"]
+anchors_preset = 0
+offset_left = -81.0
+offset_top = -126.0
+offset_right = -41.0
+offset_bottom = -86.0
+
+[node name="ProgressBar" type="ProgressBar" parent="DeckardOption/VBoxContainer/Ass/ProgressBarControl"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+offset_left = 1.0
+offset_top = 186.0
+offset_right = 301.0
+offset_bottom = 216.0
+rotation = 4.71239
+theme_override_styles/fill = SubResource("StyleBoxFlat_yjieb")
+max_value = 5.0
+step = 1.0
+value = 5.0
+show_percentage = false
+
+[node name="DeckardOptionTimer" type="Timer" parent="DeckardOption"]
+wait_time = 5.0
+one_shot = true
+
+[node name="DialogBox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 223.0
+offset_top = -338.0
+offset_right = -219.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CharPortrait" type="TextureRect" parent="DialogBox"]
+visible = false
+layout_mode = 0
+offset_left = -178.0
+offset_top = -79.0
+offset_right = 166.0
+offset_bottom = 303.0
+texture = ExtResource("1_fr38d")
+expand_mode = 1
+
+[node name="DialogueLabel" parent="DialogBox" instance=ExtResource("2_ie3aj")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 148.0
+offset_top = 21.0
+offset_right = -55.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 40
+text = "Type here"
+messages = Array[String](["You know what’s worse than a thief?", "He hits his fist on the table. ", "A broke one trying to play dumb. I can barely buy a sandwich with that.", "You thought that would work?  ", "Haven’t I made myself clear? It’s either money, your body, or jail.", "I’m not gonna go easy on you just because you’re penniless, that’s your own damn fault.", "I gave you options and you’re trying to trick me?", "Now I won’t let you go without you either showing me those tits, that crotch or that butt of yours. ", "And I don’t mean through your underwear.", "Either accept your punishment or be prepared to see the sun rise behind bars.", "He’s ready to push the call button.", "What will it be?", "-- END OF OPTIONS --", "-- SHOW TITS ---", "Without saying anything you turn your head in shame and roll up your blouse, exposing your tits, briefly.", "Vesper: Satisfied?", "Deckard: Yes, now get out of here. You’re pissing me off.", "You cover yourself up and hurry to the exit before he decides to change his mind.", "-- END TITS ---", "-- FLASH PUSSY --", "Without a word you turn your head in shame and roll down your pants and panties to your thighs. Exposing your crotch, briefly.", "Vesper: Satisfied?", "Deckard: Yes, now get out of here. You’re pissing me off.", "You cover yourself up and hurry to the exit before he decides to change his mind.", "-- END FLASH PUSSY ---", "Feeling cornered you turn around and roll down your pants and panties, exposing your butt, briefly.", "Vesper: Satisfied?", "Deckard: Yes, now get out of here. You’re pissing me off.", "You cover yourself up and hurry to the exit before he decides to change his mind.", "-- END OF FLASH BUTT --"])
+
+[node name="NamePanel" type="Panel" parent="DialogBox"]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 129.0
+offset_top = -197.0
+offset_right = -1132.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameLabel" type="Label" parent="DialogBox/NamePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Vesper"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="DeckardOption/VBoxContainer/Tits" to="." method="_on_tits_pressed"]
+[connection signal="pressed" from="DeckardOption/VBoxContainer/Pussy" to="." method="_on_pussy_pressed"]
+[connection signal="pressed" from="DeckardOption/VBoxContainer/Ass" to="." method="_on_ass_pressed"]
+[connection signal="timeout" from="DeckardOption/DeckardOptionTimer" to="." method="_on_deckard_option_timer_timeout"]

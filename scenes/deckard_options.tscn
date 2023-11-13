@@ -1,0 +1,185 @@
+[gd_scene load_steps=6 format=3 uid="uid://b735hwkq25ij5"]
+
+[ext_resource type="Script" path="res://scenes/deckard_options.gd" id="1_d11cv"]
+[ext_resource type="Texture2D" uid="uid://dv5gm07lhe4bi" path="res://assets/hospital_storyboard/hospital_scene_13.png" id="1_u80yb"]
+[ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="3_27njj"]
+[ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="4_mbs0g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ewtq3"]
+bg_color = Color(0.623529, 0.164706, 0.152941, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.388235, 0, 0, 1)
+
+[node name="DeckardOptions" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d11cv")
+
+[node name="SceneBg" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_u80yb")
+
+[node name="DeckardOption" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 381.0
+offset_top = -536.0
+offset_right = 738.0
+offset_bottom = 214.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DeckardOption"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Money" type="Button" parent="DeckardOption/VBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Give him your money ($30+)"
+
+[node name="LapDance" type="Button" parent="DeckardOption/VBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+disabled = true
+text = "??? (Lwd 20+)"
+
+[node name="Handjob" type="Button" parent="DeckardOption/VBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+disabled = true
+text = "??? (Lwd 40+)"
+
+[node name="BralessDance" type="Button" parent="DeckardOption/VBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+disabled = true
+text = "??? (Lwd 60+)"
+
+[node name="Blowjob" type="Button" parent="DeckardOption/VBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+disabled = true
+text = "??? (Lwd 80+)"
+
+[node name="Anal" type="Button" parent="DeckardOption/VBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+disabled = true
+text = "??? (Lwd 100)"
+
+[node name="ProgressBarControl" type="Control" parent="DeckardOption/VBoxContainer/Anal"]
+anchors_preset = 0
+offset_left = -81.0
+offset_top = -126.0
+offset_right = -41.0
+offset_bottom = -86.0
+
+[node name="ProgressBar" type="ProgressBar" parent="DeckardOption/VBoxContainer/Anal/ProgressBarControl"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+offset_left = 1.0
+offset_top = -34.0
+offset_right = 301.0
+offset_bottom = -4.0
+rotation = 4.71239
+theme_override_styles/fill = SubResource("StyleBoxFlat_ewtq3")
+max_value = 10.0
+step = 1.0
+value = 10.0
+show_percentage = false
+
+[node name="DeckardOptionTimer" type="Timer" parent="DeckardOption"]
+wait_time = 10.0
+one_shot = true
+
+[node name="DialogBox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 223.0
+offset_top = -338.0
+offset_right = -219.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CharPortrait" type="TextureRect" parent="DialogBox"]
+visible = false
+layout_mode = 0
+offset_left = -178.0
+offset_top = -79.0
+offset_right = 166.0
+offset_bottom = 303.0
+texture = ExtResource("3_27njj")
+expand_mode = 1
+
+[node name="DialogueLabel" parent="DialogBox" instance=ExtResource("4_mbs0g")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 148.0
+offset_top = 21.0
+offset_right = -55.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 40
+text = "Type here"
+messages = Array[String](["Deckard: Ah, now you’re talking. I’ll be having all your money then.", "A deal’s a deal, take one of those blood vials and scram. ", "He unlocks the door and sees you out. ", "-- END OF GIVE YOUR MONEY --"])
+
+[node name="NamePanel" type="Panel" parent="DialogBox"]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 129.0
+offset_top = -197.0
+offset_right = -1132.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameLabel" type="Label" parent="DialogBox/NamePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Vesper"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="DeckardOption/VBoxContainer/Money" to="." method="_on_money_pressed"]
+[connection signal="pressed" from="DeckardOption/VBoxContainer/LapDance" to="." method="_on_lap_dance_pressed"]
+[connection signal="pressed" from="DeckardOption/VBoxContainer/Handjob" to="." method="_on_handjob_pressed"]
+[connection signal="pressed" from="DeckardOption/VBoxContainer/BralessDance" to="." method="_on_braless_dance_pressed"]
+[connection signal="pressed" from="DeckardOption/VBoxContainer/Blowjob" to="." method="_on_blowjob_pressed"]
+[connection signal="pressed" from="DeckardOption/VBoxContainer/Anal" to="." method="_on_anal_pressed"]
+[connection signal="timeout" from="DeckardOption/DeckardOptionTimer" to="." method="_on_deckard_option_timer_timeout"]

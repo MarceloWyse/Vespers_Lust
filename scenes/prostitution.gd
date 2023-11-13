@@ -69,9 +69,11 @@ func _ready():
 	and SaveManager.save.player_status["lewdness"] < 100:
 		dialogue_label.jump_to(498)
 		SaveManager.save.player_status["lewdness"] += 6
-	elif SaveManager.save.player_status["lewdness"] >= 100:
+	elif not SaveManager.save.sixth_prostitution \
+	and SaveManager.save.player_status["lewdness"] >= 100:
+		SaveManager.save.sixth_prostitution = true
 		SaveManager.save.anal_whore = true
-		dialogue_label.jump_to(502)
+		dialogue_label.jump_to(503)
 
 func _process(delta):
 	
@@ -119,7 +121,7 @@ func _process(delta):
 	if dialogue_label.message_id == 501:
 		scene_finished = true
 
-	if dialogue_label.message_id == 507:
+	if dialogue_label.message_id == 505:
 		scene_finished = true
 
 	if scene_finished:
@@ -129,6 +131,10 @@ func _process(delta):
 			get_tree().change_scene_to_packed(SceneTracker.scene_3)
 		if SceneTracker.scene_3 == null:
 			SaveManager.save.day += 1
+			SaveManager.save.bar["visited"] = false
+			SaveManager.save.park["visited"] = false
+			SaveManager.save.boutique["visited"] = false
+			SaveManager.save.hospital["visited"] = false
 			SaveManager.save.same_day = false
 			get_tree().change_scene_to_file("res://scenes/player_hub.tscn")
 

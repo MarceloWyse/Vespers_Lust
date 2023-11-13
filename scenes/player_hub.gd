@@ -18,26 +18,19 @@ extends Control
 @onready var texture_rect = $ScheduleButton/ActivitiesPanel/GridContainer/TextureRect
 @onready var journalist = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Journalist
 @onready var bartender = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Bartender
-@onready var park = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Park
 @onready var sleep = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Sleep
-@onready var hunt = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Hunt
 @onready var run = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Run
 @onready var swim = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Swim
 @onready var boxing = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Boxing
-@onready var drink = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Drink
 @onready var masturbation = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Masturbation
 @onready var prostitution = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Prostitution
-@onready var hospital = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Hospital
-@onready var boutique = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Boutique
-@onready var weapons_shop = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/WeaponsShop
 @onready var speaking = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Speaking
-@onready var bar = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Bar
-@onready var gamble = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Gamble
 @onready var apply = $ScheduleButton/ActivitiesPanel/Apply
 @onready var weather_texture = $Calendar/WeatherTexture
 @onready var transition = $Transition
 @onready var lwd_bar = $AttributesPanel/AttributesGrid/LwdBar
 @onready var transitions = $Transitions
+@onready var relax = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Relax
 
 @export var e_texture : Texture 
 @export var d_texture : Texture 
@@ -64,6 +57,8 @@ extends Control
 @onready var grid_container = $ScheduleButton/ActivitiesPanel/GridContainer
 @onready var study_2 = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Study2
 @onready var texture_rect_2 = $ScheduleButton/ActivitiesPanel/GridContainer/TextureRect2
+@onready var vesper_top = $Vesper/Top
+@onready var vesper_bottom = $Vesper/Bottom
 
 var hunger = SaveManager.save.player_status["hunger"]
 var money = SaveManager.save.player_status["money"]
@@ -80,6 +75,9 @@ var can_go_out = true
 var day = SaveManager.save.day
 
 func _ready():
+	vesper_top.texture = SaveManager.save.clothing["top"]
+	vesper_bottom.texture = SaveManager.save.clothing["bottom"]
+	
 	if SaveManager.save.same_day == false:
 		var chosen_weather = weather.pick_random()
 		SaveManager.save.weather = chosen_weather
@@ -93,7 +91,11 @@ func _ready():
 			weather_texture.texture = load("res://assets/img/rainy.png")
 		day_label.text = "March %s - %s" %[day, chosen_weather]
 	else:
-		day_label.text = "March %s - %s" %[day, SaveManager.save.weather]	
+		day_label.text = "March %s - %s" %[day, SaveManager.save.weather]
+		if SaveManager.save.weather == "sunny":
+			texture_rect.texture = sleep.texture_normal
+			can_go_out = false
+			weather_texture.texture = load("res://assets/img/sunny.webp")
 	
 	SceneTracker.scene_1 = null
 	SceneTracker.scene_2 = null
@@ -105,13 +107,15 @@ func _ready():
 	speed_bar.value = spd
 	cha_bar.value = cha
 	lwd_bar.value = lewdness
-	money_label.text = str(money)
+	money_label.text = "$" + str(money)
 	
 #	transition.show()
 #	var my_tween = get_tree().create_tween()
 #	my_tween.tween_property(transition, "modulate", Color(0, 0, 0, 0), 2)
 #	await my_tween.finished
 	transitions.fade_to_image()
+	
+	save_status()
 
 func _process(delta):
 	if texture_rect.texture == null or texture_rect_2.texture == null \
@@ -120,7 +124,6 @@ func _process(delta):
 	elif texture_rect.texture != null and texture_rect_2.texture != null \
 	and texture_rect_3.texture != null:
 		apply.disabled = false
-	
 	
 	lwd_bar.tooltip_text = str(lwd_bar.value)
 	
@@ -227,6 +230,11 @@ func _process(delta):
 
 func _on_gear_button_pressed():
 	settings.visible = !settings.visible
+	activities_panel.hide()
+
+func _on_schedule_button_pressed():
+	activities_panel.visible = !activities_panel.visible
+	settings.hide()
 
 func _on_test_button_pressed():
 	if vit_bar.value != 100:
@@ -290,21 +298,6 @@ func _on_decrease_sanity_pressed():
 	if sanity > 0:
 		sanity -= 10
 
-func _on_save_pressed():
-	SaveManager.save.player_status["hunger"] = hunger_bar.value
-#	SaveManager.save.player_status["money"]
-	SaveManager.save.player_status["lewdness"] = lewdness
-	SaveManager.save.player_status["sanity"] = sanity
-	SaveManager.save.bar_values["str"] = str_bar.value
-	SaveManager.save.bar_values["vit"] = vit_bar.value
-	SaveManager.save.bar_values["int"] = int_bar.value
-	SaveManager.save.bar_values["spd"] = speed_bar.value
-	SaveManager.save.bar_values["cha"] = cha_bar.value
-	SaveManager.save_game()
-
-func _on_schedule_button_pressed():
-	activities_panel.visible = !activities_panel.visible
-
 func _on_study_2_pressed():
 	for child in grid_container.get_children():
 		if child.texture == null:
@@ -342,25 +335,13 @@ func _on_bartender_pressed():
 		if child.texture == null:
 			child.texture = bartender.texture_normal
 			return
-
-func _on_park_pressed():
-	for child in grid_container.get_children():
-		if child.texture == null:
-			child.texture = park.texture_normal
-			return
 			
 func _on_sleep_pressed():
 	for child in grid_container.get_children():
 		if child.texture == null:
 			child.texture = sleep.texture_normal
 			return
-			
-func _on_hunt_pressed():
-	for child in grid_container.get_children():
-		if child.texture == null:
-			child.texture = hunt.texture_normal
-			return
-			
+		
 func _on_run_pressed():
 	for child in grid_container.get_children():
 		if child.texture == null:
@@ -378,12 +359,6 @@ func _on_boxing_pressed():
 		if child.texture == null:
 			child.texture = boxing.texture_normal
 			return
-			
-func _on_drink_pressed():
-	for child in grid_container.get_children():
-		if child.texture == null:
-			child.texture = drink.texture_normal
-			return
 
 func _on_masturbation_pressed():
 	for child in grid_container.get_children():
@@ -396,41 +371,17 @@ func _on_prostitution_pressed():
 		if child.texture == null:
 			child.texture = prostitution.texture_normal
 			return
-			
-func _on_hospital_pressed():
-	for child in grid_container.get_children():
-		if child.texture == null:
-			child.texture = hospital.texture_normal
-			return
-			
-func _on_boutique_pressed():
-	for child in grid_container.get_children():
-		if child.texture == null:
-			child.texture = boutique.texture_normal
-			return
-			
-func _on_weapons_shop_pressed():
-	for child in grid_container.get_children():
-		if child.texture == null:
-			child.texture = weapons_shop.texture_normal
-			return
-			
+
 func _on_speaking_pressed():
 	for child in grid_container.get_children():
 		if child.texture == null:
 			child.texture = speaking.texture_normal
 			return
-			
-func _on_bar_pressed():
+
+func _on_relax_pressed():
 	for child in grid_container.get_children():
 		if child.texture == null:
-			child.texture = bar.texture_normal
-			return
-			
-func _on_gamble_pressed():
-	for child in grid_container.get_children():
-		if child.texture == null:
-			child.texture = gamble.texture_normal
+			child.texture = relax.texture_normal
 			return
 
 func _on_apply_pressed():
@@ -439,40 +390,27 @@ func _on_apply_pressed():
 			if child.name == "TextureRect":
 				if child.texture.resource_path.contains("studying"):
 					SceneTracker.scene_1 = load("res://scenes/studying.tscn")
+				if child.texture.resource_path.contains("relax"):
+					SceneTracker.scene_1 = load("res://scenes/relax.tscn")
 				if child.texture.resource_path.contains("journalist"):
 					SceneTracker.scene_1 = load("res://scenes/journalist.tscn")
 				if child.texture.resource_path.contains("bartender"):
 					SceneTracker.scene_1 = load("res://scenes/bartender.tscn")
-				if child.texture.resource_path.contains("park"):
-					SceneTracker.scene_1 = load("res://scenes/park.tscn")
 				if child.texture.resource_path.contains("sleep"):
 					SceneTracker.scene_1 = load("res://scenes/sleep.tscn")
-				if child.texture.resource_path.contains("hunt"):
-					SceneTracker.scene_1 = load("res://scenes/hunt.tscn")
 				if child.texture.resource_path.contains("jogging"):
 					SceneTracker.scene_1 = load("res://scenes/run.tscn")
 				if child.texture.resource_path.contains("swim"):
 					SceneTracker.scene_1 = load("res://scenes/swim.tscn")
 				if child.texture.resource_path.contains("boxing"):
 					SceneTracker.scene_1 = load("res://scenes/box.tscn")
-				if child.texture.resource_path.contains("liquor"):
-					SceneTracker.scene_1 = load("res://scenes/drink.tscn")
 				if child.texture.resource_path.contains("masturbation"):
 					SceneTracker.scene_1 = load("res://scenes/masturbation.tscn")
 				if child.texture.resource_path.contains("prostitution"):
 					SceneTracker.scene_1 = load("res://scenes/prostitution.tscn")
-				if child.texture.resource_path.contains("hospital"):
-					SceneTracker.scene_1 = load("res://scenes/hospital.tscn")
-				if child.texture.resource_path.contains("boutique"):
-					SceneTracker.scene_1 = load("res://scenes/boutique.tscn")
-				if child.texture.resource_path.contains("knife"):
-					SceneTracker.scene_1 = load("res://scenes/weapons.tscn")
 				if child.texture.resource_path.contains("mirror"):
 					SceneTracker.scene_1 = load("res://scenes/speech.tscn")
-				if child.texture.resource_path.contains("bar-counter"):
-					SceneTracker.scene_1 = load("res://scenes/bar.tscn")
-				if child.texture.resource_path.contains("gamble"):
-					SceneTracker.scene_1 = load("res://scenes/gamble.tscn")
+
 			if child.name == "TextureRect2":
 				if child.texture.resource_path.contains("studying"):
 					SceneTracker.scene_2 = load("res://scenes/studying.tscn")
@@ -480,75 +418,63 @@ func _on_apply_pressed():
 					SceneTracker.scene_2 = load("res://scenes/journalist.tscn")
 				if child.texture.resource_path.contains("bartender"):
 					SceneTracker.scene_2 = load("res://scenes/bartender.tscn")
-				if child.texture.resource_path.contains("park"):
-					SceneTracker.scene_2 = load("res://scenes/park.tscn")
 				if child.texture.resource_path.contains("sleep"):
 					SceneTracker.scene_2 = load("res://scenes/sleep.tscn")
-				if child.texture.resource_path.contains("hunt"):
-					SceneTracker.scene_2 = load("res://scenes/hunt.tscn")
 				if child.texture.resource_path.contains("jogging"):
 					SceneTracker.scene_2 = load("res://scenes/run.tscn")
 				if child.texture.resource_path.contains("swim"):
 					SceneTracker.scene_2 = load("res://scenes/swim.tscn")
 				if child.texture.resource_path.contains("boxing"):
 					SceneTracker.scene_2 = load("res://scenes/box.tscn")
-				if child.texture.resource_path.contains("liquor"):
-					SceneTracker.scene_2 = load("res://scenes/drink.tscn")
 				if child.texture.resource_path.contains("masturbation"):
 					SceneTracker.scene_2 = load("res://scenes/masturbation.tscn")
 				if child.texture.resource_path.contains("prostitution"):
 					SceneTracker.scene_2 = load("res://scenes/prostitution.tscn")
-				if child.texture.resource_path.contains("hospital"):
-					SceneTracker.scene_2 = load("res://scenes/hospital.tscn")
-				if child.texture.resource_path.contains("boutique"):
-					SceneTracker.scene_2 = load("res://scenes/boutique.tscn")
-				if child.texture.resource_path.contains("knife"):
-					SceneTracker.scene_2 = load("res://scenes/weapons.tscn")
 				if child.texture.resource_path.contains("mirror"):
 					SceneTracker.scene_2 = load("res://scenes/speech.tscn")
-				if child.texture.resource_path.contains("bar-counter"):
-					SceneTracker.scene_2 = load("res://scenes/bar.tscn")
-				if child.texture.resource_path.contains("gamble"):
-					SceneTracker.scene_2 = load("res://scenes/gamble.tscn")
+				if child.texture.resource_path.contains("relax"):
+					SceneTracker.scene_2 = load("res://scenes/relax.tscn")
+
 			if child.name == "TextureRect3":
 				if child.texture.resource_path.contains("studying"):
 					SceneTracker.scene_3 = load("res://scenes/studying.tscn")
+				if child.texture.resource_path.contains("relax"):
+					SceneTracker.scene_3 = load("res://scenes/relax.tscn")
 				if child.texture.resource_path.contains("journalist"):
 					SceneTracker.scene_3 = load("res://scenes/journalist.tscn")
 				if child.texture.resource_path.contains("bartender"):
 					SceneTracker.scene_3 = load("res://scenes/bartender.tscn")
-				if child.texture.resource_path.contains("park"):
-					SceneTracker.scene_3 = load("res://scenes/park.tscn")
 				if child.texture.resource_path.contains("sleep"):
 					SceneTracker.scene_3 = load("res://scenes/sleep.tscn")
-				if child.texture.resource_path.contains("hunt"):
-					SceneTracker.scene_3 = load("res://scenes/hunt.tscn")
 				if child.texture.resource_path.contains("jogging"):
 					SceneTracker.scene_3 = load("res://scenes/run.tscn")
 				if child.texture.resource_path.contains("swim"):
 					SceneTracker.scene_3 = load("res://scenes/swim.tscn")
 				if child.texture.resource_path.contains("boxing"):
 					SceneTracker.scene_3 = load("res://scenes/box.tscn")
-				if child.texture.resource_path.contains("liquor"):
-					SceneTracker.scene_3 = load("res://scenes/drink.tscn")
 				if child.texture.resource_path.contains("masturbation"):
 					SceneTracker.scene_3 = load("res://scenes/masturbation.tscn")
 				if child.texture.resource_path.contains("prostitution"):
 					SceneTracker.scene_3 = load("res://scenes/prostitution.tscn")
-				if child.texture.resource_path.contains("hospital"):
-					SceneTracker.scene_3 = load("res://scenes/hospital.tscn")
-				if child.texture.resource_path.contains("boutique"):
-					SceneTracker.scene_3 = load("res://scenes/boutique.tscn")
-				if child.texture.resource_path.contains("knife"):
-					SceneTracker.scene_3 = load("res://scenes/weapons.tscn")
 				if child.texture.resource_path.contains("mirror"):
 					SceneTracker.scene_3 = load("res://scenes/speech.tscn")
-				if child.texture.resource_path.contains("bar-counter"):
-					SceneTracker.scene_3 = load("res://scenes/bar.tscn")
-				if child.texture.resource_path.contains("gamble"):
-					SceneTracker.scene_3 = load("res://scenes/gamble.tscn")
-	get_tree().change_scene_to_packed(SceneTracker.scene_1)
 
+	get_tree().change_scene_to_packed(SceneTracker.scene_1)
 
 func _on_map_button_pressed():
 	get_tree().change_scene_to_file("res://scenes/map_room.tscn")
+
+func save_status():
+	SaveManager.save.player_status["hunger"] = hunger_bar.value
+	SaveManager.save.player_status["money"]
+	SaveManager.save.player_status["lewdness"] = lewdness
+	SaveManager.save.player_status["sanity"] = sanity
+	SaveManager.save.bar_values["str"] = str_bar.value
+	SaveManager.save.bar_values["vit"] = vit_bar.value
+	SaveManager.save.bar_values["int"] = int_bar.value
+	SaveManager.save.bar_values["spd"] = speed_bar.value
+	SaveManager.save.bar_values["cha"] = cha_bar.value
+	SaveManager.save_game()
+
+func _on_wardrobe_pressed():
+	get_tree().change_scene_to_file("res://scenes/wardrobe.tscn")

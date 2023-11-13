@@ -1,0 +1,83 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckk150t157wyj"]
+
+[ext_resource type="Script" path="res://Handjob.gd" id="1_w0ca2"]
+[ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="2_grckw"]
+[ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="3_egk2y"]
+
+[node name="Handjob" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w0ca2")
+
+[node name="SceneBg" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogBox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 223.0
+offset_top = -338.0
+offset_right = -219.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CharPortrait" type="TextureRect" parent="DialogBox"]
+visible = false
+layout_mode = 0
+offset_left = -178.0
+offset_top = -79.0
+offset_right = 166.0
+offset_bottom = 303.0
+texture = ExtResource("2_grckw")
+expand_mode = 1
+
+[node name="DialogueLabel" parent="DialogBox" instance=ExtResource("3_egk2y")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 148.0
+offset_top = 21.0
+offset_right = -55.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 40
+text = "Type here"
+messages = Array[String](["Deckard: So what’s it gonna be this time?", "Deckard: Another dance?", "Vesper: I’m tired of dancing… I was thinking of something more… ", "You swallow some saliva.", "Vesper: “Manual”.", "Deckard: Oh… I see. As usual, I’m just gonna sit here, you do whatever you feel like doing.", "He sits down with a nonchalant expression on his face.", "Vesper: You’re not going to make it easier for me, are you?", "Deckard: I certainly won’t. Why should I? You want something, you got to work for it.", "This blood here is supposed to benefit all of Grimshire’s population in times of need. And here you are, trying to steal it for your own selfish reasons.", "Deckard: Now, a little scolding is in due form, wouldn’t you agree?", "You start caressing his member through his pants first, getting to know the territory.", "You learned from last time that being shy won’t get you anywhere with him, he’s too experienced.", "Vesper: Are you going to get hard for me this time, Mr. Deckard?", "Deckard: I sure hope so, let me see that pretty face of yours while you touch me.", "You look straight at his eyes while you unbutton his pants.", "Deckard: Such a pretty face, you could’ve been a model.", "But here you are, stealing blood and stroking a stranger’s dick. Life’s a bitch, huh?", "Vesper: It sure is.", "At least he’s much harder than last time, talking to him makes him harder it seems.", " He prefers the talking than just the actual stroking. Everytime you stay silent for too long you feel him getting limper.", "Vesper: Would you like me to touch you under your briefs? Would that excite you even more?", "You start to slide your hand inside his underpants, feeling his hot cock brush against your hand.", "You’re reluctant to admit it, but making him hard is exciting you as well.", "Deckard: Oh yes, that small soft hand, feels like heaven.", "Vesper: I’m glad you’re enjoying it. If I do this for you, will you let me take a few more syringes today?", "Deckard: Sure, one more won’t hurt. Convince me you’re enjoying it as well, If you don’t want to do this, then it’s a waste of both our time.", "Vesper: I wouldn’t be doing it if I didn’t want to… ", "You pull his briefs to the side and look at his hard cock.", "Vesper: See? I’m not afraid. A deal’s a deal, you let me have what I want, I’ll give you what you want.", "You start caressing his balls and biting your lips. ", "The sight excites him.", "Vesper: I can feel your cock getting harder and harder, are you feeling good?", "Deckard: I’m feeling great. If you keep stroking it like that…", "Vesper: If I keep stroking it… will you cum for me?", "Deckard: Yes!", "Vesper: Then look at me while I play with your big cock.", "You start stroking his dick back and forth, slower, faster,   ", "Vesper: Ah, your cock feels so good, I could do this all day.", "Vesper: Maybe I’ll visit more often just to give you a freebie?", "He was already hard as a rock, but hearing that is too much even for him.", "No matter the age, or experience, a man is still a man, and you are an impressive woman.", "Deckard: I’m cumming!!!", "He cums all over your face,", "You feel his hot milk dripping down your cheeks and into your mouth", "He looks pleased.", "Vesper: Wow, you came a lot. Were you saving it up for me?", "Deckard: I sure was. If you keep making this old man happy I might have to go see my cardiologist.  ", "You grab some paper tissue from the table and clean yourself up.", "Deckard: Alright, here you are. You make good use of those syringes, whatever you do with them, You know where to find me. ", "He unlocks the door as usual, and you leave with your syringes.", "-- END OF HANDJOB ---"])
+
+[node name="NamePanel" type="Panel" parent="DialogBox"]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 129.0
+offset_top = -197.0
+offset_right = -1132.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameLabel" type="Label" parent="DialogBox/NamePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Vesper"
+horizontal_alignment = 1
+vertical_alignment = 1

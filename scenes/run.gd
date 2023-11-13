@@ -12,7 +12,7 @@ func _ready():
 		dialogue_label.start_dialogue()
 		SaveManager.save.visited_activities["running"] = true
 	elif SaveManager.save.visited_activities["running"]:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_SLEEP_2.png")
+		scene_texture.texture = load("res://assets/thumbnails/run_thumb3.png")
 		transitions.fade_to_image()
 		dialogue_label.jump_to(14)
 
@@ -33,10 +33,15 @@ func _process(delta):
 			get_tree().change_scene_to_packed(SceneTracker.scene_3)
 		if SceneTracker.scene_3 == null:
 			SaveManager.save.day += 1
+			SaveManager.save.bar["visited"] = false
+			SaveManager.save.park["visited"] = false
+			SaveManager.save.boutique["visited"] = false
+			SaveManager.save.hospital["visited"] = false
 			SaveManager.save.same_day = false
 			get_tree().change_scene_to_file("res://scenes/player_hub.tscn")
 
 func _exit_tree():
+	SaveManager.save.bar_values["spd"] += 1
 	if SceneTracker.scene_1 == null and SceneTracker.scene_2 != null:
 		SceneTracker.scene_2 = null
 	elif SceneTracker.scene_2 == null and SceneTracker.scene_3 != null:

@@ -1,4 +1,9 @@
-[gd_scene format=3 uid="uid://dkvu364up1dy3"]
+[gd_scene load_steps=5 format=3 uid="uid://dkvu364up1dy3"]
+
+[ext_resource type="Script" path="res://scenes/speech.gd" id="1_iixle"]
+[ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="2_qu1sv"]
+[ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="3_5yhp5"]
+[ext_resource type="PackedScene" uid="uid://m47064cxfa3k" path="res://scenes/transitions.tscn" id="4_jw4fu"]
 
 [node name="Speech" type="Control"]
 layout_mode = 3
@@ -7,3 +12,76 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_iixle")
+
+[node name="SceneTexture" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogBox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 223.0
+offset_top = -338.0
+offset_right = -219.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CharPortrait" type="TextureRect" parent="DialogBox"]
+visible = false
+layout_mode = 0
+offset_left = -178.0
+offset_top = -79.0
+offset_right = 166.0
+offset_bottom = 303.0
+texture = ExtResource("2_qu1sv")
+expand_mode = 1
+
+[node name="DialogueLabel" parent="DialogBox" instance=ExtResource("3_5yhp5")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 148.0
+offset_top = 21.0
+offset_right = -55.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 40
+text = "Type here"
+messages = Array[String](["Standing in front of the mirror you realize how much you’ve changed.", "You always felt like an ugly duckling in school. The nerdy girl, lost in her own fantasy world, writing fantastic stories about places and people that could only exist in your mind.", "But something is different now, not only do you look different, you also feel different.", "You can’t quite put your finger on it, but it’s a mixture of confidence, mystery, and alluring.", "It’s like your words have a different weight than before, and if you really focus, you can convince people of the most ridiculous things.", "You wonder if this is what a life coach or a cult leader feels like… You know what you’re saying is bullshit, but you say it in a way that is so convincing you start to believe it yourself.", "I might as well train this skill, it may come in handy when I have to deal with people.", "You stand in front of the mirror and start practicing your speech.", "You feel more confident and charismatic.", "-- END OF SPEECH 1 ---", "-- BEGIN SPEECH 2 ---", "The more you practice your speech the more confident you become.", "They say charisma can’t be bought, but it sure can be honed… if you’re a vampire, at least.", "--- END OF SPEECH 2 ---"])
+
+[node name="NamePanel" type="Panel" parent="DialogBox"]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 129.0
+offset_top = -197.0
+offset_right = -1132.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameLabel" type="Label" parent="DialogBox/NamePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Vesper"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Transitions" parent="." instance=ExtResource("4_jw4fu")]
+layout_mode = 1

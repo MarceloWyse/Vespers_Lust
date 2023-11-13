@@ -1,4 +1,11 @@
-[gd_scene format=3 uid="uid://0iqjnh77lxer"]
+[gd_scene load_steps=7 format=3 uid="uid://0iqjnh77lxer"]
+
+[ext_resource type="Script" path="res://scenes/hospital.gd" id="1_ae0eh"]
+[ext_resource type="Texture2D" uid="uid://cfgsc6tuwc8m1" path="res://assets/img/hospital_front.jpg" id="2_mods5"]
+[ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="3_cuvw5"]
+[ext_resource type="Texture2D" uid="uid://bh1f0stgdh4qo" path="res://assets/characters/nurse.png" id="3_u6tgc"]
+[ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="4_b0h87"]
+[ext_resource type="PackedScene" uid="uid://m47064cxfa3k" path="res://scenes/transitions.tscn" id="5_cw6y7"]
 
 [node name="Hospital" type="Control"]
 layout_mode = 3
@@ -7,3 +14,124 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ae0eh")
+
+[node name="BgTexture" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_mods5")
+
+[node name="Nurse" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 727.0
+offset_top = 266.0
+offset_right = 1145.0
+offset_bottom = 809.0
+texture = ExtResource("3_u6tgc")
+
+[node name="DialogBox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 223.0
+offset_top = -338.0
+offset_right = -219.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CharPortrait" type="TextureRect" parent="DialogBox"]
+visible = false
+layout_mode = 0
+offset_left = -178.0
+offset_top = -79.0
+offset_right = 166.0
+offset_bottom = 303.0
+texture = ExtResource("3_cuvw5")
+expand_mode = 1
+
+[node name="DialogueLabel" parent="DialogBox" instance=ExtResource("4_b0h87")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 148.0
+offset_top = 21.0
+offset_right = -55.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 40
+text = "Type here"
+messages = Array[String](["You arrive at the hospital.", "There's no one at the reception desk.", "-- END OF CONVERSATION --", "-- TALK TO A NURSE ---", "A tall red-haired nurse approaches you and starts talking, she barely looks at you.", "Nurse: Hello, honey. We have a lot on our plate today. If you’re feeling sick fill out a form and wait until someone calls your name.", "Nurse: We’re also in a shortage of blood, so if you would like to donate take the elevator and head for room 304.", "She doesn’t wait for your answer and leaves.", "She seems busy, you should leave her alone.", "-- END OF TALK 1 ---", "Haven’t I seen you before?", "She looks firmly at your face.", "I guess not… ", "Sorry for staring at you, but we had some blood stolen from the hospital recently. The whole staff is in high alert.", "Who would do such a thing? With so many poor souls in need of a blood transfusion… ", "Having said that she leaves in a haste, murmuring something about too much work on her hands.", "-- END OF TALK 2 ---"])
+
+[node name="NamePanel" type="Panel" parent="DialogBox"]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 129.0
+offset_top = -197.0
+offset_right = -1132.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameLabel" type="Label" parent="DialogBox/NamePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Vesper"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Transitions" parent="." instance=ExtResource("5_cw6y7")]
+visible = false
+layout_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 164.0
+offset_right = 522.0
+offset_bottom = 540.0
+theme_override_constants/separation = 30
+
+[node name="TalkBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Talk to a nurse"
+
+[node name="StealBloodBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Steal blood"
+
+[node name="BuyBloodBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+disabled = true
+text = "??? 
+(need information)"
+
+[node name="HomeBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Go back home"
+
+[connection signal="pressed" from="VBoxContainer/TalkBtn" to="." method="_on_talk_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/StealBloodBtn" to="." method="_on_steal_blood_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/HomeBtn" to="." method="_on_home_btn_pressed"]
