@@ -1,17 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://xk81m1kbkasv"]
+[gd_scene load_steps=3 format=3 uid="uid://dwuhbaedngkvi"]
 
-[ext_resource type="Script" path="res://scenes/anal.gd" id="1_23bd0"]
-[ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="1_numii"]
-[ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="2_jqqtb"]
+[ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="1_t6wcy"]
+[ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="2_5g7di"]
 
-[node name="Anal" type="Control"]
+[node name="LilySexDungeon" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_23bd0")
 
 [node name="SceneBg" type="TextureRect" parent="."]
 layout_mode = 0
@@ -38,10 +36,10 @@ offset_left = -178.0
 offset_top = -79.0
 offset_right = 166.0
 offset_bottom = 303.0
-texture = ExtResource("1_numii")
+texture = ExtResource("1_t6wcy")
 expand_mode = 1
 
-[node name="DialogueLabel" parent="DialogBox" instance=ExtResource("2_jqqtb")]
+[node name="DialogueLabel" parent="DialogBox" node_paths=PackedStringArray("dialogue_timer") instance=ExtResource("2_5g7di")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -55,6 +53,7 @@ grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 40
 text = "Type here"
 messages = Array[String](["Vesper: I’ve got a little farewell gift in store for you.", "Vesper: Are you ready for it?", "Deckard: I think I am.", "Vesper:  Take all your clothes off and sit down, you won’t be needing them.", "He does as he’s told.", "You strip down to your panties and start rubbing your tits on his face.", "Vesper: Lick my nipples.", "Vesper: Softly, yes. Harder. Bite them. That’s it.", "Vesper: This delicious cock is so hard already. I can't help myself anymore, Mr. Deckard. ", "Vesper: Today I'm gonna sit on it until you're tired of fucking me.", "Vesper: I’m gonna need those handcuffs first, may I borrow them for a sec?", "Deckard: After telling me that? Be my guest.", "You take his wrists and pull them to the back of the chair, closing the handcuffs as tight as possible.", "Vesper: Now, now, how would you explain if someone walked in and caught you in this deplorable state, overpowered by a small girl in her underwear?", "Deckard: I couldn’t, my life is in your hands.", "Vesper: That’s what I wanted to hear.", "You stand up, and slide your panties down to the ground.", "Seeing your pussy dripping wet makes him harder than ever.", "Vesper: Which hole do you want, Mr. Deckard? My wet pussy or my tight virgin asshole?", "Deckard: I want to stick it in your butthole.", "Vesper: What a dirty, old man. Craving my tiny little asshole. ", "You spread your ass and start shaking it on the tip of his cock.", "Deckard: I could die right now, this is heaven.", "Vesper: Not yet, soon you’ll be in heaven. With that hard, veiny cock deep, deep…", "Vesper: Inside…", "The head slides in.", "You feel it pulsating inside you.", "Vesper: My tight…", "Vesper: Asshole.", "You slide it all the way down to his balls in one fell swoop.", "The man lets out a cry of joy.", "You start moving up and down.", "Vesper: Are you enjoying screwing me in the ass?", "Deckard: Yes, it’s marvellous. You’re a goddess, an anal goddess.", "Vesper: Why do you have such a thick cock? My asshole's never going back to normal after you’re done with it.", "Deckard: I love your butthole, I'm going to stretch it beyond recognition.", "Vesper: Stretch it all you want, my asshole's all yours,", "Deckard: Aaaaarghhh, I don’t care if I drop dead tomorrow, at least I got to enjoy my life a little! Fuck it!", "Vesper: Punish this little thief with that huge stick.", "Deckard: I can’t take much more of this, you’re just fucking perfect. I wanna fill you with my cum.", "You change positions, facing him, you sit on his lap and sink his dick in your ass again.", "You’re so stretched it goes in without any resistance.", "Vesper: I can feel your cock massaging my rectum. It feels wonderful.", "Vesper: I’ll let you cum, inside of me, in exchange for that sweet blood of yours pumping in your veins.", "Deckard: Do it, drink it all away, just let me cum first.", "Vesper: As you wish, rape my asshole until you cum.", "He thrusts violently inside you over and over again, like a piston that has lost control.", "From time to time he takes it all out and shoves it all the way back in, creating a gaping hole of what was once your tight asshole.", "Deckard: I can’t hold on anymore, I’m cumming, Do it, bite me.", "Vesper: As you wish.", "You sink your teeth deep in his neck, while he fills your asshole with his milk.", "You drink until you’re satisfied. By the time you’re over he’s lost consciousness. ", "You get up and clean yourself with a tissue.", "You unfasten his handcuffs and open the door.", "You pick him up, put his briefs on and lie him on the bed, if someone comes in it’s better they find him sleeping then tied to a chair naked.", "You don’t want to raise any unnecessary suspicion, you’ve got what you came for, you’re full of energy and no longer hungry.", "You leave the room with a smirk on your face, your ass still throbbing from all the thrusting."])
+dialogue_timer = NodePath("")
 
 [node name="NamePanel" type="Panel" parent="DialogBox"]
 visible = false

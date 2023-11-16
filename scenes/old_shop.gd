@@ -9,6 +9,7 @@ extends Control
 
 func _ready():
 	if SaveManager.save.old_shop["first_visit"]:
+		scene_bg.texture = load("res://assets/img/old_street.jpg")
 		dialogue_label.start_dialogue()
 		SaveManager.save.old_shop["first_visit"] = false
 		v_box_container.hide()
@@ -19,6 +20,9 @@ func _ready():
 		dialogue_label.can_type = false
 	
 func _process(delta):
+	
+	if dialogue_label.message_id == 2:
+		scene_bg.texture = load("res://assets/img/old_shop.png")
 	
 	if dialogue_label.message_id == 24:
 		dialogue_label.can_type = false

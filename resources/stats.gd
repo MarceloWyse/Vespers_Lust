@@ -33,9 +33,11 @@ class_name Stats
 @export var bar = {"talk_act" : false, "drink" : false, "information" : false, "visited" : false}
 @export var park = {"hunt" : false, "find_male_ghoul" : false, "find_female_ghoul" : false, "visited" : false}
 @export var boutique = {"talk" : false, "shop" : false, "special_clothes" : false, "sex_toys" : false, "visited" : false}
-@export var old_shop = {"talk_act" : false, "shop" : false, "be_her_pet" : false, "visited" : false,
+@export var old_shop = {"available" : false, "talk_act" : false, "shop" : false, "be_her_pet" : false, "visited" : false,
 "talk_1" : false, "talk_2" : false, "ask_for_blood" : false, "first_visit" : true}
 
 @export var deckard = {"stolen_blood" : false, "deckard_repetition" : false, "lapdance" : false, "handjob" : false, "titsout" : false, 
 "blowjob" : false, "anal" : false
 }
+
+@export var lobo = {"information_available" : false, "met_lobo" : false, "asked_for_blood" : false}

@@ -1,5 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cx8cm4ow7xd0j"]
+[gd_scene load_steps=6 format=3 uid="uid://cx8cm4ow7xd0j"]
 
+[ext_resource type="Texture2D" uid="uid://qay44wwu2me7" path="res://assets/img/bar_bg.webp" id="1_abyjg"]
+[ext_resource type="Script" path="res://scenes/lobo.gd" id="1_r6hi2"]
 [ext_resource type="Texture2D" uid="uid://dx6hbgqubs64u" path="res://assets/characters/Lobo_full_body.png" id="1_sutwu"]
 [ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="1_t63dq"]
 [ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="2_6ntj1"]
@@ -11,11 +13,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_r6hi2")
 
 [node name="SceneBg" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_abyjg")
 
 [node name="LoboImg" type="TextureRect" parent="."]
 layout_mode = 0
@@ -62,7 +69,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 40
 text = "Type here"
-messages = Array[String](["You can’t happen to notice a tall man in the corner drinking by himself. He’s wearing a wolf mask and a suit.  ", "Vesper: I feel a strange presence emanating from him. He seems almost out of time and space. ", "But he’s right in front of me, isn’t he? Although people don’t seen to notice him at all.", "Vesper: How long has he been standing there?", "You approach the man.", "Vesper: Hello. I’m intrigued.", "Vesper: What are you?", "???: I’m a man in a mask.", "Vesper: I can see that.", "???: Then your powers of observation do not fail you.", "Vesper: I mean, who are you?", "Lobo: You may call me Lobo.", "Vesper: May I ask what are you doing here?", "Lobo: And by here I supposed you mean this bar, not this plane of existence.", "Lobo: If you mean the latter, dear Vesper, what are we all doing here? ", "Vesper: I mean this bar… wait, how do you know my name?", "Lobo; I know many things. For example:", "-- HUNTING ANIMALS ---", "I know you’ve been hunting animals in a desperate attempt to feed.", "-- END OF HUNTING ANIMALS ---", "-- PROSTITUTION --", "I know you’ve been visiting the red light district looking for easy victims.", "-- END OF PROSTITUTION --", "-- HUNT IN THE PARK ---", "I know you’ve been hunting people in the park, losing touch with what’s left of your humanity.", "-- END HUNT ---", "--- STEAL BLOOD STEAL ---", "I know you’ve been stealing blood, doing whatever you need for a fix.", "--- END BLOOD STEAL ---", "Vesper: How do you know that!? ", "Lobo: We are both creatures of the night and secrecy.", "Lobo: You vampires are powerful enough to do whatever you wish with your lives, and still, the hunger in you all speaks louder.", "Lobo: I’ve seen many of you come and go, the hunger, the lust, always your downfall. But you, you may be different. ", "Lobo: If you could control that hunger, imagine what you could accomplish. ", "Lobo: I wonder how many lifetimes that would take.", "Lobo: But I digress, why keep talking about the long term, when in the short term what you need is obvious. ", "Lobo: Now, you may ask what you truly wanted to ask me. ", "--- END OF TALK ---", "-- BLOOD --", "Vesper: Do you know where I can get blood?", "Lobo: I do, but it won’t come cheap. Things in this world never do. ", "Lobo: I know someone you can seek. ", "Lobo: However, heed my warning, she’s been alive for too long. Her pleasures are questionable, her morals inexistent.", "Lobo: Do you still want to meet her?", "Vesper: Yes.", "Lobo: Then close your eyes and focus on my voice.", "He says something incoherent. You feel your eyelids heavy, like you were hypnotized.", "Lobo: You may open them again.  ", "Lobo: I have provided you the address of an old acquaintance of mine.", "Lobo: Now, unless you need something else, leave me be. ", "Lobo; I have other business to attend to. ", "-- END OF BLOOD ASK --"])
+messages = Array[String](["You can’t happen to notice a tall man in the corner drinking by himself. He’s wearing a wolf mask and a suit.  ", "Vesper: I feel a strange presence emanating from him. He seems almost out of time and space. ", "But he’s right in front of me, isn’t he? Although people don’t seen to notice him at all.", "Vesper: How long has he been standing there?", "-- END OF MET LOBO -- ", "You approach the man.", "Vesper: Hello. I’m intrigued.", "Vesper: What are you?", "???: I’m a man in a mask.", "Vesper: I can see that.", "???: Then your powers of observation do not fail you.", "Vesper: I mean, who are you?", "Lobo: You may call me Lobo.", "Vesper: May I ask what are you doing here?", "Lobo: And by here I supposed you mean this bar, not this plane of existence.", "Lobo: If you mean the latter, dear Vesper, what are we all doing here? ", "Vesper: I mean this bar… wait, how do you know my name?", "Lobo; I know many things. For example:", "-- HUNTING ANIMALS ---", "I know you’ve been hunting animals in a desperate attempt to feed.", "-- END OF HUNTING ANIMALS ---", "-- PROSTITUTION --", "I know you’ve been visiting the red light district looking for easy victims.", "-- END OF PROSTITUTION --", "-- HUNT IN THE PARK ---", "I know you’ve been hunting people in the park, losing touch with what’s left of your humanity.", "-- END HUNT ---", "--- STEAL BLOOD STEAL ---", "I know you’ve been stealing blood, doing whatever you need for a fix.", "--- END BLOOD STEAL ---", "Vesper: How do you know that!? ", "Lobo: We are both creatures of the night and secrecy.", "Lobo: You vampires are powerful enough to do whatever you wish with your lives, and still, the hunger in you all speaks louder.", "Lobo: I’ve seen many of you come and go, the hunger, the lust, always your downfall. But you, you may be different. ", "Lobo: If you could control that hunger, imagine what you could accomplish. ", "Lobo: I wonder how many lifetimes that would take.", "Lobo: But I digress, why keep talking about the long term, when in the short term what you need is obvious. ", "Lobo: Now, you may ask what you truly wanted to ask me. ", "--- END OF TALK ---", "-- BLOOD --", "Vesper: Do you know where I can get blood?", "Lobo: I do, but it won’t come cheap. Things in this world never do. ", "Lobo: I know someone you can seek. ", "Lobo: However, heed my warning, she’s been alive for too long. Her pleasures are questionable, her morals inexistent.", "Lobo: Do you still want to meet her?", "Vesper: Yes.", "Lobo: Then close your eyes and focus on my voice.", "He says something incoherent. You feel your eyelids heavy, like you were hypnotized.", "Lobo: You may open them again.  ", "Lobo: I have provided you the address of an old acquaintance of mine.", "Lobo: Now, unless you need something else, leave me be. ", "Lobo; I have other business to attend to. ", "-- END OF BLOOD ASK --", "-- NOT FIRST TALK --", "Lobo: Is there something I can help you with? ", "-- END OF NOT FIRST TALK -- "])
 
 [node name="NamePanel" type="Panel" parent="DialogBox"]
 visible = false
@@ -89,3 +96,31 @@ theme_override_font_sizes/font_size = 30
 text = "Vesper"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Options" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 179.0
+offset_top = 234.0
+offset_right = 537.0
+offset_bottom = 483.0
+theme_override_constants/separation = 30
+
+[node name="Talk" type="Button" parent="Options"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Talk"
+
+[node name="BloodInformation" type="Button" parent="Options"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+disabled = true
+text = "Information"
+
+[node name="LeaveHim" type="Button" parent="Options"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Leave Him"
+
+[connection signal="pressed" from="Options/Talk" to="." method="_on_talk_pressed"]
+[connection signal="pressed" from="Options/BloodInformation" to="." method="_on_blood_information_pressed"]
+[connection signal="pressed" from="Options/LeaveHim" to="." method="_on_leave_him_pressed"]

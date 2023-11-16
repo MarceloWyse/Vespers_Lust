@@ -139,6 +139,11 @@ func _ready():
 	else:
 		oldshop_3.text = "- Become her pet"
 	
+	if not SaveManager.save.old_shop["available"]:
+		old_shop_map.hide()
+	else:
+		old_shop_map.show()
+			
 func _process(delta):
 	pass
 

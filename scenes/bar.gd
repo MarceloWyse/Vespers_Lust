@@ -24,3 +24,6 @@ func _on_talk_btn_pressed():
 	v_box_container.hide()
 	dialog_box.show()
 	dialogue_label.start_dialogue()
+
+func _on_information_btn_pressed():
+	get_tree().change_scene_to_file("res://scenes/lobo.tscn")

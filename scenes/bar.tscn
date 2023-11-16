@@ -51,7 +51,6 @@ text = "Go home"
 [node name="InformationBtn" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
-disabled = true
 text = "Information
 (Cha 20+)"
 
@@ -135,3 +134,4 @@ layout_mode = 1
 
 [connection signal="pressed" from="VBoxContainer/TalkBtn" to="." method="_on_talk_btn_pressed"]
 [connection signal="pressed" from="VBoxContainer/GoHomeBtn" to="." method="_on_go_home_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/InformationBtn" to="." method="_on_information_btn_pressed"]
