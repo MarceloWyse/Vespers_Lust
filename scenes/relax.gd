@@ -5,6 +5,7 @@ extends Control
 var scene_finished = false
 var random_program : int
 var increased_status = false
+@onready var scene_bg = $SceneBg
 
 func _ready():
 	transitions.fade_to_image()
@@ -20,9 +21,11 @@ func _ready():
 	#Cartoons	
 	elif random_program == 2:
 		dialogue_label.jump_to(6)
+		scene_bg.texture = load("res://assets/thumbnails/thumb_relax_cartoon.png")
 	
 	#Horror Movies
 	elif random_program == 3:
+		scene_bg.texture = load("res://assets/thumbnails/thumb_relax_terror.png")
 		dialogue_label.jump_to(11)
 		if increased_status == false:
 			SaveManager.save.bar_values["cha"] += 2
@@ -30,6 +33,7 @@ func _ready():
 	
 	#Sex Movies
 	elif random_program == 4:
+		scene_bg.texture = load("res://assets/thumbnails/thumb_relax_sex.png")
 		dialogue_label.jump_to(17)
 		if increased_status == false:
 			SaveManager.save.player_status["lewdness"] += 2
@@ -52,6 +56,7 @@ func _process(delta):
 			SaveManager.save.park["visited"] = false
 			SaveManager.save.boutique["visited"] = false
 			SaveManager.save.hospital["visited"] = false
+			SaveManager.save.old_shop["visited"] = false
 			SaveManager.save.same_day = false
 			get_tree().change_scene_to_file("res://scenes/player_hub.tscn")
 			

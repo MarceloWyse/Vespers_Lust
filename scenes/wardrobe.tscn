@@ -1,11 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://p6hnoaa7vro3"]
+[gd_scene load_steps=10 format=3 uid="uid://p6hnoaa7vro3"]
 
 [ext_resource type="Script" path="res://scenes/wardrobe.gd" id="1_rf7vw"]
-[ext_resource type="Texture2D" uid="uid://b8lo61x8yfcos" path="res://assets/characters/vesper/Vesper_model_naked.png" id="2_xnvw4"]
+[ext_resource type="Texture2D" uid="uid://djj2efqre5y37" path="res://assets/characters/vesper/Vesper_model_fixed_2.png" id="2_v037i"]
+[ext_resource type="Texture2D" uid="uid://ciwkuua8u020y" path="res://assets/characters/vesper/Vesper_model_forearm (1).png" id="3_a8b37"]
 [ext_resource type="Texture2D" uid="uid://ukbpgqstbs6u" path="res://assets/characters/vesper/clothes/Vesper_model_top1.png" id="3_l0fk6"]
-[ext_resource type="Texture2D" uid="uid://cxgeemgo6e58r" path="res://assets/characters/vesper/Vesper_forearms.png" id="4_ecapd"]
-[ext_resource type="Texture2D" uid="uid://02avvox88xur" path="res://assets/characters/vesper/clothes/Vesper_model_panties1.png" id="4_nfjxr"]
+[ext_resource type="Texture2D" uid="uid://b0xvte0twpwtt" path="res://assets/characters/vesper/Vesper_model_hand.png" id="4_23jm8"]
 [ext_resource type="Texture2D" uid="uid://c5ym40b2a071u" path="res://assets/characters/vesper/clothes/Vesper_model_top2.png" id="5_o8vf0"]
+[ext_resource type="Texture2D" uid="uid://bbjcvq0echkvi" path="res://assets/characters/vesper/clothes/Vesper_model_panties1 (1).png" id="7_sbwfo"]
+[ext_resource type="Texture2D" uid="uid://duwjf6xf7tyd3" path="res://assets/characters/vesper/clothes/Vesper_model_top4 (1).png" id="8_hdsf2"]
+[ext_resource type="Texture2D" uid="uid://d1by3s77nvxik" path="res://assets/characters/vesper/clothes/Vesper_model_top3.png" id="9_aj773"]
 
 [node name="Wardrobe" type="Control"]
 layout_mode = 3
@@ -22,13 +25,7 @@ offset_left = 683.0
 offset_top = -60.0
 offset_right = 1250.0
 offset_bottom = 1127.0
-texture = ExtResource("2_xnvw4")
-expand_mode = 1
-
-[node name="Top" type="TextureRect" parent="Vesper"]
-layout_mode = 0
-offset_right = 567.0
-offset_bottom = 1187.0
+texture = ExtResource("2_v037i")
 expand_mode = 1
 
 [node name="Bottom" type="TextureRect" parent="Vesper"]
@@ -41,7 +38,20 @@ expand_mode = 1
 layout_mode = 0
 offset_right = 567.0
 offset_bottom = 1187.0
-texture = ExtResource("4_ecapd")
+texture = ExtResource("3_a8b37")
+expand_mode = 1
+
+[node name="Top" type="TextureRect" parent="Vesper"]
+layout_mode = 0
+offset_right = 567.0
+offset_bottom = 1187.0
+expand_mode = 1
+
+[node name="Hands" type="TextureRect" parent="Vesper"]
+layout_mode = 0
+offset_right = 567.0
+offset_bottom = 1187.0
+texture = ExtResource("4_23jm8")
 expand_mode = 1
 
 [node name="BackToHub" type="Button" parent="."]
@@ -60,54 +70,102 @@ offset_bottom = 40.0
 
 [node name="TankTop" type="TextureRect" parent="Clothes"]
 layout_mode = 0
-offset_left = -127.0
-offset_top = -228.0
-offset_right = 440.0
-offset_bottom = 959.0
+offset_top = -36.0
+offset_right = 305.0
+offset_bottom = 603.0
 mouse_filter = 2
 texture = ExtResource("3_l0fk6")
 expand_mode = 1
 
 [node name="Clickable1" type="TextureRect" parent="Clothes/TankTop"]
 layout_mode = 0
-offset_left = 187.0
-offset_top = 288.0
-offset_right = 399.0
-offset_bottom = 510.0
+offset_left = 102.0
+offset_top = 163.0
+offset_right = 215.0
+offset_bottom = 274.0
 
 [node name="Blouse" type="TextureRect" parent="Clothes"]
 layout_mode = 0
-offset_left = 290.0
-offset_top = -122.0
-offset_right = 706.0
-offset_bottom = 749.0
+offset_left = 227.0
+offset_top = 34.0
+offset_right = 426.0
+offset_bottom = 451.0
 mouse_filter = 2
 texture = ExtResource("5_o8vf0")
 expand_mode = 1
 
 [node name="Clickable3" type="TextureRect" parent="Clothes/Blouse"]
 layout_mode = 0
-offset_left = 100.0
-offset_top = 205.0
-offset_right = 312.0
-offset_bottom = 427.0
+offset_left = 33.0
+offset_top = 86.0
+offset_right = 158.0
+offset_bottom = 210.0
 
 [node name="LacePanties" type="TextureRect" parent="Clothes"]
 layout_mode = 0
-offset_left = -135.0
-offset_top = -200.0
-offset_right = 432.0
-offset_bottom = 987.0
+offset_left = 30.0
+offset_top = 38.0
+offset_right = 272.0
+offset_bottom = 545.0
 mouse_filter = 2
-texture = ExtResource("4_nfjxr")
+texture = ExtResource("7_sbwfo")
 expand_mode = 1
 
 [node name="Clickable2" type="TextureRect" parent="Clothes/LacePanties"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 88.0
+offset_top = 222.0
+offset_right = -71.0
+offset_bottom = -220.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Vest" type="TextureRect" parent="Clothes"]
 layout_mode = 0
-offset_left = 193.0
-offset_top = 523.0
-offset_right = 406.0
-offset_bottom = 665.0
+offset_left = 336.0
+offset_top = -2.0
+offset_right = 578.0
+offset_bottom = 505.0
+mouse_filter = 2
+texture = ExtResource("8_hdsf2")
+expand_mode = 1
+
+[node name="Clickable5" type="TextureRect" parent="Clothes/Vest"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 80.0
+offset_top = 119.0
+offset_right = -73.0
+offset_bottom = -250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VestAndTie" type="TextureRect" parent="Clothes"]
+layout_mode = 0
+offset_left = 497.0
+offset_top = 4.0
+offset_right = 739.0
+offset_bottom = 511.0
+mouse_filter = 2
+texture = ExtResource("9_aj773")
+expand_mode = 1
+
+[node name="Clickable4" type="TextureRect" parent="Clothes/VestAndTie"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 48.0
+offset_top = 115.0
+offset_right = -53.0
+offset_bottom = -252.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
@@ -118,3 +176,6 @@ offset_bottom = 8.0
 [connection signal="gui_input" from="Clothes/TankTop/Clickable1" to="." method="_on_clickable_1_gui_input"]
 [connection signal="gui_input" from="Clothes/Blouse/Clickable3" to="." method="_on_clickable_3_gui_input"]
 [connection signal="gui_input" from="Clothes/LacePanties/Clickable2" to="." method="_on_clickable_2_gui_input"]
+[connection signal="gui_input" from="Clothes/Vest" to="." method="_on_vest_gui_input"]
+[connection signal="gui_input" from="Clothes/Vest/Clickable5" to="." method="_on_clickable_5_gui_input"]
+[connection signal="gui_input" from="Clothes/VestAndTie/Clickable4" to="." method="_on_clickable_4_gui_input"]

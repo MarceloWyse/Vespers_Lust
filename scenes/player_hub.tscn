@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://c0x5rbk7rn3vx"]
+[gd_scene load_steps=50 format=3 uid="uid://c0x5rbk7rn3vx"]
 
 [ext_resource type="Script" path="res://scenes/player_hub.gd" id="1_0hmm0"]
 [ext_resource type="Texture2D" uid="uid://7ey4i1pllc66" path="res://assets/img/e_letter.png" id="1_got0o"]
@@ -22,10 +22,11 @@
 [ext_resource type="Texture2D" uid="uid://c0trlvp01ppw7" path="res://assets/img/sanity4.png" id="16_w38km"]
 [ext_resource type="Texture2D" uid="uid://bpm1nvh5rdf10" path="res://assets/img/graybox_hubtest_V3.png" id="17_lq77n"]
 [ext_resource type="Texture2D" uid="uid://bunppy7big6un" path="res://assets/img/gears.png" id="21_8v10w"]
-[ext_resource type="Texture2D" uid="uid://b8lo61x8yfcos" path="res://assets/characters/vesper/Vesper_model_naked.png" id="23_1g67q"]
+[ext_resource type="Texture2D" uid="uid://djj2efqre5y37" path="res://assets/characters/vesper/Vesper_model_fixed_2.png" id="23_ikvf8"]
 [ext_resource type="Texture2D" uid="uid://beb5ygwro1my3" path="res://assets/img/notebook.png" id="24_7eyg5"]
-[ext_resource type="Texture2D" uid="uid://cxgeemgo6e58r" path="res://assets/characters/vesper/Vesper_forearms.png" id="25_8ihlj"]
+[ext_resource type="Texture2D" uid="uid://ciwkuua8u020y" path="res://assets/characters/vesper/Vesper_model_forearm (1).png" id="24_owvm2"]
 [ext_resource type="Texture2D" uid="uid://c3sqhlo7ahfgy" path="res://assets/img/studying.png" id="25_13td8"]
+[ext_resource type="Texture2D" uid="uid://b0xvte0twpwtt" path="res://assets/characters/vesper/Vesper_model_hand.png" id="25_lh1cj"]
 [ext_resource type="Texture2D" uid="uid://blhrb7v4w2scj" path="res://assets/img/travel-map.png" id="25_r50m7"]
 [ext_resource type="Texture2D" uid="uid://cv4y7c7vo1qwx" path="res://assets/img/journalist.png" id="26_fb58q"]
 [ext_resource type="Texture2D" uid="uid://c3tfdx5pdxx0m" path="res://assets/img/prostitution.png" id="27_88ghq"]
@@ -602,13 +603,7 @@ offset_top = -58.0
 offset_right = 1299.0
 offset_bottom = 1530.0
 mouse_filter = 2
-texture = ExtResource("23_1g67q")
-expand_mode = 1
-
-[node name="Top" type="TextureRect" parent="Vesper"]
-layout_mode = 0
-offset_right = 748.0
-offset_bottom = 1588.0
+texture = ExtResource("23_ikvf8")
 expand_mode = 1
 
 [node name="Bottom" type="TextureRect" parent="Vesper"]
@@ -621,7 +616,20 @@ expand_mode = 1
 layout_mode = 0
 offset_right = 748.0
 offset_bottom = 1588.0
-texture = ExtResource("25_8ihlj")
+texture = ExtResource("24_owvm2")
+expand_mode = 1
+
+[node name="Top" type="TextureRect" parent="Vesper"]
+layout_mode = 0
+offset_right = 748.0
+offset_bottom = 1588.0
+expand_mode = 1
+
+[node name="Hands" type="TextureRect" parent="Vesper"]
+layout_mode = 0
+offset_right = 748.0
+offset_bottom = 1588.0
+texture = ExtResource("25_lh1cj")
 expand_mode = 1
 
 [node name="ScheduleButton" type="TextureButton" parent="."]

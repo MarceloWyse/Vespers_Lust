@@ -120,13 +120,6 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Steal blood"
 
-[node name="BuyBloodBtn" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 40
-disabled = true
-text = "??? 
-(need information)"
-
 [node name="HomeBtn" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40

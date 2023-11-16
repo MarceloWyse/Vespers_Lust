@@ -88,7 +88,7 @@ offset_bottom = 303.0
 texture = ExtResource("4_864yv")
 expand_mode = 1
 
-[node name="DialogueLabel" parent="DialogBox" node_paths=PackedStringArray("dialogue_timer") instance=ExtResource("5_wow6m")]
+[node name="DialogueLabel" parent="DialogBox" instance=ExtResource("5_wow6m")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -102,7 +102,6 @@ grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 40
 text = "Type here"
 messages = Array[String](["Welcome to Saint Patrick's.", "The place where nobody knows your name.", "It's a bar, they're not supposed to.", "-- END OF TALK ---"])
-dialogue_timer = NodePath("")
 
 [node name="NamePanel" type="Panel" parent="DialogBox"]
 visible = false

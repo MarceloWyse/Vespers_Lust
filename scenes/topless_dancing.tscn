@@ -1,0 +1,86 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1c8101w11xli"]
+
+[ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="1_hng2o"]
+[ext_resource type="Script" path="res://scenes/topless_dancing.gd" id="1_mqfie"]
+[ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="2_mvlia"]
+
+[node name="ToplessDancing" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mqfie")
+
+[node name="SceneBg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogBox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 223.0
+offset_top = -338.0
+offset_right = -219.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CharPortrait" type="TextureRect" parent="DialogBox"]
+visible = false
+layout_mode = 0
+offset_left = -178.0
+offset_top = -79.0
+offset_right = 166.0
+offset_bottom = 303.0
+texture = ExtResource("1_hng2o")
+expand_mode = 1
+
+[node name="DialogueLabel" parent="DialogBox" instance=ExtResource("2_mvlia")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 148.0
+offset_top = 21.0
+offset_right = -55.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 40
+text = "Type here"
+messages = Array[String](["Deckard: Alright, you know the drill.", "He sits down on the chair. ", "Poor man, doesn’t know what’s about to hit him.", "Deckard: So, what will it be today? ", "Vesper: Today, Mr. Deckard, you get something I know you’ve been looking forward to.", "You start shaking your hips and unbuttoning your blouse. ", "But this time, you’re much more confident than last time. Your movements are much more fluid, your body feels lighter.", "You can see he’s enjoying the show, he’s already getting hard and you haven’t even touched him.", "You slowly take your blouse off and drop it on the floor.", "He stops breathing for a few seconds, you can see he’s still processing what’s happening.", "Vesper: You see… I have to confess, I haven’t been coming here just for the blood.", "Vesper: Making you hard also excites me.", "Vesper: Do you want to see how excited I am?", "You pull both straps of your bra to your shoulder.", "Vesper: Say you want it. Beg for it.", "Deckard: Yes, please, show me those beautiful breasts.", "Vesper: As you wish.", "You let your bra fall to the floor as well.", "Vesper: Can you see how hard my nipples are or do you need me to come closer?", "Deckard: Closer, I want them right in front of my face.", "Vesper: What about our little deal? How many syringes do I get today?", "Deckard: … I guess you can have three, you’re killing me here you know.", "Vesper: Oh, am I? Weren’t you the one that put this deal on the table, Mr. Security Officer? ", "Deckard: Hah, you got me there.", "Vesper: Don't you feel lucky? How much do you think people would pay for a private lap dance like this?", "Deckard: With your body, your looks and that attitude? Man, you could make a small fortune.", "Vesper: Tee-hee, I’m flattered. I guess you deserve a little more. Don’t go dying on me, old man.", "You unbutton your pants, turn around and bend down, letting them slowly fall to the ground. ", "Vesper: Now, you complain so much about cellphones and pictures, wouldn’t you want to photograph me like this?", "Deckard: I take back what I said, cameras are a god-send, I would fill my gallery with your photos.", "I thought nothing else would surprise me after 50 years of debauchery, but you in your underwear wearing only socks… my god, you’re beautiful. ", "Vesper: Thank you. As a reward…", "You slide his zipper down and pull his cock out. He’s already about to explode. Indeed, talking is his aphrodisiac. ", "Vesper: I guess you would love to cum between my legs, wouldn’t you?", "You sit on his lap, rubbing your clit on his dick.", "You both moan with pleasure. You can feel everything through the fabric.", "Deckard: Ahhh, I can’t take it anymore.", "Vesper: Cum for me, Deckard. ", "You slide up and down, your panties are so wet it feels like you aren’t wearing anything at all.", "Before you know it he cums on your thighs.", "Deckard: That felt great… ", "Vesper: I agree, I never thought this little deal of ours would be this exciting.", "You clean yourself up and put your clothes back on.", "He unlocks the door.", "You head home carrying your blood vials with you.  ", "-- END OF TOPLESS DANCING ---"])
+
+[node name="NamePanel" type="Panel" parent="DialogBox"]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 129.0
+offset_top = -197.0
+offset_right = -1132.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameLabel" type="Label" parent="DialogBox/NamePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Vesper"
+horizontal_alignment = 1
+vertical_alignment = 1

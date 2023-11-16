@@ -4,7 +4,7 @@ class_name Stats
 @export var clothing = {"top" : null, "bottom" : null}
 
 @export var bar_values = {"vit" : 1, "str" : 1, "int" : 1, "spd" : 1, "cha" : 1}
-@export var player_status = {"sanity" : 50, "lewdness" : 60, "hunger" : 50 , "money" : 0}
+@export var player_status = {"sanity" : 50, "lewdness" : 100, "hunger" : 50 , "money" : 0}
 @export var day = 1
 @export var visited_activities = {"masturbation": false, "prostitution" : false,
 "sleep" : false, "studying" : false, "bartender" : false, "journalist" : false, "running" : false,
@@ -29,10 +29,12 @@ class_name Stats
 @export var weather = []
 
 #hospital variables
-@export var hospital = {"talk_act" : false, "steal_blood" : false, "buy_blood" : false, "visited" : false, "steal_btn_disabled" : true}
+@export var hospital = {"talk_act" : false, "steal_blood" : false, "visited" : false, "steal_btn_disabled" : true}
 @export var bar = {"talk_act" : false, "drink" : false, "information" : false, "visited" : false}
 @export var park = {"hunt" : false, "find_male_ghoul" : false, "find_female_ghoul" : false, "visited" : false}
 @export var boutique = {"talk" : false, "shop" : false, "special_clothes" : false, "sex_toys" : false, "visited" : false}
+@export var old_shop = {"talk_act" : false, "shop" : false, "be_her_pet" : false, "visited" : false,
+"talk_1" : false, "talk_2" : false, "ask_for_blood" : false, "first_visit" : true}
 
 @export var deckard = {"stolen_blood" : false, "deckard_repetition" : false, "lapdance" : false, "handjob" : false, "titsout" : false, 
 "blowjob" : false, "anal" : false

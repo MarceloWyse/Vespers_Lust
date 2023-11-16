@@ -6,7 +6,6 @@ extends Control
 @onready var steal_blood_btn = $VBoxContainer/StealBloodBtn
 @onready var talk_btn = $VBoxContainer/TalkBtn
 @onready var home_btn = $VBoxContainer/HomeBtn
-@onready var buy_blood_btn = $VBoxContainer/BuyBloodBtn
 @onready var v_box_container = $VBoxContainer
 @onready var nurse = $Nurse
 
@@ -23,7 +22,6 @@ func _process(delta):
 		dialogue_label.can_type = false
 		talk_btn.show()
 		steal_blood_btn.show()
-		buy_blood_btn.show()
 		home_btn.show()
 		v_box_container.show()
 	

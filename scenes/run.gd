@@ -37,6 +37,7 @@ func _process(delta):
 			SaveManager.save.park["visited"] = false
 			SaveManager.save.boutique["visited"] = false
 			SaveManager.save.hospital["visited"] = false
+			SaveManager.save.old_shop["visited"] = false
 			SaveManager.save.same_day = false
 			get_tree().change_scene_to_file("res://scenes/player_hub.tscn")
 

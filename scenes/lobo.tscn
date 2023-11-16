@@ -1,0 +1,91 @@
+[gd_scene load_steps=4 format=3 uid="uid://cx8cm4ow7xd0j"]
+
+[ext_resource type="Texture2D" uid="uid://dx6hbgqubs64u" path="res://assets/characters/Lobo_full_body.png" id="1_sutwu"]
+[ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="1_t63dq"]
+[ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="2_6ntj1"]
+
+[node name="Lobo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SceneBg" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LoboImg" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 570.0
+offset_top = -76.0
+offset_right = 1425.0
+offset_bottom = 1551.0
+texture = ExtResource("1_sutwu")
+expand_mode = 1
+
+[node name="DialogBox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 223.0
+offset_top = -338.0
+offset_right = -219.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CharPortrait" type="TextureRect" parent="DialogBox"]
+visible = false
+layout_mode = 0
+offset_left = -178.0
+offset_top = -79.0
+offset_right = 166.0
+offset_bottom = 303.0
+texture = ExtResource("1_t63dq")
+expand_mode = 1
+
+[node name="DialogueLabel" parent="DialogBox" instance=ExtResource("2_6ntj1")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 148.0
+offset_top = 21.0
+offset_right = -55.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 40
+text = "Type here"
+messages = Array[String](["You can’t happen to notice a tall man in the corner drinking by himself. He’s wearing a wolf mask and a suit.  ", "Vesper: I feel a strange presence emanating from him. He seems almost out of time and space. ", "But he’s right in front of me, isn’t he? Although people don’t seen to notice him at all.", "Vesper: How long has he been standing there?", "You approach the man.", "Vesper: Hello. I’m intrigued.", "Vesper: What are you?", "???: I’m a man in a mask.", "Vesper: I can see that.", "???: Then your powers of observation do not fail you.", "Vesper: I mean, who are you?", "Lobo: You may call me Lobo.", "Vesper: May I ask what are you doing here?", "Lobo: And by here I supposed you mean this bar, not this plane of existence.", "Lobo: If you mean the latter, dear Vesper, what are we all doing here? ", "Vesper: I mean this bar… wait, how do you know my name?", "Lobo; I know many things. For example:", "-- HUNTING ANIMALS ---", "I know you’ve been hunting animals in a desperate attempt to feed.", "-- END OF HUNTING ANIMALS ---", "-- PROSTITUTION --", "I know you’ve been visiting the red light district looking for easy victims.", "-- END OF PROSTITUTION --", "-- HUNT IN THE PARK ---", "I know you’ve been hunting people in the park, losing touch with what’s left of your humanity.", "-- END HUNT ---", "--- STEAL BLOOD STEAL ---", "I know you’ve been stealing blood, doing whatever you need for a fix.", "--- END BLOOD STEAL ---", "Vesper: How do you know that!? ", "Lobo: We are both creatures of the night and secrecy.", "Lobo: You vampires are powerful enough to do whatever you wish with your lives, and still, the hunger in you all speaks louder.", "Lobo: I’ve seen many of you come and go, the hunger, the lust, always your downfall. But you, you may be different. ", "Lobo: If you could control that hunger, imagine what you could accomplish. ", "Lobo: I wonder how many lifetimes that would take.", "Lobo: But I digress, why keep talking about the long term, when in the short term what you need is obvious. ", "Lobo: Now, you may ask what you truly wanted to ask me. ", "--- END OF TALK ---", "-- BLOOD --", "Vesper: Do you know where I can get blood?", "Lobo: I do, but it won’t come cheap. Things in this world never do. ", "Lobo: I know someone you can seek. ", "Lobo: However, heed my warning, she’s been alive for too long. Her pleasures are questionable, her morals inexistent.", "Lobo: Do you still want to meet her?", "Vesper: Yes.", "Lobo: Then close your eyes and focus on my voice.", "He says something incoherent. You feel your eyelids heavy, like you were hypnotized.", "Lobo: You may open them again.  ", "Lobo: I have provided you the address of an old acquaintance of mine.", "Lobo: Now, unless you need something else, leave me be. ", "Lobo; I have other business to attend to. ", "-- END OF BLOOD ASK --"])
+
+[node name="NamePanel" type="Panel" parent="DialogBox"]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 129.0
+offset_top = -197.0
+offset_right = -1132.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameLabel" type="Label" parent="DialogBox/NamePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Vesper"
+horizontal_alignment = 1
+vertical_alignment = 1

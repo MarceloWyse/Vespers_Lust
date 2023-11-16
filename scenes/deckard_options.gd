@@ -19,10 +19,10 @@ func _ready():
 	
 	if SaveManager.save.player_status["lewdness"] >= 20:
 		lap_dance.disabled = false
-		lap_dance.text = "Give him a Lap Dance"
+		lap_dance.text = "A Lap Dance wouldn't hurt"
 	if SaveManager.save.player_status["lewdness"] >= 40 and SaveManager.save.deckard["lapdance"]:
 		handjob.disabled = false
-		handjob.text = "Maybe a handjob?"
+		handjob.text = "What if I touch it?"
 	if SaveManager.save.player_status["lewdness"] >= 60 and SaveManager.save.deckard["handjob"]:
 		braless_dance.disabled = false
 		braless_dance.text = "I wanna try dancing again"
@@ -53,12 +53,15 @@ func _on_handjob_pressed():
 	
 func _on_braless_dance_pressed():
 	SaveManager.save.deckard["titsout"] = true
+	get_tree().change_scene_to_file("res://scenes/topless_dancing.tscn")
 
 func _on_blowjob_pressed():
 	SaveManager.save.deckard["blowjob"] = true
+	get_tree().change_scene_to_file("res://scenes/blowjob.tscn")
 
 func _on_anal_pressed():
 	SaveManager.save.deckard["anal"] = true
+	get_tree().change_scene_to_file("res://scenes/anal.tscn")
 
 func _on_money_pressed():
 	deckard_option_timer.stop()
@@ -71,4 +74,4 @@ func _on_money_pressed():
 		SaveManager.save.player_status["money"] = 0
 		scene_bg.texture = load("res://assets/hospital_storyboard/hospital_scene_14.png")
 		deckard_option.hide()
-		
+

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8lo61x8yfcos"
-path="res://.godot/imported/Vesper_model_naked.png-aba7d1733b104dcb0375dc6720f17061.ctex"
+uid="uid://b84nfibtbdxhv"
+path="res://.godot/imported/hospital_scene_lapdance_14.png-0747c5cea829bcbd7279239cad106775.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/vesper/Vesper_model_naked.png"
-dest_files=["res://.godot/imported/Vesper_model_naked.png-aba7d1733b104dcb0375dc6720f17061.ctex"]
+source_file="res://assets/hospital_storyboard/topless_dance/hospital_scene_lapdance_14.png"
+dest_files=["res://.godot/imported/hospital_scene_lapdance_14.png-0747c5cea829bcbd7279239cad106775.ctex"]
 
 [params]
 

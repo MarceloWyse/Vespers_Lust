@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxgeemgo6e58r"
-path="res://.godot/imported/Vesper_forearms.png-7e6de6d675b0dba084c563c2f45abe9a.ctex"
+uid="uid://kccjf5sjbujh"
+path="res://.godot/imported/thumb_relax_terror.png-a5d01961ef34df42e0924f8b7cbe73b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/vesper/Vesper_forearms.png"
-dest_files=["res://.godot/imported/Vesper_forearms.png-7e6de6d675b0dba084c563c2f45abe9a.ctex"]
+source_file="res://assets/thumbnails/thumb_relax_terror.png"
+dest_files=["res://.godot/imported/thumb_relax_terror.png-a5d01961ef34df42e0924f8b7cbe73b7.ctex"]
 
 [params]
 

@@ -1,8 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://dqcp4trm0v60f"]
+[gd_scene load_steps=19 format=3 uid="uid://dqcp4trm0v60f"]
 
 [ext_resource type="Texture2D" uid="uid://wh8dgq8nnq2n" path="res://assets/img/graybox_hub_maptest.png" id="1_1katc"]
 [ext_resource type="Script" path="res://scenes/map_room.gd" id="1_yvt5v"]
 [ext_resource type="PackedScene" uid="uid://m47064cxfa3k" path="res://scenes/transitions.tscn" id="2_fo1lu"]
+[ext_resource type="Texture2D" uid="uid://yh56sfk4x4xk" path="res://assets/img/store_icon.jpg" id="4_n24sn"]
 [ext_resource type="Texture2D" uid="uid://cpt7nxnc3lsgf" path="res://assets/img/hospital.png" id="4_w44ao"]
 [ext_resource type="Texture2D" uid="uid://c7uk7ffer724d" path="res://assets/img/park.png" id="5_b15bp"]
 [ext_resource type="Texture2D" uid="uid://dnixs2jb0pso5" path="res://assets/img/bar-counter.png" id="6_wkxly"]
@@ -16,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://bshw7uv6wgkbp" path="res://assets/img/buteco.jpg" id="13_lolhe"]
 [ext_resource type="Texture2D" uid="uid://dhvowlh0tnrny" path="res://assets/img/park.jpg" id="14_cjrlw"]
 [ext_resource type="Texture2D" uid="uid://b4uk42uji5goo" path="res://assets/img/boutique.webp" id="15_0y3o8"]
+[ext_resource type="Texture2D" uid="uid://cqga0ansjybqx" path="res://assets/img/old_shop.jpg" id="16_4drd4"]
 
 [node name="MapRoom" type="Control"]
 layout_mode = 3
@@ -61,6 +63,27 @@ offset_left = 6.0
 offset_top = 200.0
 offset_right = 199.0
 offset_bottom = 292.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 40
+text = "Visit"
+
+[node name="OldShopMap" type="TextureRect" parent="."]
+modulate = Color(0.537255, 0.537255, 0.537255, 1)
+layout_mode = 0
+offset_left = 998.0
+offset_top = 518.0
+offset_right = 1171.0
+offset_bottom = 688.0
+texture = ExtResource("4_n24sn")
+expand_mode = 1
+
+[node name="OldShopGoBtn" type="Button" parent="OldShopMap"]
+visible = false
+layout_mode = 0
+offset_left = -8.0
+offset_top = 167.0
+offset_right = 185.0
+offset_bottom = 259.0
 mouse_filter = 1
 theme_override_font_sizes/font_size = 40
 text = "Visit"
@@ -235,11 +258,6 @@ text = "- Activity 1"
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "- Activity 2"
-
-[node name="hact3" type="Label" parent="HospitalPanel/ActivityContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 40
-text = "- Activity 3"
 
 [node name="PeoplePlace" type="Label" parent="HospitalPanel"]
 layout_mode = 0
@@ -553,6 +571,98 @@ offset_bottom = 782.0
 theme_override_font_sizes/font_size = 40
 text = "People of Interest"
 
+[node name="OldShopPanel" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_left = 57.0
+offset_top = 49.0
+offset_right = 544.0
+offset_bottom = 1025.0
+
+[node name="Panel" type="Panel" parent="OldShopPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -35.0
+offset_top = -35.0
+offset_right = 38.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ParkLabel" type="Label" parent="OldShopPanel"]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 333.0
+offset_right = 369.0
+offset_bottom = 405.0
+theme_override_font_sizes/font_size = 50
+text = "Old Shop"
+horizontal_alignment = 1
+
+[node name="PlaceTexture" type="TextureRect" parent="OldShopPanel"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = -1.0
+offset_right = 452.0
+offset_bottom = 337.0
+texture = ExtResource("16_4drd4")
+expand_mode = 1
+
+[node name="Activities" type="Label" parent="OldShopPanel"]
+layout_mode = 2
+offset_left = 57.0
+offset_top = 423.0
+offset_right = 491.0
+offset_bottom = 481.0
+theme_override_font_sizes/font_size = 40
+text = "Activities:"
+
+[node name="PersonContainer" type="HBoxContainer" parent="OldShopPanel"]
+layout_mode = 2
+offset_left = -7.0
+offset_top = 811.0
+offset_right = 535.0
+offset_bottom = 972.0
+alignment = 1
+
+[node name="Person1" type="TextureRect" parent="OldShopPanel/PersonContainer"]
+layout_mode = 2
+texture = ExtResource("10_3jetj")
+expand_mode = 2
+
+[node name="ActivityContainer" type="VBoxContainer" parent="OldShopPanel"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 490.0
+offset_right = 471.0
+offset_bottom = 672.0
+
+[node name="oldshop1" type="Label" parent="OldShopPanel/ActivityContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "- Activity 1"
+
+[node name="oldshop2" type="Label" parent="OldShopPanel/ActivityContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "- Activity 2"
+
+[node name="oldshop3" type="Label" parent="OldShopPanel/ActivityContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "- Activity 3"
+
+[node name="PeoplePlace" type="Label" parent="OldShopPanel"]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 724.0
+offset_right = 410.0
+offset_bottom = 782.0
+theme_override_font_sizes/font_size = 40
+text = "People of Interest"
+
 [node name="Transitions" parent="." instance=ExtResource("2_fo1lu")]
 visible = false
 layout_mode = 1
@@ -561,6 +671,9 @@ layout_mode = 1
 [connection signal="mouse_entered" from="HospitalMap" to="." method="_on_hospital_map_mouse_entered"]
 [connection signal="mouse_exited" from="HospitalMap" to="." method="_on_hospital_map_mouse_exited"]
 [connection signal="pressed" from="HospitalMap/HospitalGoBtn" to="." method="_on_hospital_go_btn_pressed"]
+[connection signal="mouse_entered" from="OldShopMap" to="." method="_on_old_shop_map_mouse_entered"]
+[connection signal="mouse_exited" from="OldShopMap" to="." method="_on_old_shop_map_mouse_exited"]
+[connection signal="pressed" from="OldShopMap/OldShopGoBtn" to="." method="_on_old_shop_go_btn_pressed"]
 [connection signal="mouse_entered" from="Park" to="." method="_on_park_mouse_entered"]
 [connection signal="mouse_exited" from="Park" to="." method="_on_park_mouse_exited"]
 [connection signal="pressed" from="Park/ParkGoBtn" to="." method="_on_park_go_btn_pressed"]

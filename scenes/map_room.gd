@@ -8,7 +8,6 @@ extends Control
 @onready var vesper_map = $VesperMap
 @onready var hact_1 = $HospitalPanel/ActivityContainer/hact1
 @onready var hact_2 = $HospitalPanel/ActivityContainer/hact2
-@onready var hact_3 = $HospitalPanel/ActivityContainer/hact3
 @onready var hospital_go_btn = $HospitalMap/HospitalGoBtn
 @onready var hospital_panel = $HospitalPanel
 @onready var bar_panel = $BarPanel
@@ -27,6 +26,12 @@ extends Control
 @onready var boutiqueact_4 = $BoutiquePanel/ActivityContainer/boutiqueact4
 @onready var boutique_panel = $BoutiquePanel
 @onready var boutique_go_btn = $Boutique/BoutiqueGoBtn
+@onready var old_shop_go_btn = $OldShopMap/OldShopGoBtn
+@onready var old_shop_panel = $OldShopPanel
+@onready var old_shop_map = $OldShopMap
+@onready var oldshop_1 = $OldShopPanel/ActivityContainer/oldshop1
+@onready var oldshop_2 = $OldShopPanel/ActivityContainer/oldshop2
+@onready var oldshop_3 = $OldShopPanel/ActivityContainer/oldshop3
 
 
 func _ready():
@@ -53,6 +58,11 @@ func _ready():
 		boutique_go_btn.disabled = true
 	else:
 		boutique_go_btn.disabled = false
+
+	if SaveManager.save.old_shop["visited"] == true:
+		old_shop_go_btn.disabled = true
+	else:
+		old_shop_go_btn.disabled = false
 	
 	#Hospital Activities
 	if SaveManager.save.hospital["talk_act"] == false:
@@ -63,10 +73,7 @@ func _ready():
 		hact_2.text = "- ???"
 	else:
 		hact_2.text = "- Steal blood"
-	if SaveManager.save.hospital["buy_blood"] == false:
-		hact_3.text = "- ???"
-	else:
-		hact_3.text = "- Buy blood"
+
 	#Bar Activities
 	if SaveManager.save.bar["talk_act"] == false:
 		baract_1.text = "- ???"
@@ -115,6 +122,22 @@ func _ready():
 		boutiqueact_4.text = "- ???"
 	else:
 		boutiqueact_4.text = "- Sex Toys"
+	
+	#Old_shop activities
+	if SaveManager.save.old_shop["talk_act"] == false:
+		oldshop_1.text = "- ???"
+	else:
+		oldshop_1.text = "- Talk"
+	
+	if SaveManager.save.old_shop["shop"] == false:
+		oldshop_2.text = "- ???"
+	else:
+		oldshop_2.text = "- Shop"
+	
+	if SaveManager.save.old_shop["be_her_pet"] == false:
+		oldshop_3.text = "- ???"
+	else:
+		oldshop_3.text = "- Become her pet"
 	
 func _process(delta):
 	pass
@@ -177,3 +200,18 @@ func _on_bar_go_btn_pressed():
 func _on_park_go_btn_pressed():
 	SaveManager.save.park["visited"] = true
 	get_tree().change_scene_to_file("res://scenes/park.tscn")
+
+
+func _on_old_shop_map_mouse_entered():
+	old_shop_map.modulate = Color(1, 1, 1)
+	old_shop_go_btn.show()
+	old_shop_panel.show()
+
+func _on_old_shop_map_mouse_exited():
+	old_shop_map.modulate = Color(0.50928616523743, 0.50928616523743, 0.50928616523743)
+	old_shop_go_btn.hide()
+	old_shop_panel.hide()
+
+func _on_old_shop_go_btn_pressed():
+	SaveManager.save.old_shop["visited"] = true
+	get_tree().change_scene_to_file("res://scenes/old_shop.tscn")

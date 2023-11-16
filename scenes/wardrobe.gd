@@ -5,6 +5,8 @@ extends Control
 @onready var tank_top = $Clothes/TankTop
 @onready var lace_panties = $Clothes/LacePanties
 @onready var blouse = $Clothes/Blouse
+@onready var vest_and_tie = $Clothes/VestAndTie
+@onready var vest = $Clothes/Vest
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -35,3 +37,15 @@ func _on_clickable_3_gui_input(event):
 		SaveManager.save.clothing["top"] = blouse.texture
 	if Input.is_action_just_pressed("right_click"):
 		SaveManager.save.clothing["top"] = null	
+
+func _on_clickable_4_gui_input(event):
+	if Input.is_action_just_pressed("left_click"):
+		SaveManager.save.clothing["top"] = vest_and_tie.texture
+	if Input.is_action_just_pressed("right_click"):
+		SaveManager.save.clothing["top"] = null	
+	
+func _on_clickable_5_gui_input(event):
+	if Input.is_action_just_pressed("left_click"):
+		SaveManager.save.clothing["top"] = vest.texture
+	if Input.is_action_just_pressed("right_click"):
+		SaveManager.save.clothing["top"] = null
