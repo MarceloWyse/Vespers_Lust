@@ -1,0 +1,78 @@
+[gd_scene load_steps=4 format=3 uid="uid://ye2l1dhr8y6i"]
+
+[ext_resource type="Script" path="res://scenes/fifth_prostitution.gd" id="1_ijy8f"]
+[ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="1_tf84y"]
+[ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="2_q736q"]
+
+[node name="FifthProstitution" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ijy8f")
+
+[node name="DialogBox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 223.0
+offset_top = -338.0
+offset_right = -219.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CharPortrait" type="TextureRect" parent="DialogBox"]
+visible = false
+layout_mode = 0
+offset_left = -178.0
+offset_top = -79.0
+offset_right = 166.0
+offset_bottom = 303.0
+texture = ExtResource("1_tf84y")
+expand_mode = 1
+
+[node name="DialogueLabel" parent="DialogBox" instance=ExtResource("2_q736q")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 148.0
+offset_top = 21.0
+offset_right = -55.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 40
+text = "Type here"
+messages = Array[String](["Your body feels so hypersensitive since you’ve turned, you can actually feel your holes itching for attention. Fingers and tongues simply don’t satisfy you anymore. With a see-through blouse and no panties, you came to the red-light district ready to fuck. ", "You want to take the cocks you’ve been sucking and stick them deep inside you until you feel your womb fill up with their cum.", "You’ve decided not to go home today until your hymen is properly torn apart, and your ass is stretched so wide it takes hours to go back to its normal size.", "Hopefully, you can find a client large enough to satisfy your needs, and then suck him dry. You get wet remembering all the men you’ve had so far, and the fun you’ll have now that you’re not bound by moral limitations anymore, you want to taste everything that life, or in this case, death, has to offer.", "Today must be your lucky day, not an hour has passed a tall muscular man approaches you. He’s not bad to look at, but… when he opens his mouth, you understand why he’s out here picking up women. He has a foreign accent and barely speaks English.", "Besides, this man has particular needs, that only a hooker life yourself could satisfy. He doesn’t talk to you like a woman at all but like an object. This irritates you deeply and excites you. Oh, you’ll love to sink your teeth in this one once you’re done, maybe you’ll even break your little rule of not killing your clients.", "Man: Hello, bitch.", "Vesper: Hello.", "Man: Shaved?", "Vesper: Yes, of course.", "Man: Check before buy.", "Vesper: Sure… ", "You did come with no panties today, but you weren’t expecting such a straightforward request.", "You lift off your skirt, revealing what's undernearth.", "Man: Good. You smell good.", "He starts licking your slit right there.", "There are still some people around, they are minding their own business, but you didn’t come here for a freebie. ", "Vesper: Wait, not here. Let’s go someplace else.", "Was this man raised with animals or something to be doing this in the middle of the street?", "Man: I want fuck.", "Man: Fuck here.", "Wet with saliva he pushes his finger inside you.", "Suddenly, his expression turns to a surprise one when he realizes you’re tight as a virgin.", "Man: You VIRGIN?", "Vesper: Yes, do you like it?", "Man: Oh, I love. Take Nico money, here.", "Nico, hands you his wallet.", "You take his wallet and take a step back.", "Vesper: Okay, Nico, if you want to stick your cock in this tight pussy, follow me.", "This one won’t need any convincing, he’s so dumb he’ll follow you directly to a cliff and jump off.", "You start walking to your hideout. You didn’t think you’d be using it again so soon after Frederick, but it seems like now’s a good chance.", "Nico: You pretty virgin. I fuck you good. Me big dick. Strong.", "Vesper: Oh, yes. Nico, you’re big all over, aren’t you? What will you do to such a frail girl like me?", "Nico: You small girl, I pay, I use.", "Vesper: Oh, yes, you pay you use. That’s the deal. ", "Nico puts his hand inside your skirt and shoves a finger in your ass as you walk.", "At least this dumb man is not all about talk.", "When you arrive at the hideout, he doesn’t even care the place looks sketchy, he slaps you across the face hard and throws you on top of the mattress like a sack of potatoes.", "Vesper: Oh, I’m definitely not letting you walk out of here, Nico… ", "He takes off his clothes, you get on your knees and he shoves his dick in your mouth.", "Nico: Shut up and suck, bitch.", "You do as you are told, he’s a jerk but he has a huge delicious dick.", "He grabs you by the hair and pushes it all the way down your throat, luckily you’re so used to it by now it doesn’t hurt at all.", "He looks satisfied.", "Nico:  You suck, good. Pretty bitch.", "You keep sucking his dick while playing with yourself.", "He picks you by the hair, slaps you across the face again, and rips your blouse. You take off your skirt before he rips it off too. This is the first time you’ve been entirely naked with someone.", "He puts your hands on the wall and asks you to lift your ass. Then he gets on his knees and starts sucking your asshole while shoving a finger inside your pussy. You hate to admit it, but you want to be fucked until you lose all sensation down there.", "You start shaking your ass, seducing him, and say:", "Vesper: Nico, put that fat cock inside me, please.", "Nico: You hungry bitch. I fuck you now.", "He spreads your legs wide open and puts his dick in your entrance. You thought he would push it in like the brute he is, but he wants to enjoy stretching you, inch by inch. Having such a large cock slowly entering you is making you crazy.", "Vesper: Oh, Nico, stop teasing me, shove it all in, please.", "Nico: Shut up, virgin, bitch. I take time. Nico gentleman.", "He says that and shoves his thumb in your asshole while he slaps you constantly with another hand. ", "You moan with pleasure and pain, he’s hitting you so hard your ass is going numb.", "Nico: Nice butt, good small asshole. Nico like it.", "You can feel his cock hitting your hymen. You spread your legs even further to allow him in.", "Vesper: Nico, just a little more, I can feel my hymen stretching, aaahhnn, it hurts.", "As he slowly tears your hymen apart he lets go a smirk across his stupid face.", "Nico: You no virgin anymore. Nico take it.", "Vesper: Oh yes, Nico, I can feel it, it hurts, but I love it. ", "Satisfied that he took your virginity, with a thumb still exploring your ass, he shoves it all the way into your womb.", "You squirm with pain and pleasure.", "He doesn’t care that you were a virgin just seconds ago, he’s already drilling you hard. You feel like your pussy is on fire.", "Nico: I fuck you all night. You mine.", "Vesper: Do whatever you want. this pussy is all yours tonight, Nico.", "His cock feels better than what you’d hoped for, you can’t imagine what it will feel like after you get more used to it. But you’re loving it.", "Then, he pulls it all the way off and shoves it all the way in until he hits your womb. ", "He repeats that nonstop, stretching your pussy beyond recognition.", "You can only imagine how deformed it’s becoming, your hole that was so tight just a few minutes ago.", "Then, he pulls both his thumb out of your ass, and his dick from your pussy. Spreads your holes as wide as he can, and says:", "Nico: Pretty bitch, pretty pink holes. ", "Vesper: You like my pink holes, Nico? Do you want to fuck me more?", "You lie down on the mattress and open your legs so that he can see everything. ", "Vesper: Come, fuck my brains out, Nico. Use this pussy until your dick falls off.", "Without saying anything he jumps on top of you and shoves it all the way in, you can feel his balls hitting your ass every time he shoves it in and out.", "Lost in pleasure you enlace your legs around his back and search for his tongue in a frenzy. You suck his tongue like it was candy, while he hammers your pussy.", "Vesper: Pull my tits. Pull my nipples with all your strength!", "He pulls your tits like he wants to tear them off.", "You moan with pleasure, getting stuffed while having your tits almost ripped off feels great.", "You can feel him getting harder, you know he’s excited using you as he wishes. But you can’t contain yourself anymore, you want to cum with his dick inside you.", "Vesper: Nico, are you enjoying your little bitch?", "Vesper: I want you to cum inside me, fill my womb with your cum.", "Nico: Little bitch have my babies. ", "Vesper: Do you want to get me pregnant, Nico? Do you want your little bitch pregnant?", "Nico: Me proud man, make you strong baby.", "You can tell the idea of making you pregnant is making him even more excited. His dick is harder than a rock, he’s ", "Vesper: Who’s going to take care of them, Nico? Are you going to be a good father? ", "Nico: Nico not a father, you bitch, Nico makes babies you take care.", "Nico: You want Nico’s babies?", "Vesper: Oh yes, Nico. I want your babies, cum inside me. Cum until you have nothing left in your balls. ", "You push him to the floor, showing your true strength. ", "Surprised he’s speechless.", "Then with one fell swoop, you sit on his dick with all your strength, your tits bouncing up and down, your ass stretched out from all his fingering, your back filled with sweat.", "He groans in pleasure not understanding what’s happening. You’re in command now.", "Vesper: Come on, motherfucker. You took my virginity with this enormous cock, you said you wanted to make me pregnant and disappear. Give me all your cum before I rip your head off.", "You start to choke him, his dick gets harder and harder, he’s panicking but his cock is not getting limper.", "You can feel it coming, you’re about to cum too, you’re choking him so hard his eyes are about to pop from his eye socket. ", "Then you contract your pussy with all your strength, and with a swift movement slide all the way to the tip of his cock and down until the base of his shaft.", "As you descend you hear his throat make a strange cracking sound as he cums deep inside you. Feeling your womb getting filled with his milk you cum too.", "You let your teeth protrude all the way out, he’s still conscious and looks terrified. ", "Vesper: Now, it’s my time to devour you, stupid Nico.", "You bite his neck and his blood gushes all over, his dick still hard inside you.", "You drink until the last drop until you’re sure he’s not breathing anymore.", "When you can’t drink anymore, you get up.", "Vesper: Nobody is going to miss this piece of shit. So long, Nico.", "You decide to take a quick shower before you head out. ", "You caress your belly.", "Vesper: Vampires can’t get pregnant, can they? ", "His cum dripping down your legs, you laugh hysterically, feeling satisfied.", "--- FIFTH PROSTITUION END ---", "-- PROSTITUTION GRADE A ---", "Having lost your virginity and experienced the utmost pleasure of sex and blood, this place has become your private paradise. ", "Before draining their blood, you always make sure your clients either cum in your mouth, or deposit their hot milk in your womb, sometimes both. ", "No one leaves wanting for pleasure, and everyone's satisfied, especially you.", "-- END OF PROSTITUTION A ---"])
+
+[node name="NamePanel" type="Panel" parent="DialogBox"]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 129.0
+offset_top = -197.0
+offset_right = -1132.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameLabel" type="Label" parent="DialogBox/NamePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Vesper"
+horizontal_alignment = 1
+vertical_alignment = 1

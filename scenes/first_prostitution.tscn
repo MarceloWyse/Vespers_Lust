@@ -1,0 +1,79 @@
+[gd_scene load_steps=4 format=3 uid="uid://by6sf866le8hh"]
+
+[ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="1_7gxpt"]
+[ext_resource type="Script" path="res://scenes/first_prostitution.gd" id="1_idsbd"]
+[ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="2_5jhu7"]
+
+[node name="FirstProstitution" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_idsbd")
+
+[node name="DialogBox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 223.0
+offset_top = -338.0
+offset_right = -219.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CharPortrait" type="TextureRect" parent="DialogBox"]
+visible = false
+layout_mode = 0
+offset_left = -178.0
+offset_top = -79.0
+offset_right = 166.0
+offset_bottom = 303.0
+texture = ExtResource("1_7gxpt")
+expand_mode = 1
+
+[node name="DialogueLabel" parent="DialogBox" node_paths=PackedStringArray("dialogue_timer") instance=ExtResource("2_5jhu7")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 148.0
+offset_top = 21.0
+offset_right = -55.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 40
+text = "Type here"
+messages = Array[String](["Why deny it any longer…", "I’m not the same person I was before this all started.", "My body is different, my needs are different. The Vesper I knew is dead. This is the Vesper I have to become in order to survive in this crazy world. ", "I have nobody on my side, no family I can run to. It’s either this or death.", "I’m not even a person, I’m a walking corpse. Why should I feel ashamed, I need the money, and I need to feed, now. This could easily become my hunting ground, without the risk of getting caught. ", "I just have to be rational and think smart. The best way to do this is to play the part. A fairly young girl like me, in this place, nobody would suspect if I lured men into the shadows. ", "It’s not prostitution, per se, it’s strategy. ", "When I was interviewing these girls they all told me I could make a fortune here with my looks…. most of them were sad, but a few actually liked this job, I shouldn’t be so judgemental.", "At least it’s a fair trade, my body for their blood and money. I’ll have to be careful not to raise suspicion.", " I just have to take their money, let them have some fun, and when their guard is down… sink my teeth into their necks.", "You start scanning the area for potential clients. ", "None of them are what you would call The Bachelor material, but you’re not out looking for love anyway. ", "You notice from afar one guy wearing what it seems to be a wedding ring, with a strong smell of booze and cigarettes.", "You think to yourself:", "Vesper: At least this one won’t go about telling others of his strange encounter… I don’t think anyone would believe him anyway.", "Convincing yourself this is the best route, you approach the guy, who’s been eyeing you for some time.", "Imitating as best as you can your former interviewees, you say:", "Vesper: Hello, wanna have some fun?", "The man’s eyes clearly show that he can’t believe what he’s hearing. ", "Man: What's a goddess like you doing in a place like this?", "Vesper: A girl's gotta pay her bills.", "Man: You ain’t a cop, are you?", "Vesper: You’ve been watching too many TV shows, since when are cops interested in this god-forsaken place?", "Man: Good point.", "Man: I don’t think I have enough to pay for your services, though…", "Vesper: Oh, I’m sure you have enough to satisfy me.", "You were nervous before, but you feel your hunting instincts kicking in, it’s like you’re on autopilot. ", "Man: Do you wanna go someplace?", "Vesper: I was thinking of something more reserved, immediate. What about that corner over there?", "Vesper: I’ll let you cop a feel, in exchange for everything you have.", "Man: I promised my wife I would stop coming here… but here I am… and here you are. This is my lucky day, you’re so pretty, and I’m just a slave to my desires…", "Vesper: Aren’t we all?", "You guide the man to the corner by the hand.", "He’s drunker than you thought he would be, this isn’t going to be hard at all.", "There’s no one nearby, you’re all alone.", "The man starts kissing your neck from behind. ", "He’s clearly more experienced than you are.", "You thought about just drinking him dry the first chance you had, but…", "He bites your earlobe softly, whispering into your ear:", "Man: You’re so beautiful...", "You can feel him hard, pushing against your back. ", "He wants you to touch him too. You don’t want to, at least you think you don’t…", "You tell yourself:", "This is just a job… a way to get by.", "You feel his hands over your thin silk shirt making their way up your belly button.", "You start to breathe heavier.", "He reaches for your breasts, taking his time, exploring every inch of your body.", "He fondles them softly at first, and then vigorously, while his other hand caresses your thigh.", "You let a little moan slip.", "The man looks satisfied.", "You turn around and say:", "Vesper: My turn…", "You start licking his neck… you can feel his heart beating fast as if he just got out of a roller coaster.", "You can’t hold it anymore. Before you know it you have your fangs deep into the man’s neck.", "He doesn’t even realize what’s happening. You just feel him fading away.", "You hold his unconscious body as he falls. You don’t want your victims to get a concussion, you want them to walk out of here like nothing happened.", "Vesper: We both got a fair deal. ", "You search through his wallet and take whatever money he has in there. He wasn’t lying, it isn’t much.", "Your body is still hot from all the excitement and you're feeling more lustful than ever. At least you’re not starved anymore.", "Considering this as a success, you leave him lying on the ground, strangely enough, with a delighted expression on his face.", "-- END OF FIRST PROSTITUTION --", "-- START OF PROSTITUTION E ---", "You find yourself once again hunting for victims in the dark alleys of Grimshire.", "Vesper: I just have to follow my M.O. and find some horny, lonely men, willing to have a good time.", "Without too much effort you soon encounter your next victim.", "He fondles you all over before you have the chance to suck his blood out.", "You leave him breathing but unconscious, unaware of what has transpired.", "You feel less hungry, but more lustful.", "-- END OF PROSTITUION E ---"])
+dialogue_timer = NodePath("")
+
+[node name="NamePanel" type="Panel" parent="DialogBox"]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 129.0
+offset_top = -197.0
+offset_right = -1132.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameLabel" type="Label" parent="DialogBox/NamePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Vesper"
+horizontal_alignment = 1
+vertical_alignment = 1

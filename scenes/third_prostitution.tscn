@@ -1,0 +1,79 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvfnhprtexx2n"]
+
+[ext_resource type="Script" path="res://scenes/third_prostitution.gd" id="1_upgqw"]
+[ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="2_y6ody"]
+[ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="3_d11ct"]
+
+[node name="ThirdProstitution" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_upgqw")
+
+[node name="DialogBox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 223.0
+offset_top = -338.0
+offset_right = -219.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CharPortrait" type="TextureRect" parent="DialogBox"]
+visible = false
+layout_mode = 0
+offset_left = -178.0
+offset_top = -79.0
+offset_right = 166.0
+offset_bottom = 303.0
+texture = ExtResource("2_y6ody")
+expand_mode = 1
+
+[node name="DialogueLabel" parent="DialogBox" node_paths=PackedStringArray("dialogue_timer") instance=ExtResource("3_d11ct")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 148.0
+offset_top = 21.0
+offset_right = -55.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 40
+text = "Type here"
+messages = Array[String](["You’re making enough money and kind of having fun while doing it, but… ", "You don’t think you’re being too fair to your clients. Most of them are just poor sobs who want to have some fun.", "The red light district can be a dangerous place, but for you, it has been nothing but an all-you-can-eat buffet.", "That’s why today you decided to wear something lighter, more revealing. You’re already dead, being a little more adventurous won’t kill you.", "A bra only gets in the way in this line of work, so you leave home without one. And it’s been such a long time since you haven’t worn a skirt, now’s the best chance you’ll get.", "I don’t want people to get suspicious, I’ve been coming here rather frequently. Someone might start noticing if I don’t dress myself accordingly.", "Ignoring that it’s just an excuse you’re telling yourself to be naughtier, you begin searching for your next client.", "Ignoring that it’s just an excuse you’re telling yourself to be naughtier, you begin searching for your next client.", "You’ve fallen into the same trap Helena had… like any other visitor of this red light district has… ", "But you can’t go back now. You know you’ll be coming for more, denying the truth is futile.", "Tonight you’re not feeling like choosing too much, you’ve tasted people and in the end, they all taste the same, minus the alcohol running through their veins.", "Differently from the movies, it’s not about the quality, but the quantity they can provide.", "Fortunately, a very tall bald man approaches and grabs your ass, hard.", "As if expecting a slap he flinches when you turn around. But to his surprise, you give him a smile and let him keep rubbing your butt.", "My god, I’m the luckiest man alive. I thought your body was amazing, but you’re also as pretty as one of them TV models.", "I like men with attitude. Do you also have the money to back that up?", "You brush away his hand from your butt to let him know you mean business.", "I certainly do! I wasn’t planning on spending it all in one place, though.", "Well, you’ve already tasted the merchandise, now you’ve gotta buy it too.", "You purposely let a strap of your shirt slip down slowly, laying bare your pale shoulder reflected by the moonlight.", "Ahw, shucks. You only live once, huh? Alright, you can have it. But I want the full experience.", "Oh, you won’t regret it, big boy.", "He happily follows you to a dark alley, his enormous hand groping your buttocks.", "You’re sure this one is going to give you more trouble, but you don’t want to raise any alarm, if done this right he’ll let his guard down like all the others.", "Plus, you think he’s a jerk. You’ll gladly suck him dry once this is over.", "He finds an old sofa chair lying around, it seems to have been left here by some junkies, judging by a bunch of used syringes scattered about and a few drops of blood.", "The sight of blood thrills you, you can’t stop thinking about slurping this huge man’s blood down your throat.", "He notices your delighted expression.", "Oh, you’re a kinky one, heh. Well then, sit on my lap them, I wanna feel you from behind.", "This is going to make things harder for you, but you don’t have a choice. ", "You do as he says and sit on his lap.", "The man lets out a huge smile showing his crooked teeth.", "He immediately rams his hands inside your shirt, pinching your nipples as hard as he can.", "It hurts a little, but it’s nothing you can’t stand. The pain you’ve caused others so far must be much worse than this.", "Next, he takes a hand off your chest and pulls your hair firmly, tilting your head backward and exposing your neck, making you feel helpless.", "Then, he starts licking the side of your lips searching for your tongue, you try to fight it, but the urge to reciprocate is stronger, and your tongue instinctively meets his.", "He tastes like old whisky, you kind of like it.", "He lets go of your hair, but you continue kissing him.", "When you open your eyes he’s staring at you, proudly.", "This is getting out of hand, you’re losing control.", "You try to stand up, but he’s too powerful, he’s got you locked up.", "He’s played with your nipples so much it feels like they’re on fire. It’s been a long time since you haven’t felt this alive. ", "You notice that his fly is unzipped, and you can guess by the size that he has an abnormally large member. ", "It’s driving you insane. The more you try to break free, the more you feel him brushing against your inner thighs.", "You know if you really wanted to, you could rip this man’s throat open in an instant. But… you can’t stop moaning.", "He starts choking you softly, gaining your trust, as you finally stop resisting he chokes you harder.", "His hands are so gigantic that he only needs one of them to dominate you completely.", "With his free hand, he slides it into your panties.", "You let out a huge moan.", "You don’t want to admit it, but you’re soaking wet.", "He starts by playing with your clitoris, slowly, taking his time to appreciate you.", "For a brute, he sure knows how to handle your lady bits.", "Overwhelmed by desire you put your tiny hands on top of his huge tent. He’s so big it makes your hands feel even tinier.", "You have to stop, this has gone far away from your original plan.", "Whilst you tell yourself that, you know you’re free to go for a while now.", "The man stopped moving his hands when you started caressing his cock.", "He knows he has you beaten.", "You’re baffled by his demeanor, sometimes treating you like a princess, others like a ragdoll.", "You’ve thrown your sanity out the window for a while now, your lust won’t let you stop moving your hips up and down.", "Every time you move you feel his index finger hitting your entrance; Aside from your own small fingers you never had something so big inside you.", "You start to get nervous, but curious at the same time, imagining how it would feel like to have him inside you.", "You’re so wet it might not even hurt.", "Lost in the moment you reach for his tongue, kissing him as if he were the last man on earth.", "Surprised by your reaction he starts moving again, trying to insert his finger inside you, but your hymen is so tight he can’t get all the way in.", "Realizing you’re still a virgin makes the man so excited you can feel his member almost exploding from within his underpants.", "Now he’s relentlessly playing with your clitoris with one hand and trying to go deeper inside you with the other.", "You start sucking his neck as hard as you can without biting, savoring each moment.", "Then, you finally open your legs as wide as you can, like a broken doll, letting him in.", "When his finger hits your womb you both climax together.", "With his finger still deep inside you, you bite his neck, and blood splatters all over. You are so excited, it even feels like your heart is pumping again. ", "You understand now perfectly what Helena meant by blood and sex. This is the best feeling ever. You drink his blood until he’s out cold, not wasting any drop. ", "You were wrong, not everybody tastes the same. Sexual arousal makes the whole experience much more worthwhile. You can’t even put it into words, but you’ve never felt this fulfilled in your entire life.", "You’re certain this is the crack for vampires. And like any powerful drug, once tasted you’re addicted.", "END OF THIRD PROSTITUTION - ", "-- START OF PROSTITUIN GRADE C --", "As you had predicted you find your way back into the red-light district.", "You’re not even that picky anymore, short, tall, fat, slim, ugly, good-looking, if they seem like easy prey, you let them have their way with you.", "You love feeling their fingers inside you while you see their eyes rolling into oblivion as you suck the life out of them.", "-- END OF PROSTITUTION C --"])
+dialogue_timer = NodePath("")
+
+[node name="NamePanel" type="Panel" parent="DialogBox"]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 129.0
+offset_top = -197.0
+offset_right = -1132.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameLabel" type="Label" parent="DialogBox/NamePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Vesper"
+horizontal_alignment = 1
+vertical_alignment = 1

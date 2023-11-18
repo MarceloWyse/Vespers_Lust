@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dwuhbaedngkvi"]
+[gd_scene load_steps=5 format=3 uid="uid://dwuhbaedngkvi"]
 
+[ext_resource type="Script" path="res://scenes/lily_sex_dungeon.gd" id="1_611j5"]
 [ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="1_t6wcy"]
 [ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="2_5g7di"]
+[ext_resource type="Texture2D" uid="uid://cberx63720yco" path="res://assets/img/bondage_dungeon.jpg" id="2_vweic"]
 
 [node name="LilySexDungeon" type="Control"]
 layout_mode = 3
@@ -10,11 +12,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_611j5")
 
 [node name="SceneBg" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_vweic")
 
 [node name="DialogBox" type="Panel" parent="."]
 layout_mode = 1
@@ -39,7 +46,7 @@ offset_bottom = 303.0
 texture = ExtResource("1_t6wcy")
 expand_mode = 1
 
-[node name="DialogueLabel" parent="DialogBox" node_paths=PackedStringArray("dialogue_timer") instance=ExtResource("2_5g7di")]
+[node name="DialogueLabel" parent="DialogBox" instance=ExtResource("2_5g7di")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -52,8 +59,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 40
 text = "Type here"
-messages = Array[String](["Vesper: I’ve got a little farewell gift in store for you.", "Vesper: Are you ready for it?", "Deckard: I think I am.", "Vesper:  Take all your clothes off and sit down, you won’t be needing them.", "He does as he’s told.", "You strip down to your panties and start rubbing your tits on his face.", "Vesper: Lick my nipples.", "Vesper: Softly, yes. Harder. Bite them. That’s it.", "Vesper: This delicious cock is so hard already. I can't help myself anymore, Mr. Deckard. ", "Vesper: Today I'm gonna sit on it until you're tired of fucking me.", "Vesper: I’m gonna need those handcuffs first, may I borrow them for a sec?", "Deckard: After telling me that? Be my guest.", "You take his wrists and pull them to the back of the chair, closing the handcuffs as tight as possible.", "Vesper: Now, now, how would you explain if someone walked in and caught you in this deplorable state, overpowered by a small girl in her underwear?", "Deckard: I couldn’t, my life is in your hands.", "Vesper: That’s what I wanted to hear.", "You stand up, and slide your panties down to the ground.", "Seeing your pussy dripping wet makes him harder than ever.", "Vesper: Which hole do you want, Mr. Deckard? My wet pussy or my tight virgin asshole?", "Deckard: I want to stick it in your butthole.", "Vesper: What a dirty, old man. Craving my tiny little asshole. ", "You spread your ass and start shaking it on the tip of his cock.", "Deckard: I could die right now, this is heaven.", "Vesper: Not yet, soon you’ll be in heaven. With that hard, veiny cock deep, deep…", "Vesper: Inside…", "The head slides in.", "You feel it pulsating inside you.", "Vesper: My tight…", "Vesper: Asshole.", "You slide it all the way down to his balls in one fell swoop.", "The man lets out a cry of joy.", "You start moving up and down.", "Vesper: Are you enjoying screwing me in the ass?", "Deckard: Yes, it’s marvellous. You’re a goddess, an anal goddess.", "Vesper: Why do you have such a thick cock? My asshole's never going back to normal after you’re done with it.", "Deckard: I love your butthole, I'm going to stretch it beyond recognition.", "Vesper: Stretch it all you want, my asshole's all yours,", "Deckard: Aaaaarghhh, I don’t care if I drop dead tomorrow, at least I got to enjoy my life a little! Fuck it!", "Vesper: Punish this little thief with that huge stick.", "Deckard: I can’t take much more of this, you’re just fucking perfect. I wanna fill you with my cum.", "You change positions, facing him, you sit on his lap and sink his dick in your ass again.", "You’re so stretched it goes in without any resistance.", "Vesper: I can feel your cock massaging my rectum. It feels wonderful.", "Vesper: I’ll let you cum, inside of me, in exchange for that sweet blood of yours pumping in your veins.", "Deckard: Do it, drink it all away, just let me cum first.", "Vesper: As you wish, rape my asshole until you cum.", "He thrusts violently inside you over and over again, like a piston that has lost control.", "From time to time he takes it all out and shoves it all the way back in, creating a gaping hole of what was once your tight asshole.", "Deckard: I can’t hold on anymore, I’m cumming, Do it, bite me.", "Vesper: As you wish.", "You sink your teeth deep in his neck, while he fills your asshole with his milk.", "You drink until you’re satisfied. By the time you’re over he’s lost consciousness. ", "You get up and clean yourself with a tissue.", "You unfasten his handcuffs and open the door.", "You pick him up, put his briefs on and lie him on the bed, if someone comes in it’s better they find him sleeping then tied to a chair naked.", "You don’t want to raise any unnecessary suspicion, you’ve got what you came for, you’re full of energy and no longer hungry.", "You leave the room with a smirk on your face, your ass still throbbing from all the thrusting."])
-dialogue_timer = NodePath("")
+messages = Array[String](["Lily hands you a collar choker and grabs the leash.", "The moment you said you wanted to become her pet it's as if she no longers see you as a person.", "Lily: Go on, put it on. Do as your master tells you to.", "You do as you're told.", "Lily: You're mine now. Forever.", "Lily: I pity you. I hope you haven't chosen this thinking you may overpower me with your vampiric skills?", "Vesper: No, I…", "Lily: Go on, try to protrude those fangs of yours. Don’t be shy.", "You try to protrude your fangs. If anything it’s been hard to contain them inside your mouth, not the opposite.", "However, they just won’t come out.", "Lily: Feels bad, doesn’t it? I'm afraid your powers don't work here.", "Lily: Here in this store you’re as powerless as any human. This is my domain. ", "Lily: My wards may not have repelled you, but they still make you as insignificant as a fly, that I could crush at any minute. ", "Lily: Are you afraid? You should be. If you have mistaken me for someone with mercy.", "That, has been ripped away from me centuries ago.", " I see you as a living toy, that I can use and abuse anyway I see fit.", "Lily: Go on, try to run away. I dare you.", "Vesper: Even if I wanted to, I don’t think I could escape you.", "Lily: Very good, my new pet. I’m beginning to like you, don’t make me regret it.", "Lily: Come, let’s have your first lesson in pleasing me.", "She pulls you by leash and takes you downstairs to the basement..", "If there was a picture in the dictionary depicting a sex dungeon, this would fit perfectly in it.", "There are things in this place you can’t even imagine how they would work.", "Lily: What do you think about my little collection? I’ve spent decades gathering these. ", "She looks very excited talking about her collection.", "Lily: They aren’t as easy to find anymore, and I’ve had to move so many times over the past centuries, I always have to start a new one.", "Lily: Pity, some of my old things must be on display in museums, oh how I miss some of my toys. ", "Vesper: I don’t know what to say.", "Lily: I'm getting wet just thinking about all the things I'm going to do to you.", "Lily: Think about this place as a gym. The first time you enter there are so many machines and exercises that you feel overwhelmed, but soon you’ll come to realize it’s become second nature to you.", "-- END OF INTRO ---", "--- LESSON NUMBER ---", "What lesson are you going to take today?"])
 
 [node name="NamePanel" type="Panel" parent="DialogBox"]
 visible = false
@@ -80,3 +86,36 @@ theme_override_font_sizes/font_size = 30
 text = "Vesper"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 273.0
+offset_right = 365.0
+offset_bottom = 470.0
+theme_override_constants/separation = 30
+
+[node name="Intro" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Intro"
+
+[node name="Lesson1" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+disabled = true
+text = "Lesson 1"
+
+[node name="Lesson2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+disabled = true
+text = "Lesson 2"
+
+[node name="Lesson3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+disabled = true
+text = "Lesson 3"
+
+[connection signal="pressed" from="VBoxContainer/Intro" to="." method="_on_intro_pressed"]

@@ -26,9 +26,13 @@ func _process(delta):
 	if dialogue_label.message_id == 27:
 		scene_bg.texture = load("res://assets/hospital_storyboard/topless_dance/hospital_scene_lapdance_9.png")	
 	if dialogue_label.message_id == 31:
-		scene_bg.texture = load("res://assets/hospital_storyboard/topless_dance/hospital_scene_lapdance_10.png")	
+		scene_bg.texture = load("res://assets/hospital_storyboard/topless_dance/hospital_scene_lapdance_10.png")
+	if dialogue_label.message_id == 32:
+		scene_bg.texture = load("res://assets/hospital_storyboard/topless_dance/hospital_scene_lapdance_10-11.png")		
 	if dialogue_label.message_id == 33:
-		scene_bg.texture = load("res://assets/hospital_storyboard/topless_dance/hospital_scene_lapdance_11.png")	
+		scene_bg.texture = load("res://assets/hospital_storyboard/topless_dance/hospital_scene_lapdance_11.png")
+	if dialogue_label.message_id == 34:
+		scene_bg.texture = load("res://assets/hospital_storyboard/topless_dance/hospital_scene_lapdance_11-12.png")	
 	if dialogue_label.message_id == 35:
 		scene_bg.texture = load("res://assets/hospital_storyboard/topless_dance/hospital_scene_lapdance_12.png")	
 	if dialogue_label.message_id == 37:

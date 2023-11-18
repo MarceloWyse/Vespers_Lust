@@ -1,0 +1,85 @@
+[gd_scene load_steps=5 format=3 uid="uid://bjrqkcm4frv7e"]
+
+[ext_resource type="Script" path="res://scenes/intro_lesson.gd" id="1_6me7u"]
+[ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="1_eo8qg"]
+[ext_resource type="Texture2D" uid="uid://cberx63720yco" path="res://assets/img/bondage_dungeon.jpg" id="1_wqm8b"]
+[ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="2_1kjyr"]
+
+[node name="IntroLesson" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6me7u")
+
+[node name="SceneBg" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_wqm8b")
+
+[node name="DialogBox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 223.0
+offset_top = -338.0
+offset_right = -219.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CharPortrait" type="TextureRect" parent="DialogBox"]
+visible = false
+layout_mode = 0
+offset_left = -178.0
+offset_top = -79.0
+offset_right = 166.0
+offset_bottom = 303.0
+texture = ExtResource("1_eo8qg")
+expand_mode = 1
+
+[node name="DialogueLabel" parent="DialogBox" instance=ExtResource("2_1kjyr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 148.0
+offset_top = 21.0
+offset_right = -55.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 40
+text = "<null>"
+messages = Array[String](["Lily: Why don’t we get to know each other?", "Lily: Come closer. Don’t be shy, I hate shy pets.", "She pulls your leash towards her forcefully, ", "Lily pulls your leash towards her forcefully and kisses your lips. Soon her tongue starts massaging yours", "The kiss continues for a long time, sometimes slower, sometimes faster, you lost track of time of how long you two have been kissing.", "Lily: Ah, you taste delicious. I’ve never tasted vampire before. ", "Lily: I thought this would be a waste of my precious time, but I may enjoy this after all.", "Lily: I’ve been bored for so long, all alone in this shop. And now I’ve got a new plaything, a delicious plaything. I’m quite happy.  ", "Lily: Let me feel that body of yours.", "Saying that she slides her hands below your bra and pinches your nipples, hard.", "You let out a little moan, it hurts but it’s also good.", "Lily: I see, you’re sensitive in there, huh. We’ll have plenty of fun with those tits later. Remember that you’re not here to feel pleasure, you’re here to serve me.", "Lily: Say you understand.", "She pinches your nipples harder.", "Lily: Call me “master”.", "Vesper: Yes, master.", "Lily: Good girl.", "She pulls your pants and panties down.", "She unbuttons her blouse, exposing her bosom.", "Lily: Do you like your master titties ? Show me how you use that mouth of yours.", "Lily: Suck them as hard as you can, or else.", "She slides a finger down your butt and stops at the entrance of your asshole. ", "Lily: I’ll see how many fingers you can fit in here. ", "You start sucking her tits as she demands.", "Lily: Harder!", "You suck them until it breaks the skin.", "Lily: Now, bite my nipples.", "Vesper: Like this?", "Lily: Have I given you permission to talk?", "She shoves two of her long fingers inside your ass, you feel them hitting your rectum.", "Lily: What a tight asshole you've got. It won't be so tight once I'm done fingering you.", "You moan in pain, your eyes full of tears.", "Lily: I'm sure your vampire asshole can take it. Soon the pain will become pleasure.", "Lily: Go on, bite my nipples hard, as I stretch your ass.", "You bite it, over and over again. Her face twisting in a mixture of agony and pleasure.", "The more you bite her, the more she fingers you.", "You're giving and receiving pain at the same time. At first you only felt pain, but now... your asshole is burning hot and your pussy's dripping wet.", "Vesper: Master?", "Lily's face turns red with anger.", "Lily: Haven't I told you to only speak when...", "Vesper: One more finger, please!", "Lily's face turns from anger to bliss.", "She shoves a third finger deep inside your ass.", "You scream in pain and joy.", "Lily: Ahhh, it’s been so long since I’ve had such a wonderful pet to play with. Scream for me!, my slave.", "You scream as loud as you can.", "Lily: Yes, that's it, I'’m cumming!!!", "Her eyes roll to the top of her eyesocket, her tongue hanging outside her mouth.", "Lily: Ah, it’s been so long since I haven’t cum this intensively. ", "She takes her fingers out of your ass and starts licking them. ", "Lily: You taste exquisite my little pet. ", "Lily: Well then, you deserve your reward. ", "She hands you a bag full of blood.", "Lily: That wasn’t so bad now, was it?", "Lily: I told you I won’t go light on you. You vampires have a threshold for pain above any human.", "Lily: I’ll train your body ‘till you surpass your limits.", "Now go, I need to grab some sleep, I’m awfully tired after this exercise.", "You do as you’re told and head home.", "--- END  INTRO LESSON --- "])
+
+[node name="NamePanel" type="Panel" parent="DialogBox"]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 129.0
+offset_top = -197.0
+offset_right = -1132.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameLabel" type="Label" parent="DialogBox/NamePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Vesper"
+horizontal_alignment = 1
+vertical_alignment = 1

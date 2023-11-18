@@ -6,6 +6,7 @@ extends Control
 @onready var talk_btn = $VBoxContainer/TalkBtn
 @onready var shop = $VBoxContainer/Shop
 @onready var be_her_pet = $VBoxContainer/BeHerPet
+@onready var lily = $Lily
 
 func _ready():
 	if SaveManager.save.old_shop["first_visit"]:
@@ -16,6 +17,7 @@ func _ready():
 		SaveManager.save.old_shop["talk_act"] = true
 	else:
 		dialogue_label.jump_to(24)
+		lily.show()
 		v_box_container.show()
 		dialogue_label.can_type = false
 	
@@ -23,6 +25,9 @@ func _process(delta):
 	
 	if dialogue_label.message_id == 2:
 		scene_bg.texture = load("res://assets/img/old_shop.png")
+	
+	if dialogue_label.message_id == 4:
+		lily.show()
 	
 	if dialogue_label.message_id == 24:
 		dialogue_label.can_type = false
@@ -74,3 +79,6 @@ func _on_talk_btn_pressed():
 
 func _on_go_home_pressed():
 	get_tree().change_scene_to_file("res://scenes/player_hub.tscn")
+
+func _on_be_her_pet_pressed():
+	get_tree().change_scene_to_file("res://scenes/lily_sex_dungeon.tscn")

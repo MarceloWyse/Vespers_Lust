@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bpyicuo6tobls"]
+[gd_scene load_steps=6 format=3 uid="uid://bpyicuo6tobls"]
 
 [ext_resource type="Script" path="res://scenes/old_shop.gd" id="1_k4b5f"]
 [ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="1_sfm2f"]
 [ext_resource type="Texture2D" uid="uid://stl0khhnt8w8" path="res://assets/img/old_shop.png" id="2_gxphq"]
 [ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="2_hg2mm"]
+[ext_resource type="Texture2D" uid="uid://bsw1emdmgcoue" path="res://assets/characters/lily_placeholder.png" id="3_7n7qk"]
 
 [node name="OldShop" type="Control"]
 layout_mode = 3
@@ -22,6 +23,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_gxphq")
+
+[node name="Lily" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 619.0
+offset_top = 76.0
+offset_right = 1246.0
+offset_bottom = 1079.0
+texture = ExtResource("3_7n7qk")
+expand_mode = 1
 
 [node name="DialogBox" type="Panel" parent="."]
 layout_mode = 1
@@ -119,4 +130,5 @@ theme_override_font_sizes/font_size = 50
 text = "Go Home"
 
 [connection signal="pressed" from="VBoxContainer/TalkBtn" to="." method="_on_talk_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/BeHerPet" to="." method="_on_be_her_pet_pressed"]
 [connection signal="pressed" from="VBoxContainer/GoHome" to="." method="_on_go_home_pressed"]

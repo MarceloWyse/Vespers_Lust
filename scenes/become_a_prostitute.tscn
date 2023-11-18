@@ -1,0 +1,79 @@
+[gd_scene load_steps=4 format=3 uid="uid://cruym7g8i0l5f"]
+
+[ext_resource type="Script" path="res://scenes/become_a_prostitute.gd" id="1_gusvt"]
+[ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="2_bsl71"]
+[ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="3_qu4xq"]
+
+[node name="BecomeAProstitute" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gusvt")
+
+[node name="DialogBox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 223.0
+offset_top = -338.0
+offset_right = -219.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CharPortrait" type="TextureRect" parent="DialogBox"]
+visible = false
+layout_mode = 0
+offset_left = -178.0
+offset_top = -79.0
+offset_right = 166.0
+offset_bottom = 303.0
+texture = ExtResource("2_bsl71")
+expand_mode = 1
+
+[node name="DialogueLabel" parent="DialogBox" node_paths=PackedStringArray("dialogue_timer") instance=ExtResource("3_qu4xq")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 148.0
+offset_top = 21.0
+offset_right = -55.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 40
+text = "Type here"
+messages = Array[String](["Half unaware of where you’re going you find yourself in the red light district of town.", "You’ve been here before interviewing people for the newspaper.", "You know it’s a place full of junkies, dark alleys and more importantly; no police.", "This is the forgotten part of town, the other Grimshire. The part people don’t talk about. ", "If the kidnappings happened here nobody would’ve cared. But Helena had a preference, for pretty young girls like yourself. And that, the police wouldn’t let slide.", "You know if you had the guts you could easily find targets here. You wouldn’t even have to do much, just seduce them, take them into a dark alley, and suck the life out of them.", "What am I thinking? Have I stooped so low to be even considering that?", "I’m better than this… ", "You say that, but the hunger inside you begs to differ.", "You’re starving but not that desperate, yet.", "You decide to leave.", "--- NOT FIRST VISIT BUT NOT MASTURBATED ---", "You find yourself once more visiting the red light district…", "Why am I here, again?", " I… shouldn’t.", "You can feel your fangs yearning for blood.", "Nevertheless, you haven’t even touched yourself since you’ve become a vampire. ", "You can’t imagine how it would feel being touched by other people… ", "With that in mind you decide to leave.", "-- END OF NOT MASTURBATED AND NOT FIRST VISIT --"])
+dialogue_timer = NodePath("")
+
+[node name="NamePanel" type="Panel" parent="DialogBox"]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 129.0
+offset_top = -197.0
+offset_right = -1132.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameLabel" type="Label" parent="DialogBox/NamePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Vesper"
+horizontal_alignment = 1
+vertical_alignment = 1
