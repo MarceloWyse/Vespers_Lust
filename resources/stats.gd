@@ -1,10 +1,11 @@
 extends Resource
 class_name Stats
 
+@export var items = {"bloodbag" : 0, "bloodflask" : 0}
 @export var clothing = {"top" : null, "bottom" : null}
 @export var vesper = {"virgin" : true, "anal_virgin" : true}
 @export var bar_values = {"vit" : 1, "str" : 1, "int" : 1, "spd" : 1, "cha" : 1}
-@export var player_status = {"sanity" : 50, "lewdness" : 5, "hunger" : 50 , "money" : 0}
+@export var player_status = {"sanity" : 50, "lewdness" : 5, "hunger" : 50 , "money" : 500}
 @export var day = 1
 @export var visited_activities = {"masturbation": false, "prostitution" : false,
 "sleep" : false, "studying" : false, "bartender" : false, "journalist" : false, "running" : false,
@@ -20,8 +21,9 @@ class_name Stats
 @export var fifth_prostitution = false
 @export var sixth_prostitution = false
 @export var prostitute = false
-@export var killed_fred = false
 @export var anal_whore = false
+@export var have_fredericks_number = false
+@export var have_kates_number = false
 
 #innocent, pure, naughty, sassy, depraved, lustful, lewd, lascivous
 #management

@@ -13,6 +13,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gusvt")
 
+[node name="SceneBg" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
 [node name="DialogBox" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 12
@@ -36,7 +41,7 @@ offset_bottom = 303.0
 texture = ExtResource("2_bsl71")
 expand_mode = 1
 
-[node name="DialogueLabel" parent="DialogBox" node_paths=PackedStringArray("dialogue_timer") instance=ExtResource("3_qu4xq")]
+[node name="DialogueLabel" parent="DialogBox" instance=ExtResource("3_qu4xq")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -49,8 +54,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 40
 text = "Type here"
-messages = Array[String](["Half unaware of where you’re going you find yourself in the red light district of town.", "You’ve been here before interviewing people for the newspaper.", "You know it’s a place full of junkies, dark alleys and more importantly; no police.", "This is the forgotten part of town, the other Grimshire. The part people don’t talk about. ", "If the kidnappings happened here nobody would’ve cared. But Helena had a preference, for pretty young girls like yourself. And that, the police wouldn’t let slide.", "You know if you had the guts you could easily find targets here. You wouldn’t even have to do much, just seduce them, take them into a dark alley, and suck the life out of them.", "What am I thinking? Have I stooped so low to be even considering that?", "I’m better than this… ", "You say that, but the hunger inside you begs to differ.", "You’re starving but not that desperate, yet.", "You decide to leave.", "--- NOT FIRST VISIT BUT NOT MASTURBATED ---", "You find yourself once more visiting the red light district…", "Why am I here, again?", " I… shouldn’t.", "You can feel your fangs yearning for blood.", "Nevertheless, you haven’t even touched yourself since you’ve become a vampire. ", "You can’t imagine how it would feel being touched by other people… ", "With that in mind you decide to leave.", "-- END OF NOT MASTURBATED AND NOT FIRST VISIT --"])
-dialogue_timer = NodePath("")
+messages = Array[String](["Half unaware of where you’re going you find yourself in Grimshire's red light district.", "You’ve been here before interviewing people for the newspaper.", "It’s a place full of junkies, dark alleys and more importantly; no police.", "This is the forgotten part of town, the other Grimshire. The part people don’t talk about. ", "Nobody would’ve cared if the kidnappings happened here. But Helena had a preference, for pretty young girls like yourself. And that, the police wouldn’t let slide.", "If you had the the guts you could easily find targets here.", "You wouldn’t even have to do much, just seduce them, take them into a dark alley, and suck the life out of them", "What am I thinking? Have I stooped so low to be even considering that?", "I’m better than this… ", "Nonetheless, the hunger inside you begs to differ.", "Vesper: I’m starving but not that desperate, yet.", "Vesper: I shouldn’t stay here any longer.", "--- NOT FIRST VISIT BUT NOT MASTURBATED ---", "You find yourself once more visiting the red light district.", "Vesper: Why am I here, again?", "Vesper:  I… shouldn’t.", "However, you can feel your fangs yearning for blood.", "Throbbing inside your mouth, begging to come out.", "Nevertheless, you haven’t even touched yourself since you’ve become a vampire. ", "Vesper: I can’t imagine how it would feel being touched by other people.", "Vesper: I'm going crazy! My body's weird and I'm starving.", "Vesper: I'm seriously thinking about selling my body...", "Vesper: But I still have other options, don't I? ", "With that hammering in your mind you decide to leave.", "-- END OF NOT MASTURBATED AND NOT FIRST VISIT --"])
 
 [node name="NamePanel" type="Panel" parent="DialogBox"]
 visible = false

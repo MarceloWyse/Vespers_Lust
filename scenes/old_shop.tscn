@@ -1,10 +1,183 @@
-[gd_scene load_steps=6 format=3 uid="uid://bpyicuo6tobls"]
+[gd_scene load_steps=50 format=3 uid="uid://bpyicuo6tobls"]
 
 [ext_resource type="Script" path="res://scenes/old_shop.gd" id="1_k4b5f"]
 [ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="1_sfm2f"]
 [ext_resource type="Texture2D" uid="uid://stl0khhnt8w8" path="res://assets/img/old_shop.png" id="2_gxphq"]
 [ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="2_hg2mm"]
-[ext_resource type="Texture2D" uid="uid://bsw1emdmgcoue" path="res://assets/characters/lily_placeholder.png" id="3_7n7qk"]
+[ext_resource type="Texture2D" uid="uid://cku6uygfup6bh" path="res://assets/characters/lily/lily_00.png" id="3_xfsff"]
+[ext_resource type="Texture2D" uid="uid://c3uwragg0rurj" path="res://assets/characters/lily/lily_01.png" id="4_rimwc"]
+[ext_resource type="Texture2D" uid="uid://cnfgq028f5xp7" path="res://assets/characters/lily/lily_02.png" id="5_5xs6s"]
+[ext_resource type="Texture2D" uid="uid://cgejbvq6hfwjy" path="res://assets/characters/lily/lily_03.png" id="6_vlxew"]
+[ext_resource type="Texture2D" uid="uid://cso2rr3cd36x1" path="res://assets/characters/lily/lily_04.png" id="7_ksycr"]
+[ext_resource type="Texture2D" uid="uid://b1blh7s8ji0pq" path="res://assets/characters/lily/lily_05.png" id="8_pjsow"]
+[ext_resource type="Texture2D" uid="uid://dr1h28u3b8fo3" path="res://assets/characters/lily/lily_06.png" id="9_clduv"]
+[ext_resource type="Texture2D" uid="uid://cahdjjhg2ow8r" path="res://assets/characters/lily/lily_07.png" id="10_jjuu4"]
+[ext_resource type="Texture2D" uid="uid://d0ufs7awet3fm" path="res://assets/characters/lily/lily_08.png" id="11_r5844"]
+[ext_resource type="Texture2D" uid="uid://co84mkirgh5dq" path="res://assets/characters/lily/lily_09.png" id="12_cl0sb"]
+[ext_resource type="Texture2D" uid="uid://cw3jx0api6732" path="res://assets/characters/lily/lily_10.png" id="13_xnepu"]
+[ext_resource type="Texture2D" uid="uid://c33whj6jefg7p" path="res://assets/characters/lily/lily_11.png" id="14_mf8oq"]
+[ext_resource type="Texture2D" uid="uid://d0v4wfu8lwhqs" path="res://assets/characters/lily/lily_12.png" id="15_t023d"]
+[ext_resource type="Texture2D" uid="uid://dkgjkt2q7sqh3" path="res://assets/characters/lily/lily_13.png" id="16_8ki1g"]
+[ext_resource type="Texture2D" uid="uid://bnmet62rvdyl4" path="res://assets/characters/lily/lily_14.png" id="17_ntmmp"]
+[ext_resource type="Texture2D" uid="uid://bv0h12ifndtav" path="res://assets/characters/lily/lily_15.png" id="18_ywtv4"]
+[ext_resource type="Texture2D" uid="uid://dm7d38mdim641" path="res://assets/characters/lily/lily_16.png" id="19_uydbo"]
+[ext_resource type="Texture2D" uid="uid://po1dhe5mjayo" path="res://assets/characters/lily/lily_17.png" id="20_e2tu0"]
+[ext_resource type="Texture2D" uid="uid://d0cs5ilvffmub" path="res://assets/characters/lily/lily_18.png" id="21_j0gwr"]
+[ext_resource type="Texture2D" uid="uid://cwl5a3c5kst57" path="res://assets/characters/lily/lily_19.png" id="22_vialn"]
+[ext_resource type="Texture2D" uid="uid://dkbpyypfgc3d" path="res://assets/characters/lily/lily_20.png" id="23_k85hd"]
+[ext_resource type="Texture2D" uid="uid://coti1uvlu8n5m" path="res://assets/characters/lily/lily_21.png" id="24_1fbcf"]
+[ext_resource type="Texture2D" uid="uid://iur8hpiuhawj" path="res://assets/characters/lily/lily_22.png" id="25_ycan2"]
+[ext_resource type="Texture2D" uid="uid://biuht80xcg5pv" path="res://assets/characters/lily/lily_23.png" id="26_0w4b0"]
+[ext_resource type="Texture2D" uid="uid://d07bfpmcmhn3y" path="res://assets/characters/lily/lily_24.png" id="27_eg4je"]
+[ext_resource type="Texture2D" uid="uid://dn0n5jvwvo71b" path="res://assets/characters/lily/lily_25.png" id="28_3g166"]
+[ext_resource type="Texture2D" uid="uid://boe6um6lgxkw2" path="res://assets/characters/lily/lily_26.png" id="29_4axhr"]
+[ext_resource type="Texture2D" uid="uid://bynb1ekhectdj" path="res://assets/characters/lily/lily_27.png" id="30_c4glw"]
+[ext_resource type="Texture2D" uid="uid://deny2x6gjy5bs" path="res://assets/characters/lily/lily_28.png" id="31_nq81q"]
+[ext_resource type="Texture2D" uid="uid://6gc5mqa1vuwq" path="res://assets/characters/lily/lily_29.png" id="32_fb4nn"]
+[ext_resource type="Texture2D" uid="uid://c6kuj5tyewrka" path="res://assets/characters/lily/lily_30.png" id="33_wa6fl"]
+[ext_resource type="Texture2D" uid="uid://cm6ifnvcdg734" path="res://assets/characters/lily/lily_31.png" id="34_kjalt"]
+[ext_resource type="Texture2D" uid="uid://byt3ptl5cs15j" path="res://assets/characters/lily/lily_32.png" id="35_bgwly"]
+[ext_resource type="Texture2D" uid="uid://b6a75krybb8d8" path="res://assets/characters/lily/lily_33.png" id="36_x4hhb"]
+[ext_resource type="Texture2D" uid="uid://chxsc107wxstm" path="res://assets/characters/lily/lily_34.png" id="37_3yoab"]
+[ext_resource type="Texture2D" uid="uid://b8465wnt00nbf" path="res://assets/characters/lily/lily_35.png" id="38_nnqvp"]
+[ext_resource type="Texture2D" uid="uid://bbo43qd1x1nn2" path="res://assets/characters/lily/lily_36.png" id="39_ykl74"]
+[ext_resource type="Texture2D" uid="uid://dyxq8k8nstnao" path="res://assets/characters/lily/lily_37.png" id="40_1abk4"]
+[ext_resource type="Texture2D" uid="uid://c7xbgi3qssqpk" path="res://assets/characters/lily/lily_38.png" id="41_d22mc"]
+[ext_resource type="Texture2D" uid="uid://cyfsla3b85va0" path="res://assets/characters/lily/lily_39.png" id="42_ka1ae"]
+[ext_resource type="Texture2D" uid="uid://bwvgtq2dsmyi0" path="res://assets/img/blood_bag.png" id="45_u7qrx"]
+[ext_resource type="Texture2D" uid="uid://ddf6yuthdhq4d" path="res://assets/img/blood_flask.png" id="46_b180v"]
+[ext_resource type="Texture2D" uid="uid://dipajkpfpjcdt" path="res://assets/img/wallet.png" id="47_sj74u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uw2u2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_xfsff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rimwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5xs6s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vlxew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ksycr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pjsow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_clduv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jjuu4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_r5844")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_cl0sb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_xnepu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_mf8oq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_t023d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_8ki1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ntmmp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ywtv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_uydbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_e2tu0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_j0gwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_vialn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_k85hd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_1fbcf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ycan2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_0w4b0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_eg4je")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_3g166")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_4axhr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_c4glw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_nq81q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_fb4nn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_wa6fl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_kjalt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_bgwly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_x4hhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_3yoab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_nnqvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_ykl74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_1abk4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_d22mc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_ka1ae")
+}],
+"loop": true,
+"name": &"default",
+"speed": 25.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xd2sx"]
+bg_color = Color(0.431373, 0.054902, 0.0823529, 0.203922)
 
 [node name="OldShop" type="Control"]
 layout_mode = 3
@@ -24,15 +197,13 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_gxphq")
 
-[node name="Lily" type="TextureRect" parent="."]
+[node name="Lily" type="AnimatedSprite2D" parent="."]
 visible = false
-layout_mode = 0
-offset_left = 619.0
-offset_top = 76.0
-offset_right = 1246.0
-offset_bottom = 1079.0
-texture = ExtResource("3_7n7qk")
-expand_mode = 1
+position = Vector2(1003, 611)
+scale = Vector2(0.598464, 0.598464)
+sprite_frames = SubResource("SpriteFrames_uw2u2")
+autoplay = "default"
+frame_progress = 0.0055867
 
 [node name="DialogBox" type="Panel" parent="."]
 layout_mode = 1
@@ -70,7 +241,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 40
 text = "Type here"
-messages = Array[String](["You have no idea where you are going, but you know exactly where you have to go.", "You keep walking the streets of the Old District of Grimshire, like you were lost, your body moving on its own, until you finally arrive at an old shop.", "Upon entering you notice it’s full of ingredients you’ve never heard of. The place smell of lilies, even though you don’t see any around.", "You realize you’re being watched, you turn to face the person behind the counter. You’re sure she wasn’t there when you arrived.", "???: What have we got here? May I ask how come you’ve managed to find this place? ", "Her eyes are sharp, her left hand on top of the counter, her right hand hidden.", "Vesper: I don’t know, I just walked in…", "???: So you’re going to begin with a lie, huh? ", "I’ve set up wards to repel your kind, there’s no way you could’ve entered without some strong magic, and I don’t sense any in you.", "Vesper: I’m not lying. I met this strange man, and I don’t know what he did, but the next thing I know I was coming here.", "???: Would you be so kind to describe this man to me?", "Vesper: I don’t know anything about him, he was wearing a suit and a wol…", "She interrupts you.", "???: A wolf mask?", "Vesper: Yes, how did you…", "???: So, you’ve met him, huh. I guess you weren’t lying them. I was ready to get rid of you, but if he sent you here…", "She puts her right arm on top of the counter, you notice a dagger on her hand.", "Vesper: Are you friends with him?", "???: Friends? Oh no. I don’t think he has any. ", "???: Let’s say our paths have crossed, a few times along the millenia. He comes and goes, but if he is here, something ajar is happening.", "???: He sent you here for something specific, I guess.", "Lily: The name’s Lily, by the way. And you are?", "Vesper: Vesper.", "Lily: Nice to meet you, Vesper. Now that you have found your into this shop. ", "How may I help you?", "-- WHAT ARE YOU ---", "Lily: Direct to the point, huh. I like that.", "Lily: Haven’t you guessed already?", "Lily: I’m a witch. ", "Vesper: You don’t look like one.", "Lily: You mean I’m not a crone, riddled with moles, a big crooked nose and a pointy hat?", "Lily: Don’t be fooled by my looks, magical beings don’t age as humans do. Soon you’ll realize that, you’re a product of magic yourself.", "-- END OF WHAT ARE YOU ---", "-- MY KIND --", "Vesper: You mentioned my kind. Do you know what I am?", "Lily: Do you take me for a fool, vampire?", "Lily: I’ve been alive much longer than most of your kind. I know how to spot a bloodsucker when I see one.", "Vesper: Can you tell me something about vampires? Something real, not what I see in the movies.", "Lily; You mean aside from your hypersensitivity to the sun, your overwhelming lust, and a hunger that never sleeps?", "Vesper: Yes, aside from that.", "Lily: Not much is known, like Witches, much has been lost during the Dark Ages.", "Lily: The most biblical inclined believe you to be sons and daughters of Cain, cursed to wander this world, forever. ", "The hunger, your punishment, the lust a mere reflection of humans deepest desires.", "Vesper: And do you believe that?", "Lily: I personally find it all bullshit. There’s nothing holy or cursed about vampires.", "Lily: You can go into a church and drink holy water to your heart's content.", "Lily: Rumor has it our kind created yours, as a project. The purpose is unknow. Maybe because they could? We witches tend do things just because.", "Lily: What was I saying? Oh yes, and as a failsafe system they’ve factored the hunger so you wouldn’t run about feeling invincible.", "Lily: Have you noticed the sun is deadlier to you the more you feed? ", "I wonder if that is also part of the failsafe system or just a way to torture you. We also have a tendency for that.", "Vesper: Am I dead? I don’t feel dead. If anything I feel more alive.", "Lily: You’re not dead, you’re just… different. Embrace your new existent, and you’ll be much happier, I guarantee.", "Vesper: And the lust? I wasn’t like this before. Now I can’t contain myself, I’m hot all the time.", "Lily: That lust is a bonus. I have no way to prove it, but I’m certain you’ve got that from us. You see, vampires are not the only ones wet all the time.", "Lily: Alright, history lesson’s over.", "Lily: What did you come here for?", "----- END OF TALK 2 ----", "-- ASK FOR BLOOD ---", "Vesper: I’m in desperate need of blood. ", "Lily: We are all in desperate need of something. ", "Lily: I’m not some good Samaritan helping vampires in their time of need. ", "Lily: You want something that valuable, you should be ready to pay the price.", "Lily: I can sell you some from my personal stock, if you have the money. ", "Lily: Or you may become my personal slave. ", "Lily: I always wanted a pet vampire.", "---- END OF ASK FOR BLOOD ---"])
+messages = Array[String](["You have no idea where you are going, but you know exactly where you have to go.", "You keep walking the streets of the Old District of Grimshire, like you were lost, your body moving on its own, until you finally arrive at an old shop.", "Upon entering you notice it’s full of ingredients you’ve never heard of. The place smell of lilies, even though you don’t see any around.", "You realize you’re being watched, you turn to face the person behind the counter. You’re sure she wasn’t there when you arrived.", "???: What have we got here? May I ask how come you’ve managed to find this place? ", "Her eyes are sharp, her left hand on top of the counter, her right hand hidden.", "Vesper: I don’t know, I just walked in…", "???: So you’re going to begin with a lie, huh? ", "I’ve set up wards to repel your kind, there’s no way you could’ve entered without some strong magic, and I don’t sense any in you.", "Vesper: I’m not lying. I met this strange man, and I don’t know what he did, but the next thing I know I was coming here.", "???: Would you be so kind to describe this man to me?", "Vesper: I don’t know anything about him, he was wearing a suit and a wol…", "She interrupts you.", "???: A wolf mask?", "Vesper: Yes, how did you…", "???: So, you’ve met him, huh. I guess you weren’t lying them. I was ready to get rid of you, but if he sent you here…", "She puts her right arm on top of the counter, you notice a dagger on her hand.", "Vesper: Are you friends with him?", "???: Friends? Oh no. I don’t think he has any. ", "???: Let’s say our paths have crossed, a few times along the millenia. He comes and goes, but if he is here, something ajar is happening.", "???: He sent you here for something specific, I guess.", "Lily: The name’s Lily, by the way. And you are?", "Vesper: Vesper.", "Lily: Nice to meet you, Vesper. Now that you have found your into this shop. ", "How may I help you?", "-- WHAT ARE YOU ---", "Lily: Direct to the point, huh. I like that.", "Lily: Haven’t you guessed already?", "Lily: I’m a witch. ", "Vesper: You don’t look like one.", "Lily: You mean I’m not a crone, riddled with moles, a big crooked nose and a pointy hat?", "Lily: Don’t be fooled by my looks, magical beings don’t age as humans do. Soon you’ll realize that, you’re a product of magic yourself.", "-- END OF WHAT ARE YOU ---", "-- MY KIND --", "Vesper: You mentioned my kind. Do you know what I am?", "Lily: Do you take me for a fool, vampire?", "Lily: I’ve been alive much longer than most of your kind. I know how to spot a bloodsucker when I see one.", "Vesper: Can you tell me something about vampires? Something real, not what I see in the movies.", "Lily: You mean aside from your hypersensitivity to the sun, your overwhelming lust, and a hunger that never sleeps?", "Vesper: Yes, aside from that.", "Lily: Not much is known, like Witches, much has been lost during the Dark Ages.", "Lily: The most biblical inclined believe you to be sons and daughters of Cain, cursed to wander this world, forever. ", "The hunger, your punishment, the lust a mere reflection of humans deepest desires.", "Vesper: And do you believe that?", "Lily: I personally find it all bullshit. There’s nothing holy or cursed about vampires.", "Lily: You can go into a church and drink holy water to your heart's content.", "Lily: Rumor has it our kind created yours, as a project. The purpose is unknow. Maybe because they could? We witches tend do things just because.", "Lily: What was I saying? Oh yes, and as a failsafe system they’ve factored the hunger so you wouldn’t run about feeling invincible.", "Lily: Have you noticed the sun is deadlier to you the more you feed? ", "I wonder if that is also part of the failsafe system or just a way to torture you. We also have a tendency for that.", "Vesper: Am I dead? I don’t feel dead. If anything I feel more alive.", "Lily: You’re not dead, you’re just… different. Embrace your new existent, and you’ll be much happier, I guarantee.", "Vesper: And the lust? I wasn’t like this before. Now I can’t contain myself, I’m hot all the time.", "Lily: That lust is a bonus. I have no way to prove it, but I’m certain you’ve got that from us. You see, vampires are not the only ones wet all the time.", "Lily: Alright, history lesson’s over.", "Lily: What did you come here for?", "----- END OF TALK 2 ----", "-- ASK FOR BLOOD ---", "Vesper: I’m in desperate need of blood. ", "Lily: We are all in desperate need of something. ", "Lily: I’m not some good Samaritan helping vampires in their time of need. ", "Lily: You want something that valuable, you should be ready to pay the price.", "Lily: I can sell you some from my personal stock, if you have the money. ", "Lily: Or you may become my personal slave. ", "Lily: I always wanted a pet vampire.", "---- END OF ASK FOR BLOOD ---", "Lily: If you have the money, I'll sell you what you're looking for. ", "-- END OF SHOP --"])
 
 [node name="NamePanel" type="Panel" parent="DialogBox"]
 visible = false
@@ -98,7 +269,8 @@ text = "Vesper"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="Options" type="VBoxContainer" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 228.0
 offset_top = 163.0
@@ -106,29 +278,155 @@ offset_right = 336.0
 offset_bottom = 240.0
 theme_override_constants/separation = 30
 
-[node name="TalkBtn" type="Button" parent="VBoxContainer"]
+[node name="TalkBtn" type="Button" parent="Options"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Talk"
 
-[node name="Shop" type="Button" parent="VBoxContainer"]
+[node name="Shop" type="Button" parent="Options"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 disabled = true
 text = "???"
 
-[node name="BeHerPet" type="Button" parent="VBoxContainer"]
+[node name="BeHerPet" type="Button" parent="Options"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 disabled = true
 text = "??? 
 (Lwd 60+)"
 
-[node name="GoHome" type="Button" parent="VBoxContainer"]
+[node name="GoHome" type="Button" parent="Options"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Go Home"
 
-[connection signal="pressed" from="VBoxContainer/TalkBtn" to="." method="_on_talk_btn_pressed"]
-[connection signal="pressed" from="VBoxContainer/BeHerPet" to="." method="_on_be_her_pet_pressed"]
-[connection signal="pressed" from="VBoxContainer/GoHome" to="." method="_on_go_home_pressed"]
+[node name="ShopPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 379.0
+offset_top = 86.0
+offset_right = 925.0
+offset_bottom = 625.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xd2sx")
+
+[node name="CloseBtn" type="Button" parent="ShopPanel"]
+layout_mode = 0
+offset_left = 199.0
+offset_top = 453.0
+offset_right = 337.0
+offset_bottom = 530.0
+theme_override_font_sizes/font_size = 50
+text = "Close"
+
+[node name="Item1" type="TextureRect" parent="ShopPanel"]
+layout_mode = 0
+offset_left = 114.0
+offset_top = 30.0
+offset_right = 247.0
+offset_bottom = 152.0
+texture = ExtResource("45_u7qrx")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="ShopPanel/Item1"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -63.5
+offset_top = 7.0
+offset_right = 9.5
+offset_bottom = 59.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Bloodbag 
+$500"
+horizontal_alignment = 1
+
+[node name="BloodBagHolding" type="Label" parent="ShopPanel/Item1"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -71.5
+offset_top = 67.0
+offset_right = 20.5
+offset_bottom = 93.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Holding: -"
+horizontal_alignment = 1
+
+[node name="Buy1Btn" type="Button" parent="ShopPanel/Item1"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 247.0
+offset_right = 67.0
+offset_bottom = 294.0
+text = "Buy"
+
+[node name="Item2" type="TextureRect" parent="ShopPanel"]
+layout_mode = 0
+offset_left = 345.0
+offset_top = 36.0
+offset_right = 442.0
+offset_bottom = 133.0
+texture = ExtResource("46_b180v")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="ShopPanel/Item2"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 117.0
+offset_right = 88.0
+offset_bottom = 169.0
+text = "Bloodflask 
+$300"
+horizontal_alignment = 1
+
+[node name="FlaskHoldingLabel" type="Label" parent="ShopPanel/Item2"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 180.0
+offset_right = 96.0
+offset_bottom = 206.0
+text = "Holding: -"
+horizontal_alignment = 1
+
+[node name="Buy2Btn2" type="Button" parent="ShopPanel/Item2"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 241.0
+offset_right = 76.0
+offset_bottom = 288.0
+text = "Buy"
+
+[node name="Money" type="TextureRect" parent="ShopPanel"]
+layout_mode = 0
+offset_left = 252.0
+offset_top = 360.0
+offset_right = 333.0
+offset_bottom = 441.0
+texture = ExtResource("47_sj74u")
+expand_mode = 1
+
+[node name="MoneyLabel" type="Label" parent="ShopPanel/Money"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 28.0
+offset_right = 152.0
+offset_bottom = 54.0
+text = "$Money
+"
+
+[connection signal="pressed" from="Options/TalkBtn" to="." method="_on_talk_btn_pressed"]
+[connection signal="pressed" from="Options/Shop" to="." method="_on_shop_pressed"]
+[connection signal="pressed" from="Options/BeHerPet" to="." method="_on_be_her_pet_pressed"]
+[connection signal="pressed" from="Options/GoHome" to="." method="_on_go_home_pressed"]
+[connection signal="pressed" from="ShopPanel/CloseBtn" to="." method="_on_close_btn_pressed"]
+[connection signal="pressed" from="ShopPanel/Item1/Buy1Btn" to="." method="_on_buy_1_btn_pressed"]
+[connection signal="pressed" from="ShopPanel/Item2/Buy2Btn2" to="." method="_on_buy_2_btn_2_pressed"]

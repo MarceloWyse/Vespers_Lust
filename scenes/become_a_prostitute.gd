@@ -1,21 +1,44 @@
 extends Control
 
-@onready var dialogue_label = $DialogBox/DialogueLabel
+@onready var dialogue_label = $DialogBox/DialogueLabel as DialogueLabel
+@onready var scene_bg = $SceneBg
 
 var scene_finished
 
 func _ready():
 	if 	SaveManager.save.visited_activities["prostitution"] == false:
+		scene_bg.texture = load("res://assets/prostitution_storyboard/denial/prostitution_1stime_1.png")
 		dialogue_label.start_dialogue()
 		SaveManager.save.visited_activities["prostitution"] = true
 		
 	elif not SaveManager.save.visited_activities["masturbation"] and \
 	SaveManager.save.visited_activities["prostitution"]:
-		dialogue_label.jump_to(12)
+		dialogue_label.jump_to(13)
 
 func _process(delta):
 	
-	if dialogue_label.message_id == 11 or dialogue_label.message_id == 19:
+	if dialogue_label.message_id == 5:
+		scene_bg.texture = load("res://assets/prostitution_storyboard/denial/prostitution_1stime_2.png")
+	
+	if dialogue_label.message_id == 7:
+		scene_bg.texture = load("res://assets/prostitution_storyboard/denial/prostitution_1stime_3.png")
+
+	if dialogue_label.message_id == 10:
+		scene_bg.texture = load("res://assets/prostitution_storyboard/denial/prostitution_2ndtime_3.png")
+
+	if dialogue_label.message_id == 13:
+		scene_bg.texture = load("res://assets/prostitution_storyboard/denial/prostitution_1stime_1.png")
+
+	if dialogue_label.message_id == 16:
+		scene_bg.texture = load("res://assets/prostitution_storyboard/denial/prostitution_2ndtime_2.png")
+
+	if dialogue_label.message_id == 18:
+		scene_bg.texture = load("res://assets/prostitution_storyboard/denial/prostitution_2ndtime_1.png")
+
+	if dialogue_label.message_id == 21:
+		scene_bg.texture = load("res://assets/prostitution_storyboard/denial/prostitution_2ndtime_3.png")
+
+	if dialogue_label.message_id == 11 or dialogue_label.message_id == 24:
 		scene_finished = true
 
 	if scene_finished:

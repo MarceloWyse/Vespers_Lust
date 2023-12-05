@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://c0x5rbk7rn3vx"]
+[gd_scene load_steps=53 format=3 uid="uid://c0x5rbk7rn3vx"]
 
 [ext_resource type="Script" path="res://scenes/player_hub.gd" id="1_0hmm0"]
 [ext_resource type="Texture2D" uid="uid://7ey4i1pllc66" path="res://assets/img/e_letter.png" id="1_got0o"]
@@ -38,7 +38,10 @@
 [ext_resource type="Texture2D" uid="uid://dw1587p7wc00y" path="res://assets/img/swim.png" id="35_sn1dq"]
 [ext_resource type="Texture2D" uid="uid://cgevy6m7kf6sf" path="res://assets/img/jogging.png" id="36_mye0o"]
 [ext_resource type="Texture2D" uid="uid://c8ex0y22676hr" path="res://assets/img/clothes.png" id="39_kqq8b"]
+[ext_resource type="Texture2D" uid="uid://dtbt63dkrrrm5" path="res://assets/img/bag.png" id="40_m4inh"]
+[ext_resource type="Texture2D" uid="uid://bwvgtq2dsmyi0" path="res://assets/img/blood_bag.png" id="41_33k6g"]
 [ext_resource type="Texture2D" uid="uid://ctngtyheo4tns" path="res://assets/img/mirror.png" id="41_gff0o"]
+[ext_resource type="Texture2D" uid="uid://ddf6yuthdhq4d" path="res://assets/img/blood_flask.png" id="42_imd5n"]
 [ext_resource type="PackedScene" uid="uid://m47064cxfa3k" path="res://scenes/transitions.tscn" id="44_0gk0u"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3bu17"]
@@ -420,9 +423,9 @@ rounded = true
 [node name="GearButton" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = 1738.0
-offset_top = 26.0
+offset_top = 873.0
 offset_right = 1880.0
-offset_bottom = 168.0
+offset_bottom = 1015.0
 texture_normal = ExtResource("21_8v10w")
 ignore_texture_size = true
 stretch_mode = 0
@@ -1065,6 +1068,79 @@ text = "Clothes"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Bag" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 769.0
+offset_top = -524.0
+offset_right = 943.0
+offset_bottom = -364.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("40_m4inh")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Clothes" type="Label" parent="Bag"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 156.0
+offset_right = 153.0
+offset_bottom = 201.0
+theme_override_colors/font_color = Color(0.792157, 0.611765, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.129412, 0.0941176, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Items"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemsPanel" type="Panel" parent="Bag"]
+layout_mode = 0
+offset_left = -261.0
+offset_top = 249.0
+offset_right = 152.0
+offset_bottom = 416.0
+
+[node name="BloodBags" type="TextureButton" parent="Bag/ItemsPanel"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 18.0
+offset_right = 117.0
+offset_bottom = 100.0
+texture_normal = ExtResource("41_33k6g")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BloodLabel" type="Label" parent="Bag/ItemsPanel/BloodBags"]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 93.0
+offset_right = 72.0
+offset_bottom = 119.0
+text = "Quantity: -"
+
+[node name="BloodFlask" type="TextureButton" parent="Bag/ItemsPanel"]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 18.0
+offset_right = 239.0
+offset_bottom = 100.0
+texture_normal = ExtResource("42_imd5n")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BloodFlaskLabel" type="Label" parent="Bag/ItemsPanel/BloodFlask"]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 93.0
+offset_right = 72.0
+offset_bottom = 119.0
+text = "Quantity: -"
+
 [node name="Transition" type="TextureRect" parent="."]
 visible = false
 modulate = Color(0, 0, 0, 1)
@@ -1117,3 +1193,6 @@ layout_mode = 1
 [connection signal="pressed" from="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Boxing" to="." method="_on_boxing_pressed"]
 [connection signal="pressed" from="MapButton" to="." method="_on_map_button_pressed"]
 [connection signal="pressed" from="Wardrobe" to="." method="_on_wardrobe_pressed"]
+[connection signal="pressed" from="Bag" to="." method="_on_bag_pressed"]
+[connection signal="pressed" from="Bag/ItemsPanel/BloodBags" to="." method="_on_blood_bags_pressed"]
+[connection signal="pressed" from="Bag/ItemsPanel/BloodFlask" to="." method="_on_blood_flask_pressed"]

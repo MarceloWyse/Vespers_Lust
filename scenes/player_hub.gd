@@ -31,6 +31,11 @@ extends Control
 @onready var lwd_bar = $AttributesPanel/AttributesGrid/LwdBar
 @onready var transitions = $Transitions
 @onready var relax = $ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Relax
+@onready var items_panel = $Bag/ItemsPanel
+@onready var blood_label = $Bag/ItemsPanel/BloodBags/BloodLabel
+@onready var blood_flask_label = $Bag/ItemsPanel/BloodFlask/BloodFlaskLabel
+@onready var blood_bags = $Bag/ItemsPanel/BloodBags
+@onready var blood_flask = $Bag/ItemsPanel/BloodFlask
 
 @export var e_texture : Texture 
 @export var d_texture : Texture 
@@ -118,12 +123,23 @@ func _ready():
 	save_status()
 
 func _process(delta):
+	
 	if texture_rect.texture == null or texture_rect_2.texture == null \
 	or texture_rect_3.texture == null:
 		apply.disabled = true
 	elif texture_rect.texture != null and texture_rect_2.texture != null \
 	and texture_rect_3.texture != null:
 		apply.disabled = false
+	
+	
+	if SaveManager.save.items["bloodbag"] <= 0:
+		blood_bags.hide()
+	if SaveManager.save.items["bloodflask"] <= 0:
+		blood_flask.hide()
+	
+	hunger_bar.value = SaveManager.save.player_status["hunger"]
+	blood_label.text = "Quantity: %s" %SaveManager.save.items["bloodbag"]
+	blood_flask_label.text = "Quantity: %s" %SaveManager.save.items["bloodflask"]
 	
 	lwd_bar.tooltip_text = str(lwd_bar.value)
 	
@@ -231,10 +247,12 @@ func _process(delta):
 func _on_gear_button_pressed():
 	settings.visible = !settings.visible
 	activities_panel.hide()
+	items_panel.hide()
 
 func _on_schedule_button_pressed():
 	activities_panel.visible = !activities_panel.visible
 	settings.hide()
+	items_panel.hide()
 
 func _on_test_button_pressed():
 	if vit_bar.value != 100:
@@ -478,3 +496,24 @@ func save_status():
 
 func _on_wardrobe_pressed():
 	get_tree().change_scene_to_file("res://scenes/wardrobe.tscn")
+
+func _on_bag_pressed():
+	items_panel.visible = !items_panel.visible
+	settings.hide()
+	activities_panel.hide()
+	
+func _on_blood_bags_pressed():
+	if SaveManager.save.items["bloodbag"] > 0:
+		SaveManager.save.items["bloodbag"] -= 1
+		if SaveManager.save.player_status["hunger"] <= 50:
+			SaveManager.save.player_status["hunger"] = 0
+		else:
+			SaveManager.save.player_status["hunger"] -= 50
+
+func _on_blood_flask_pressed():
+	if SaveManager.save.items["bloodflask"] > 0:
+		SaveManager.save.items["bloodflask"] -= 1
+		if SaveManager.save.player_status["hunger"] <= 20:
+			SaveManager.save.player_status["hunger"] = 0
+		else:
+			SaveManager.save.player_status["hunger"] -= 20
