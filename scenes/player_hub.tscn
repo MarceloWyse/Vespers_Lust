@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://b7ra4v2n3idm" path="res://assets/img/sanity0.jpg" id="14_p180w"]
 [ext_resource type="Texture2D" uid="uid://bsjoxpueb5cy3" path="res://assets/img/sanity3.png" id="15_wii6g"]
 [ext_resource type="Texture2D" uid="uid://c0trlvp01ppw7" path="res://assets/img/sanity4.png" id="16_w38km"]
-[ext_resource type="Texture2D" uid="uid://bpm1nvh5rdf10" path="res://assets/img/graybox_hubtest_V3.png" id="17_lq77n"]
+[ext_resource type="Texture2D" uid="uid://ba770uqf08bhq" path="res://assets/img/room_placeholder.png" id="17_8btwi"]
 [ext_resource type="Texture2D" uid="uid://bunppy7big6un" path="res://assets/img/gears.png" id="21_8v10w"]
 [ext_resource type="Texture2D" uid="uid://djj2efqre5y37" path="res://assets/characters/vesper/Vesper_model_fixed_2.png" id="23_ikvf8"]
 [ext_resource type="Texture2D" uid="uid://beb5ygwro1my3" path="res://assets/img/notebook.png" id="24_7eyg5"]
@@ -109,7 +109,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("17_lq77n")
+texture = ExtResource("17_8btwi")
 expand_mode = 1
 
 [node name="AttributesPanel" type="Panel" parent="."]
@@ -1099,6 +1099,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ItemsPanel" type="Panel" parent="Bag"]
+visible = false
 layout_mode = 0
 offset_left = -261.0
 offset_top = 249.0

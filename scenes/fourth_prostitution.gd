@@ -6,7 +6,7 @@ var scene_finished
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
-#	SaveManager.save.fourth_prostitution = true
+	SaveManager.save.fourth_prostitution = true
 	
 	if not SaveManager.save.fourth_prostitution:
 		dialogue_label.start_dialogue()

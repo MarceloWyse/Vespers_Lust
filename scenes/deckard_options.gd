@@ -65,7 +65,7 @@ func _on_anal_pressed():
 
 func _on_money_pressed():
 	deckard_option_timer.stop()
-	if SaveManager.save.player_status["money"] <= 30:
+	if SaveManager.save.player_status["money"] <= 300:
 		get_tree().change_scene_to_file("res://scenes/no_money.tscn")
 	else:
 		dialog_box.show()

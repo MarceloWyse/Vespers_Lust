@@ -26,6 +26,5 @@ func _process(delta):
 		scene_bg.texture = load("res://assets/hospital_storyboard/hospital_scene_23.png")
 	if dialogue_label.message_id == 33:
 		scene_bg.texture = load("res://assets/hospital_storyboard/hospital_scene_24.png")
-		
-	if dialogue_label.message_id == 40:
+	if dialogue_label.message_id == 39:
 		get_tree().change_scene_to_file("res://scenes/player_hub.tscn")

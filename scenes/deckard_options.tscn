@@ -50,7 +50,7 @@ theme_override_constants/separation = 20
 custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Give him your money ($30+)"
+text = "Give him your money ($300+)"
 
 [node name="LapDance" type="Button" parent="DeckardOption/VBoxContainer"]
 custom_minimum_size = Vector2(300, 100)

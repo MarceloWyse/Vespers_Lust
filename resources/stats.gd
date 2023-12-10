@@ -39,7 +39,7 @@ class_name Stats
 "talk_1" : false, "talk_2" : false, "ask_for_blood" : false, "first_visit" : true}
 
 @export var deckard = {"stolen_blood" : false, "deckard_repetition" : false, "lapdance" : false, "handjob" : false, "titsout" : false, 
-"blowjob" : false, "anal" : false
+"blowjob" : false, "anal" : false, "showed_tits" : false, "showed_butt" : false, "showed_pussy" : false
 }
 
 @export var lobo = {"information_available" : false, "met_lobo" : false, "asked_for_blood" : false}
