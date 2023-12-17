@@ -1,6 +1,7 @@
 extends Control
 
 @onready var fade_out_trans = $FadeOutTrans
+@onready var video_stream_player = $VideoStreamPlayer
 
 func _on_quit_pressed():
 	get_tree().quit()
@@ -30,3 +31,6 @@ func _on_new_game_pressed():
 func _on_load_pressed():
 	SaveManager.load_game()
 	get_tree().change_scene_to_file("res://scenes/player_hub.tscn")
+
+func _on_video_stream_player_finished():
+	video_stream_player.play()

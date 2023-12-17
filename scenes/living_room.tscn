@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=3 uid="uid://noo4wtr2gx05"]
+
+[ext_resource type="Script" path="res://scenes/living_room.gd" id="1_rq1mo"]
+[ext_resource type="Texture2D" uid="uid://xxphb70yyv4u" path="res://assets/img/living_room_placeholder.png" id="2_vvhsu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_41wn1"]
+bg_color = Color(0.247059, 0.25098, 0.235294, 1)
+
+[node name="LivingRoom" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rq1mo")
+
+[node name="BackgroundScene" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_vvhsu")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 193.0
+offset_top = 158.0
+offset_right = 518.0
+offset_bottom = 449.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_41wn1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 16.0
+offset_right = 311.0
+offset_bottom = 275.0
+theme_override_constants/separation = 14
+
+[node name="JoshBtn" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Talk to Josh"
+
+[node name="KateBtn" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Talk to Kate"
+
+[node name="HubBtn" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Back to Hub"
+
+[connection signal="pressed" from="Panel/VBoxContainer/HubBtn" to="." method="_on_hub_btn_pressed"]

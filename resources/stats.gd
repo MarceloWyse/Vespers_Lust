@@ -44,3 +44,14 @@ class_name Stats
 
 @export var lobo = {"information_available" : false, "met_lobo" : false, "asked_for_blood" : false}
 @export var lily = {"intro_dungeon" : true}
+
+@export var prologue_cg = {"prologue_1" : false, "prologue_2" : false, "prologue_3" : false, 
+"prologue_4" : false, "prologue_5" : false, "prologue_6" : false, "prologue_7" : false, 
+"prologue_8" : false, "prologue_9" : false, "prologue_10" : false, "prologue_10_11" : false,
+"prologue_11" : false, "prologue_12" : false, "prologue_12_13" : false, "prologue_13" : false,
+"prologue_14" : false, "prologue_15" : false, "prologue_16" : false, "prologue_17" : false, 
+"prologue_18" : false, "prologue_19" : false, "prologue_20" : false, "prologue_21" : false, 
+"prologue_22" : false, "prologue_23" : false, "prologue_24" : false, "prologue_25" : false, 
+"prologue_26" : false, "prologue_26_27" : false, "prologue_27" : false, "prologue_28" : false,
+"prologue_29" : false, "prologue_30" : false, "prologue_31" : false, "prologue_32" : false
+}

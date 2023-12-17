@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://c0x5rbk7rn3vx"]
+[gd_scene load_steps=54 format=3 uid="uid://c0x5rbk7rn3vx"]
 
 [ext_resource type="Script" path="res://scenes/player_hub.gd" id="1_0hmm0"]
 [ext_resource type="Texture2D" uid="uid://7ey4i1pllc66" path="res://assets/img/e_letter.png" id="1_got0o"]
@@ -38,6 +38,7 @@
 [ext_resource type="Texture2D" uid="uid://dw1587p7wc00y" path="res://assets/img/swim.png" id="35_sn1dq"]
 [ext_resource type="Texture2D" uid="uid://cgevy6m7kf6sf" path="res://assets/img/jogging.png" id="36_mye0o"]
 [ext_resource type="Texture2D" uid="uid://c8ex0y22676hr" path="res://assets/img/clothes.png" id="39_kqq8b"]
+[ext_resource type="Texture2D" uid="uid://bla5vqku32nf0" path="res://assets/img/living-room.png" id="39_p24sw"]
 [ext_resource type="Texture2D" uid="uid://dtbt63dkrrrm5" path="res://assets/img/bag.png" id="40_m4inh"]
 [ext_resource type="Texture2D" uid="uid://bwvgtq2dsmyi0" path="res://assets/img/blood_bag.png" id="41_33k6g"]
 [ext_resource type="Texture2D" uid="uid://ctngtyheo4tns" path="res://assets/img/mirror.png" id="41_gff0o"]
@@ -1035,6 +1036,36 @@ theme_override_colors/font_color = Color(0.792157, 0.611765, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.129412, 0.0941176, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Map"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LivingRoom" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 755.0
+offset_top = 122.0
+offset_right = 929.0
+offset_bottom = 282.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("39_p24sw")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MapLabel" type="Label" parent="LivingRoom"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 153.0
+offset_right = 185.0
+offset_bottom = 198.0
+theme_override_colors/font_color = Color(0.792157, 0.611765, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.129412, 0.0941176, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Living Room"
 horizontal_alignment = 1
 vertical_alignment = 1
 

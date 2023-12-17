@@ -25,7 +25,11 @@ extends Control
 @onready var eat_food_option = $EatFoodOption
 @onready var black_screen = $BlackScreen
 @onready var transitions = $Transitions
+@onready var skip_timer = $SkipTimer
+@onready var skipping_label = $SkippingPanel/SkippingLabel
+@onready var skipping_panel = $SkippingPanel
 
+var reset_timer = false
 var taxi_driver = preload("res://assets/img/taxi_driver.png")
 var vesper = preload("res://assets/img/vesper_face.png")
 var helena = preload("res://assets/img/Helena_bust.png")
@@ -40,15 +44,24 @@ var call_help_clicked = false
 var can_make_invisible = true
 
 func _ready():
-#	fade_in_trans.show()
-#	var my_tween = get_tree().create_tween()
-#	my_tween.tween_property(fade_in_trans, "modulate", Color(0, 0, 0, 0), 2)
-#	await my_tween.finished
-#	dialogue_label.jump_to(75)
 	dialogue_label.start_dialogue()
 	transitions.fade_to_image()
 
 func _process(delta):
+	
+	if reset_timer == false:
+		if Input.is_action_pressed("skip_scene"):
+			skipping_panel.show()
+			reset_timer = true
+			skip_timer.start()
+	
+	if reset_timer == true:
+		skipping_label.text = "Skipping in: %d" %int(skip_timer.time_left)
+	
+	if Input.is_action_just_released("skip_scene"):
+		skipping_panel.hide()
+		reset_timer = false
+		skip_timer.stop()
 	
 	if can_make_invisible:
 		if Input.is_action_just_pressed("right_click"):
@@ -61,29 +74,45 @@ func _process(delta):
 			dialogue_label.can_type = true
 	
 	if dialogue_label.message_id == 0:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_grimshire.png")
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue1.png")
+		if SaveManager.save.prologue_cg["prologue_1"] == false:
+			SaveManager.save.prologue_cg["prologue_1"] = true
 		
 	if dialogue_label.message_id == 3:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_desk_02.png")
-
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue2.png")
+		if SaveManager.save.prologue_cg["prologue_2"] == false:
+			SaveManager.save.prologue_cg["prologue_2"] = true
+		
 	if dialogue_label.message_id == 4:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_board_03.png")
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue3.png")
+		if SaveManager.save.prologue_cg["prologue_3"] == false:
+			SaveManager.save.prologue_cg["prologue_3"] = true
 	
 	if dialogue_label.message_id == 8:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_corpse_04.png")
-	
-	if dialogue_label.message_id == 12:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_helena_photo_05.png")
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue4.png")
+		if SaveManager.save.prologue_cg["prologue_4"] == false:
+			SaveManager.save.prologue_cg["prologue_4"] = true
 		
+	if dialogue_label.message_id == 12:
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue5.png")
+		if SaveManager.save.prologue_cg["prologue_5"] == false:
+			SaveManager.save.prologue_cg["prologue_5"] = true	
+
 	if dialogue_label.message_id == 17:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_helena_suitcase_06.png")
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue6.png")
+		if SaveManager.save.prologue_cg["prologue_6"] == false:
+			SaveManager.save.prologue_cg["prologue_6"] = true
 		
 	if dialogue_label.message_id == 19:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_mayor_07.png")
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue7.png")
+		if SaveManager.save.prologue_cg["prologue_7"] == false:
+			SaveManager.save.prologue_cg["prologue_7"] = true
 
 	if dialogue_label.message_id == 24:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_board_08.png")
-
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue8.png")
+		if SaveManager.save.prologue_cg["prologue_8"] == false:
+			SaveManager.save.prologue_cg["prologue_8"] = true
+			
 	if dialogue_label.message_id == 25:
 		show_speaker("???", vesper)
 
@@ -91,40 +120,59 @@ func _process(delta):
 		hide_names()
 
 	if dialogue_label.message_id == 27:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_missing_09.png")
-
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue9.png")
+		if SaveManager.save.prologue_cg["prologue_9"] == false:
+			SaveManager.save.prologue_cg["prologue_9"] = true
+			
 	if dialogue_label.message_id == 37:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_party_10.png")
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue10.png")
+		if SaveManager.save.prologue_cg["prologue_10"] == false:
+			SaveManager.save.prologue_cg["prologue_10"] = true
+	
+	if dialogue_label.message_id == 42:
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue10_11.png")
+		if SaveManager.save.prologue_cg["prologue_10_11"] == false:
+			SaveManager.save.prologue_cg["prologue_10_11"] = true
 	
 	if dialogue_label.message_id == 45:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_letter_11.png")
-		
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue11.png")
+		if SaveManager.save.prologue_cg["prologue_11"] == false:
+			SaveManager.save.prologue_cg["prologue_11"] = true
+			
 	if dialogue_label.message_id == 53:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_helena_room_12.png")
-		
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue12.png")
+		if SaveManager.save.prologue_cg["prologue_12"] == false:
+			SaveManager.save.prologue_cg["prologue_12"] = true
+			
 	if dialogue_label.message_id == 55:
 		show_speaker("???", vesper)
 		
 	if dialogue_label.message_id == 59:
 		during_choice = true
-		scene_texture.texture = load("res://assets/img/revolver_scene_block.png")
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue12_13.png")
 		gun_option.show()
 		if option_timer == false:
 			dialogue_label.can_type = false 
 			gun_option_timer.start()
 			option_timer = true
 		progress_bar.value = gun_option_timer.time_left
-	
+		if SaveManager.save.prologue_cg["prologue_12_13"] == false:
+			SaveManager.save.prologue_cg["prologue_12_13"] = true
+		
 	if dialogue_label.message_id == 62:
 		option_timer = false
 		scene_texture.texture = null
-		scene_texture.texture = load("res://assets/thumbnails/thumb_taxi_13.png")
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue13.png")
 		name_panel.hide()
 		char_portrait.hide()
-	
+		if SaveManager.save.prologue_cg["prologue_13"] == false:
+			SaveManager.save.prologue_cg["prologue_13"] = true
+			
 	if dialogue_label.message_id == 66:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_bridge_14.png")
-	
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue14.png")
+		if SaveManager.save.prologue_cg["prologue_14"] == false:
+			SaveManager.save.prologue_cg["prologue_14"] = true
+			
 	if dialogue_label.message_id == 69:
 		name_panel.show()
 		char_portrait.show()
@@ -142,17 +190,21 @@ func _process(delta):
 		char_portrait.hide()
 
 	if dialogue_label.message_id == 80:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_raccoon_15.png")
-	
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue15.png")
+		if SaveManager.save.prologue_cg["prologue_15"] == false:
+			SaveManager.save.prologue_cg["prologue_15"] = true
+			
 	if dialogue_label.message_id == 81:
 		name_panel.show()
 		char_portrait.show()
 		
 	if dialogue_label.message_id == 82:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_1PM_16.png")
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue16.png")
 		name_panel.hide()
 		char_portrait.hide()
-
+		if SaveManager.save.prologue_cg["prologue_16"] == false:
+			SaveManager.save.prologue_cg["prologue_16"] = true
+			
 	if dialogue_label.message_id == 84:
 		name_panel.show()
 		char_portrait.show()
@@ -167,13 +219,15 @@ func _process(delta):
 		char_portrait.show()
 	
 	if dialogue_label.message_id == 93:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_taxidriver_17.png")
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue17.png")
+		if SaveManager.save.prologue_cg["prologue_17"] == false:
+			SaveManager.save.prologue_cg["prologue_17"] = true
 		name_label.text = "Taxi Driver"
 		char_portrait.texture = taxi_driver
 		var my_tween = create_tween()
 		my_tween.tween_property(black_screen, "modulate", Color(0, 0, 0, 0), 1)
 		await my_tween.finished
-		
+
 	
 	if dialogue_label.message_id == 94:
 		name_label.text = "???"
@@ -184,7 +238,9 @@ func _process(delta):
 		char_portrait.hide()
 	
 	if dialogue_label.message_id == 97:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_tireexplode_18.png")
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue18.png")
+		if SaveManager.save.prologue_cg["prologue_18"] == false:
+			SaveManager.save.prologue_cg["prologue_18"] = true
 	
 	if dialogue_label.message_id == 99:
 		name_panel.show()
@@ -199,9 +255,11 @@ func _process(delta):
 		char_portrait.texture = vesper
 
 	if dialogue_label.message_id == 102:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_taxiBG_19.png")
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue19.png")
 		hide_names()
-		
+		if SaveManager.save.prologue_cg["prologue_19"] == false:
+			SaveManager.save.prologue_cg["prologue_19"] = true
+			
 	if dialogue_label.message_id == 103:
 		show_speaker("taxi_driver", taxi_driver)
 
@@ -281,15 +339,19 @@ func _process(delta):
 		car_progress_bar.value = car_option_timer.time_left
 	
 	if dialogue_label.message_id == 138:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_taxi_lock_20.png")
-	
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue20.png")
+		if SaveManager.save.prologue_cg["prologue_20"] == false:
+			SaveManager.save.prologue_cg["prologue_20"] = true
+			
 	if dialogue_label.message_id == 139:
 		during_choice = false
 		hide_names()
 	
 	if dialogue_label.message_id == 140:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_taxiBG_19.png")
-	
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue19.png")
+		if SaveManager.save.prologue_cg["prologue_19"] == false:
+			SaveManager.save.prologue_cg["prologue_19"] = true
+			
 	if dialogue_label.message_id == 144:
 		show_speaker("vesper", vesper)
 		if take_gun:
@@ -304,28 +366,38 @@ func _process(delta):
 		show_speaker("vesper", vesper)
 		
 	if dialogue_label.message_id == 150:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_taxiwindow_21.png")
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue21.png")
 		hide_names()
-		
+		if SaveManager.save.prologue_cg["prologue_21"] == false:
+			SaveManager.save.prologue_cg["prologue_21"] = true
+			
 	if dialogue_label.message_id == 151:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_handstrangle_22.png")
-	
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue22.png")
+		if SaveManager.save.prologue_cg["prologue_22"] == false:
+			SaveManager.save.prologue_cg["prologue_22"] = true
+			
 	if dialogue_label.message_id == 154:
 		dialogue_label.jump_to(211)
 	
 	if dialogue_label.message_id == 155:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_taxiBG_19.png")
-	
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue19.png")
+		if SaveManager.save.prologue_cg["prologue_19"] == false:
+			SaveManager.save.prologue_cg["prologue_19"] = true
+			
 	if dialogue_label.message_id == 156:
 		dialogue_label.jump_to(140)
 	
 	if dialogue_label.message_id == 157:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_darkroad_23.png")
-	
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue23.png")
+		if SaveManager.save.prologue_cg["prologue_23"] == false:
+			SaveManager.save.prologue_cg["prologue_23"] = true
+			
 	if dialogue_label.message_id == 160:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_darkroad_24.png")
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue24.png")
 		hide_names()
-	
+		if SaveManager.save.prologue_cg["prologue_24"] == false:
+			SaveManager.save.prologue_cg["prologue_24"] = true
+			
 	if dialogue_label.message_id == 161:
 		show_speaker("vesper", vesper)
 	
@@ -333,11 +405,15 @@ func _process(delta):
 		hide_names()
 	
 	if dialogue_label.message_id == 164:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_head_25.png")
-	
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue25.png")
+		if SaveManager.save.prologue_cg["prologue_25"] == false:
+			SaveManager.save.prologue_cg["prologue_25"] = true
+			
 	if dialogue_label.message_id == 165:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_shock_26.png")
-	
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue26.png")
+		if SaveManager.save.prologue_cg["prologue_26"] == false:
+			SaveManager.save.prologue_cg["prologue_26"] = true
+			
 	if dialogue_label.message_id == 168:
 		show_speaker("vesper", vesper)
 	
@@ -357,16 +433,20 @@ func _process(delta):
 		dialogue_label.jump_to(211)
 	
 	if dialogue_label.message_id == 179:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_darkroad_23.png")
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue23.png")
 		hide_names()
-	
+		if SaveManager.save.prologue_cg["prologue_23"] == false:
+			SaveManager.save.prologue_cg["prologue_23"] = true
+			
 	if dialogue_label.message_id == 182:
 		show_speaker("vesper", vesper)
 	
 	if dialogue_label.message_id == 183:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_darkroad_24.png")
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue24.png")
 		hide_names()
-	
+		if SaveManager.save.prologue_cg["prologue_24"] == false:
+			SaveManager.save.prologue_cg["prologue_24"] = true
+			
 	if dialogue_label.message_id == 187:
 		show_speaker("vesper", vesper)
 	
@@ -377,15 +457,21 @@ func _process(delta):
 		show_speaker("vesper", vesper)
 	
 	if dialogue_label.message_id == 192:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_head_25.png")
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue25.png")
 		hide_names()
-	
+		if SaveManager.save.prologue_cg["prologue_25"] == false:
+			SaveManager.save.prologue_cg["prologue_25"] = true
+			
 	if dialogue_label.message_id == 193:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_shock_26.png")
-	
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue26.png")
+		if SaveManager.save.prologue_cg["prologue_26"] == false:
+			SaveManager.save.prologue_cg["prologue_26"] = true
+			
 	if dialogue_label.message_id == 195:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_run_28.png")
-	
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue28.png")
+		if SaveManager.save.prologue_cg["prologue_28"] == false:
+			SaveManager.save.prologue_cg["prologue_28"] = true
+			
 	if dialogue_label.message_id == 197:
 		name_label.text = "???"
 		name_panel.show()
@@ -405,14 +491,18 @@ func _process(delta):
 		hide_names()
 	
 	if dialogue_label.message_id == 209:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_faint_run_shot.png")
-	
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue26_27.png")
+		if SaveManager.save.prologue_cg["prologue_26_27"] == false:
+			SaveManager.save.prologue_cg["prologue_26_27"] = true
+			
 	if dialogue_label.message_id == 210:
 		dialogue_label.jump_to(211)
 	
 	if dialogue_label.message_id == 211:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_chair.png")
-	
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue29.png")
+		if SaveManager.save.prologue_cg["prologue_29"] == false:
+			SaveManager.save.prologue_cg["prologue_29"] = true
+			
 	#Kidnapped Day 1:
 	if dialogue_label.message_id == 213:
 		show_speaker("vesper", vesper)
@@ -433,8 +523,10 @@ func _process(delta):
 		hide_names()
 	
 	if dialogue_label.message_id == 226:
-		scene_texture.texture = load("res://assets/thumbnails/thumb_sex_riding_30.png")
-	
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue30.png")
+		if SaveManager.save.prologue_cg["prologue_30"] == false:
+			SaveManager.save.prologue_cg["prologue_30"] = true
+			
 	if dialogue_label.message_id == 230:
 		show_speaker("vesper", vesper)
 
@@ -978,7 +1070,7 @@ func _on_fire_option_timer_timeout():
 	dialogue_label.jump_to(175)
 
 func _on_fire_btn_pressed():
-	scene_texture.texture = load("res://assets/thumbnails/thumb_shoot_27.png")
+	scene_texture.texture = load("res://assets/thumbnails/prologue/prologue27.png")
 	during_choice = false
 	fire_option_timer.stop()
 	fired_gun = true 
@@ -992,7 +1084,7 @@ func _on_fire_btn_pressed():
 	dialogue_label.jump_to(175)
 
 func _on_run_btn_pressed():
-	scene_texture.texture = load("res://assets/thumbnails/thumb_run_28.png")
+	scene_texture.texture = load("res://assets/thumbnails/prologue/prologue28.png")
 	during_choice = false
 	fire_option_timer.stop()
 	fired_gun = true 
@@ -1067,3 +1159,7 @@ func _on_dont_eat_btn_pressed():
 	during_choice = false
 	dialogue_label.can_type = true
 	dialogue_label.jump_to(459)
+
+
+func _on_skip_timer_timeout():
+	get_tree().change_scene_to_file("res://scenes/player_hub.tscn")

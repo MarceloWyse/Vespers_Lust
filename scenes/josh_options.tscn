@@ -1,0 +1,251 @@
+[gd_scene load_steps=6 format=3 uid="uid://boev5yqil4gaj"]
+
+[ext_resource type="Texture2D" uid="uid://dqolvso87m8x4" path="res://assets/characters/josh/josh_placeholder.png" id="1_83vue"]
+[ext_resource type="Script" path="res://scenes/josh_options.gd" id="1_baf5y"]
+[ext_resource type="Texture2D" uid="uid://xxphb70yyv4u" path="res://assets/img/living_room_placeholder.png" id="2_3l217"]
+[ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="3_m7cv0"]
+[ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="4_mqs77"]
+
+[node name="JoshOptions" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_baf5y")
+
+[node name="Scenebackground" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3l217")
+
+[node name="JoshCharacter" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 584.0
+offset_top = 46.0
+offset_right = 1323.0
+offset_bottom = 1302.0
+texture = ExtResource("1_83vue")
+expand_mode = 1
+
+[node name="OptionsBox" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 145.0
+offset_right = 559.0
+offset_bottom = 222.0
+
+[node name="Button" type="Button" parent="OptionsBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Talk"
+
+[node name="RubBtn" type="Button" parent="OptionsBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Massage"
+
+[node name="RubBox" type="VBoxContainer" parent="OptionsBox/RubBtn"]
+visible = false
+layout_mode = 0
+offset_left = 559.0
+offset_top = -108.0
+offset_right = 877.0
+offset_bottom = 131.0
+
+[node name="FootRub" type="Button" parent="OptionsBox/RubBtn/RubBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Rub my feet"
+
+[node name="BackRub" type="Button" parent="OptionsBox/RubBtn/RubBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Rub my back"
+
+[node name="LegRub" type="Button" parent="OptionsBox/RubBtn/RubBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Rub my legs"
+
+[node name="FoolAround" type="Button" parent="OptionsBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Fool Around"
+
+[node name="FoolBox" type="VBoxContainer" parent="OptionsBox/FoolAround"]
+visible = false
+layout_mode = 0
+offset_left = 559.0
+offset_top = -108.0
+offset_right = 877.0
+offset_bottom = 131.0
+
+[node name="HandJobBtn" type="Button" parent="OptionsBox/FoolAround/FoolBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Handjob"
+
+[node name="TitJob" type="Button" parent="OptionsBox/FoolAround/FoolBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Tit Job"
+
+[node name="BlowJob" type="Button" parent="OptionsBox/FoolAround/FoolBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Blowjob"
+
+[node name="Dominate" type="Button" parent="OptionsBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Dominate"
+
+[node name="DominateBox" type="VBoxContainer" parent="OptionsBox/Dominate"]
+visible = false
+layout_mode = 0
+offset_left = 559.0
+offset_top = -108.0
+offset_right = 877.0
+offset_bottom = 131.0
+
+[node name="Pee" type="Button" parent="OptionsBox/Dominate/DominateBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Pee"
+
+[node name="Whip" type="Button" parent="OptionsBox/Dominate/DominateBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Whip"
+
+[node name="Strapon" type="Button" parent="OptionsBox/Dominate/DominateBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Strap-on"
+
+[node name="Sex" type="Button" parent="OptionsBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Fuck"
+
+[node name="SexBox" type="VBoxContainer" parent="OptionsBox/Sex"]
+visible = false
+layout_mode = 0
+offset_left = 559.0
+offset_top = -108.0
+offset_right = 877.0
+offset_bottom = 131.0
+
+[node name="Whip" type="Button" parent="OptionsBox/Sex/SexBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Ride"
+
+[node name="Missionary" type="Button" parent="OptionsBox/Sex/SexBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Missionary"
+
+[node name="Strapon" type="Button" parent="OptionsBox/Sex/SexBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Doggy"
+
+[node name="DrinkBtn" type="Button" parent="OptionsBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Drink Blood"
+
+[node name="BackHub" type="Button" parent="OptionsBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Back to Hub"
+
+[node name="DialogBox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 223.0
+offset_top = -338.0
+offset_right = -219.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CharPortrait" type="TextureRect" parent="DialogBox"]
+visible = false
+layout_mode = 0
+offset_left = -178.0
+offset_top = -79.0
+offset_right = 166.0
+offset_bottom = 303.0
+texture = ExtResource("3_m7cv0")
+expand_mode = 1
+
+[node name="DialogueLabel" parent="DialogBox" instance=ExtResource("4_mqs77")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 148.0
+offset_top = 21.0
+offset_right = -55.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 40
+text = "Type here"
+messages = Array[String](["Josh: Yes, my mistress?", "-- END OF CONVERSATION --"])
+
+[node name="NamePanel" type="Panel" parent="DialogBox"]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 129.0
+offset_top = -197.0
+offset_right = -1132.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameLabel" type="Label" parent="DialogBox/NamePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Vesper"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 1380.0
+offset_top = 68.0
+offset_right = 1740.0
+offset_bottom = 115.0
+theme_override_font_sizes/font_size = 30
+step = 1.0
+value = 30.0
+
+[node name="Label" type="Label" parent="ProgressBar"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 63.0
+offset_right = 336.0
+offset_bottom = 108.0
+theme_override_font_sizes/font_size = 30
+text = "Josh's trainning level"

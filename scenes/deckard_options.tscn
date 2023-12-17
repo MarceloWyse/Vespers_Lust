@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://b735hwkq25ij5"]
 
 [ext_resource type="Script" path="res://scenes/deckard_options.gd" id="1_d11cv"]
-[ext_resource type="Texture2D" uid="uid://dv5gm07lhe4bi" path="res://assets/hospital_storyboard/hospital_scene_13.png" id="1_u80yb"]
+[ext_resource type="Texture2D" uid="uid://dv5gm07lhe4bi" path="res://assets/hospital_storyboard/deckard_options.png" id="1_u80yb"]
 [ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="3_27njj"]
 [ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="4_mbs0g"]
 
