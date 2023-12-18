@@ -326,9 +326,6 @@ func unlock_prologue():
 	if SaveManager.save.prologue_cg["prologue_30"] == true:
 		prologue_rect_30.texture = load("res://assets/thumbnails/prologue/prologue30.png")
 
-func _on_back_btn_pressed():
-	get_tree().change_scene_to_file("res://scenes/image_gallery.tscn")
-
 func _on_page_1_btn_pressed():
 	page_1.show()
 	page_2.hide()
@@ -337,4 +334,5 @@ func _on_page_2_btn_pressed():
 	page_2.show()
 	page_1.hide()
 
-
+func _on_back_button_pressed():
+	get_tree().change_scene_to_file("res://scenes/image_gallery.tscn")

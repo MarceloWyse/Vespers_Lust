@@ -45,6 +45,7 @@ var can_make_invisible = true
 
 func _ready():
 	dialogue_label.start_dialogue()
+#	dialogue_label.jump_to(170)
 	transitions.fade_to_image()
 
 func _process(delta):
@@ -357,7 +358,7 @@ func _process(delta):
 		if take_gun:
 			dialogue_label.create_message("instinctively you grab your gun as hard as you can.")
 		else:
-			dialogue_label.create_message("A thought races into your mind: 'Vesper, as long as you stay in the car it doesn't matter you haven't brought your gun'")
+			dialogue_label.create_message("A thought races into your mind: (Vesper, as long as you stay in the car it doesn't matter you haven't brought your gun)")
 	
 	if dialogue_label.message_id == 145:
 		hide_names()

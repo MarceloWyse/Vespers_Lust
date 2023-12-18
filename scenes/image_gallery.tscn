@@ -1,22 +1,41 @@
-[gd_scene load_steps=7 format=3 uid="uid://cyj8lr65klk4j"]
+[gd_scene load_steps=14 format=3 uid="uid://cyj8lr65klk4j"]
 
 [ext_resource type="Script" path="res://scenes/image_gallery.gd" id="1_38y2y"]
-[ext_resource type="Texture2D" uid="uid://dhtljkresqg51" path="res://assets/UI/video/prototype_title_2.png" id="2_fwhwk"]
+[ext_resource type="Texture2D" uid="uid://x3e68pplaohc" path="res://assets/UI/cg_gallery/cg_list_bg.png" id="2_uvgsy"]
+[ext_resource type="Texture2D" uid="uid://dd430f3wh47j3" path="res://assets/UI/cg_gallery/name_tag.png" id="3_xy5ik"]
 [ext_resource type="FontFile" uid="uid://cti0vlwxxfed1" path="res://assets/UI/font/Piratte Diarys.otf" id="6_u0ek6"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7fpxq"]
-content_margin_left = 40.0
-content_margin_top = 25.0
-content_margin_bottom = 25.0
-bg_color = Color(0, 0, 0, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fj1l3"]
+content_margin_top = 15.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8pxw7"]
-content_margin_left = 25.0
-bg_color = Color(0, 0, 0, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vwenw"]
+content_margin_top = 12.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l0pw0"]
-content_margin_left = 25.0
-bg_color = Color(0, 0, 0, 0.992157)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qgjka"]
+content_margin_top = 12.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dpi41"]
+content_margin_top = 12.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ij7qo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hoxve"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3seuu"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bb0wd"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_17oo3"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
 
 [node name="ImageGallery" type="Control"]
 layout_mode = 3
@@ -48,332 +67,472 @@ text = "CG List"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="BackgroundImage" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_uvgsy")
+expand_mode = 1
+
 [node name="BackButton" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 912.0
-offset_top = 958.0
-offset_right = 1293.0
-offset_bottom = 1021.0
+offset_left = 817.0
+offset_top = 953.0
+offset_right = 1198.0
+offset_bottom = 1023.0
+rotation = 0.00872665
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.290196, 0.290196, 0.290196, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("6_u0ek6")
 theme_override_font_sizes/font_size = 40
-text = "Back To Start Menu"
+theme_override_styles/normal = SubResource("StyleBoxFlat_fj1l3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vwenw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qgjka")
+theme_override_styles/focus = SubResource("StyleBoxFlat_dpi41")
+text = "Back to Menu"
 
 [node name="CGMenu" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 16.0
-offset_top = 112.0
-offset_right = 374.0
-offset_bottom = 1063.0
+offset_left = 63.0
+offset_top = 170.0
+offset_right = 383.0
+offset_bottom = 1027.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ij7qo")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CGMenu"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -2.0
-offset_right = 3.0
+offset_top = -43.0
+offset_right = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CGMenu/ScrollContainer"]
 layout_mode = 2
-theme_override_constants/separation = 20
+theme_override_constants/separation = 8
 
 [node name="ActivitiesBtn" type="Button" parent="CGMenu/ScrollContainer/VBoxContainer"]
-clip_contents = true
-custom_minimum_size = Vector2(350, 0)
+custom_minimum_size = Vector2(300, 80)
 layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 2
-theme_override_constants/h_separation = 0
-theme_override_constants/icon_max_width = 0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("6_u0ek6")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_7fpxq")
-theme_override_styles/hover = SubResource("StyleBoxFlat_8pxw7")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_l0pw0")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_hoxve")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3seuu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb0wd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_17oo3")
 text = "Activities"
-alignment = 0
+
+[node name="TextureRect" type="TextureRect" parent="CGMenu/ScrollContainer/VBoxContainer/ActivitiesBtn"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -42.5
+offset_right = 313.0
+offset_bottom = 43.5
+grow_vertical = 2
+texture = ExtResource("3_xy5ik")
 
 [node name="DeckardBtn" type="Button" parent="CGMenu/ScrollContainer/VBoxContainer"]
-clip_contents = true
-custom_minimum_size = Vector2(350, 0)
+custom_minimum_size = Vector2(300, 80)
 layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 2
-theme_override_constants/h_separation = 0
-theme_override_constants/icon_max_width = 0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("6_u0ek6")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_7fpxq")
-theme_override_styles/hover = SubResource("StyleBoxFlat_8pxw7")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_l0pw0")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_hoxve")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3seuu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb0wd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_17oo3")
 text = "Deckard"
-alignment = 0
+
+[node name="TextureRect" type="TextureRect" parent="CGMenu/ScrollContainer/VBoxContainer/DeckardBtn"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -42.5
+offset_right = 313.0
+offset_bottom = 43.5
+grow_vertical = 2
+texture = ExtResource("3_xy5ik")
 
 [node name="DougBtn" type="Button" parent="CGMenu/ScrollContainer/VBoxContainer"]
-clip_contents = true
-custom_minimum_size = Vector2(350, 0)
+custom_minimum_size = Vector2(300, 80)
 layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 2
-theme_override_constants/h_separation = 0
-theme_override_constants/icon_max_width = 0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("6_u0ek6")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_7fpxq")
-theme_override_styles/hover = SubResource("StyleBoxFlat_8pxw7")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_l0pw0")
-text = "Doug
-"
-alignment = 0
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_hoxve")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3seuu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb0wd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_17oo3")
+text = "Doug"
+
+[node name="TextureRect" type="TextureRect" parent="CGMenu/ScrollContainer/VBoxContainer/DougBtn"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -42.5
+offset_right = 313.0
+offset_bottom = 43.5
+grow_vertical = 2
+texture = ExtResource("3_xy5ik")
 
 [node name="EndingsBtn" type="Button" parent="CGMenu/ScrollContainer/VBoxContainer"]
-clip_contents = true
-custom_minimum_size = Vector2(350, 0)
+custom_minimum_size = Vector2(300, 80)
 layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 2
-theme_override_constants/h_separation = 0
-theme_override_constants/icon_max_width = 0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("6_u0ek6")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_7fpxq")
-theme_override_styles/hover = SubResource("StyleBoxFlat_8pxw7")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_l0pw0")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_hoxve")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3seuu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb0wd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_17oo3")
 text = "Endings"
-alignment = 0
+
+[node name="TextureRect" type="TextureRect" parent="CGMenu/ScrollContainer/VBoxContainer/EndingsBtn"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -42.5
+offset_right = 313.0
+offset_bottom = 43.5
+grow_vertical = 2
+texture = ExtResource("3_xy5ik")
 
 [node name="FrederickBtn" type="Button" parent="CGMenu/ScrollContainer/VBoxContainer"]
-clip_contents = true
-custom_minimum_size = Vector2(350, 0)
+custom_minimum_size = Vector2(300, 80)
 layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 2
-theme_override_constants/h_separation = 0
-theme_override_constants/icon_max_width = 0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("6_u0ek6")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_7fpxq")
-theme_override_styles/hover = SubResource("StyleBoxFlat_8pxw7")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_l0pw0")
-text = "Frederick
-"
-alignment = 0
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_hoxve")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3seuu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb0wd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_17oo3")
+text = "Frederick"
+
+[node name="TextureRect" type="TextureRect" parent="CGMenu/ScrollContainer/VBoxContainer/FrederickBtn"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -42.5
+offset_right = 313.0
+offset_bottom = 43.5
+grow_vertical = 2
+texture = ExtResource("3_xy5ik")
 
 [node name="HelenaBtn" type="Button" parent="CGMenu/ScrollContainer/VBoxContainer"]
-clip_contents = true
-custom_minimum_size = Vector2(350, 0)
+custom_minimum_size = Vector2(300, 80)
 layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 2
-theme_override_constants/h_separation = 0
-theme_override_constants/icon_max_width = 0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("6_u0ek6")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_7fpxq")
-theme_override_styles/hover = SubResource("StyleBoxFlat_8pxw7")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_l0pw0")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_hoxve")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3seuu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb0wd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_17oo3")
 text = "Helena"
-alignment = 0
+
+[node name="TextureRect" type="TextureRect" parent="CGMenu/ScrollContainer/VBoxContainer/HelenaBtn"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -42.5
+offset_right = 313.0
+offset_bottom = 43.5
+grow_vertical = 2
+texture = ExtResource("3_xy5ik")
 
 [node name="JoshBtn" type="Button" parent="CGMenu/ScrollContainer/VBoxContainer"]
-clip_contents = true
-custom_minimum_size = Vector2(350, 0)
+custom_minimum_size = Vector2(300, 80)
 layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 2
-theme_override_constants/h_separation = 0
-theme_override_constants/icon_max_width = 0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("6_u0ek6")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_7fpxq")
-theme_override_styles/hover = SubResource("StyleBoxFlat_8pxw7")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_l0pw0")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_hoxve")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3seuu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb0wd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_17oo3")
 text = "Josh"
-alignment = 0
+
+[node name="TextureRect" type="TextureRect" parent="CGMenu/ScrollContainer/VBoxContainer/JoshBtn"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -42.5
+offset_right = 313.0
+offset_bottom = 43.5
+grow_vertical = 2
+texture = ExtResource("3_xy5ik")
 
 [node name="KateBtn" type="Button" parent="CGMenu/ScrollContainer/VBoxContainer"]
-clip_contents = true
-custom_minimum_size = Vector2(350, 0)
+custom_minimum_size = Vector2(300, 80)
 layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 2
-theme_override_constants/h_separation = 0
-theme_override_constants/icon_max_width = 0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("6_u0ek6")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_7fpxq")
-theme_override_styles/hover = SubResource("StyleBoxFlat_8pxw7")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_l0pw0")
-text = "Kate
-"
-alignment = 0
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_hoxve")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3seuu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb0wd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_17oo3")
+text = "Kate"
 
-[node name="Kate&JoshBtn" type="Button" parent="CGMenu/ScrollContainer/VBoxContainer"]
-clip_contents = true
-custom_minimum_size = Vector2(350, 0)
-layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 2
-theme_override_constants/h_separation = 0
-theme_override_constants/icon_max_width = 0
-theme_override_fonts/font = ExtResource("6_u0ek6")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_7fpxq")
-theme_override_styles/hover = SubResource("StyleBoxFlat_8pxw7")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_l0pw0")
-text = "Kate/Josh
-"
-alignment = 0
+[node name="TextureRect" type="TextureRect" parent="CGMenu/ScrollContainer/VBoxContainer/KateBtn"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -42.5
+offset_right = 313.0
+offset_bottom = 43.5
+grow_vertical = 2
+texture = ExtResource("3_xy5ik")
 
-[node name="KateJoshVesperBtn" type="Button" parent="CGMenu/ScrollContainer/VBoxContainer"]
-clip_contents = true
-custom_minimum_size = Vector2(350, 0)
+[node name="TwosomeBtn" type="Button" parent="CGMenu/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 80)
 layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 2
-theme_override_constants/h_separation = 0
-theme_override_constants/icon_max_width = 0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("6_u0ek6")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_7fpxq")
-theme_override_styles/hover = SubResource("StyleBoxFlat_8pxw7")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_l0pw0")
-text = "Kate/Vesper/Josh
-"
-alignment = 0
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_hoxve")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3seuu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb0wd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_17oo3")
+text = "Twosome"
+
+[node name="TextureRect" type="TextureRect" parent="CGMenu/ScrollContainer/VBoxContainer/TwosomeBtn"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -42.5
+offset_right = 313.0
+offset_bottom = 43.5
+grow_vertical = 2
+texture = ExtResource("3_xy5ik")
+
+[node name="ThreesomeBtn" type="Button" parent="CGMenu/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("6_u0ek6")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_hoxve")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3seuu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb0wd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_17oo3")
+text = "Threesome"
+
+[node name="TextureRect" type="TextureRect" parent="CGMenu/ScrollContainer/VBoxContainer/ThreesomeBtn"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -42.5
+offset_right = 313.0
+offset_bottom = 43.5
+grow_vertical = 2
+texture = ExtResource("3_xy5ik")
 
 [node name="LilyBtn" type="Button" parent="CGMenu/ScrollContainer/VBoxContainer"]
-clip_contents = true
-custom_minimum_size = Vector2(350, 0)
+custom_minimum_size = Vector2(300, 80)
 layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 2
-theme_override_constants/h_separation = 0
-theme_override_constants/icon_max_width = 0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("6_u0ek6")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_7fpxq")
-theme_override_styles/hover = SubResource("StyleBoxFlat_8pxw7")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_l0pw0")
-text = "Lily
-"
-alignment = 0
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_hoxve")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3seuu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb0wd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_17oo3")
+text = "Lily"
+
+[node name="TextureRect" type="TextureRect" parent="CGMenu/ScrollContainer/VBoxContainer/LilyBtn"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -42.5
+offset_right = 313.0
+offset_bottom = 43.5
+grow_vertical = 2
+texture = ExtResource("3_xy5ik")
 
 [node name="LoboBtn" type="Button" parent="CGMenu/ScrollContainer/VBoxContainer"]
-clip_contents = true
-custom_minimum_size = Vector2(350, 0)
+custom_minimum_size = Vector2(300, 80)
 layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 2
-theme_override_constants/h_separation = 0
-theme_override_constants/icon_max_width = 0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("6_u0ek6")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_7fpxq")
-theme_override_styles/hover = SubResource("StyleBoxFlat_8pxw7")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_l0pw0")
-text = "Lobo
-"
-alignment = 0
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_hoxve")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3seuu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb0wd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_17oo3")
+text = "Lobo"
+
+[node name="TextureRect" type="TextureRect" parent="CGMenu/ScrollContainer/VBoxContainer/LoboBtn"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -42.5
+offset_right = 313.0
+offset_bottom = 43.5
+grow_vertical = 2
+texture = ExtResource("3_xy5ik")
 
 [node name="MasturbationBtn" type="Button" parent="CGMenu/ScrollContainer/VBoxContainer"]
-clip_contents = true
-custom_minimum_size = Vector2(350, 0)
+custom_minimum_size = Vector2(300, 80)
 layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 2
-theme_override_constants/h_separation = 0
-theme_override_constants/icon_max_width = 0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("6_u0ek6")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_7fpxq")
-theme_override_styles/hover = SubResource("StyleBoxFlat_8pxw7")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_l0pw0")
-text = "Masturbation
-"
-alignment = 0
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_hoxve")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3seuu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb0wd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_17oo3")
+text = "Masturbation"
+
+[node name="TextureRect" type="TextureRect" parent="CGMenu/ScrollContainer/VBoxContainer/MasturbationBtn"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -42.5
+offset_right = 313.0
+offset_bottom = 43.5
+grow_vertical = 2
+texture = ExtResource("3_xy5ik")
 
 [node name="PrologueBtn" type="Button" parent="CGMenu/ScrollContainer/VBoxContainer"]
-clip_contents = true
-custom_minimum_size = Vector2(350, 0)
+custom_minimum_size = Vector2(300, 80)
 layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 2
-theme_override_constants/h_separation = 0
-theme_override_constants/icon_max_width = 0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("6_u0ek6")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_7fpxq")
-theme_override_styles/hover = SubResource("StyleBoxFlat_8pxw7")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_l0pw0")
-text = "Prologue
-"
-alignment = 0
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_hoxve")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3seuu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb0wd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_17oo3")
+text = "Prologue"
+
+[node name="TextureRect" type="TextureRect" parent="CGMenu/ScrollContainer/VBoxContainer/PrologueBtn"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -42.5
+offset_right = 313.0
+offset_bottom = 43.5
+grow_vertical = 2
+texture = ExtResource("3_xy5ik")
 
 [node name="ProstitutionBtn" type="Button" parent="CGMenu/ScrollContainer/VBoxContainer"]
-clip_contents = true
-custom_minimum_size = Vector2(350, 0)
+custom_minimum_size = Vector2(300, 80)
 layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 2
-theme_override_constants/h_separation = 0
-theme_override_constants/icon_max_width = 0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("6_u0ek6")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_7fpxq")
-theme_override_styles/hover = SubResource("StyleBoxFlat_8pxw7")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_l0pw0")
-text = "Prostitution
-"
-alignment = 0
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_hoxve")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3seuu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb0wd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_17oo3")
+text = "Prostitution"
+
+[node name="TextureRect" type="TextureRect" parent="CGMenu/ScrollContainer/VBoxContainer/ProstitutionBtn"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -42.5
+offset_right = 313.0
+offset_bottom = 43.5
+grow_vertical = 2
+texture = ExtResource("3_xy5ik")
 
 [node name="SteveBtn" type="Button" parent="CGMenu/ScrollContainer/VBoxContainer"]
-clip_contents = true
-custom_minimum_size = Vector2(350, 0)
+custom_minimum_size = Vector2(300, 80)
 layout_mode = 2
-size_flags_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 2
-theme_override_constants/h_separation = 0
-theme_override_constants/icon_max_width = 0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
 theme_override_fonts/font = ExtResource("6_u0ek6")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_7fpxq")
-theme_override_styles/hover = SubResource("StyleBoxFlat_8pxw7")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_l0pw0")
-text = "Steve
-"
-alignment = 0
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_hoxve")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3seuu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb0wd")
+theme_override_styles/focus = SubResource("StyleBoxFlat_17oo3")
+text = "Steve"
 
-[node name="BackgroundImage" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="CGMenu/ScrollContainer/VBoxContainer/SteveBtn"]
+show_behind_parent = true
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 437.0
-offset_top = 325.0
-offset_right = -223.0
-offset_bottom = -340.0
-grow_horizontal = 2
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -42.5
+offset_right = 313.0
+offset_bottom = 43.5
 grow_vertical = 2
-texture = ExtResource("2_fwhwk")
-expand_mode = 1
+texture = ExtResource("3_xy5ik")
 
 [connection signal="pressed" from="Panel/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="CGMenu/ScrollContainer/VBoxContainer/PrologueBtn" to="." method="_on_prologue_btn_pressed"]
+[connection signal="pressed" from="CGMenu/ScrollContainer/VBoxContainer/ProstitutionBtn" to="." method="_on_prostitution_btn_pressed"]

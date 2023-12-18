@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://ba7fwwpa72hos"
-path="res://.godot/imported/BrasiliaDelight-Regular.ttf-76101be8981628a75a4a60fd3c305996.fontdata"
+uid="uid://b48ydmd446jm7"
+path="res://.godot/imported/Citylist.otf-bfea4b0dcef4b6123ca773eb54317021.fontdata"
 
 [deps]
 
-source_file="res://assets/UI/font/BrasiliaDelight-Regular.ttf"
-dest_files=["res://.godot/imported/BrasiliaDelight-Regular.ttf-76101be8981628a75a4a60fd3c305996.fontdata"]
+source_file="res://assets/UI/font/Citylist.otf"
+dest_files=["res://.godot/imported/Citylist.otf-bfea4b0dcef4b6123ca773eb54317021.fontdata"]
 
 [params]
 
