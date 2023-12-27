@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://c0x5rbk7rn3vx"]
+[gd_scene load_steps=57 format=3 uid="uid://c0x5rbk7rn3vx"]
 
 [ext_resource type="Script" path="res://scenes/player_hub.gd" id="1_0hmm0"]
 [ext_resource type="Texture2D" uid="uid://7ey4i1pllc66" path="res://assets/img/e_letter.png" id="1_got0o"]
@@ -23,25 +23,26 @@
 [ext_resource type="Texture2D" uid="uid://ba770uqf08bhq" path="res://assets/img/room_placeholder.png" id="17_8btwi"]
 [ext_resource type="Texture2D" uid="uid://bunppy7big6un" path="res://assets/img/gears.png" id="21_8v10w"]
 [ext_resource type="Texture2D" uid="uid://djj2efqre5y37" path="res://assets/characters/vesper/Vesper_model_fixed_2.png" id="23_ikvf8"]
-[ext_resource type="Texture2D" uid="uid://beb5ygwro1my3" path="res://assets/img/notebook.png" id="24_7eyg5"]
 [ext_resource type="Texture2D" uid="uid://ciwkuua8u020y" path="res://assets/characters/vesper/Vesper_model_forearm (1).png" id="24_owvm2"]
-[ext_resource type="Texture2D" uid="uid://c3sqhlo7ahfgy" path="res://assets/img/studying.png" id="25_13td8"]
 [ext_resource type="Texture2D" uid="uid://b0xvte0twpwtt" path="res://assets/characters/vesper/Vesper_model_hand.png" id="25_lh1cj"]
 [ext_resource type="Texture2D" uid="uid://blhrb7v4w2scj" path="res://assets/img/travel-map.png" id="25_r50m7"]
-[ext_resource type="Texture2D" uid="uid://cv4y7c7vo1qwx" path="res://assets/img/journalist.png" id="26_fb58q"]
-[ext_resource type="Texture2D" uid="uid://c3tfdx5pdxx0m" path="res://assets/img/prostitution.png" id="27_88ghq"]
-[ext_resource type="Texture2D" uid="uid://dfpl5xt3000k6" path="res://assets/img/bartender.png" id="27_lyrfm"]
-[ext_resource type="Texture2D" uid="uid://8mjtpg1rms3i" path="res://assets/img/masturbation.png" id="29_e0nol"]
-[ext_resource type="Texture2D" uid="uid://c0swrla7qa084" path="res://assets/img/sleep.png" id="31_agijj"]
-[ext_resource type="Texture2D" uid="uid://owqp8jct2dck" path="res://assets/img/boxing.png" id="34_u3ti2"]
-[ext_resource type="Texture2D" uid="uid://b7m6qxfdq6m7s" path="res://assets/img/relax.png" id="35_jxty6"]
-[ext_resource type="Texture2D" uid="uid://dw1587p7wc00y" path="res://assets/img/swim.png" id="35_sn1dq"]
-[ext_resource type="Texture2D" uid="uid://cgevy6m7kf6sf" path="res://assets/img/jogging.png" id="36_mye0o"]
+[ext_resource type="Texture2D" uid="uid://bjbdbav42o0bi" path="res://assets/UI/icons/schedule_icon.png" id="26_wbt5d"]
+[ext_resource type="FontFile" uid="uid://cti0vlwxxfed1" path="res://assets/UI/font/Piratte Diarys.otf" id="27_0l8ot"]
+[ext_resource type="Texture2D" uid="uid://des7ygq7moqd4" path="res://assets/UI/icons/journalist_icon.png" id="27_uv3vv"]
+[ext_resource type="Texture2D" uid="uid://bh0ulguafb2d4" path="res://assets/UI/icons/bartender_icon.png" id="28_2nprm"]
+[ext_resource type="Texture2D" uid="uid://bl54nhwtb8k6h" path="res://assets/UI/icons/prostitution_icon.png" id="29_iuyok"]
+[ext_resource type="Texture2D" uid="uid://6c2f0h8id3qm" path="res://assets/UI/icons/study_icon.png" id="30_gc5xk"]
+[ext_resource type="Texture2D" uid="uid://bj4xyijxm7qry" path="res://assets/UI/icons/running_icon.png" id="31_obhl4"]
+[ext_resource type="Texture2D" uid="uid://bar1s1rs044e5" path="res://assets/UI/icons/speech_icon.png" id="32_6h0u6"]
+[ext_resource type="Texture2D" uid="uid://bnsreehrph6rj" path="res://assets/UI/icons/sleep_icon.png" id="33_0m5ub"]
+[ext_resource type="Texture2D" uid="uid://lliut4m0mm2m" path="res://assets/UI/icons/masturbation_icon.png" id="34_cbrid"]
+[ext_resource type="Texture2D" uid="uid://bky10wh4aegd3" path="res://assets/UI/icons/relax_icon.png" id="35_mopkr"]
+[ext_resource type="Texture2D" uid="uid://k1xd5rxem3pb" path="res://assets/UI/icons/swimming_icon.png" id="36_s47po"]
+[ext_resource type="Texture2D" uid="uid://l8y1myk587tq" path="res://assets/UI/icons/boxing_icon.png" id="37_6tx6v"]
 [ext_resource type="Texture2D" uid="uid://c8ex0y22676hr" path="res://assets/img/clothes.png" id="39_kqq8b"]
 [ext_resource type="Texture2D" uid="uid://bla5vqku32nf0" path="res://assets/img/living-room.png" id="39_p24sw"]
 [ext_resource type="Texture2D" uid="uid://dtbt63dkrrrm5" path="res://assets/img/bag.png" id="40_m4inh"]
 [ext_resource type="Texture2D" uid="uid://bwvgtq2dsmyi0" path="res://assets/img/blood_bag.png" id="41_33k6g"]
-[ext_resource type="Texture2D" uid="uid://ctngtyheo4tns" path="res://assets/img/mirror.png" id="41_gff0o"]
 [ext_resource type="Texture2D" uid="uid://ddf6yuthdhq4d" path="res://assets/img/blood_flask.png" id="42_imd5n"]
 [ext_resource type="PackedScene" uid="uid://m47064cxfa3k" path="res://scenes/transitions.tscn" id="44_0gk0u"]
 
@@ -73,6 +74,12 @@ expand_margin_bottom = 5.0
 [sub_resource type="CanvasTexture" id="CanvasTexture_5kb0o"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_npcay"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8uk2d"]
+bg_color = Color(0.129412, 0.2, 0.309804, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2celd"]
+bg_color = Color(0.886275, 0.45098, 0.419608, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u4l27"]
 bg_color = Color(0.329412, 0.137255, 0.133333, 1)
@@ -417,26 +424,28 @@ offset_top = 157.0
 offset_right = 175.0
 offset_bottom = 203.0
 theme_override_font_sizes/font_size = 30
+theme_override_styles/background = SubResource("StyleBoxFlat_8uk2d")
+theme_override_styles/fill = SubResource("StyleBoxFlat_2celd")
 step = 1.0
 value = 50.0
 rounded = true
 
 [node name="GearButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 1738.0
-offset_top = 873.0
-offset_right = 1880.0
-offset_bottom = 1015.0
+offset_left = 466.0
+offset_top = 893.0
+offset_right = 573.0
+offset_bottom = 1000.0
 texture_normal = ExtResource("21_8v10w")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="GearButton"]
 layout_mode = 0
-offset_left = 2.0
-offset_top = 140.0
-offset_right = 119.0
-offset_bottom = 185.0
+offset_left = -11.0
+offset_top = 101.0
+offset_right = 106.0
+offset_bottom = 146.0
 theme_override_colors/font_color = Color(0.870588, 0.752941, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.137255, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
@@ -637,37 +646,38 @@ texture = ExtResource("25_lh1cj")
 expand_mode = 1
 
 [node name="ScheduleButton" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 578.0
-offset_top = -524.0
-offset_right = 752.0
-offset_bottom = -364.0
+offset_left = 559.0
+offset_top = -541.0
+offset_right = 759.0
+offset_bottom = -341.0
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("24_7eyg5")
+texture_normal = ExtResource("26_wbt5d")
 ignore_texture_size = true
-stretch_mode = 0
+stretch_mode = 4
 
 [node name="ScheduleLabel" type="Label" parent="ScheduleButton"]
 layout_mode = 0
-offset_left = 27.0
-offset_top = 153.0
-offset_right = 158.0
-offset_bottom = 198.0
+offset_left = 44.0
+offset_top = 159.0
+offset_right = 160.0
+offset_bottom = 195.0
 theme_override_colors/font_color = Color(0.792157, 0.611765, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.129412, 0.0941176, 0, 1)
+theme_override_fonts/font = ExtResource("27_0l8ot")
 theme_override_font_sizes/font_size = 30
 text = "Schedule"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ActivitiesPanel" type="Panel" parent="ScheduleButton"]
-visible = false
 layout_mode = 0
 offset_left = -153.0
 offset_top = 226.0
@@ -775,9 +785,9 @@ theme_override_constants/v_separation = 20
 columns = 3
 
 [node name="Journalist" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(105, 105)
 layout_mode = 2
-texture_normal = ExtResource("26_fb58q")
+texture_normal = ExtResource("27_uv3vv")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -791,9 +801,9 @@ theme_override_font_sizes/font_size = 20
 text = "Journalist"
 
 [node name="Bartender" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(105, 105)
 layout_mode = 2
-texture_normal = ExtResource("27_lyrfm")
+texture_normal = ExtResource("28_2nprm")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -814,9 +824,9 @@ theme_override_font_sizes/font_size = 20
 text = "Bartender"
 
 [node name="Prostitution" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(105, 105)
 layout_mode = 2
-texture_normal = ExtResource("27_88ghq")
+texture_normal = ExtResource("29_iuyok")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -830,9 +840,9 @@ theme_override_font_sizes/font_size = 20
 text = "Prostitute"
 
 [node name="Study2" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(105, 105)
 layout_mode = 2
-texture_normal = ExtResource("25_13td8")
+texture_normal = ExtResource("30_gc5xk")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -853,9 +863,9 @@ theme_override_font_sizes/font_size = 20
 text = "Study"
 
 [node name="Run" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(105, 105)
 layout_mode = 2
-texture_normal = ExtResource("36_mye0o")
+texture_normal = ExtResource("31_obhl4")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -876,9 +886,9 @@ theme_override_font_sizes/font_size = 20
 text = "Running"
 
 [node name="Speaking" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(105, 105)
 layout_mode = 2
-texture_normal = ExtResource("41_gff0o")
+texture_normal = ExtResource("32_6h0u6")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -899,9 +909,9 @@ theme_override_font_sizes/font_size = 20
 text = "Speech"
 
 [node name="Sleep" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(105, 105)
 layout_mode = 2
-texture_normal = ExtResource("31_agijj")
+texture_normal = ExtResource("33_0m5ub")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -915,9 +925,9 @@ theme_override_font_sizes/font_size = 20
 text = "Rest"
 
 [node name="Masturbation" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(105, 105)
 layout_mode = 2
-texture_normal = ExtResource("29_e0nol")
+texture_normal = ExtResource("34_cbrid")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -931,9 +941,9 @@ theme_override_font_sizes/font_size = 20
 text = "Pleasure"
 
 [node name="Relax" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(105, 105)
 layout_mode = 2
-texture_normal = ExtResource("35_jxty6")
+texture_normal = ExtResource("35_mopkr")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -954,9 +964,9 @@ theme_override_font_sizes/font_size = 20
 text = "Relax"
 
 [node name="Swim" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(105, 105)
 layout_mode = 2
-texture_normal = ExtResource("35_sn1dq")
+texture_normal = ExtResource("36_s47po")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -977,9 +987,9 @@ theme_override_font_sizes/font_size = 20
 text = "Swimming"
 
 [node name="Boxing" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(105, 105)
 layout_mode = 2
-texture_normal = ExtResource("34_u3ti2")
+texture_normal = ExtResource("37_6tx6v")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -1001,10 +1011,10 @@ text = "Boxing"
 
 [node name="ActivitiesLabel" type="Label" parent="ScheduleButton/ActivitiesPanel/Activities"]
 layout_mode = 0
-offset_left = 252.0
-offset_top = 428.0
-offset_right = 601.0
-offset_bottom = 541.0
+offset_left = 292.0
+offset_top = 482.0
+offset_right = 641.0
+offset_bottom = 595.0
 rotation = 4.71239
 theme_override_font_sizes/font_size = 70
 text = "Activities"
@@ -1046,10 +1056,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 755.0
-offset_top = 122.0
-offset_right = 929.0
-offset_bottom = 282.0
+offset_left = -503.0
+offset_top = 173.0
+offset_right = -376.0
+offset_bottom = 290.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("39_p24sw")
@@ -1058,10 +1068,10 @@ stretch_mode = 0
 
 [node name="MapLabel" type="Label" parent="LivingRoom"]
 layout_mode = 0
-offset_left = 9.0
-offset_top = 153.0
-offset_right = 185.0
-offset_bottom = 198.0
+offset_left = -27.0
+offset_top = 103.0
+offset_right = 149.0
+offset_bottom = 148.0
 theme_override_colors/font_color = Color(0.792157, 0.611765, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.129412, 0.0941176, 0, 1)
 theme_override_font_sizes/font_size = 30

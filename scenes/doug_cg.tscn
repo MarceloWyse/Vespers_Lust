@@ -1,0 +1,1204 @@
+[gd_scene load_steps=18 format=3 uid="uid://dr8ifw311utkj"]
+
+[ext_resource type="Script" path="res://scenes/doug_cg.gd" id="1_ahvxv"]
+[ext_resource type="Texture2D" uid="uid://gkiuyf3hqdl7" path="res://assets/UI/cg_gallery/CG_list_gallery.png" id="2_rve7l"]
+[ext_resource type="Texture2D" uid="uid://cx8kc1fnbswhd" path="res://assets/UI/cg_gallery/locked_image.png" id="3_8poqt"]
+[ext_resource type="FontFile" uid="uid://cti0vlwxxfed1" path="res://assets/UI/font/Piratte Diarys.otf" id="4_pvugl"]
+[ext_resource type="FontFile" uid="uid://b48ydmd446jm7" path="res://assets/UI/font/Citylist.otf" id="5_0oonw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ojrne"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7i3s5"]
+content_margin_top = 5.0
+content_margin_right = 5.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pyatm"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ewvi"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_flk68"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_amhuo"]
+content_margin_top = 5.0
+content_margin_right = 5.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_opmtw"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4fki"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v0qvh"]
+content_margin_top = 15.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d5jt8"]
+content_margin_top = 12.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_est4n"]
+content_margin_top = 12.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y4ade"]
+content_margin_top = 12.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="DougCG" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ahvxv")
+
+[node name="ImageBackground" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_rve7l")
+
+[node name="Page1" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 120.0
+offset_top = -898.0
+offset_right = 1786.0
+offset_bottom = 18.0
+grow_vertical = 0
+columns = 5
+
+[node name="DougRect1" type="TextureRect" parent="Page1"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect2" type="TextureRect" parent="Page1"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect3" type="TextureRect" parent="Page1"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect4" type="TextureRect" parent="Page1"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect5" type="TextureRect" parent="Page1"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect6" type="TextureRect" parent="Page1"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect7" type="TextureRect" parent="Page1"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect8" type="TextureRect" parent="Page1"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect9" type="TextureRect" parent="Page1"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect10" type="TextureRect" parent="Page1"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect11" type="TextureRect" parent="Page1"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect12" type="TextureRect" parent="Page1"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect13" type="TextureRect" parent="Page1"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect14" type="TextureRect" parent="Page1"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect15" type="TextureRect" parent="Page1"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect16" type="TextureRect" parent="Page1"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect17" type="TextureRect" parent="Page1"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect18" type="TextureRect" parent="Page1"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect19" type="TextureRect" parent="Page1"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect20" type="TextureRect" parent="Page1"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect21" type="TextureRect" parent="Page1"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect22" type="TextureRect" parent="Page1"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect23" type="TextureRect" parent="Page1"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect24" type="TextureRect" parent="Page1"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect25" type="TextureRect" parent="Page1"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="Page2" type="GridContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 120.0
+offset_top = -898.0
+offset_right = 1786.0
+offset_bottom = -32.0
+grow_vertical = 0
+columns = 5
+
+[node name="DougRect26" type="TextureRect" parent="Page2"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect27" type="TextureRect" parent="Page2"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect28" type="TextureRect" parent="Page2"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect29" type="TextureRect" parent="Page2"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect30" type="TextureRect" parent="Page2"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect31" type="TextureRect" parent="Page2"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect32" type="TextureRect" parent="Page2"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect33" type="TextureRect" parent="Page2"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect34" type="TextureRect" parent="Page2"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect35" type="TextureRect" parent="Page2"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect36" type="TextureRect" parent="Page2"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect37" type="TextureRect" parent="Page2"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect38" type="TextureRect" parent="Page2"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect39" type="TextureRect" parent="Page2"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect40" type="TextureRect" parent="Page2"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect41" type="TextureRect" parent="Page2"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect42" type="TextureRect" parent="Page2"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect43" type="TextureRect" parent="Page2"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect44" type="TextureRect" parent="Page2"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect45" type="TextureRect" parent="Page2"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect46" type="TextureRect" parent="Page2"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect47" type="TextureRect" parent="Page2"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect48" type="TextureRect" parent="Page2"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect49" type="TextureRect" parent="Page2"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect50" type="TextureRect" parent="Page2"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="Page3" type="GridContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 120.0
+offset_top = -898.0
+offset_right = 1786.0
+offset_bottom = -32.0
+grow_vertical = 0
+columns = 5
+
+[node name="DougRect51" type="TextureRect" parent="Page3"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect52" type="TextureRect" parent="Page3"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect53" type="TextureRect" parent="Page3"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect54" type="TextureRect" parent="Page3"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect55" type="TextureRect" parent="Page3"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect56" type="TextureRect" parent="Page3"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect57" type="TextureRect" parent="Page3"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect58" type="TextureRect" parent="Page3"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect59" type="TextureRect" parent="Page3"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect60" type="TextureRect" parent="Page3"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect61" type="TextureRect" parent="Page3"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect62" type="TextureRect" parent="Page3"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect63" type="TextureRect" parent="Page3"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect64" type="TextureRect" parent="Page3"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect65" type="TextureRect" parent="Page3"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect66" type="TextureRect" parent="Page3"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect67" type="TextureRect" parent="Page3"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect68" type="TextureRect" parent="Page3"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect69" type="TextureRect" parent="Page3"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect70" type="TextureRect" parent="Page3"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect71" type="TextureRect" parent="Page3"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect72" type="TextureRect" parent="Page3"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect73" type="TextureRect" parent="Page3"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect74" type="TextureRect" parent="Page3"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect75" type="TextureRect" parent="Page3"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="Page4" type="GridContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 120.0
+offset_top = -898.0
+offset_right = 1786.0
+offset_bottom = -32.0
+grow_vertical = 0
+columns = 5
+
+[node name="DougRect76" type="TextureRect" parent="Page4"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect77" type="TextureRect" parent="Page4"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect78" type="TextureRect" parent="Page4"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect79" type="TextureRect" parent="Page4"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect80" type="TextureRect" parent="Page4"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect81" type="TextureRect" parent="Page4"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect82" type="TextureRect" parent="Page4"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect83" type="TextureRect" parent="Page4"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect84" type="TextureRect" parent="Page4"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect85" type="TextureRect" parent="Page4"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect86" type="TextureRect" parent="Page4"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect87" type="TextureRect" parent="Page4"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect88" type="TextureRect" parent="Page4"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect89" type="TextureRect" parent="Page4"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect90" type="TextureRect" parent="Page4"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect91" type="TextureRect" parent="Page4"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect92" type="TextureRect" parent="Page4"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect93" type="TextureRect" parent="Page4"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect94" type="TextureRect" parent="Page4"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect95" type="TextureRect" parent="Page4"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect96" type="TextureRect" parent="Page4"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect97" type="TextureRect" parent="Page4"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect98" type="TextureRect" parent="Page4"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect99" type="TextureRect" parent="Page4"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DougRect100" type="TextureRect" parent="Page4"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="Page5" type="GridContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 120.0
+offset_top = -898.0
+offset_right = 1786.0
+offset_bottom = -32.0
+grow_vertical = 0
+columns = 5
+
+[node name="DeckardRect101" type="TextureRect" parent="Page5"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect102" type="TextureRect" parent="Page5"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect103" type="TextureRect" parent="Page5"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect104" type="TextureRect" parent="Page5"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect105" type="TextureRect" parent="Page5"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect106" type="TextureRect" parent="Page5"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect107" type="TextureRect" parent="Page5"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect108" type="TextureRect" parent="Page5"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect109" type="TextureRect" parent="Page5"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect110" type="TextureRect" parent="Page5"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect111" type="TextureRect" parent="Page5"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect112" type="TextureRect" parent="Page5"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect113" type="TextureRect" parent="Page5"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect114" type="TextureRect" parent="Page5"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect115" type="TextureRect" parent="Page5"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect116" type="TextureRect" parent="Page5"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect117" type="TextureRect" parent="Page5"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect118" type="TextureRect" parent="Page5"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect119" type="TextureRect" parent="Page5"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect120" type="TextureRect" parent="Page5"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect121" type="TextureRect" parent="Page5"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect122" type="TextureRect" parent="Page5"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect123" type="TextureRect" parent="Page5"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect124" type="TextureRect" parent="Page5"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect125" type="TextureRect" parent="Page5"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="Page6" type="GridContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 120.0
+offset_top = -898.0
+offset_right = 1786.0
+offset_bottom = -32.0
+grow_vertical = 0
+columns = 5
+
+[node name="DeckardRect126" type="TextureRect" parent="Page6"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect127" type="TextureRect" parent="Page6"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect128" type="TextureRect" parent="Page6"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect129" type="TextureRect" parent="Page6"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect130" type="TextureRect" parent="Page6"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect131" type="TextureRect" parent="Page6"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect132" type="TextureRect" parent="Page6"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect133" type="TextureRect" parent="Page6"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect134" type="TextureRect" parent="Page6"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect135" type="TextureRect" parent="Page6"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect136" type="TextureRect" parent="Page6"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect137" type="TextureRect" parent="Page6"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect138" type="TextureRect" parent="Page6"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect139" type="TextureRect" parent="Page6"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="DeckardRect140" type="TextureRect" parent="Page6"]
+custom_minimum_size = Vector2(330, 170)
+layout_mode = 2
+texture = ExtResource("3_8poqt")
+expand_mode = 1
+
+[node name="PrologueLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 339.0
+offset_top = 53.0
+offset_right = 724.0
+offset_bottom = 128.0
+theme_override_colors/font_color = Color(0.113725, 0.223529, 0.278431, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_pvugl")
+theme_override_font_sizes/font_size = 55
+text = "Doug"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Page1Btn" type="Button" parent="PrologueLabel"]
+offset_left = 476.0
+offset_top = 10.0
+offset_right = 555.0
+offset_bottom = 86.0
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("5_0oonw")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_ojrne")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7i3s5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pyatm")
+theme_override_styles/focus = SubResource("StyleBoxFlat_6ewvi")
+text = "1"
+
+[node name="Page2Btn" type="Button" parent="PrologueLabel"]
+offset_left = 588.0
+offset_top = 10.0
+offset_right = 669.0
+offset_bottom = 86.0
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("5_0oonw")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_flk68")
+theme_override_styles/hover = SubResource("StyleBoxFlat_amhuo")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_opmtw")
+theme_override_styles/focus = SubResource("StyleBoxFlat_g4fki")
+text = "2"
+
+[node name="Page3Btn" type="Button" parent="PrologueLabel"]
+offset_left = 698.0
+offset_top = 10.0
+offset_right = 777.0
+offset_bottom = 86.0
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("5_0oonw")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_ojrne")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7i3s5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pyatm")
+theme_override_styles/focus = SubResource("StyleBoxFlat_6ewvi")
+text = "3"
+
+[node name="Page4Btn" type="Button" parent="PrologueLabel"]
+offset_left = 800.0
+offset_top = 10.0
+offset_right = 879.0
+offset_bottom = 86.0
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("5_0oonw")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_ojrne")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7i3s5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pyatm")
+theme_override_styles/focus = SubResource("StyleBoxFlat_6ewvi")
+text = "4"
+
+[node name="Page5Btn" type="Button" parent="PrologueLabel"]
+offset_left = 900.0
+offset_top = 10.0
+offset_right = 979.0
+offset_bottom = 86.0
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("5_0oonw")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_ojrne")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7i3s5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pyatm")
+theme_override_styles/focus = SubResource("StyleBoxFlat_6ewvi")
+text = "5"
+
+[node name="Page6Btn" type="Button" parent="PrologueLabel"]
+offset_left = 1008.0
+offset_top = 10.0
+offset_right = 1087.0
+offset_bottom = 86.0
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("5_0oonw")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_ojrne")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7i3s5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pyatm")
+theme_override_styles/focus = SubResource("StyleBoxFlat_6ewvi")
+text = "6"
+
+[node name="BackButton" type="Button" parent="PrologueLabel"]
+offset_left = 1198.0
+offset_top = -3.00001
+offset_right = 1562.0
+offset_bottom = 78.0
+rotation = 0.104441
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.290196, 0.290196, 0.290196, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("4_pvugl")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_v0qvh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d5jt8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_est4n")
+theme_override_styles/focus = SubResource("StyleBoxFlat_y4ade")
+text = "Back to CG"
+
+[node name="ImageViewer" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="gui_input" from="Page1/DougRect1" to="." method="_on_doug_rect_1_gui_input"]
+[connection signal="gui_input" from="Page1/DougRect2" to="." method="_on_doug_rect_2_gui_input"]
+[connection signal="gui_input" from="Page1/DougRect3" to="." method="_on_doug_rect_3_gui_input"]
+[connection signal="gui_input" from="Page1/DougRect4" to="." method="_on_doug_rect_4_gui_input"]
+[connection signal="gui_input" from="Page1/DougRect5" to="." method="_on_doug_rect_5_gui_input"]
+[connection signal="gui_input" from="Page1/DougRect6" to="." method="_on_doug_rect_6_gui_input"]
+[connection signal="gui_input" from="Page1/DougRect7" to="." method="_on_doug_rect_7_gui_input"]
+[connection signal="gui_input" from="Page1/DougRect8" to="." method="_on_doug_rect_8_gui_input"]
+[connection signal="gui_input" from="Page1/DougRect9" to="." method="_on_doug_rect_9_gui_input"]
+[connection signal="gui_input" from="Page1/DougRect10" to="." method="_on_doug_rect_10_gui_input"]
+[connection signal="gui_input" from="Page1/DougRect11" to="." method="_on_doug_rect_11_gui_input"]
+[connection signal="gui_input" from="Page1/DougRect12" to="." method="_on_doug_rect_12_gui_input"]
+[connection signal="gui_input" from="Page1/DougRect13" to="." method="_on_doug_rect_13_gui_input"]
+[connection signal="gui_input" from="Page1/DougRect14" to="." method="_on_doug_rect_14_gui_input"]
+[connection signal="gui_input" from="Page1/DougRect15" to="." method="_on_doug_rect_15_gui_input"]
+[connection signal="gui_input" from="Page1/DougRect16" to="." method="_on_doug_rect_16_gui_input"]
+[connection signal="gui_input" from="Page1/DougRect17" to="." method="_on_doug_rect_17_gui_input"]
+[connection signal="gui_input" from="Page1/DougRect18" to="." method="_on_doug_rect_18_gui_input"]
+[connection signal="gui_input" from="Page1/DougRect19" to="." method="_on_doug_rect_19_gui_input"]
+[connection signal="gui_input" from="Page1/DougRect20" to="." method="_on_doug_rect_20_gui_input"]
+[connection signal="gui_input" from="Page1/DougRect21" to="." method="_on_doug_rect_21_gui_input"]
+[connection signal="gui_input" from="Page1/DougRect22" to="." method="_on_doug_rect_22_gui_input"]
+[connection signal="gui_input" from="Page1/DougRect23" to="." method="_on_doug_rect_23_gui_input"]
+[connection signal="gui_input" from="Page1/DougRect24" to="." method="_on_doug_rect_24_gui_input"]
+[connection signal="gui_input" from="Page1/DougRect25" to="." method="_on_doug_rect_25_gui_input"]
+[connection signal="gui_input" from="Page2/DougRect26" to="." method="_on_doug_rect_26_gui_input"]
+[connection signal="gui_input" from="Page2/DougRect27" to="." method="_on_doug_rect_27_gui_input"]
+[connection signal="gui_input" from="Page2/DougRect28" to="." method="_on_doug_rect_28_gui_input"]
+[connection signal="gui_input" from="Page2/DougRect29" to="." method="_on_doug_rect_29_gui_input"]
+[connection signal="gui_input" from="Page2/DougRect30" to="." method="_on_doug_rect_30_gui_input"]
+[connection signal="gui_input" from="Page2/DougRect31" to="." method="_on_doug_rect_31_gui_input"]
+[connection signal="gui_input" from="Page2/DougRect32" to="." method="_on_doug_rect_32_gui_input"]
+[connection signal="gui_input" from="Page2/DougRect33" to="." method="_on_doug_rect_33_gui_input"]
+[connection signal="gui_input" from="Page2/DougRect34" to="." method="_on_doug_rect_34_gui_input"]
+[connection signal="gui_input" from="Page2/DougRect35" to="." method="_on_doug_rect_35_gui_input"]
+[connection signal="gui_input" from="Page2/DougRect36" to="." method="_on_doug_rect_36_gui_input"]
+[connection signal="gui_input" from="Page2/DougRect37" to="." method="_on_doug_rect_37_gui_input"]
+[connection signal="gui_input" from="Page2/DougRect38" to="." method="_on_doug_rect_38_gui_input"]
+[connection signal="gui_input" from="Page2/DougRect39" to="." method="_on_doug_rect_39_gui_input"]
+[connection signal="gui_input" from="Page2/DougRect40" to="." method="_on_doug_rect_40_gui_input"]
+[connection signal="gui_input" from="Page2/DougRect41" to="." method="_on_doug_rect_41_gui_input"]
+[connection signal="gui_input" from="Page2/DougRect42" to="." method="_on_doug_rect_42_gui_input"]
+[connection signal="gui_input" from="Page2/DougRect43" to="." method="_on_doug_rect_43_gui_input"]
+[connection signal="gui_input" from="Page2/DougRect44" to="." method="_on_doug_rect_44_gui_input"]
+[connection signal="gui_input" from="Page2/DougRect45" to="." method="_on_doug_rect_45_gui_input"]
+[connection signal="gui_input" from="Page2/DougRect46" to="." method="_on_doug_rect_46_gui_input"]
+[connection signal="gui_input" from="Page2/DougRect47" to="." method="_on_doug_rect_47_gui_input"]
+[connection signal="gui_input" from="Page2/DougRect48" to="." method="_on_doug_rect_48_gui_input"]
+[connection signal="gui_input" from="Page2/DougRect49" to="." method="_on_doug_rect_49_gui_input"]
+[connection signal="gui_input" from="Page2/DougRect50" to="." method="_on_doug_rect_50_gui_input"]
+[connection signal="gui_input" from="Page3/DougRect51" to="." method="_on_doug_rect_51_gui_input"]
+[connection signal="gui_input" from="Page3/DougRect52" to="." method="_on_doug_rect_52_gui_input"]
+[connection signal="gui_input" from="Page3/DougRect53" to="." method="_on_doug_rect_53_gui_input"]
+[connection signal="gui_input" from="Page3/DougRect54" to="." method="_on_doug_rect_54_gui_input"]
+[connection signal="gui_input" from="Page3/DougRect55" to="." method="_on_doug_rect_55_gui_input"]
+[connection signal="gui_input" from="Page3/DougRect56" to="." method="_on_doug_rect_56_gui_input"]
+[connection signal="gui_input" from="Page3/DougRect57" to="." method="_on_doug_rect_57_gui_input"]
+[connection signal="gui_input" from="Page3/DougRect58" to="." method="_on_doug_rect_58_gui_input"]
+[connection signal="gui_input" from="Page3/DougRect59" to="." method="_on_doug_rect_59_gui_input"]
+[connection signal="gui_input" from="Page3/DougRect60" to="." method="_on_doug_rect_60_gui_input"]
+[connection signal="gui_input" from="Page3/DougRect61" to="." method="_on_doug_rect_61_gui_input"]
+[connection signal="gui_input" from="Page3/DougRect62" to="." method="_on_doug_rect_62_gui_input"]
+[connection signal="gui_input" from="Page3/DougRect63" to="." method="_on_doug_rect_63_gui_input"]
+[connection signal="gui_input" from="Page3/DougRect64" to="." method="_on_doug_rect_64_gui_input"]
+[connection signal="gui_input" from="Page3/DougRect65" to="." method="_on_doug_rect_65_gui_input"]
+[connection signal="gui_input" from="Page3/DougRect66" to="." method="_on_doug_rect_66_gui_input"]
+[connection signal="gui_input" from="Page3/DougRect67" to="." method="_on_doug_rect_67_gui_input"]
+[connection signal="gui_input" from="Page3/DougRect68" to="." method="_on_doug_rect_68_gui_input"]
+[connection signal="gui_input" from="Page3/DougRect69" to="." method="_on_doug_rect_69_gui_input"]
+[connection signal="gui_input" from="Page3/DougRect70" to="." method="_on_doug_rect_70_gui_input"]
+[connection signal="gui_input" from="Page3/DougRect71" to="." method="_on_doug_rect_71_gui_input"]
+[connection signal="gui_input" from="Page3/DougRect72" to="." method="_on_doug_rect_72_gui_input"]
+[connection signal="gui_input" from="Page3/DougRect73" to="." method="_on_doug_rect_73_gui_input"]
+[connection signal="gui_input" from="Page3/DougRect74" to="." method="_on_doug_rect_74_gui_input"]
+[connection signal="gui_input" from="Page3/DougRect75" to="." method="_on_doug_rect_75_gui_input"]
+[connection signal="gui_input" from="Page4/DougRect76" to="." method="_on_doug_rect_76_gui_input"]
+[connection signal="gui_input" from="Page4/DougRect77" to="." method="_on_doug_rect_77_gui_input"]
+[connection signal="pressed" from="PrologueLabel/Page1Btn" to="." method="_on_page_1_btn_pressed"]
+[connection signal="pressed" from="PrologueLabel/Page2Btn" to="." method="_on_page_2_btn_pressed"]
+[connection signal="pressed" from="PrologueLabel/Page3Btn" to="." method="_on_page_3_btn_pressed"]
+[connection signal="pressed" from="PrologueLabel/Page4Btn" to="." method="_on_page_4_btn_pressed"]
+[connection signal="pressed" from="PrologueLabel/Page5Btn" to="." method="_on_page_5_btn_pressed"]
+[connection signal="pressed" from="PrologueLabel/Page6Btn" to="." method="_on_page_6_btn_pressed"]
+[connection signal="pressed" from="PrologueLabel/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="gui_input" from="ImageViewer" to="." method="_on_image_viewer_gui_input"]

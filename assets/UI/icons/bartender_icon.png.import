@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0dumddvg7b1o"
-path="res://.godot/imported/flashing_scene_pussy_8.png-8d7b24119d59faf29308d8d195ae0586.ctex"
+uid="uid://bh0ulguafb2d4"
+path="res://.godot/imported/bartender_icon.png-0206d634b28f996f851878d53998d865.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/hospital_storyboard/no_money/show_pussy/flashing_scene_pussy_8.png"
-dest_files=["res://.godot/imported/flashing_scene_pussy_8.png-8d7b24119d59faf29308d8d195ae0586.ctex"]
+source_file="res://assets/UI/icons/bartender_icon.png"
+dest_files=["res://.godot/imported/bartender_icon.png-0206d634b28f996f851878d53998d865.ctex"]
 
 [params]
 

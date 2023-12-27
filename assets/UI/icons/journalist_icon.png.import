@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0pnj2g5hck1c"
-path="res://.godot/imported/prostitution_GC_14.png-4f3fddc2aa71009221692c37b8e112be.ctex"
+uid="uid://des7ygq7moqd4"
+path="res://.godot/imported/journalist_icon.png-c87869f74da6ed0792df26217454d810.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/prostitution_storyboard/third/prostitution_GC_14.png"
-dest_files=["res://.godot/imported/prostitution_GC_14.png-4f3fddc2aa71009221692c37b8e112be.ctex"]
+source_file="res://assets/UI/icons/journalist_icon.png"
+dest_files=["res://.godot/imported/journalist_icon.png-c87869f74da6ed0792df26217454d810.ctex"]
 
 [params]
 

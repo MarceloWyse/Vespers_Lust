@@ -1072,6 +1072,8 @@ func _on_fire_option_timer_timeout():
 
 func _on_fire_btn_pressed():
 	scene_texture.texture = load("res://assets/thumbnails/prologue/prologue27.png")
+	if SaveManager.save.prologue_cg["prologue_27"] == false:
+		SaveManager.save.prologue_cg["prologue_27"] = true
 	during_choice = false
 	fire_option_timer.stop()
 	fired_gun = true 

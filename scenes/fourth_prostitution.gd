@@ -413,58 +413,76 @@ func _process(delta):
 	#Doug repetititon:
 	if dialogue_label.message_id == 362:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_1.png")
-
+		if SaveManager.save.doug_cg["doug_43"] == false:
+				SaveManager.save.doug_cg["doug_43"] = true
 	if dialogue_label.message_id == 365:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_2.png")
-
+		if SaveManager.save.doug_cg["doug_44"] == false:
+				SaveManager.save.doug_cg["doug_44"] = true
 	if dialogue_label.message_id == 368:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_3.png")
-
+		if SaveManager.save.doug_cg["doug_45"] == false:
+				SaveManager.save.doug_cg["doug_45"] = true
 	if dialogue_label.message_id == 370:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_4.png")
-
+		if SaveManager.save.doug_cg["doug_46"] == false:
+				SaveManager.save.doug_cg["doug_46"] = true
 	if dialogue_label.message_id == 373:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_5.png")
-
+		if SaveManager.save.doug_cg["doug_47"] == false:
+				SaveManager.save.doug_cg["doug_47"] = true
 	if dialogue_label.message_id == 375:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_6.png")
-
+		if SaveManager.save.doug_cg["doug_48"] == false:
+				SaveManager.save.doug_cg["doug_48"] = true
 	if dialogue_label.message_id == 377:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_7.png")
-
+		if SaveManager.save.doug_cg["doug_48"] == false:
+				SaveManager.save.doug_cg["doug_48"] = true
 	if dialogue_label.message_id == 380:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_8.png")
-
+		if SaveManager.save.doug_cg["doug_49"] == false:
+				SaveManager.save.doug_cg["doug_49"] = true
 	if dialogue_label.message_id == 383:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_9.png")
-
+		if SaveManager.save.doug_cg["doug_50"] == false:
+				SaveManager.save.doug_cg["doug_50"] = true
 	if dialogue_label.message_id == 385:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_10.png")
-
+		if SaveManager.save.doug_cg["doug_51"] == false:
+				SaveManager.save.doug_cg["doug_51"] = true
 	if dialogue_label.message_id == 389:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_11.png")
-
+		if SaveManager.save.doug_cg["doug_52"] == false:
+				SaveManager.save.doug_cg["doug_52"] = true
 	if dialogue_label.message_id == 391:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_12.png")
-
+		if SaveManager.save.doug_cg["doug_53"] == false:
+				SaveManager.save.doug_cg["doug_53"] = true
 	if dialogue_label.message_id == 393:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_13.png")
-
+		if SaveManager.save.doug_cg["doug_54"] == false:
+				SaveManager.save.doug_cg["doug_54"] = true
 	if dialogue_label.message_id == 397:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_14.png")
-
+		if SaveManager.save.doug_cg["doug_55"] == false:
+				SaveManager.save.doug_cg["doug_55"] = true
 	if dialogue_label.message_id == 400:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_15.png")
-
+		if SaveManager.save.doug_cg["doug_56"] == false:
+				SaveManager.save.doug_cg["doug_56"] = true
 	if dialogue_label.message_id == 403:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_16.png")
-
+		if SaveManager.save.doug_cg["doug_57"] == false:
+				SaveManager.save.doug_cg["doug_57"] = true
 	if dialogue_label.message_id == 406:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_18.png")
-
+		if SaveManager.save.doug_cg["doug_58"] == false:
+				SaveManager.save.doug_cg["doug_58"] = true
 	if dialogue_label.message_id == 407:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_17.png")
-
+		if SaveManager.save.doug_cg["doug_59"] == false:
+				SaveManager.save.doug_cg["doug_59"] = true
 	if dialogue_label.message_id == 408:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_18.png")
 
@@ -482,28 +500,34 @@ func _process(delta):
 
 	if dialogue_label.message_id == 414:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_19.png")
-
+		if SaveManager.save.doug_cg["doug_60"] == false:
+				SaveManager.save.doug_cg["doug_60"] = true
 	if dialogue_label.message_id == 414:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_19.png")
 
 	if dialogue_label.message_id == 418:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_20.png")
-
+		if SaveManager.save.doug_cg["doug_61"] == false:
+				SaveManager.save.doug_cg["doug_61"] = true
 	if dialogue_label.message_id == 418:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_20.png")
 
 	if dialogue_label.message_id == 422:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_21.png")
-
+		if SaveManager.save.doug_cg["doug_62"] == false:
+				SaveManager.save.doug_cg["doug_62"] = true
 	if dialogue_label.message_id == 426:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_22.png")
-
+		if SaveManager.save.doug_cg["doug_63"] == false:
+				SaveManager.save.doug_cg["doug_63"] = true
 	if dialogue_label.message_id == 429:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_23.png")
-
+		if SaveManager.save.doug_cg["doug_64"] == false:
+				SaveManager.save.doug_cg["doug_64"] = true
 	if dialogue_label.message_id == 430:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_24.png")
-
+		if SaveManager.save.doug_cg["doug_65"] == false:
+				SaveManager.save.doug_cg["doug_65"] = true
 	if dialogue_label.message_id == 431:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_23.png")
 
@@ -518,10 +542,12 @@ func _process(delta):
 
 	if dialogue_label.message_id == 435:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_25.png")
-
+		if SaveManager.save.doug_cg["doug_66"] == false:
+				SaveManager.save.doug_cg["doug_66"] = true
 	if dialogue_label.message_id == 436:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_26.png")
-
+		if SaveManager.save.doug_cg["doug_67"] == false:
+				SaveManager.save.doug_cg["doug_67"] = true
 	if dialogue_label.message_id == 437:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_25.png")
 
@@ -536,10 +562,12 @@ func _process(delta):
 
 	if dialogue_label.message_id == 441:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_27.png")
-
+		if SaveManager.save.doug_cg["doug_68"] == false:
+				SaveManager.save.doug_cg["doug_68"] = true
 	if dialogue_label.message_id == 442:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_28.png")
-
+		if SaveManager.save.doug_cg["doug_69"] == false:
+				SaveManager.save.doug_cg["doug_69"] = true
 	if dialogue_label.message_id == 443:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_27.png")
 
@@ -563,10 +591,12 @@ func _process(delta):
 
 	if dialogue_label.message_id == 450:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_29.png")
-
+		if SaveManager.save.doug_cg["doug_70"] == false:
+				SaveManager.save.doug_cg["doug_70"] = true
 	if dialogue_label.message_id == 451:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_30.png")
-
+		if SaveManager.save.doug_cg["doug_71"] == false:
+				SaveManager.save.doug_cg["doug_71"] = true
 	if dialogue_label.message_id == 452:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_29.png")
 
@@ -581,19 +611,24 @@ func _process(delta):
 
 	if dialogue_label.message_id == 456:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_31.png")
-
+		if SaveManager.save.doug_cg["doug_72"] == false:
+				SaveManager.save.doug_cg["doug_72"] = true
 	if dialogue_label.message_id == 458:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_32.png")
-
+		if SaveManager.save.doug_cg["doug_73"] == false:
+				SaveManager.save.doug_cg["doug_73"] = true
 	if dialogue_label.message_id == 460:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_33.png")
-
+		if SaveManager.save.doug_cg["doug_74"] == false:
+				SaveManager.save.doug_cg["doug_74"] = true
 	if dialogue_label.message_id == 462:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_34.png")
-
+		if SaveManager.save.doug_cg["doug_75"] == false:
+				SaveManager.save.doug_cg["doug_75"] = true
 	if dialogue_label.message_id == 465:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/fourth/repetition/prostitution_repB_35.png")
-
+		if SaveManager.save.doug_cg["doug_76"] == false:
+				SaveManager.save.doug_cg["doug_76"] = true
 	if dialogue_label.message_id == 360 or dialogue_label.message_id == 468:
 		scene_finished = true
 	

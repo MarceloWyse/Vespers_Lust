@@ -231,7 +231,7 @@ func _on_prologue_rect_26_gui_input(event):
 func _on_prologue_rect_26_27_gui_input(event):
 	if Input.is_action_just_pressed("left_click"):
 		if SaveManager.save.prologue_cg["prologue_26_27"]:
-			image_viewer.texture = prologue_rect_20.texture
+			image_viewer.texture = prologue_rect_26_27.texture
 			image_viewer.show()
 
 func _on_prologue_rect_27_gui_input(event):

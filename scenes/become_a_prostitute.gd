@@ -8,6 +8,8 @@ var scene_finished
 func _ready():
 	if 	SaveManager.save.visited_activities["prostitution"] == false:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/denial/prostitution_1stime_1.png")
+		if SaveManager.save.prostitution_cg["prostitution_1"] == false:
+			SaveManager.save.prostitution_cg["prostitution_1"] = true
 		dialogue_label.start_dialogue()
 		SaveManager.save.visited_activities["prostitution"] = true
 		
@@ -19,22 +21,27 @@ func _process(delta):
 	
 	if dialogue_label.message_id == 5:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/denial/prostitution_1stime_2.png")
-	
+		if SaveManager.save.prostitution_cg["prostitution_2"] == false:
+			SaveManager.save.prostitution_cg["prostitution_2"] = true	
 	if dialogue_label.message_id == 7:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/denial/prostitution_1stime_3.png")
-
+		if SaveManager.save.prostitution_cg["prostitution_3"] == false:
+			SaveManager.save.prostitution_cg["prostitution_3"] = true
 	if dialogue_label.message_id == 10:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/denial/prostitution_2ndtime_3.png")
-
+		if SaveManager.save.prostitution_cg["prostitution_4"] == false:
+			SaveManager.save.prostitution_cg["prostitution_4"] = true
 	if dialogue_label.message_id == 13:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/denial/prostitution_1stime_1.png")
 
 	if dialogue_label.message_id == 16:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/denial/prostitution_2ndtime_2.png")
-
+		if SaveManager.save.prostitution_cg["prostitution_5"] == false:
+			SaveManager.save.prostitution_cg["prostitution_5"] = true
 	if dialogue_label.message_id == 18:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/denial/prostitution_2ndtime_1.png")
-
+		if SaveManager.save.prostitution_cg["prostitution_6"] == false:
+			SaveManager.save.prostitution_cg["prostitution_6"] = true
 	if dialogue_label.message_id == 21:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/denial/prostitution_2ndtime_3.png")
 

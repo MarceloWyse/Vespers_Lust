@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dn3vn2mnkdjys"
-path="res://.godot/imported/prostitution_GC_13.png-3e9f2df5979c98415975185e059bcdf3.ctex"
+uid="uid://l8dn8ws7uprb"
+path="res://.godot/imported/page_grid.png-6d57afd6acb7528198dc98171ea6b942.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/prostitution_storyboard/third/prostitution_GC_13.png"
-dest_files=["res://.godot/imported/prostitution_GC_13.png-3e9f2df5979c98415975185e059bcdf3.ctex"]
+source_file="res://assets/UI/page_grid.png"
+dest_files=["res://.godot/imported/page_grid.png-6d57afd6acb7528198dc98171ea6b942.ctex"]
 
 [params]
 

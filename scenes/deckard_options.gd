@@ -16,6 +16,10 @@ func _ready():
 	
 	dialog_box.hide()
 	dialogue_label.can_type = false
+	if SaveManager.save.deckard_cg["deckard_135"] == false:
+		SaveManager.save.deckard_cg["deckard_135"] = true
+	#Lewdness Test 
+	SaveManager.save.player_status["lewdness"] = 100
 	
 	if SaveManager.save.player_status["lewdness"] >= 20:
 		lap_dance.disabled = false
@@ -72,6 +76,8 @@ func _on_money_pressed():
 		dialogue_label.can_type = true
 		dialogue_label.start_dialogue()
 		SaveManager.save.player_status["money"] = 0
-		scene_bg.texture = load("res://assets/hospital_storyboard/hospital_scene_14.png")
+		scene_bg.texture = load("res://assets/hospital_storyboard/pay_deckard.png")
+		if SaveManager.save.deckard_cg["deckard_137"] == false:
+			SaveManager.save.deckard_cg["deckard_137"] = true
 		deckard_option.hide()
 
