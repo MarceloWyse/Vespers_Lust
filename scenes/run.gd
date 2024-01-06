@@ -7,12 +7,12 @@ var scene_finished = false
 
 func _ready():
 	if not SaveManager.save.visited_activities["running"]:
-		scene_texture.texture = load("res://assets/thumbnails/run_intro.png")
+		scene_texture.texture = load("res://assets/thumbnails/run/run_intro.png")
 		transitions.fade_to_image()
 		dialogue_label.start_dialogue()
 		SaveManager.save.visited_activities["running"] = true
 	elif SaveManager.save.visited_activities["running"]:
-		scene_texture.texture = load("res://assets/thumbnails/run_thumb3.png")
+		scene_texture.texture = load("res://assets/thumbnails/run/run_thumb3.png")
 		transitions.fade_to_image()
 		dialogue_label.jump_to(14)
 
@@ -21,10 +21,10 @@ func _process(delta):
 		scene_finished = true
 	
 	if dialogue_label.message_id == 6:
-		scene_texture.texture = load("res://assets/thumbnails/run_thumb2.png")
+		scene_texture.texture = load("res://assets/thumbnails/run/run_thumb2.png")
 	
 	if dialogue_label.message_id == 9:
-		scene_texture.texture = load("res://assets/thumbnails/run_thumb1.png")
+		scene_texture.texture = load("res://assets/thumbnails/run/run_thumb1.png")
 	
 	if scene_finished:
 		if SceneTracker.scene_1 == null and SceneTracker.scene_2 != null:

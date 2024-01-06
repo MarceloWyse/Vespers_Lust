@@ -14,6 +14,7 @@ func _ready():
 	#Documentary
 	if random_program == 1:
 		dialogue_label.jump_to(1)
+		scene_bg.texture = load("res://assets/thumbnails/relax/thumb_relax_documentary.png")
 		if increased_status == false:
 			SaveManager.save.bar_values["int"] += 2
 			increased_status = true
@@ -21,11 +22,11 @@ func _ready():
 	#Cartoons	
 	elif random_program == 2:
 		dialogue_label.jump_to(6)
-		scene_bg.texture = load("res://assets/thumbnails/thumb_relax_cartoon.png")
+		scene_bg.texture = load("res://assets/thumbnails/relax/thumb_relax_cartoon.png")
 	
 	#Horror Movies
 	elif random_program == 3:
-		scene_bg.texture = load("res://assets/thumbnails/thumb_relax_terror.png")
+		scene_bg.texture = load("res://assets/thumbnails/relax/thumb_relax_terror.png")
 		dialogue_label.jump_to(11)
 		if increased_status == false:
 			SaveManager.save.bar_values["cha"] += 2
@@ -33,7 +34,7 @@ func _ready():
 	
 	#Sex Movies
 	elif random_program == 4:
-		scene_bg.texture = load("res://assets/thumbnails/thumb_relax_sex.png")
+		scene_bg.texture = load("res://assets/thumbnails/relax/thumb_relax_sex.png")
 		dialogue_label.jump_to(17)
 		if increased_status == false:
 			SaveManager.save.player_status["lewdness"] += 2

@@ -5,14 +5,17 @@ class_name Stats
 @export var clothing = {"top" : null, "bottom" : null}
 @export var vesper = {"virgin" : true, "anal_virgin" : true}
 @export var bar_values = {"vit" : 1, "str" : 1, "int" : 1, "spd" : 1, "cha" : 1}
-@export var player_status = {"sanity" : 50, "lewdness" : 5, "hunger" : 50 , "money" : 500}
+@export var player_status = {"sanity" : 50, "lewdness" : 0, "hunger" : 50 , "money" : 1200}
 @export var day = 1
 @export var visited_activities = {"masturbation": false, "prostitution" : false,
 "sleep" : false, "studying" : false, "bartender" : false, "journalist" : false, "running" : false,
 "speech" : false
 }
 @export var activity_level = {"bartending" : 0, "journalist" : 0}
-
+@export var events = {"first_event" : false}
+@export var masturbation_counter = 1
+@export var showed_boobs = {"deckard" : false, "josh" : false}
+@export var testing = {"test" : false}
 #prostitution vars:
 @export var first_prostitution = true
 @export var second_prostitution = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://bpyicuo6tobls"]
+[gd_scene load_steps=51 format=3 uid="uid://bpyicuo6tobls"]
 
 [ext_resource type="Script" path="res://scenes/old_shop.gd" id="1_k4b5f"]
 [ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="1_sfm2f"]
@@ -46,6 +46,7 @@
 [ext_resource type="Texture2D" uid="uid://cyfsla3b85va0" path="res://assets/characters/lily/lily_39.png" id="42_ka1ae"]
 [ext_resource type="Texture2D" uid="uid://bwvgtq2dsmyi0" path="res://assets/img/blood_bag.png" id="45_u7qrx"]
 [ext_resource type="Texture2D" uid="uid://ddf6yuthdhq4d" path="res://assets/img/blood_flask.png" id="46_b180v"]
+[ext_resource type="Texture2D" uid="uid://75oqh72etug6" path="res://assets/img/dagger.png" id="47_kk4eq"]
 [ext_resource type="Texture2D" uid="uid://dipajkpfpjcdt" path="res://assets/img/wallet.png" id="47_sj74u"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uw2u2"]
@@ -241,7 +242,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 40
 text = "Type here"
-messages = Array[String](["You have no idea where you are going, but you know exactly where you have to go.", "You keep walking the streets of the Old District of Grimshire, like you were lost, your body moving on its own, until you finally arrive at an old shop.", "Upon entering you notice it’s full of ingredients you’ve never heard of. The place smell of lilies, even though you don’t see any around.", "You realize you’re being watched, you turn to face the person behind the counter. You’re sure she wasn’t there when you arrived.", "???: What have we got here? May I ask how come you’ve managed to find this place? ", "Her eyes are sharp, her left hand on top of the counter, her right hand hidden.", "Vesper: I don’t know, I just walked in…", "???: So you’re going to begin with a lie, huh? ", "I’ve set up wards to repel your kind, there’s no way you could’ve entered without some strong magic, and I don’t sense any in you.", "Vesper: I’m not lying. I met this strange man, and I don’t know what he did, but the next thing I know I was coming here.", "???: Would you be so kind to describe this man to me?", "Vesper: I don’t know anything about him, he was wearing a suit and a wol…", "She interrupts you.", "???: A wolf mask?", "Vesper: Yes, how did you…", "???: So, you’ve met him, huh. I guess you weren’t lying them. I was ready to get rid of you, but if he sent you here…", "She puts her right arm on top of the counter, you notice a dagger on her hand.", "Vesper: Are you friends with him?", "???: Friends? Oh no. I don’t think he has any. ", "???: Let’s say our paths have crossed, a few times along the millenia. He comes and goes, but if he is here, something ajar is happening.", "???: He sent you here for something specific, I guess.", "Lily: The name’s Lily, by the way. And you are?", "Vesper: Vesper.", "Lily: Nice to meet you, Vesper. Now that you have found your into this shop. ", "How may I help you?", "-- WHAT ARE YOU ---", "Lily: Direct to the point, huh. I like that.", "Lily: Haven’t you guessed already?", "Lily: I’m a witch. ", "Vesper: You don’t look like one.", "Lily: You mean I’m not a crone, riddled with moles, a big crooked nose and a pointy hat?", "Lily: Don’t be fooled by my looks, magical beings don’t age as humans do. Soon you’ll realize that, you’re a product of magic yourself.", "-- END OF WHAT ARE YOU ---", "-- MY KIND --", "Vesper: You mentioned my kind. Do you know what I am?", "Lily: Do you take me for a fool, vampire?", "Lily: I’ve been alive much longer than most of your kind. I know how to spot a bloodsucker when I see one.", "Vesper: Can you tell me something about vampires? Something real, not what I see in the movies.", "Lily: You mean aside from your hypersensitivity to the sun, your overwhelming lust, and a hunger that never sleeps?", "Vesper: Yes, aside from that.", "Lily: Not much is known, like Witches, much has been lost during the Dark Ages.", "Lily: The most biblical inclined believe you to be sons and daughters of Cain, cursed to wander this world, forever. ", "The hunger, your punishment, the lust a mere reflection of humans deepest desires.", "Vesper: And do you believe that?", "Lily: I personally find it all bullshit. There’s nothing holy or cursed about vampires.", "Lily: You can go into a church and drink holy water to your heart's content.", "Lily: Rumor has it our kind created yours, as a project. The purpose is unknow. Maybe because they could? We witches tend do things just because.", "Lily: What was I saying? Oh yes, and as a failsafe system they’ve factored the hunger so you wouldn’t run about feeling invincible.", "Lily: Have you noticed the sun is deadlier to you the more you feed? ", "I wonder if that is also part of the failsafe system or just a way to torture you. We also have a tendency for that.", "Vesper: Am I dead? I don’t feel dead. If anything I feel more alive.", "Lily: You’re not dead, you’re just… different. Embrace your new existent, and you’ll be much happier, I guarantee.", "Vesper: And the lust? I wasn’t like this before. Now I can’t contain myself, I’m hot all the time.", "Lily: That lust is a bonus. I have no way to prove it, but I’m certain you’ve got that from us. You see, vampires are not the only ones wet all the time.", "Lily: Alright, history lesson’s over.", "Lily: What did you come here for?", "----- END OF TALK 2 ----", "-- ASK FOR BLOOD ---", "Vesper: I’m in desperate need of blood. ", "Lily: We are all in desperate need of something. ", "Lily: I’m not some good Samaritan helping vampires in their time of need. ", "Lily: You want something that valuable, you should be ready to pay the price.", "Lily: I can sell you some from my personal stock, if you have the money. ", "Lily: Or you may become my personal slave. ", "Lily: I always wanted a pet vampire.", "---- END OF ASK FOR BLOOD ---", "Lily: If you have the money, I'll sell you what you're looking for. ", "-- END OF SHOP --"])
+messages = Array[String](["You have no idea where you are going, but you know exactly where you have to go.", "You keep walking the streets of the Old District of Grimshire, like you were lost, your body moving on its own, until you finally arrive at an old shop.", "Upon entering you notice it’s full of ingredients you’ve never heard of. The place smell of lilies, even though you don’t see any around.", "You realize you’re being watched, you turn to face the person behind the counter. You’re sure she wasn’t there when you arrived.", "???: What have we got here? May I ask how come you’ve managed to find this place? ", "Her eyes are sharp, her left hand on top of the counter, her right hand hidden.", "Vesper: I don’t know, I just walked in…", "???: So you’re going to begin with a lie, huh? ", "I’ve set up wards to repel your kind, there’s no way you could’ve entered without some strong magic, and I don’t sense any in you.", "Vesper: I’m not lying. I met this strange man, and I don’t know what he did, but the next thing I know I was coming here.", "???: Would you be so kind to describe this man to me?", "Vesper: I don’t know anything about him, he was wearing a suit and a wol…", "She interrupts you.", "???: A wolf mask?", "Vesper: Yes, how did you…", "???: So, you’ve met him, huh. I guess you weren’t lying them. I was ready to get rid of you, but if he sent you here…", "She puts her right arm on top of the counter, you notice a dagger on her hand.", "Vesper: Are you friends with him?", "???: Friends? Oh no. I don’t think he has any. ", "???: Let’s say our paths have crossed, a few times along the millenia. He comes and goes, but if he is here, something ajar is happening.", "???: He sent you here for something specific, I guess.", "Lily: The name’s Lily, by the way. And you are?", "Vesper: Vesper.", "Lily: Nice to meet you, Vesper. Now that you have found your into this shop. ", "How may I help you?", "-- WHAT ARE YOU ---", "Lily: Direct to the point, huh. I like that.", "Lily: Haven’t you guessed already?", "Lily: I’m a witch. ", "Vesper: You don’t look like one.", "Lily: You mean I’m not a crone, riddled with moles, a big crooked nose and a pointy hat?", "Lily: Don’t be fooled by my looks, magical beings don’t age as humans do. Soon you’ll realize that, you’re a product of magic yourself.", "-- END OF WHAT ARE YOU ---", "-- MY KIND --", "Vesper: You mentioned my kind. Do you know what I am?", "Lily: Do you take me for a fool, vampire?", "Lily: I’ve been alive much longer than most of your kind. I know how to spot a bloodsucker when I see one.", "Vesper: Can you tell me something about vampires? Something real, not what I see in the movies.", "Lily: You mean aside from your hypersensitivity to the sun, your overwhelming lust, and a hunger that never sleeps?", "Vesper: Yes, aside from that.", "Lily: Not much is known, like Witches, much has been lost during the Dark Ages.", "Lily: The most biblical inclined believe you to be sons and daughters of Cain, cursed to wander this world, forever. ", "The hunger, your punishment, the lust a mere reflection of humans deepest desires.", "Vesper: And do you believe that?", "Lily: I personally find it all bullshit. There’s nothing holy or cursed about vampires.", "Lily: You can go into a church and drink holy water to your heart's content.", "Lily: Rumor has it our kind created yours, as a project. The purpose is unknow. Maybe because they could? We witches tend do things just because.", "Lily: What was I saying? Oh yes, and as a failsafe system they’ve factored the hunger so you wouldn’t run about feeling invincible.", "Lily: Have you noticed the sun is deadlier to you the more you feed? ", "I wonder if that is also part of the failsafe system or just a way to torture you. We also have a tendency for that.", "Vesper: Am I dead? I don’t feel dead. If anything I feel more alive.", "Lily: You’re not dead, you’re just… different. Embrace your new existent, and you’ll be much happier, I guarantee.", "Vesper: And the lust? I wasn’t like this before. Now I can’t contain myself, I’m hot all the time.", "Lily: That lust is a bonus. I have no way to prove it, but I’m certain you’ve got that from us. You see, vampires are not the only ones wet all the time.", "Lily: Alright, history lesson’s over.", "Lily: What did you come here for?", "----- END OF TALK 2 ----", "-- ASK FOR BLOOD ---", "Vesper: I’m in desperate need of blood. ", "Lily: We are all in desperate need of something. ", "Lily: I’m not some good Samaritan helping vampires in their time of need. ", "Lily: You want something that valuable, you should be ready to pay the price.", "Lily: I can sell you some from my personal stock, if you have the money. ", "Lily: Or you may become my personal slave. ", "Lily: I always wanted a pet vampire.", "---- END OF ASK FOR BLOOD ---", "Lily: If you have the money, I'll sell you what you're looking for. ", "-- END OF SHOP --", "Lily: You really want this fancy dagger, huh?", "Lily: I'm not simply going to give it to you.", "Lily: Why don't you try one more time?", "Lily: Had enough?", "Lily: Maybe if you become my pet?"])
 
 [node name="NamePanel" type="Panel" parent="DialogBox"]
 visible = false
@@ -302,12 +303,11 @@ theme_override_font_sizes/font_size = 50
 text = "Go Home"
 
 [node name="ShopPanel" type="Panel" parent="."]
-visible = false
 layout_mode = 0
 offset_left = 379.0
 offset_top = 86.0
-offset_right = 925.0
-offset_bottom = 625.0
+offset_right = 936.0
+offset_bottom = 725.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_xd2sx")
 
 [node name="CloseBtn" type="Button" parent="ShopPanel"]
@@ -405,6 +405,41 @@ offset_right = 76.0
 offset_bottom = 288.0
 text = "Buy"
 
+[node name="Item3" type="TextureRect" parent="ShopPanel"]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 332.0
+offset_right = 203.0
+offset_bottom = 429.0
+texture = ExtResource("47_kk4eq")
+expand_mode = 1
+
+[node name="DaggerLabel" type="Label" parent="ShopPanel/Item3"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 117.0
+offset_right = 88.0
+offset_bottom = 169.0
+text = "-"
+horizontal_alignment = 1
+
+[node name="FlaskHoldingLabel" type="Label" parent="ShopPanel/Item3"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 180.0
+offset_right = 96.0
+offset_bottom = 206.0
+text = "Holding: -"
+horizontal_alignment = 1
+
+[node name="Buy3Btn2" type="Button" parent="ShopPanel/Item3"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 241.0
+offset_right = 76.0
+offset_bottom = 288.0
+text = "Buy"
+
 [node name="Money" type="TextureRect" parent="ShopPanel"]
 layout_mode = 0
 offset_left = 252.0
@@ -430,3 +465,4 @@ text = "$Money
 [connection signal="pressed" from="ShopPanel/CloseBtn" to="." method="_on_close_btn_pressed"]
 [connection signal="pressed" from="ShopPanel/Item1/Buy1Btn" to="." method="_on_buy_1_btn_pressed"]
 [connection signal="pressed" from="ShopPanel/Item2/Buy2Btn2" to="." method="_on_buy_2_btn_2_pressed"]
+[connection signal="pressed" from="ShopPanel/Item3/Buy3Btn2" to="." method="_on_buy_3_btn_2_pressed"]

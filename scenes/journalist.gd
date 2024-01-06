@@ -12,7 +12,7 @@ func _ready():
 	SaveManager.save.bar_values["cha"] += 2
 	if not SaveManager.save.visited_activities["journalist"]:
 		SaveManager.save.visited_activities["journalist"] = true
-		scene_image.texture = load("res://assets/thumbnails/journalism_intro.png")
+		scene_image.texture = load("res://assets/thumbnails/journalism/journalism_intro.png")
 		transitions.fade_to_image()
 		dialogue_label.start_dialogue()
 		
@@ -20,41 +20,41 @@ func _ready():
 	elif SaveManager.save.visited_activities["journalist"] \
 	and SaveManager.save.activity_level["journalist"] >= 0 \
 	and SaveManager.save.activity_level["journalist"] < 20:
-		scene_image.texture = load("res://assets/thumbnails/journalism_gradeE.png")
+		scene_image.texture = load("res://assets/thumbnails/journalism/journalism_gradeE.png")
 		transitions.fade_to_image()
 		dialogue_label.jump_to(23)
 	#Study Grade D
 	elif SaveManager.save.visited_activities["journalist"] \
 	and SaveManager.save.activity_level["journalist"] >= 20 \
 	and SaveManager.save.activity_level["journalist"] < 40:
-		scene_image.texture = load("res://assets/thumbnails/journalism_gradeD.png")
+		scene_image.texture = load("res://assets/thumbnails/journalism/journalism_gradeD.png")
 		transitions.fade_to_image()
 		dialogue_label.jump_to(27)
 	#Study Grade C
 	elif SaveManager.save.visited_activities["journalist"] \
 	and SaveManager.save.activity_level["journalist"] >= 40 \
 	and SaveManager.save.activity_level["journalist"] < 60:
-		scene_image.texture = load("res://assets/thumbnails/journalism_gradeC.png")
+		scene_image.texture = load("res://assets/thumbnails/journalism/journalism_gradeC.png")
 		transitions.fade_to_image()
 		dialogue_label.jump_to(30)
 	#Study Grade B
 	elif SaveManager.save.visited_activities["journalist"] \
 	and SaveManager.save.activity_level["journalist"] >= 60 \
 	and SaveManager.save.activity_level["journalist"] < 80:
-		scene_image.texture = load("res://assets/thumbnails/journalism_gradeB.png")
+		scene_image.texture = load("res://assets/thumbnails/journalism/journalism_gradeB.png")
 		transitions.fade_to_image()
 		dialogue_label.jump_to(33)
 	#Study Grade A
 	elif SaveManager.save.visited_activities["journalist"] \
 	and SaveManager.save.activity_level["journalist"] >= 80:
-		scene_image.texture = load("res://assets/thumbnails/journalism_gradeA.png")
+		scene_image.texture = load("res://assets/thumbnails/journalism/journalism_gradeA.png")
 		transitions.fade_to_image()
 		dialogue_label.jump_to(37)
 	
 func _process(delta):
 	
 	if dialogue_label.message_id == 4:
-		scene_image.texture = load("res://assets/thumbnails/journalism_intro2.png")
+		scene_image.texture = load("res://assets/thumbnails/journalism/journalism_intro2.png")
 	
 	if dialogue_label.message_id == 23 \
 	or dialogue_label.message_id == 26 \

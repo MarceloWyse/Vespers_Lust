@@ -10,41 +10,41 @@ func _ready():
 	#First Study
 	if not SaveManager.save.visited_activities["studying"]:
 		SaveManager.save.visited_activities["studying"] = true
-		scene_image.texture = load("res://assets/thumbnails/thumb_study_intro.png")
+		scene_image.texture = load("res://assets/thumbnails/study/thumb_study_intro.png")
 		transitions.fade_to_image()
 		dialogue_label.start_dialogue()
 	#Study Grade E
 	elif SaveManager.save.visited_activities["studying"] \
 	and SaveManager.save.bar_values["int"] >= 0 \
 	and SaveManager.save.bar_values["int"] < 20:
-		scene_image.texture = load("res://assets/thumbnails/thumb_study_gradeE.png")
+		scene_image.texture = load("res://assets/thumbnails/study/thumb_study_gradeE.png")
 		transitions.fade_to_image()
 		dialogue_label.jump_to(5)
 	#Study Grade D
 	elif SaveManager.save.visited_activities["studying"] \
 	and SaveManager.save.bar_values["int"] >= 20 \
 	and SaveManager.save.bar_values["int"] < 40:
-		scene_image.texture = load("res://assets/thumbnails/thumb_study_gradeD.png")
+		scene_image.texture = load("res://assets/thumbnails/study/thumb_study_gradeD.png")
 		transitions.fade_to_image()
 		dialogue_label.jump_to(7)
 	#Study Grade C
 	elif SaveManager.save.visited_activities["studying"] \
 	and SaveManager.save.bar_values["int"] >= 40 \
 	and SaveManager.save.bar_values["int"] < 60:
-		scene_image.texture = load("res://assets/thumbnails/thumb_study_gradeC.png")
+		scene_image.texture = load("res://assets/thumbnails/study/thumb_study_gradeC.png")
 		transitions.fade_to_image()
 		dialogue_label.jump_to(9)
 	#Study Grade B
 	elif SaveManager.save.visited_activities["studying"] \
 	and SaveManager.save.bar_values["int"] >= 60 \
 	and SaveManager.save.bar_values["int"] < 80:
-		scene_image.texture = load("res://assets/thumbnails/thumb_study_gradeB.png")
+		scene_image.texture = load("res://assets/thumbnails/study/thumb_study_gradeB.png")
 		transitions.fade_to_image()
 		dialogue_label.jump_to(11)
 	#Study Grade A
 	elif SaveManager.save.visited_activities["studying"] \
 	and SaveManager.save.bar_values["int"] >= 80:
-		scene_image.texture = load("res://assets/thumbnails/thumb_study_gradeA.png")
+		scene_image.texture = load("res://assets/thumbnails/study/thumb_study_gradeA.png")
 		transitions.fade_to_image()
 		dialogue_label.jump_to(13)
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -11,8 +11,14 @@ extends Control
 @onready var blood_bag_holding = $ShopPanel/Item1/BloodBagHolding
 @onready var flask_holding_label = $ShopPanel/Item2/FlaskHoldingLabel
 @onready var options = $Options
+@onready var dagger_label = $ShopPanel/Item3/DaggerLabel
 
 func _ready():
+	if SaveManager.save.player_status["money"] <= 1000:
+		dagger_label.text = "Dagger\n$1000"
+	elif SaveManager.save.player_status["money"] >= 1000:
+		dagger_label.text = "Dagger\n$%s" %str(SaveManager.save.player_status["money"] * 2)
+		
 	if SaveManager.save.old_shop["first_visit"]:
 		scene_bg.texture = load("res://assets/img/old_street.jpg")
 		dialogue_label.start_dialogue()
@@ -26,6 +32,9 @@ func _ready():
 		dialogue_label.can_type = false
 	
 func _process(delta):
+	
+	if shop_panel.visible:
+		dialogue_label.can_type = false
 	
 	flask_holding_label.text = str(SaveManager.save.items["bloodflask"])
 	blood_bag_holding.text = str(SaveManager.save.items["bloodbag"])
@@ -112,3 +121,16 @@ func _on_shop_pressed():
 	dialogue_label.can_type = false
 	options.hide()
 	shop_panel.show()
+
+func _on_buy_3_btn_2_pressed():
+	var rand = randi_range(1,5)
+	if rand == 1:
+		dialogue_label.jump_to(68)
+	if rand == 2:
+		dialogue_label.jump_to(69)
+	if rand == 3:
+		dialogue_label.jump_to(70)
+	if rand == 4:
+		dialogue_label.jump_to(71)
+	if rand == 5:
+		dialogue_label.jump_to(72)

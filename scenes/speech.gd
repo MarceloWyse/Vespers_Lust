@@ -7,12 +7,12 @@ var scene_finished = false
 
 func _ready():
 	if not SaveManager.save.visited_activities["speech"]:
-		scene_texture.texture = load("res://assets/thumbnails/speech_thumb1.png")
+		scene_texture.texture = load("res://assets/thumbnails/speech/speech_thumb1.png")
 		transitions.fade_to_image()
 		dialogue_label.start_dialogue()
 		SaveManager.save.visited_activities["speech"] = true
 	elif SaveManager.save.visited_activities["speech"]:
-		scene_texture.texture = load("res://assets/thumbnails/speech_thumb2.png")
+		scene_texture.texture = load("res://assets/thumbnails/speech/speech_thumb2.png")
 		transitions.fade_to_image()
 		dialogue_label.jump_to(11)
 

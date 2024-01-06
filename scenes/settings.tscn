@@ -186,7 +186,6 @@ popup/item_5/id = 5
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_oydun")
-autoplay = true
 bus = &"Music"
 
 [connection signal="hidden" from="." to="." method="_on_hidden"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://c0x5rbk7rn3vx"]
+[gd_scene load_steps=61 format=3 uid="uid://c0x5rbk7rn3vx"]
 
 [ext_resource type="Script" path="res://scenes/player_hub.gd" id="1_0hmm0"]
 [ext_resource type="Texture2D" uid="uid://7ey4i1pllc66" path="res://assets/img/e_letter.png" id="1_got0o"]
@@ -30,6 +30,7 @@
 [ext_resource type="FontFile" uid="uid://cti0vlwxxfed1" path="res://assets/UI/font/Piratte Diarys.otf" id="27_0l8ot"]
 [ext_resource type="Texture2D" uid="uid://des7ygq7moqd4" path="res://assets/UI/icons/journalist_icon.png" id="27_uv3vv"]
 [ext_resource type="Texture2D" uid="uid://bh0ulguafb2d4" path="res://assets/UI/icons/bartender_icon.png" id="28_2nprm"]
+[ext_resource type="Texture2D" uid="uid://l8dn8ws7uprb" path="res://assets/UI/page_grid.png" id="28_46tcy"]
 [ext_resource type="Texture2D" uid="uid://bl54nhwtb8k6h" path="res://assets/UI/icons/prostitution_icon.png" id="29_iuyok"]
 [ext_resource type="Texture2D" uid="uid://6c2f0h8id3qm" path="res://assets/UI/icons/study_icon.png" id="30_gc5xk"]
 [ext_resource type="Texture2D" uid="uid://bj4xyijxm7qry" path="res://assets/UI/icons/running_icon.png" id="31_obhl4"]
@@ -41,10 +42,12 @@
 [ext_resource type="Texture2D" uid="uid://l8y1myk587tq" path="res://assets/UI/icons/boxing_icon.png" id="37_6tx6v"]
 [ext_resource type="Texture2D" uid="uid://c8ex0y22676hr" path="res://assets/img/clothes.png" id="39_kqq8b"]
 [ext_resource type="Texture2D" uid="uid://bla5vqku32nf0" path="res://assets/img/living-room.png" id="39_p24sw"]
+[ext_resource type="Texture2D" uid="uid://b2feui86y7sm7" path="res://assets/UI/page_BG.png" id="40_c23fe"]
 [ext_resource type="Texture2D" uid="uid://dtbt63dkrrrm5" path="res://assets/img/bag.png" id="40_m4inh"]
 [ext_resource type="Texture2D" uid="uid://bwvgtq2dsmyi0" path="res://assets/img/blood_bag.png" id="41_33k6g"]
 [ext_resource type="Texture2D" uid="uid://ddf6yuthdhq4d" path="res://assets/img/blood_flask.png" id="42_imd5n"]
 [ext_resource type="PackedScene" uid="uid://m47064cxfa3k" path="res://scenes/transitions.tscn" id="44_0gk0u"]
+[ext_resource type="AudioStream" uid="uid://djiac7er8vkud" path="res://assets/music/Fabian Measures - Ebb and Flow.mp3" id="48_5jaag"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3bu17"]
 bg_color = Color(0.431373, 0.121569, 0.121569, 1)
@@ -85,6 +88,8 @@ bg_color = Color(0.886275, 0.45098, 0.419608, 1)
 bg_color = Color(0.329412, 0.137255, 0.133333, 1)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_doxj7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rhcxn"]
 
 [node name="PlayerHUB" type="Control"]
 layout_mode = 3
@@ -709,6 +714,21 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
+[node name="TextureRect" type="TextureRect" parent="ScheduleButton/ActivitiesPanel/GridContainer/TextureRect"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -7.0
+offset_top = -10.0
+offset_right = 7.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("28_46tcy")
+expand_mode = 1
+
 [node name="TextureRect2" type="TextureRect" parent="ScheduleButton/ActivitiesPanel/GridContainer"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
@@ -724,6 +744,21 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
+[node name="TextureRect2" type="TextureRect" parent="ScheduleButton/ActivitiesPanel/GridContainer/TextureRect2"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -7.0
+offset_top = -10.0
+offset_right = 7.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("28_46tcy")
+expand_mode = 1
+
 [node name="TextureRect3" type="TextureRect" parent="ScheduleButton/ActivitiesPanel/GridContainer"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
@@ -738,6 +773,21 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="TextureRect3" type="TextureRect" parent="ScheduleButton/ActivitiesPanel/GridContainer/TextureRect3"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = -10.0
+offset_right = 8.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("28_46tcy")
+expand_mode = 1
 
 [node name="Label" type="Label" parent="ScheduleButton/ActivitiesPanel"]
 layout_mode = 0
@@ -776,16 +826,16 @@ offset_bottom = 182.0
 
 [node name="ActivitiesContainer" type="GridContainer" parent="ScheduleButton/ActivitiesPanel/Activities"]
 layout_mode = 0
-offset_left = -42.0
-offset_top = 83.0
-offset_right = 238.0
-offset_bottom = 663.0
+offset_left = -54.0
+offset_top = 98.0
+offset_right = 346.0
+offset_bottom = 678.0
 theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 20
 columns = 3
 
 [node name="Journalist" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
-custom_minimum_size = Vector2(105, 105)
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 texture_normal = ExtResource("27_uv3vv")
 ignore_texture_size = true
@@ -793,15 +843,15 @@ stretch_mode = 0
 
 [node name="WorkLabel" type="Label" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Journalist"]
 layout_mode = 0
-offset_left = -6.0
-offset_top = 73.0
-offset_right = 87.0
-offset_bottom = 104.0
+offset_left = 12.0
+offset_top = 102.0
+offset_right = 105.0
+offset_bottom = 133.0
 theme_override_font_sizes/font_size = 20
 text = "Journalist"
 
 [node name="Bartender" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
-custom_minimum_size = Vector2(105, 105)
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 texture_normal = ExtResource("28_2nprm")
 ignore_texture_size = true
@@ -815,16 +865,16 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -47.0
-offset_top = -8.0
+offset_top = -16.0
 offset_right = 52.0
-offset_bottom = 23.0
+offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 20
 text = "Bartender"
 
 [node name="Prostitution" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
-custom_minimum_size = Vector2(105, 105)
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 texture_normal = ExtResource("29_iuyok")
 ignore_texture_size = true
@@ -833,14 +883,14 @@ stretch_mode = 0
 [node name="Label" type="Label" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Prostitution"]
 layout_mode = 0
 offset_left = -2.0
-offset_top = 72.0
+offset_top = 105.0
 offset_right = 114.0
-offset_bottom = 103.0
+offset_bottom = 136.0
 theme_override_font_sizes/font_size = 20
 text = "Prostitute"
 
 [node name="Study2" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
-custom_minimum_size = Vector2(105, 105)
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 texture_normal = ExtResource("30_gc5xk")
 ignore_texture_size = true
@@ -854,16 +904,16 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -30.0
-offset_top = -6.0
+offset_top = -18.0
 offset_right = 25.0
-offset_bottom = 25.0
+offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 20
 text = "Study"
 
 [node name="Run" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
-custom_minimum_size = Vector2(105, 105)
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 texture_normal = ExtResource("31_obhl4")
 ignore_texture_size = true
@@ -876,17 +926,17 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -34.0
-offset_top = -10.0
-offset_right = 47.0
-offset_bottom = 21.0
+offset_left = -39.0
+offset_top = -20.0
+offset_right = 42.0
+offset_bottom = 11.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 20
 text = "Running"
 
 [node name="Speaking" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
-custom_minimum_size = Vector2(105, 105)
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 texture_normal = ExtResource("32_6h0u6")
 ignore_texture_size = true
@@ -899,17 +949,17 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -35.0
-offset_top = -7.0
-offset_right = 55.0
-offset_bottom = 24.0
+offset_left = -43.0
+offset_top = -25.0
+offset_right = 47.0
+offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 20
 text = "Speech"
 
 [node name="Sleep" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
-custom_minimum_size = Vector2(105, 105)
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 texture_normal = ExtResource("33_0m5ub")
 ignore_texture_size = true
@@ -917,15 +967,15 @@ stretch_mode = 0
 
 [node name="Label" type="Label" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Sleep"]
 layout_mode = 0
-offset_left = 20.0
-offset_top = 71.0
-offset_right = 62.0
-offset_bottom = 102.0
+offset_left = 38.0
+offset_top = 92.0
+offset_right = 80.0
+offset_bottom = 123.0
 theme_override_font_sizes/font_size = 20
 text = "Rest"
 
 [node name="Masturbation" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
-custom_minimum_size = Vector2(105, 105)
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 texture_normal = ExtResource("34_cbrid")
 ignore_texture_size = true
@@ -933,15 +983,15 @@ stretch_mode = 0
 
 [node name="Label" type="Label" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer/Masturbation"]
 layout_mode = 0
-offset_left = -4.0
-offset_top = 73.0
-offset_right = 80.0
-offset_bottom = 104.0
+offset_left = 20.0
+offset_top = 93.0
+offset_right = 104.0
+offset_bottom = 124.0
 theme_override_font_sizes/font_size = 20
 text = "Pleasure"
 
 [node name="Relax" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
-custom_minimum_size = Vector2(105, 105)
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 texture_normal = ExtResource("35_mopkr")
 ignore_texture_size = true
@@ -955,16 +1005,16 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -29.0
-offset_top = -6.0
+offset_top = -28.0
 offset_right = 61.0
-offset_bottom = 25.0
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 20
 text = "Relax"
 
 [node name="Swim" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
-custom_minimum_size = Vector2(105, 105)
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 texture_normal = ExtResource("36_s47po")
 ignore_texture_size = true
@@ -987,7 +1037,7 @@ theme_override_font_sizes/font_size = 20
 text = "Swimming"
 
 [node name="Boxing" type="TextureButton" parent="ScheduleButton/ActivitiesPanel/Activities/ActivitiesContainer"]
-custom_minimum_size = Vector2(105, 105)
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 texture_normal = ExtResource("37_6tx6v")
 ignore_texture_size = true
@@ -1010,14 +1060,26 @@ theme_override_font_sizes/font_size = 20
 text = "Boxing"
 
 [node name="ActivitiesLabel" type="Label" parent="ScheduleButton/ActivitiesPanel/Activities"]
+visible = false
 layout_mode = 0
-offset_left = 292.0
-offset_top = 482.0
-offset_right = 641.0
-offset_bottom = 595.0
+offset_left = -146.0
+offset_top = 522.0
+offset_right = 203.0
+offset_bottom = 635.0
 rotation = 4.71239
 theme_override_font_sizes/font_size = 70
 text = "Activities"
+
+[node name="TextureRect" type="TextureRect" parent="ScheduleButton/ActivitiesPanel"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -187.0
+offset_top = -72.0
+offset_right = 660.0
+offset_bottom = 1057.0
+mouse_filter = 2
+texture = ExtResource("40_c23fe")
+expand_mode = 1
 
 [node name="MapButton" type="TextureButton" parent="."]
 layout_mode = 1
@@ -1200,6 +1262,25 @@ texture = SubResource("CanvasTexture_doxj7")
 visible = false
 layout_mode = 1
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("48_5jaag")
+autoplay = true
+bus = &"Music"
+
+[node name="EventsTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="EventPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_rhcxn")
+
 [connection signal="pressed" from="GearButton" to="." method="_on_gear_button_pressed"]
 [connection signal="pressed" from="TestButton" to="." method="_on_test_button_pressed"]
 [connection signal="pressed" from="TestButton2" to="." method="_on_test_button_2_pressed"]
@@ -1238,3 +1319,4 @@ layout_mode = 1
 [connection signal="pressed" from="Bag" to="." method="_on_bag_pressed"]
 [connection signal="pressed" from="Bag/ItemsPanel/BloodBags" to="." method="_on_blood_bags_pressed"]
 [connection signal="pressed" from="Bag/ItemsPanel/BloodFlask" to="." method="_on_blood_flask_pressed"]
+[connection signal="timeout" from="EventsTimer" to="." method="_on_events_timer_timeout"]

@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://7rqfbnqwewjt"]
+[gd_scene load_steps=5 format=3 uid="uid://7rqfbnqwewjt"]
 
 [ext_resource type="Script" path="res://scenes/relax.gd" id="1_5qcq5"]
-[ext_resource type="Texture2D" uid="uid://clwnqkhlu277v" path="res://assets/img/living_room_bg.jpg" id="2_qcsag"]
 [ext_resource type="PackedScene" uid="uid://m47064cxfa3k" path="res://scenes/transitions.tscn" id="3_2soej"]
 [ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="4_udrjr"]
 [ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="5_3xf33"]
@@ -22,7 +21,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_qcsag")
 
 [node name="Transitions" parent="." instance=ExtResource("3_2soej")]
 layout_mode = 1

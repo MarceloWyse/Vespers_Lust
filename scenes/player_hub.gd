@@ -36,6 +36,8 @@ extends Control
 @onready var blood_flask_label = $Bag/ItemsPanel/BloodFlask/BloodFlaskLabel
 @onready var blood_bags = $Bag/ItemsPanel/BloodBags
 @onready var blood_flask = $Bag/ItemsPanel/BloodFlask
+@onready var event_panel = $EventPanel
+@onready var events_timer = $EventsTimer
 
 @export var e_texture : Texture 
 @export var d_texture : Texture 
@@ -80,6 +82,10 @@ var can_go_out = true
 var day = SaveManager.save.day
 
 func _ready():
+	if SaveManager.save.day == 3 and SaveManager.save.events["first_event"] == false:
+		event_panel.show()
+		events_timer.start()
+	
 	vesper_top.texture = SaveManager.save.clothing["top"]
 	vesper_bottom.texture = SaveManager.save.clothing["bottom"]
 	
@@ -406,7 +412,7 @@ func _on_apply_pressed():
 	for child in grid_container.get_children():
 		if child.texture != null:
 			if child.name == "TextureRect":
-				if child.texture.resource_path.contains("studying"):
+				if child.texture.resource_path.contains("study"):
 					SceneTracker.scene_1 = load("res://scenes/studying.tscn")
 				if child.texture.resource_path.contains("relax"):
 					SceneTracker.scene_1 = load("res://scenes/relax.tscn")
@@ -416,7 +422,7 @@ func _on_apply_pressed():
 					SceneTracker.scene_1 = load("res://scenes/bartender.tscn")
 				if child.texture.resource_path.contains("sleep"):
 					SceneTracker.scene_1 = load("res://scenes/sleep.tscn")
-				if child.texture.resource_path.contains("jogging"):
+				if child.texture.resource_path.contains("running"):
 					SceneTracker.scene_1 = load("res://scenes/run.tscn")
 				if child.texture.resource_path.contains("swim"):
 					SceneTracker.scene_1 = load("res://scenes/swim.tscn")
@@ -426,11 +432,11 @@ func _on_apply_pressed():
 					SceneTracker.scene_1 = load("res://scenes/masturbation.tscn")
 				if child.texture.resource_path.contains("prostitution"):
 					SceneTracker.scene_1 = load("res://scenes/prostitution.tscn")
-				if child.texture.resource_path.contains("mirror"):
+				if child.texture.resource_path.contains("speech"):
 					SceneTracker.scene_1 = load("res://scenes/speech.tscn")
 
 			if child.name == "TextureRect2":
-				if child.texture.resource_path.contains("studying"):
+				if child.texture.resource_path.contains("study"):
 					SceneTracker.scene_2 = load("res://scenes/studying.tscn")
 				if child.texture.resource_path.contains("journalist"):
 					SceneTracker.scene_2 = load("res://scenes/journalist.tscn")
@@ -438,7 +444,7 @@ func _on_apply_pressed():
 					SceneTracker.scene_2 = load("res://scenes/bartender.tscn")
 				if child.texture.resource_path.contains("sleep"):
 					SceneTracker.scene_2 = load("res://scenes/sleep.tscn")
-				if child.texture.resource_path.contains("jogging"):
+				if child.texture.resource_path.contains("running"):
 					SceneTracker.scene_2 = load("res://scenes/run.tscn")
 				if child.texture.resource_path.contains("swim"):
 					SceneTracker.scene_2 = load("res://scenes/swim.tscn")
@@ -448,13 +454,13 @@ func _on_apply_pressed():
 					SceneTracker.scene_2 = load("res://scenes/masturbation.tscn")
 				if child.texture.resource_path.contains("prostitution"):
 					SceneTracker.scene_2 = load("res://scenes/prostitution.tscn")
-				if child.texture.resource_path.contains("mirror"):
+				if child.texture.resource_path.contains("speech"):
 					SceneTracker.scene_2 = load("res://scenes/speech.tscn")
 				if child.texture.resource_path.contains("relax"):
 					SceneTracker.scene_2 = load("res://scenes/relax.tscn")
 
 			if child.name == "TextureRect3":
-				if child.texture.resource_path.contains("studying"):
+				if child.texture.resource_path.contains("study"):
 					SceneTracker.scene_3 = load("res://scenes/studying.tscn")
 				if child.texture.resource_path.contains("relax"):
 					SceneTracker.scene_3 = load("res://scenes/relax.tscn")
@@ -464,7 +470,7 @@ func _on_apply_pressed():
 					SceneTracker.scene_3 = load("res://scenes/bartender.tscn")
 				if child.texture.resource_path.contains("sleep"):
 					SceneTracker.scene_3 = load("res://scenes/sleep.tscn")
-				if child.texture.resource_path.contains("jogging"):
+				if child.texture.resource_path.contains("running"):
 					SceneTracker.scene_3 = load("res://scenes/run.tscn")
 				if child.texture.resource_path.contains("swim"):
 					SceneTracker.scene_3 = load("res://scenes/swim.tscn")
@@ -474,7 +480,7 @@ func _on_apply_pressed():
 					SceneTracker.scene_3 = load("res://scenes/masturbation.tscn")
 				if child.texture.resource_path.contains("prostitution"):
 					SceneTracker.scene_3 = load("res://scenes/prostitution.tscn")
-				if child.texture.resource_path.contains("mirror"):
+				if child.texture.resource_path.contains("speech"):
 					SceneTracker.scene_3 = load("res://scenes/speech.tscn")
 
 	get_tree().change_scene_to_packed(SceneTracker.scene_1)
@@ -517,3 +523,7 @@ func _on_blood_flask_pressed():
 			SaveManager.save.player_status["hunger"] = 0
 		else:
 			SaveManager.save.player_status["hunger"] -= 20
+
+func _on_events_timer_timeout():
+	event_panel.hide()
+	get_tree().change_scene_to_file("res://test_scene.tscn")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://djiac7er8vkud"
+path="res://.godot/imported/Fabian Measures - Ebb and Flow.mp3-769416e98ab1e8e9fd6c15d84712eb67.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Fabian Measures - Ebb and Flow.mp3"
+dest_files=["res://.godot/imported/Fabian Measures - Ebb and Flow.mp3-769416e98ab1e8e9fd6c15d84712eb67.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
