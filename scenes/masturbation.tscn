@@ -1,9 +1,160 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddqaw1hxmaoy4"]
+[gd_scene load_steps=14 format=3 uid="uid://ddqaw1hxmaoy4"]
 
 [ext_resource type="Script" path="res://scenes/masturbation.gd" id="1_iv2vv"]
 [ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="2_2m4em"]
 [ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="2_b16x2"]
 [ext_resource type="PackedScene" uid="uid://m47064cxfa3k" path="res://scenes/transitions.tscn" id="4_lstac"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wvgbc"]
+bg_color = Color(0.454902, 0.219608, 0.4, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.113725, 0.113725, 0.113725, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_n6a0w"]
+font_size = 50
+
+[sub_resource type="Animation" id="Animation_0ygv6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LewdPanel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LewdPanel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(816, 576)]
+}
+
+[sub_resource type="Animation" id="Animation_lukpn"]
+resource_name = "animate_status"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LewdPanel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LewdPanel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(816, 576), Vector2(816, 64)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7cgu5"]
+_data = {
+"RESET": SubResource("Animation_0ygv6"),
+"animate_status": SubResource("Animation_lukpn")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ng4nh"]
+bg_color = Color(0.607843, 0.121569, 0.290196, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.113725, 0.113725, 0.113725, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 5
+
+[sub_resource type="Animation" id="Animation_f1wj7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(816, 656)]
+}
+
+[sub_resource type="Animation" id="Animation_fiehm"]
+resource_name = "hunger_animation"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(816, 656), Vector2(816, 144)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6xa24"]
+_data = {
+"RESET": SubResource("Animation_f1wj7"),
+"hunger_animation": SubResource("Animation_fiehm")
+}
 
 [node name="Masturbation" type="Control"]
 layout_mode = 3
@@ -58,8 +209,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 40
 text = "Type here"
-messages = Array[String](["Vesper: I shouldn’t be doing this. I’m wasting precious time. ", "Vesper: It’s not like blood is going to materialize in front of me. ", "Vesper: But… I can’t seem to get out of this bed, no matter how hard I try.", "Vesper: What’s wrong with me?", "Vesper: Doing this kind of thing will get me nowhere.", "--- first", "Vesper: Here I am touching myself again. ", "Vesper: I have to concentrate, there are so many other activities, why do I keep coming back to this?", "Vesper: Come on, Vesper. You’re stronger than this.", "--- second", "Vesper: I’m hungry, so hungry. And I’m only getting hungrier, I know it.", "Vesper: Is masturbating really the best course of action?", "Vesper: Before all this happened I never felt the need for such trivial things. But now… look at me.  ", "-- third", "Vesper: Be rational, Vesper! You gotta think straight! ", "Vesper: This is a waste of time!", "Vesper: I have to work! Now more than ever… ", "---- fourth", "Vesper: Why won’t my hands stop?", "Vesper: They seem to have a life of their own.", "Vesper: I wasn’t like this, what’s going on?", "-- fifth", "Vesper: Staying in bed doing this, I feel like a slave to my desires.", "Vesper: I should be going out, making money at least. ", "Vesper: I know I’m just getting hungrier but I don’t want to leave this bed.", "---- sixth", "Vesper: It feels so good. ", "Vesper: My whole body’s so sensitive.", "Vesper: Is this also a vampire’s curse?", "-- seventh", "Vesper: Now that I think about it, Helena and Clive were doing it for quite some time.", "Vesper: I’m beginning to understand why she was moaning so loudly.", "Vesper: I… feel like moaning too.", "-- eight", "Vesper: How many times have I done this…?", "Vesper: I’ve lost count. ", "Vesper: If I continue touching myself… ", "-- ninth", "Vesper: Why is it so hot in here?", "Vesper: Is the air conditioner broken?", "Vesper: No… it’s working. Then, why am I feeling so hot? It doesn’t make sense.", "-- tenth", "Vesper: What am I doing? ", "Vesper: I should be getting dressed, not undressing.", "Vesper: It’s just my vest… it’s fine.", "-- eleventh", "Vesper: It feels much better without my vest in the way, anyway.", "Vesper: Were my breasts always this big?", "Vesper: They feel bigger… ", "-- twelth", "Vesper: I’m starting to sweat.", "Vesper: I can’t go out like this.", "Vesper: Maybe if I… ", "-- thirteenth", "Vesper: Ahh… just a little won’t hurt.", "Vesper: I’ll stop after I cool down. ", "-- fourteenth", "Vesper: In a minute I’ll pull the zipper back up and go outside.", "Vesper: I’ll just make myself feel good for a while.", "--- fifteenth", "Vesper: Or I could stay home… and do this.", "Vesper: It’s not like I’m hurting anybody.", "-- sixteenth", "Vesper: I forgot I put on black panties today.", "Vesper: They hide how wet I actually am.", "--- seventeenth", "Vesper: I don’t think I can stop now. ", "Vesper: The part of me that wants to continue is winning, no matter how much I try to resist.     ", "-- eighteenth", "Vesper: I should at least close the blinds… ", "Vesper: What if somebody sees me?", "Vesper: But it's not like I'm doing much... ", "-- nineteenth", "Vesper: I can’t believe how hot it is in here.", "Vesper: I’m burning hot. ", "Before you noticed you had slid your pants further down.", "-- twentieth", "Vesper: The blinds are still open…", "Vesper: It’s almost as if I want to be caught.", "-- twenty-first", "Vesper: I can still go to work, right? It’s not that late…", "Vesper: Then why am I taking my blouse off?", "Vesper: Do I really want to go to work…", "-- twenty-second", "Vesper: My favorite blouse is going to get all sweaty…", "Vesper: I guess I should unfasten a few more buttons… ", "-- twenty-third", "Vesper: And one more…", "Vesper: I don’t see why not.", "-- twenty-fourth", "Vesper: Should I take this shirt off too? ", "Vesper: Maybe not, people can already see me from outside.", "-- twenty-fifth", "Vesper: But, it’s just like wearing a bikini.", "Vesper: Some bikinis are even more revealing, right?", "-- twenty-sixth", "Vesper: I shouldn’t be ashamed.", "Vesper: People walk around the house in their underwear when it’s hot.", "Vesper: Don’t they?  ", "-- twenty seventh", "Vesper: Besides, it’s so hot in here. ", "Vesper: I’m sweating even in my underwear.", "-- twenty-eigth", "Vesper: My bra doesn’t seem to want to stay in place.", "Vesper: It’s very distracting.", "-- twenty-ninth", "Vesper: The straps keep falling.", "Vesper: I can’t concentrate like this…", "-- thirtieth", "Vesper: Should I take my bra off? Am I that type of girl?", "Vesper: I say that but I’m half-naked already.", "Vesper: And the straps aren’t falling by accident…", "-- thirty-first", "Vesper: No… the blinds are open. Imagine if someone is actually watching.", "Vesper: I don’t want a stranger to see my boobs.
-", "Vesper: I may be a little kinky, but this has to stop here.", "Vesper: I have to keep myself in check. I’m a vampire, not a slut.", "-- thirty-second (boobs lock)", "Vesper: Who am I kidding?", "Vesper: I left the blinds open on purpose. ", "- dynamic", "Vesper: Thinking someone could be watching me again is exciting.", "-- thirty-third", "Vesper: They would see a young journalist in her underwear.  ", "Vesper: Touching herself every day. ", "Vesper: An almost naked vampire… ", "-- thirty-fourth", "Vesper: Ahh… I said almost naked, but these big boobs want to come out to breathe.", "Vesper: Who would’ve thought becoming a vampire would make me so naughty?", "-- thirty-fifth", "Vesper: I wonder if someone is jerking off while watching me.", "Vesper: What would they say if they knew they were masturbating to a vampire?  ", "Vesper: A virgin vampire, tight everywhere.", "-- thirty-six", "Vesper: Look at my tits, why do I keep them hidden?", "Vesper: I should be prouder of my assets.", "Vesper: These big symmetrical perky assets.", "thirty-seven", "Vesper: My nipples are so hard! I don’t want to keep wearing a bra.", "Vesper: I wonder what my boss would say if I showed up to work without one.", "Vesper: He’s such a gentleman… would he notice how pointy my nipples are?", "-- thirty-eight", "Vesper: Just fantasizing about it makes me wet.", "Vesper: He’s so old he’s probably very experienced.   ", "Vesper: Would my boobs even satisfy him?", "-- thirty-ninth", "Vesper: Look at me, Steve. Look at your protégée’s huge knockers.", "Vesper: Don’t you want to suck them in the conference room?", "Vesper: Ahhhhh… I wish Steve would grab me from behind and massage my tits in the break room.", "-- fourtieth"])
+messages = Array[String](["Vesper: I shouldn’t be doing this. I’m wasting precious time. ", "Vesper: It’s not like blood is going to materialize in front of me. ", "Vesper: Doing this kind of thing won’t get me anywhere.", "Vesper: But… I can’t seem to get out of this bed, no matter how hard I try.", "Vesper: What’s wrong with me?", "--- 1", "Vesper: Here I am touching myself again. ", "Vesper: I have to concentrate, there are so many other activities, why do I keep coming back to this?", "Vesper: Come on, Vesper! You’re stronger than this, resist!", "--- 2", "Vesper: I’m hungry, so hungry. And I’m only getting hungrier, I know it.", "Vesper: Is masturbating really the best course of action?", "Vesper: Before all this happened I never felt the need for such trivial things. But now… look at me.  ", "-- 3", "Vesper: Be rational, Vesper! You gotta think straight! ", "Vesper: This is a waste of time!", "Vesper: I have to work! Now more than ever… ", "---- 4", "Vesper: Why won’t my hands stop?", "Vesper: They seem to have a life of their own.", "Vesper: I wasn’t like this, what’s going on?", "-- 5", "Vesper: Staying in bed doing this, when there’s a whole world out there.", "Vesper: I should be out making money.", "Vesper: I know I’m just getting hungrier but I don’t want to leave this bed.", "---- 6", "Vesper: It feels so good. ", "Vesper: My whole body’s so sensitive.", "Vesper: Is this also a vampire’s curse?", "-- 7", "Vesper: I can’t help but open my legs. Every time I touch down there I feel like moaning.", "Vesper: Now that I think about it, Helena and Clive were doing it for quite some time.", "Vesper: I’m beginning to understand why she was moaning so loudly.", "-- 8", "Vesper: How many times have I done this?", "Vesper: I’ve lost count. ", "Vesper: If I continue touching myself...", "-- 9", "Vesper: Why is it so hot in here?", "Vesper: Is the air conditioner broken?", "Vesper: No… it’s working. Then, why am I feeling so hot? It doesn’t make sense.", "-- 10", "Vesper: What am I doing? ", "Vesper: I should be getting dressed, not undressing.", "Vesper: It’s just my vest… it’s fine.", "-- 11", "Vesper: It feels much better without my vest in the way, anyway.", "Vesper: Were my breasts always this big?", "Vesper: They feel bigger… ", "-- 12", "Vesper: I’m starting to sweat.", "Vesper: I can’t go out like this.", "Vesper: Maybe if I… ", "-- 13", "Vesper: Ahh… just a little won’t hurt.", "Vesper: I’ll stop after I cool down. ", "-- 14", "Vesper: In a minute I’ll pull the zipper back up and go outside.", "Vesper: I’ll just make myself feel good for a while.", "--- fifteenth", "Vesper: Or I could stay home… and do this.", "Vesper: It’s not like I’m hurting anybody.", "-- sixteenth", "Vesper: I forgot I put on black panties today.", "Vesper: They hide how wet I actually am.", "--- seventeenth", "Vesper: I don’t think I can stop now. ", "Vesper: The part of me that wants to continue is winning, no matter how much I try to resist.     ", "-- eighteenth", "Vesper: I should at least close the blinds… ", "Vesper: What if somebody sees me?", "Vesper: But it's not like I'm doing much... ", "-- nineteenth", "Vesper: I can’t believe how hot it is in here.", "Vesper: I’m burning hot. ", "Before you noticed you had slid your pants further down.", "-- twentieth", "Vesper: The blinds are still open…", "Vesper: It’s almost as if I want to be caught.", "-- twenty-first", "Vesper: I can still go to work, right? It’s not that late…", "Vesper: Then why am I taking my blouse off?", "Vesper: Do I really want to go to work…", "-- twenty-second", "Vesper: My favorite blouse is going to get all sweaty…", "Vesper: I guess I should unfasten a few more buttons… ", "-- twenty-third", "Vesper: And one more…", "Vesper: I don’t see why not.", "-- twenty-fourth", "Vesper: Should I take this shirt off too? ", "Vesper: Maybe not, people can already see me from outside.", "-- twenty-fifth", "Vesper: But, it’s just like wearing a bikini.", "Vesper: Some bikinis are even more revealing, right?", "-- twenty-sixth", "Vesper: I shouldn’t be ashamed.", "Vesper: People walk around the house in their underwear when it’s hot.", "Vesper: Don’t they?  ", "-- twenty seventh", "Vesper: Besides, it’s so hot in here. ", "Vesper: I’m sweating even in my underwear.", "-- twenty-eigth", "Vesper: My bra doesn’t seem to want to stay in place.", "Vesper: It’s very distracting.", "-- twenty-ninth", "Vesper: The straps keep falling.", "Vesper: I can’t concentrate like this…", "-- thirtieth", "Vesper: Should I take my bra off? Am I that type of girl?", "Vesper: I say that but I’m half-naked already.", "Vesper: And the straps aren’t falling by accident…", "-- thirty-first", "Vesper: No… the blinds are open. Imagine if someone is actually watching.", "Vesper: I don’t want a stranger to see my boobs. I may be a little kinky, but not that kinky. At least not yet.
+", "Vesper: Besides, touching myself isn’t doing it for me anymore. I don’t think I’m getting naughtier. I just feel silly.", "Vesper: I think I should go out and get some real-life experience if I want more material to masturbate. ", "-- thirty-second (boobs lock)", "Vesper: Who am I kidding?", "Vesper: I left the blinds open on purpose. ", "- dynamic", "Vesper: Thinking someone could be watching me again is exciting.", "-- thirty-third", "Vesper: They would see a young journalist in her underwear.  ", "Vesper: Touching herself every day. ", "Vesper: An almost naked vampire… ", "-- thirty-fourth", "Vesper: Ahh… I said almost naked, but these big boobs want to come out to breathe.", "Vesper: Who would’ve thought becoming a vampire would make me so naughty?", "-- thirty-fifth", "Vesper: I wonder if someone is jerking off while watching me.", "Vesper: What would they say if they knew they were masturbating to a vampire?  ", "Vesper: A virgin vampire, tight everywhere.", "-- thirty-six", "Vesper: Look at my tits, why do I keep them hidden?", "Vesper: I should be prouder of my assets.", "Vesper: These big symmetrical perky assets.", "thirty-seven", "Vesper: My nipples are so hard! I don’t want to keep wearing a bra.", "Vesper: I wonder what my boss would say if I showed up to work without one.", "Vesper: He’s such a gentleman… would he notice how pointy my nipples are?", "-- thirty-eight", "Vesper: Just fantasizing about it makes me wet.", "Vesper: He’s so old he’s probably very experienced.   ", "Vesper: Would my boobs even satisfy him?", "-- thirty-ninth", "Vesper: Look at me, Steve. Look at your protégée’s huge knockers.", "Vesper: Don’t you want to suck them in the conference room?", "Vesper: Ahhhhh… I wish Steve would grab me from behind and massage my tits in the break room.", "-- fourtieth"])
 
 [node name="NamePanel" type="Panel" parent="DialogBox"]
 visible = false
@@ -86,6 +237,57 @@ theme_override_font_sizes/font_size = 30
 text = "Vesper"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="LewdPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 816.0
+offset_top = 576.0
+offset_right = 1152.0
+offset_bottom = 639.999
+theme_override_styles/panel = SubResource("StyleBoxFlat_wvgbc")
+
+[node name="Label" type="Label" parent="LewdPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "+1 Lewdness"
+label_settings = SubResource("LabelSettings_n6a0w")
+horizontal_alignment = 1
+
+[node name="LewdPlayer" type="AnimationPlayer" parent="LewdPanel"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_7cgu5")
+}
+
+[node name="HungerPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 816.0
+offset_top = 656.0
+offset_right = 1152.0
+offset_bottom = 720.001
+theme_override_styles/panel = SubResource("StyleBoxFlat_ng4nh")
+
+[node name="Label" type="Label" parent="HungerPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "+20 Hunger"
+label_settings = SubResource("LabelSettings_n6a0w")
+horizontal_alignment = 1
+
+[node name="HungerPlayer" type="AnimationPlayer" parent="HungerPanel"]
+libraries = {
+"": SubResource("AnimationLibrary_6xa24")
+}
 
 [node name="Transitions" parent="." instance=ExtResource("4_lstac")]
 layout_mode = 1

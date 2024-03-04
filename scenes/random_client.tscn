@@ -1,0 +1,123 @@
+[gd_scene load_steps=9 format=3 uid="uid://cbokpydvhi0dc"]
+
+[ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="1_ayqrr"]
+[ext_resource type="Script" path="res://scenes/random_client.gd" id="1_oara4"]
+[ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="2_l2r6y"]
+[ext_resource type="Texture2D" uid="uid://chr0okr6frcot" path="res://aaa.png" id="4_u0g4b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugoda"]
+atlas = ExtResource("4_u0g4b")
+region = Rect2(0, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yp5ks"]
+atlas = ExtResource("4_u0g4b")
+region = Rect2(320, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3j3hq"]
+atlas = ExtResource("4_u0g4b")
+region = Rect2(640, 0, 320, 180)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1chan"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugoda")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yp5ks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3j3hq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="RandomClient" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oara4")
+
+[node name="SceneBg" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogBox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 223.0
+offset_top = -338.0
+offset_right = -219.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CharPortrait" type="TextureRect" parent="DialogBox"]
+visible = false
+layout_mode = 0
+offset_left = -178.0
+offset_top = -79.0
+offset_right = 166.0
+offset_bottom = 303.0
+texture = ExtResource("1_ayqrr")
+expand_mode = 1
+
+[node name="DialogueLabel" parent="DialogBox" instance=ExtResource("2_l2r6y")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 148.0
+offset_top = 21.0
+offset_right = -55.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 40
+text = "Type here"
+messages = Array[String](["You’re still feeling out of place, but you know you need the blood and the money.  ", "Vesper: I shouldn’t be ashamed of myself. I was born poor, and poor people must work. ", "Soon you find yourself again in a dark alley with a client, your pants on the floor, his hands on your crotch.", "Fully aware this is not the first time, nor the last, you let him touch you until it’s safe enough to bite him.", "----- END OF RANDOM CLIENT 1 ---", "Vesper: Since my clients always end up taking off my pants… isn’t it easier if start wearing a skirt?", "Vesper: That way I can just open my legs and let them have some fun.", "When you began working the streets you felt more like playing the part of a prostitute, but now that you’ve been doing it for a while you’re starting to enjoy the lifestyle. ", "Vesper: Choke me, harder, please!", "-- END OF RANDOM CLIENT 2 ---", "You’ve met a lot of girls these past few weeks. One of them, a much more experienced prostitute who calls herself Veronica is very fond of you.", "Complaining about being a slow night she invites you to team up in her search for a potential client. She says the contrast between black and white will call people’s attention for sure.", "Her plan works like a charm and soon a client is milking your tits while Veronica sucks him off.   ", "After she’s done her part in making him cum in her mouth, she says she'll give you some minutes alone to test how good you are.", "In a hurry to make him cum again you lick his nipples and ask him to play with your ass. ", "When his guard is down you sink your fangs into his neck and go meet up with Veronica.", "--- END OF RANDOM CLIENT 3 ---", "Sometimes you get strange requests from clients, and this time it wouldn’t be different.  ", "This peculiar client wants you to masturbate for him while he rubs his cock against your holes. ", "The timing couldn’t be better, as you’ve been feeling your pussy throbbing, aching for attention.", "You take him to an old mattress nearby and get on all fours.", "Feeling his hard cock brushing against your pussy you can’t resist, letting him slide your panties to your ankles. ", "Lost in a world of pleasure you don’t realize half his head has been inside your pussy the entire time.", "When you feel his cum dripping down your pussy you reach an orgasm. ", "-- END OF RANDOM CLIENT 4 ---", "Working alongside Veronica you’ve seen how a good blowjob has its value. ", "So who’s better to show you the ropes than Veronica herself?", "You’ve been asking her for a while if she could teach you a thing or two about how she makes a customer cum so fast. And tonight she’s willing to show you.", "But you were naive to think Veronica would share her secrets out of the goodness of her heart.", "When you begin giving your customer a blowjob she inserts her fingers in your pussy and starts poking your womb.", "Feeling unable to protest after practically begging her to teach you how to suck a cock properly, you let her do as she wishes.", "With her directions you make him cum twice in your mouth in less than ten minutes.", "She’s thrilled to see you’re such an obedient, diligent student.  ", "-- END OF RANDOM CLIENT 5 ---", "Every day you go to work excited to have your pussy drilled by a different cock. ", "It doesn’t matter if a customer is fat or thin, tall or short, you’ll gladly spread your legs for any cock in Grimshire.", "Whenever a client cums in your pussy, you only have one regret though.  ", "Vesper: (It feels so good! Why didn't I start spreading my legs sooner?)", "-- END OF RANDOM CLIENT 6 ---", "You started working as a prostitute for the blood and the money. But nowadays you can’t live without sucking a big juicy cock. The more the merrier.", "The only thing in this world close to the feeling of slurping hot blood is drinking clients’ cum until there’s none left in their balls. It doesn’t extinguish entirely, but it does help soothe your Hunger.", "You’ve lost count of how many men have been inside your holes the last few weeks.", "For sure you’re so used to having cock inside you that it must be way past the hundreds.", "Not even a well-versed prostitute like Veronica can match your insatiable lust for sex. It doesn’t matter how many men fuck you, you’re always ready for the next.", "Your asshole has become Grimshire’s favorite cum dumpster, and you take pride in your work.", "--- END OF RANDOM CLIENTS ---"])
+
+[node name="NamePanel" type="Panel" parent="DialogBox"]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 129.0
+offset_top = -197.0
+offset_right = -1132.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameLabel" type="Label" parent="DialogBox/NamePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Vesper"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimatedIcon" type="AnimatedSprite2D" parent="DialogBox"]
+visible = false
+position = Vector2(1374, 218)
+scale = Vector2(0.494444, 0.494444)
+sprite_frames = SubResource("SpriteFrames_1chan")
+frame_progress = 0.797903
+
+[connection signal="message_finished" from="DialogBox/DialogueLabel" to="." method="_on_dialogue_label_message_finished"]
+[connection signal="message_next" from="DialogBox/DialogueLabel" to="." method="_on_dialogue_label_message_next"]

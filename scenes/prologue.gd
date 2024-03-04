@@ -45,7 +45,6 @@ var can_make_invisible = true
 
 func _ready():
 	dialogue_label.start_dialogue()
-#	dialogue_label.jump_to(170)
 	transitions.fade_to_image()
 
 func _process(delta):
@@ -75,45 +74,22 @@ func _process(delta):
 			dialogue_label.can_type = true
 	
 	if dialogue_label.message_id == 0:
-		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue1.png")
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue_1.png")
 		if SaveManager.save.prologue_cg["prologue_1"] == false:
 			SaveManager.save.prologue_cg["prologue_1"] = true
 		
-	if dialogue_label.message_id == 3:
-		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue2.png")
+	if dialogue_label.message_id == 8:
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue_2.png")
 		if SaveManager.save.prologue_cg["prologue_2"] == false:
 			SaveManager.save.prologue_cg["prologue_2"] = true
 		
-	if dialogue_label.message_id == 4:
-		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue3.png")
+	if dialogue_label.message_id == 10:
+		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue_3.png")
 		if SaveManager.save.prologue_cg["prologue_3"] == false:
 			SaveManager.save.prologue_cg["prologue_3"] = true
 	
-	if dialogue_label.message_id == 8:
-		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue4.png")
-		if SaveManager.save.prologue_cg["prologue_4"] == false:
-			SaveManager.save.prologue_cg["prologue_4"] = true
-		
-	if dialogue_label.message_id == 12:
-		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue5.png")
-		if SaveManager.save.prologue_cg["prologue_5"] == false:
-			SaveManager.save.prologue_cg["prologue_5"] = true	
-
-	if dialogue_label.message_id == 17:
-		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue6.png")
-		if SaveManager.save.prologue_cg["prologue_6"] == false:
-			SaveManager.save.prologue_cg["prologue_6"] = true
-		
-	if dialogue_label.message_id == 19:
-		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue7.png")
-		if SaveManager.save.prologue_cg["prologue_7"] == false:
-			SaveManager.save.prologue_cg["prologue_7"] = true
-
-	if dialogue_label.message_id == 24:
-		scene_texture.texture = load("res://assets/thumbnails/prologue/prologue8.png")
-		if SaveManager.save.prologue_cg["prologue_8"] == false:
-			SaveManager.save.prologue_cg["prologue_8"] = true
-			
+	
+	
 	if dialogue_label.message_id == 25:
 		show_speaker("???", vesper)
 

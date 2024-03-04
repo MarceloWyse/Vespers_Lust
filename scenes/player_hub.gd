@@ -81,7 +81,14 @@ var weather = ["cloudy", "rainy", "sunny"]
 var can_go_out = true
 var day = SaveManager.save.day
 
+
 func _ready():
+	if SaveManager.save.vesper["thief"]:
+		prostitution.hide()
+	
+	if SaveManager.save.vesper["prostitute"]:
+		journalist.hide()
+	
 	if SaveManager.save.day == 3 and SaveManager.save.events["first_event"] == false:
 		event_panel.show()
 		events_timer.start()

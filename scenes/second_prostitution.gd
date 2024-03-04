@@ -5,14 +5,8 @@ extends Control
 var scene_finished
 
 func _ready():
-#	SaveManager.save.second_prostitution = true
-	
-	if not SaveManager.save.second_prostitution:
-		dialogue_label.start_dialogue()
-		SaveManager.save.second_prostitution = true
-		scene_bg.texture = load("res://assets/prostitution_storyboard/second/prostitution_GD_1.png")
-	elif SaveManager.save.second_prostitution:
-		dialogue_label.jump_to(53)
+	dialogue_label.start_dialogue()
+	scene_bg.texture = load("res://assets/prostitution_storyboard/second/prostitution_GD_1.png")
 
 func _process(delta):
 	if dialogue_label.message_id == 4:
@@ -54,32 +48,7 @@ func _process(delta):
 	if dialogue_label.message_id == 48:
 		scene_bg.texture = load("res://assets/prostitution_storyboard/second/prostitution_GD_20.png")
 	
-	#Repetition 
-	if dialogue_label.message_id == 53:
-		scene_bg.texture = load("res://assets/prostitution_storyboard/second/prostitution_repD_0.png")
-		if SaveManager.save.prostitution_cg["prostitution_36"] == false:
-			SaveManager.save.prostitution_cg["prostitution_36"] = true
-	if dialogue_label.message_id == 57:
-		scene_bg.texture = load("res://assets/prostitution_storyboard/second/prostitution_repD_0-1.png")
-		if SaveManager.save.prostitution_cg["prostitution_37"] == false:
-			SaveManager.save.prostitution_cg["prostitution_37"] = true
-	if dialogue_label.message_id == 65:
-		scene_bg.texture = load("res://assets/prostitution_storyboard/second/prostitution_repD_1.png")
-		if SaveManager.save.prostitution_cg["prostitution_38"] == false:
-			SaveManager.save.prostitution_cg["prostitution_38"] = true
-	if dialogue_label.message_id == 76:
-		scene_bg.texture = load("res://assets/prostitution_storyboard/second/prostitution_repD_2.png")
-		if SaveManager.save.prostitution_cg["prostitution_39"] == false:
-			SaveManager.save.prostitution_cg["prostitution_39"] = true
-	if dialogue_label.message_id == 80:
-		scene_bg.texture = load("res://assets/prostitution_storyboard/second/prostitution_repD_3.png")
-		if SaveManager.save.prostitution_cg["prostitution_40"] == false:
-			SaveManager.save.prostitution_cg["prostitution_40"] = true
-	if dialogue_label.message_id == 82:
-		scene_bg.texture = load("res://assets/prostitution_storyboard/second/prostitution_repD_4.png")
-		if SaveManager.save.prostitution_cg["prostitution_41"] == false:
-			SaveManager.save.prostitution_cg["prostitution_41"] = true
-	if dialogue_label.message_id == 51 or dialogue_label.message_id == 84:
+	if dialogue_label.message_id == 51:
 		scene_finished = true
 	
 	if scene_finished:

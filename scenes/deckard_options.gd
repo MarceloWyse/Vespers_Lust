@@ -19,18 +19,18 @@ func _ready():
 	if SaveManager.save.deckard_cg["deckard_135"] == false:
 		SaveManager.save.deckard_cg["deckard_135"] = true
 	#Lewdness Test 
-	SaveManager.save.player_status["lewdness"] = 100
+#	SaveManager.save.player_status["lewdness"] = 100
 	
-	if SaveManager.save.player_status["lewdness"] >= 20:
+	if SaveManager.save.player_status["lewdness"] >= 10:
 		lap_dance.disabled = false
 		lap_dance.text = "A Lap Dance wouldn't hurt"
-	if SaveManager.save.player_status["lewdness"] >= 40 and SaveManager.save.deckard["lapdance"]:
+	if SaveManager.save.player_status["lewdness"] >= 20 and SaveManager.save.deckard["lapdance"]:
 		handjob.disabled = false
 		handjob.text = "What if I touch it?"
-	if SaveManager.save.player_status["lewdness"] >= 60 and SaveManager.save.deckard["handjob"]:
+	if SaveManager.save.player_status["lewdness"] >= 40 and SaveManager.save.deckard["handjob"]:
 		braless_dance.disabled = false
 		braless_dance.text = "I wanna try dancing again"
-	if SaveManager.save.player_status["lewdness"] >= 80 and SaveManager.save.deckard["titsout"]:
+	if SaveManager.save.player_status["lewdness"] >= 60 and SaveManager.save.deckard["titsout"]:
 		blowjob.disabled = false
 		blowjob.text = "I wonder how it tastes"
 	if SaveManager.save.player_status["lewdness"] >= 100 and SaveManager.save.deckard["blowjob"]:

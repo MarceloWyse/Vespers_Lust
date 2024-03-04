@@ -3,6 +3,8 @@ extends Control
 @onready var dialogue_label = $DialogBox/DialogueLabel as DialogueLabel
 @onready var scene_image = $SceneImage
 @onready var transitions = $Transitions
+@onready var lewd_player = $LewdPanel/LewdPlayer
+@onready var hunger_player = $HungerPanel/HungerPlayer
 
 var scene_finished = false
 
@@ -11,16 +13,14 @@ var scene_finished = false
 #		SaveManager.save.player_status["lewdness"] = 100
 
 func _ready():
-	if not SaveManager.save.testing["test"]:
-		SaveManager.save.masturbation_counter = 25
-		SaveManager.save.showed_boobs["deckard"] = true
-		SaveManager.save.testing["test"] = true
 	#first time - fully clothed
 	if not SaveManager.save.visited_activities["masturbation"]:
 		scene_image.texture = load("res://assets/thumbnails/masturbation/masturbation_1.png")
 		transitions.fade_to_image()
 		SaveManager.save.visited_activities["masturbation"] = true
 		dialogue_label.start_dialogue()
+		lewd_player.play("animate_status")
+		hunger_player.play("hunger_animation")
 		SaveManager.save.masturbation_counter += 1
 		SaveManager.save.player_status["lewdness"] += 1
 		SaveManager.save.player_status["hunger"] += 20
@@ -31,12 +31,14 @@ func _ready():
 		dialogue_label.jump_to(6)
 		SaveManager.save.masturbation_counter += 1
 		SaveManager.save.player_status["hunger"] += 20
+		hunger_player.play("hunger_animation")
 	
 	elif SaveManager.save.masturbation_counter == 3:
 		scene_image.texture = load("res://assets/thumbnails/masturbation/masturbation_1.png")
 		transitions.fade_to_image()
 		SaveManager.save.masturbation_counter += 1		
 		dialogue_label.jump_to(10)
+		hunger_player.play("hunger_animation")
 		SaveManager.save.player_status["hunger"] += 20
 	
 	elif SaveManager.save.masturbation_counter == 4:
@@ -44,13 +46,17 @@ func _ready():
 		transitions.fade_to_image()
 		SaveManager.save.masturbation_counter += 1		
 		dialogue_label.jump_to(14)
+		SaveManager.save.vesper["sexual"] = true
+		hunger_player.play("hunger_animation")
 		SaveManager.save.player_status["hunger"] += 20
 
 	elif SaveManager.save.masturbation_counter == 5:
 		scene_image.texture = load("res://assets/thumbnails/masturbation/masturbation_2.png")
 		transitions.fade_to_image()
 		SaveManager.save.player_status["lewdness"] += 1
-		SaveManager.save.masturbation_counter += 1		
+		SaveManager.save.masturbation_counter += 1
+		hunger_player.play("hunger_animation")
+		lewd_player.play("animate_status")
 		dialogue_label.jump_to(18)
 		SaveManager.save.player_status["hunger"] += 20
 
@@ -201,6 +207,7 @@ func _ready():
 	elif SaveManager.save.masturbation_counter == 25:
 		scene_image.texture = load("res://assets/thumbnails/masturbation/masturbation_9.png")
 		transitions.fade_to_image()
+		SaveManager.save.player_status["lewdness"] += 1
 		SaveManager.save.masturbation_counter += 1		
 		dialogue_label.jump_to(90)
 		SaveManager.save.player_status["hunger"] += 20
@@ -251,7 +258,10 @@ func _ready():
 	elif SaveManager.save.masturbation_counter == 32:
 		scene_image.texture = load("res://assets/thumbnails/masturbation/masturbation_12.png")
 		transitions.fade_to_image()
-		SaveManager.save.masturbation_counter += 1
+		if SaveManager.save.masturbation_locks["boobs"] == false:
+			SaveManager.save.player_status["lewdness"] += 1
+			SaveManager.save.masturbation_locks["boobs"] = true
+#		SaveManager.save.masturbation_counter += 1
 		dialogue_label.jump_to(113)
 		SaveManager.save.player_status["hunger"] += 20
 	
@@ -341,9 +351,9 @@ func _process(delta):
 	
 	if dialogue_label.message_id == 119:
 		if SaveManager.save.showed_boobs["deckard"]:
-			dialogue_label.create_message("Vesper: I loved how Mr. Deckard stared at my tits for what seemed like hours.")
+			dialogue_label.create_message("Vesper: I loved exposing my tits to Mr. Deckard, older men make me horny.")
 		if SaveManager.save.showed_boobs["josh"]:
-			dialogue_label.create_message("Vesper: I liked showing my boobs to Josh and the way he pinched my nipples.")				
+			dialogue_label.create_message("Vesper: I liked showing my boobs to Josh. He was the first to pinch my nipples.")				
 	
 	if scene_finished:
 		if SceneTracker.scene_1 == null and SceneTracker.scene_2 != null:

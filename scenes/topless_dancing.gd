@@ -5,11 +5,15 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if SaveManager.save.masturbation_locks["boobs"] == true:
+		SaveManager.save.masturbation_counter += 1
+		SaveManager.save.showed_boobs["deckard"] = true
+		SaveManager.save.masturbation_locks["boobs"] = false
 	dialogue_label.start_dialogue()
 	scene_bg.texture = load("res://assets/hospital_storyboard/topless_dance/hospital_scene_lapdance_1.png")
 	if SaveManager.save.deckard_cg["deckard_22"] == false:
 		SaveManager.save.deckard_cg["deckard_22"] = true
-	
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

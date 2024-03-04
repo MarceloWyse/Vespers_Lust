@@ -35,6 +35,9 @@ extends Control
 
 
 func _ready():
+	if SaveManager.save.vesper["prostitute"]:
+		hospital_map.hide()
+	
 	vesper_map.show()
 	SaveManager.save.same_day = true
 	transitions.fade_to_image()

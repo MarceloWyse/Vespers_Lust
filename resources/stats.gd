@@ -1,11 +1,21 @@
 extends Resource
 class_name Stats
 
+@export var vesper = {
+"sexual" : false,
+"virgin" : true, "anal_virgin" : true, 
+"pussy_raped" : false, "ass_raped" : false, "cock_sucker" : false, "ass_licker" : false,
+"pussy_fingered" : false, "ass_fingered" : false, 
+"journalist" : true, "thief" : false, "prostitute" : false, "stripper" : false,
+"tits_sucked" : false, "gives_handjobs" : false,
+}
+
+
 @export var items = {"bloodbag" : 0, "bloodflask" : 0}
 @export var clothing = {"top" : null, "bottom" : null}
-@export var vesper = {"virgin" : true, "anal_virgin" : true}
+
 @export var bar_values = {"vit" : 1, "str" : 1, "int" : 1, "spd" : 1, "cha" : 1}
-@export var player_status = {"sanity" : 50, "lewdness" : 0, "hunger" : 50 , "money" : 1200}
+@export var player_status = {"sanity" : 50, "lewdness" : 1, "hunger" : 50 , "money" : 1200}
 @export var day = 1
 @export var visited_activities = {"masturbation": false, "prostitution" : false,
 "sleep" : false, "studying" : false, "bartender" : false, "journalist" : false, "running" : false,
@@ -14,6 +24,7 @@ class_name Stats
 @export var activity_level = {"bartending" : 0, "journalist" : 0}
 @export var events = {"first_event" : false}
 @export var masturbation_counter = 1
+@export var masturbation_locks = {"boobs" : false}
 @export var showed_boobs = {"deckard" : false, "josh" : false}
 @export var testing = {"test" : false}
 #prostitution vars:
@@ -23,8 +34,6 @@ class_name Stats
 @export var fourth_prostitution = false
 @export var fifth_prostitution = false
 @export var sixth_prostitution = false
-@export var prostitute = false
-@export var anal_whore = false
 @export var have_fredericks_number = false
 @export var have_kates_number = false
 

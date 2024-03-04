@@ -39,14 +39,20 @@ func stop_dialogue():
 	
 	emit_signal("dialogue_ended")
 
-func create_message(message : String):
+func create_message_ahead_1(message : String):
 	messages[message_id + 1] = message
 
-func create_message_ahead(message : String):
+func create_message_ahead_2(message : String):
 	messages[message_id + 2] = message
 
-func create_message_ahead_ahead(message : String):
+func create_message_ahead_3(message : String):
 	messages[message_id + 3] = message
+
+func create_message_ahead_4(message : String):
+	messages[message_id + 4] = message
+
+func create_message_ahead_5(message : String):
+	messages[message_id + 5] = message
 
 func change_messages(new_array:Array):
 	messages = new_array.duplicate()

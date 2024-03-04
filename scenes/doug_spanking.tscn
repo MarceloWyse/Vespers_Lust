@@ -1,0 +1,83 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbwdpqflqery3"]
+
+[ext_resource type="Script" path="res://DougSpanking.gd" id="1_sv171"]
+[ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="2_5p03x"]
+[ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="3_6x4wu"]
+
+[node name="DougSpanking" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sv171")
+
+[node name="SceneBg" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogBox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 223.0
+offset_top = -338.0
+offset_right = -219.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CharPortrait" type="TextureRect" parent="DialogBox"]
+visible = false
+layout_mode = 0
+offset_left = -178.0
+offset_top = -79.0
+offset_right = 166.0
+offset_bottom = 303.0
+texture = ExtResource("2_5p03x")
+expand_mode = 1
+
+[node name="DialogueLabel" parent="DialogBox" instance=ExtResource("3_6x4wu")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 148.0
+offset_top = 21.0
+offset_right = -55.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 40
+text = "Type here"
+messages = Array[String](["You find yourself once again hunting for victims in the dark alleys of Grimshire.", "Vesper: I just have to follow my M.O. and find some horny, lonely men, willing to have a good time.", "Without too much effort you soon encounter your next victim.", "A short heavy man, with hairy arms and a huge gap between his teeth. ", "Vesper: Perhaps this one won't give me much trouble.", "You take him to an alley but this time you're more careful and don't turn your back to him.", "Vesper: Today's too crowded...", "Man: People will give us more privacy once they realize what we're about to do.", "He swiftly unbuttons your blouse.", "Vesper: (I thought he would take longer, this is going too fast!)", "Man: You have great tits, but I’m more of a butt man myself, let me see what you got down there.", "Stalling for time you take off your pants while he takes off his.", "Vesper: (I have to do something, we just got here and I’m already in my underwear)", "Vesper: Come here, I want you to touch me.", "Man: Oh, you’re a kinky one. I like that.", "Pressed against the wall he begins fondling your butt with both hands. ", "Heavy man: What a big.", "Vesper: AH!", "Heavy Man: Round!", "Vesper: AAHH!", "Heavy Man: Juicy.", "Vesper: AAAAAAHH!", "Heavy Man: Butt.", "Heavy: Are you enjoying getting spanked?", "Vesper: It hurts.", "Heavy Man: Really?", "He slaps you again, harder than last time.", "Heavy Man: Then how come your hand’s inside my pants this entire time?", "Vesper:  Your cock’s so hard... that my hand moved on its own.", "Heavy: Tell me the truth.", "Vesper: AAAAAAHHHHHHH!", "Vesper: Please, I-", "Heavy Man: Do you like getting spanked?", "You feel yourself getting wetter every time he slaps you.", "Heavy Man: Stop lying.", "Vesper: AAAAAAAAAAAAAAAAAAAh!!!", "He grabs your buttcheeks with force and spreads them wide.", "Your panties in disarray, your asshole’s almost exposed. ", "Heavy Man: Answer me!", "Vesper: Yes!", "This sensation of pain and relief is exhilarating. ", "Heavy Man: Good girl.", "Heavy Man: Here’s your reward.", "After all the spanking he starts poking your asshole.", "Your ass is so numb it feels good to have something else touched that is still sensitive.", "Heavy Man: How does it feel now? If you lie I will know.", "Vesper: It feels a little weird, but it doesn’t hurt. ", "Vesper: You’re getting harder. ", "Vesper: You like my ass that much?", "Heavy Man: I love your ass, do you want me to stop?", "You can feel his fingertip entering your anus through the fabric.", "Vesper: No… you can keep poking it, if you want.", "Satisfied with your answer he keeps poking your asshole while you massage his cock.", "After a while there doesn’t seem to be anyone nearby anymore.", "Vesper: (It’s now or never)", "You bite his neck sucking away his blood. ", "He drops to the floor still holding your butt. ", "Before you put your pants back on you search his wallet and take away his money", "You feel less hungry, but more lustful.", "-- END OF DOUG SPANKING --"])
+
+[node name="NamePanel" type="Panel" parent="DialogBox"]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 129.0
+offset_top = -197.0
+offset_right = -1132.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameLabel" type="Label" parent="DialogBox/NamePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Vesper"
+horizontal_alignment = 1
+vertical_alignment = 1

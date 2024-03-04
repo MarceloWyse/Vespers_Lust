@@ -4,6 +4,7 @@ extends Control
 @onready var scene_bg = $SceneBg
 
 func _ready():
+	SaveManager.save.player_status["lewdness"] += 5
 	dialogue_label.start_dialogue()
 	scene_bg.texture = load("res://assets/hospital_storyboard/shy_lapdance/hospital_scene_15.png")
 	if SaveManager.save.deckard_cg["deckard_1"] == false:

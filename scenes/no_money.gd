@@ -8,19 +8,24 @@ extends Control
 @onready var deckard_option_timer = $DeckardOption/DeckardOptionTimer
 @onready var ass = $DeckardOption/VBoxContainer/Ass
 @onready var pussy = $DeckardOption/VBoxContainer/Pussy
+@onready var tits = $DeckardOption/VBoxContainer/Tits
 
 var timer_started = false
 var quick_tits = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	SaveManager.save.player_status["lewdness"] = 100
-	SaveManager.save.deckard["showed_tits"] = true
-	SaveManager.save.deckard["showed_butt"] = true
+#	SaveManager.save.player_status["lewdness"] = 100
+#	SaveManager.save.deckard["showed_tits"] = true
+#	SaveManager.save.deckard["showed_butt"] = true
+	if SaveManager.save.player_status["lewdness"] < 10:
+		tits.disabled = true
+	else:
+		tits.disabled = false
 	
-	if SaveManager.save.deckard["showed_tits"] and SaveManager.save.player_status["lewdness"] >= 20:
+	if SaveManager.save.deckard["showed_tits"] and SaveManager.save.player_status["lewdness"] >= 60:
 		ass.disabled = false
 		
-	if SaveManager.save.deckard["showed_butt"] and SaveManager.save.player_status["lewdness"] >= 40:
+	if SaveManager.save.deckard["showed_butt"] and SaveManager.save.player_status["lewdness"] >= 80:
 		pussy.disabled = false
 	dialog_box.show()
 	deckard_option.hide()
@@ -291,6 +296,11 @@ func _on_deckard_option_timer_timeout():
 	get_tree().change_scene_to_file("res://scenes/sanatorium_ending.tscn")
 
 func _on_tits_pressed():
+	if SaveManager.save.masturbation_locks["boobs"] == true:
+		SaveManager.save.showed_boobs["deckard"] = true
+		SaveManager.save.masturbation_counter += 1
+	SaveManager.save.masturbation_locks["boobs"] = false
+	
 	SaveManager.save.player_status["lewdness"] += 10
 	deckard_option_timer.stop()
 	deckard_option.hide()

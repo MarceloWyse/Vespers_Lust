@@ -7,12 +7,18 @@ var scene_finished = false
 
 func _ready():
 	if not SaveManager.save.visited_activities["sleep"]:
-		scene_texture.texture = load("res://assets/thumbnails/sleep/SLEEP_vesper.png")
+		if SceneTracker.scene_1 == null and SceneTracker.scene_2 != null:
+			scene_texture.texture = load("res://assets/thumbnails/sleep/Sleep_1_morning.png")
+		else:
+			scene_texture.texture = load("res://assets/thumbnails/sleep/Sleep_1.png")
 		transitions.fade_to_image()
 		dialogue_label.start_dialogue()
 		SaveManager.save.visited_activities["sleep"] = true
 	elif SaveManager.save.visited_activities["sleep"]:
-		scene_texture.texture = load("res://assets/thumbnails/sleep/thumb_SLEEP_2.png")
+		if SceneTracker.scene_1 == null and SceneTracker.scene_2 != null:
+			scene_texture.texture = load("res://assets/thumbnails/sleep/Sleep_2_morning.png")
+		else:
+			scene_texture.texture = load("res://assets/thumbnails/sleep/Sleep_2.png")
 		transitions.fade_to_image()
 		dialogue_label.jump_to(10)
 

@@ -48,14 +48,14 @@ theme_override_constants/separation = 30
 custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Flash Tits"
+text = "Flash Tits (LWD 10+)"
 
 [node name="Ass" type="Button" parent="DeckardOption/VBoxContainer"]
 custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 disabled = true
-text = "Flash butt (LWD 20+)"
+text = "Flash Butt (LWD 60+)"
 
 [node name="ProgressBarControl" type="Control" parent="DeckardOption/VBoxContainer/Ass"]
 anchors_preset = 0
@@ -83,7 +83,7 @@ custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 disabled = true
-text = "Flash Pussy (LWD 40+)"
+text = "Flash Pussy (LWD 80+)"
 
 [node name="DeckardOptionTimer" type="Timer" parent="DeckardOption"]
 wait_time = 5.0
