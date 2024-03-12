@@ -41,7 +41,7 @@ func _on_talk_pressed():
 	dialogue_label.can_type = true
 
 func _on_leave_him_pressed():
-	get_tree().change_scene_to_file("res://scenes/bar.tscn")
+	Events.change_scene_to_path.emit("res://scenes/bar.tscn")
 
 func _on_blood_information_pressed():
 	SaveManager.save.old_shop["available"] = true

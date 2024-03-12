@@ -22,10 +22,10 @@ func _process(delta):
 	
 	if scene_finished:
 		if SceneTracker.scene_1 == null and SceneTracker.scene_2 != null:
-			get_tree().change_scene_to_packed(SceneTracker.scene_2)
-		if SceneTracker.scene_2 == null and SceneTracker.scene_3 != null:
-			get_tree().change_scene_to_packed(SceneTracker.scene_3)
-		if SceneTracker.scene_3 == null:
+			Events.change_scene_to_packed.emit(SceneTracker.scene_2)
+		elif SceneTracker.scene_2 == null and SceneTracker.scene_3 != null:
+			Events.change_scene_to_packed.emit(SceneTracker.scene_3)
+		elif SceneTracker.scene_3 == null:
 			SaveManager.save.day += 1
 			SaveManager.save.bar["visited"] = false
 			SaveManager.save.park["visited"] = false
@@ -33,7 +33,7 @@ func _process(delta):
 			SaveManager.save.hospital["visited"] = false
 			SaveManager.save.old_shop["visited"] = false
 			SaveManager.save.same_day = false
-			get_tree().change_scene_to_file("res://scenes/player_hub.tscn")
+			Events.change_scene_to_path.emit("res://scenes/player_hub.tscn")
 
 func _exit_tree():
 	SaveManager.save.bar_values["cha"] += 3

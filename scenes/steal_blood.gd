@@ -53,7 +53,7 @@ func _process(delta):
 		scene_bg.texture = load("res://assets/hospital_storyboard/first_time_stealing/stealing_first_time_11.png")
 	
 	if dialogue_label.message_id == 28:
-		get_tree().change_scene_to_file("res://scenes/player_hub.tscn")
+		Events.change_scene_to_path.emit("res://scenes/player_hub.tscn")
 	
 	if dialogue_label.message_id == 30:
 		scene_bg.texture = load("res://assets/hospital_storyboard/second_time_stealing/hospital_scene_0.png")
@@ -94,7 +94,7 @@ func _process(delta):
 		scene_bg.texture = load("res://assets/hospital_storyboard/deckard_options.png")
 
 	if dialogue_label.message_id == 71 or dialogue_label.message_id == 80:
-		get_tree().change_scene_to_file("res://scenes/deckard_options.tscn")
+		Events.change_scene_to_path.emit("res://scenes/deckard_options.tscn")
 	
 	if dialogue_label.message_id == 73:
 		scene_bg.texture = load("res://assets/hospital_storyboard/second_time_stealing/hospital_scene_5.png")

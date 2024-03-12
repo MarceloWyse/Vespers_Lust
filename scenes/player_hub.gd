@@ -490,10 +490,10 @@ func _on_apply_pressed():
 				if child.texture.resource_path.contains("speech"):
 					SceneTracker.scene_3 = load("res://scenes/speech.tscn")
 
-	get_tree().change_scene_to_packed(SceneTracker.scene_1)
+	Events.change_scene_to_packed.emit(SceneTracker.scene_1)
 
 func _on_map_button_pressed():
-	get_tree().change_scene_to_file("res://scenes/map_room.tscn")
+	Events.change_scene_to_path.emit("res://scenes/map_room.tscn")
 
 func save_status():
 	SaveManager.save.player_status["hunger"] = hunger_bar.value
@@ -508,7 +508,7 @@ func save_status():
 	SaveManager.save_game()
 
 func _on_wardrobe_pressed():
-	get_tree().change_scene_to_file("res://scenes/wardrobe.tscn")
+	Events.change_scene_to_path.emit("res://scenes/wardrobe.tscn")
 
 func _on_bag_pressed():
 	items_panel.visible = !items_panel.visible
@@ -533,4 +533,4 @@ func _on_blood_flask_pressed():
 
 func _on_events_timer_timeout():
 	event_panel.hide()
-	get_tree().change_scene_to_file("res://test_scene.tscn")
+	Events.change_scene_to_path.emit("res://test_scene.tscn")

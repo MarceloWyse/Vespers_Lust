@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://m47064cxfa3k"]
+[gd_scene load_steps=6 format=3 uid="uid://m47064cxfa3k"]
 
 [ext_resource type="Script" path="res://scenes/transitions.gd" id="1_4seal"]
 
@@ -19,6 +19,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TransitionImage:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_a8q1s"]
 resource_name = "fade_to_image"
@@ -35,25 +47,21 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
 }
-
-[sub_resource type="Animation" id="Animation_fh1p7"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("TransitionImage:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TransitionImage:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 1)]
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fmklw"]
 _data = {
-"RESET": SubResource("Animation_fh1p7"),
 "fade_to_black": SubResource("Animation_p0e8r"),
 "fade_to_image": SubResource("Animation_a8q1s")
 }

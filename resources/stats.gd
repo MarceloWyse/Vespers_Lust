@@ -1,6 +1,8 @@
 extends Resource
 class_name Stats
 
+@export var prologue = {"took_gun" : false}
+
 @export var vesper = {
 "sexual" : false,
 "virgin" : true, "anal_virgin" : true, 

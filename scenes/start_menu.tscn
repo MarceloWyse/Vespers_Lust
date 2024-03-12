@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://c6ghxmw38r60"]
+[gd_scene load_steps=8 format=3 uid="uid://c6ghxmw38r60"]
 
 [ext_resource type="Script" path="res://scenes/start_menu.gd" id="1_6j3rw"]
 [ext_resource type="VideoStream" path="res://assets/UI/video/Menu_video.ogv" id="2_4av8l"]
 [ext_resource type="Texture2D" uid="uid://dhtljkresqg51" path="res://assets/UI/video/prototype_title_2.png" id="3_35mqc"]
 [ext_resource type="AudioStream" uid="uid://d1givqgarpvb8" path="res://assets/sounds/Lite Saturation - Fantastic Magically Orchestra.mp3" id="4_3ine6"]
 [ext_resource type="FontFile" uid="uid://cti0vlwxxfed1" path="res://assets/UI/font/Piratte Diarys.otf" id="4_sb8dk"]
+[ext_resource type="PackedScene" uid="uid://m47064cxfa3k" path="res://scenes/transitions.tscn" id="6_1c3mv"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_k55l4"]
 
@@ -102,6 +103,10 @@ theme_override_fonts/font = ExtResource("4_sb8dk")
 theme_override_font_sizes/font_size = 50
 text = "Quit"
 flat = true
+
+[node name="Transitions" parent="." instance=ExtResource("6_1c3mv")]
+visible = false
+layout_mode = 1
 
 [node name="FadeOutTrans" type="TextureRect" parent="."]
 modulate = Color(0, 0, 0, 0)

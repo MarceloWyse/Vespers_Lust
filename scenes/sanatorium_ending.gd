@@ -18,4 +18,4 @@ func _process(delta):
 	if dialogue_label.message_id == 7:
 		dialogue_label.can_type = false
 		await get_tree().create_timer(4).timeout
-		get_tree().change_scene_to_file("res://scenes/start_menu.tscn")
+		Events.change_scene_to_path.emit("res://scenes/start_menu.tscn")

@@ -1,17 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://bxkv2lyqmm417"]
 
-[ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="1_8rs11"]
-[ext_resource type="Script" path="res://scenes/second_prostitution.gd" id="1_57x75"]
-[ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="2_djwqt"]
+[ext_resource type="Script" path="res://scenes/meeting_josh.gd" id="1_lieyt"]
+[ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="2_4ygkj"]
+[ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="3_sg4nj"]
 
-[node name="SecondProstitution" type="Control"]
+[node name="MeetingJosh" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_57x75")
+script = ExtResource("1_lieyt")
 
 [node name="SceneBg" type="TextureRect" parent="."]
 layout_mode = 0
@@ -38,10 +38,10 @@ offset_left = -178.0
 offset_top = -79.0
 offset_right = 166.0
 offset_bottom = 303.0
-texture = ExtResource("1_8rs11")
+texture = ExtResource("2_4ygkj")
 expand_mode = 1
 
-[node name="DialogueLabel" parent="DialogBox" instance=ExtResource("2_djwqt")]
+[node name="DialogueLabel" parent="DialogBox" instance=ExtResource("3_sg4nj")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

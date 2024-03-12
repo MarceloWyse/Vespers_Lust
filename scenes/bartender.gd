@@ -49,7 +49,7 @@ func _ready():
 		dialogue_label.jump_to(19)
 	
 func _process(delta):
-	
+
 	if dialogue_label.message_id == 6 \
 	or dialogue_label.message_id == 9 \
 	or dialogue_label.message_id == 12 \
@@ -57,14 +57,13 @@ func _process(delta):
 	or dialogue_label.message_id == 18 \
 	or dialogue_label.message_id == 21:
 		scene_finished = true
-	
-	
-	if scene_finished == true:
+
+	if scene_finished:
 		if SceneTracker.scene_1 == null and SceneTracker.scene_2 != null:
-			get_tree().change_scene_to_packed(SceneTracker.scene_2)
-		if SceneTracker.scene_2 == null and SceneTracker.scene_3 != null:
-			get_tree().change_scene_to_packed(SceneTracker.scene_3)
-		if SceneTracker.scene_3 == null:
+			Events.change_scene_to_packed.emit(SceneTracker.scene_2)
+		elif SceneTracker.scene_2 == null and SceneTracker.scene_3 != null:
+			Events.change_scene_to_packed.emit(SceneTracker.scene_3)
+		elif SceneTracker.scene_3 == null:
 			SaveManager.save.day += 1
 			SaveManager.save.bar["visited"] = false
 			SaveManager.save.park["visited"] = false
@@ -72,7 +71,7 @@ func _process(delta):
 			SaveManager.save.hospital["visited"] = false
 			SaveManager.save.old_shop["visited"] = false
 			SaveManager.save.same_day = false
-			get_tree().change_scene_to_file("res://scenes/player_hub.tscn")
+			Events.change_scene_to_path.emit("res://scenes/player_hub.tscn")
 
 func _exit_tree():
 	if SceneTracker.scene_1 == null and SceneTracker.scene_2 != null:

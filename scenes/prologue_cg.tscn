@@ -141,12 +141,6 @@ layout_mode = 2
 texture = ExtResource("3_bdec6")
 expand_mode = 1
 
-[node name="PrologueRect10_11" type="TextureRect" parent="Page1"]
-custom_minimum_size = Vector2(330, 170)
-layout_mode = 2
-texture = ExtResource("3_bdec6")
-expand_mode = 1
-
 [node name="PrologueRect11" type="TextureRect" parent="Page1"]
 custom_minimum_size = Vector2(330, 170)
 layout_mode = 2
@@ -154,12 +148,6 @@ texture = ExtResource("3_bdec6")
 expand_mode = 1
 
 [node name="PrologueRect12" type="TextureRect" parent="Page1"]
-custom_minimum_size = Vector2(330, 170)
-layout_mode = 2
-texture = ExtResource("3_bdec6")
-expand_mode = 1
-
-[node name="PrologueRect12_13" type="TextureRect" parent="Page1"]
 custom_minimum_size = Vector2(330, 170)
 layout_mode = 2
 texture = ExtResource("3_bdec6")
@@ -257,12 +245,6 @@ texture = ExtResource("3_bdec6")
 expand_mode = 1
 
 [node name="PrologueRect26" type="TextureRect" parent="Page2"]
-custom_minimum_size = Vector2(330, 170)
-layout_mode = 2
-texture = ExtResource("3_bdec6")
-expand_mode = 1
-
-[node name="PrologueRect26_27" type="TextureRect" parent="Page2"]
 custom_minimum_size = Vector2(330, 170)
 layout_mode = 2
 texture = ExtResource("3_bdec6")
@@ -373,10 +355,8 @@ grow_vertical = 2
 [connection signal="gui_input" from="Page1/PrologueRect8" to="." method="_on_prologue_rect_8_gui_input"]
 [connection signal="gui_input" from="Page1/PrologueRect9" to="." method="_on_prologue_rect_9_gui_input"]
 [connection signal="gui_input" from="Page1/PrologueRect10" to="." method="_on_prologue_rect_10_gui_input"]
-[connection signal="gui_input" from="Page1/PrologueRect10_11" to="." method="_on_prologue_rect_10_11_gui_input"]
 [connection signal="gui_input" from="Page1/PrologueRect11" to="." method="_on_prologue_rect_11_gui_input"]
 [connection signal="gui_input" from="Page1/PrologueRect12" to="." method="_on_prologue_rect_12_gui_input"]
-[connection signal="gui_input" from="Page1/PrologueRect12_13" to="." method="_on_prologue_rect_12_13_gui_input"]
 [connection signal="gui_input" from="Page1/PrologueRect13" to="." method="_on_prologue_rect_13_gui_input"]
 [connection signal="gui_input" from="Page1/PrologueRect14" to="." method="_on_prologue_rect_14_gui_input"]
 [connection signal="gui_input" from="Page1/PrologueRect15" to="." method="_on_prologue_rect_15_gui_input"]
@@ -391,7 +371,6 @@ grow_vertical = 2
 [connection signal="gui_input" from="Page2/PrologueRect24" to="." method="_on_prologue_rect_24_gui_input"]
 [connection signal="gui_input" from="Page2/PrologueRect25" to="." method="_on_prologue_rect_25_gui_input"]
 [connection signal="gui_input" from="Page2/PrologueRect26" to="." method="_on_prologue_rect_26_gui_input"]
-[connection signal="gui_input" from="Page2/PrologueRect26_27" to="." method="_on_prologue_rect_26_27_gui_input"]
 [connection signal="gui_input" from="Page2/PrologueRect27" to="." method="_on_prologue_rect_27_gui_input"]
 [connection signal="gui_input" from="Page2/PrologueRect28" to="." method="_on_prologue_rect_28_gui_input"]
 [connection signal="gui_input" from="Page2/PrologueRect29" to="." method="_on_prologue_rect_29_gui_input"]

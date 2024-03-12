@@ -42,35 +42,35 @@ func _ready():
 func _process(delta):
 	progress_bar.value = deckard_option_timer.time_left
 	if dialogue_label.message_id == 3:
-		get_tree().change_scene_to_file("res://scenes/player_hub.tscn")
+		Events.change_scene_to_path.emit("res://scenes/player_hub.tscn")
 	
 func _on_deckard_option_timer_timeout():
-	get_tree().change_scene_to_file("res://scenes/sanatorium_ending.tscn")
+	Events.change_scene_to_path.emit("res://scenes/sanatorium_ending.tscn")
 
 func _on_lap_dance_pressed():
 	SaveManager.save.deckard["lapdance"] = true
-	get_tree().change_scene_to_file("res://scenes/lapdance.tscn")
+	Events.change_scene_to_path.emit("res://scenes/lapdance.tscn")
 
 func _on_handjob_pressed():
 	SaveManager.save.deckard["handjob"] = true
-	get_tree().change_scene_to_file("res://scenes/handjob.tscn")
+	Events.change_scene_to_path.emit("res://scenes/handjob.tscn")
 	
 func _on_braless_dance_pressed():
 	SaveManager.save.deckard["titsout"] = true
-	get_tree().change_scene_to_file("res://scenes/topless_dancing.tscn")
+	Events.change_scene_to_path.emit("res://scenes/topless_dancing.tscn")
 
 func _on_blowjob_pressed():
 	SaveManager.save.deckard["blowjob"] = true
-	get_tree().change_scene_to_file("res://scenes/blowjob.tscn")
+	Events.change_scene_to_path.emit("res://scenes/blowjob.tscn")
 
 func _on_anal_pressed():
 	SaveManager.save.deckard["anal"] = true
-	get_tree().change_scene_to_file("res://scenes/anal.tscn")
+	Events.change_scene_to_path.emit("res://scenes/anal.tscn")
 
 func _on_money_pressed():
 	deckard_option_timer.stop()
 	if SaveManager.save.player_status["money"] <= 300:
-		get_tree().change_scene_to_file("res://scenes/no_money.tscn")
+		Events.change_scene_to_path.emit("res://scenes/no_money.tscn")
 	else:
 		dialog_box.show()
 		dialogue_label.can_type = true

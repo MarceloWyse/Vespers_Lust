@@ -319,3 +319,6 @@ func player_received_damage():
 	damage_counter.global_position = vesper.global_position + Vector2(30,150)
 	damage_counter.text = "Miss"
 	$AnimationPlayer2.play("show_damage")
+
+#func _on_test_button_mouse_exited():
+#	test_button.release_focus()

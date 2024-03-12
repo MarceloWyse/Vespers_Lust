@@ -24,7 +24,7 @@ func _process(delta):
 		dialogue_label.can_type = false
 
 func _on_go_home_btn_pressed():
-	get_tree().change_scene_to_file("res://scenes/player_hub.tscn")
+	Events.change_scene_to_path.emit("res://scenes/player_hub.tscn")
 
 func _on_talk_btn_pressed():
 	v_box_container.hide()

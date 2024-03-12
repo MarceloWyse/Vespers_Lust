@@ -1,0 +1,250 @@
+[gd_scene load_steps=6 format=3 uid="uid://b6jiaejf0dpx0"]
+
+[ext_resource type="Script" path="res://scenes/prologue_part_2.gd" id="1_0xp66"]
+[ext_resource type="Texture2D" uid="uid://dl8u2hk4yiw3a" path="res://assets/img/vesper_face.png" id="1_o7ok2"]
+[ext_resource type="PackedScene" uid="uid://728fnim4yyl8" path="res://scenes/dialogue_label.tscn" id="2_l8ggc"]
+[ext_resource type="PackedScene" uid="uid://m47064cxfa3k" path="res://scenes/transitions.tscn" id="3_dmrjr"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_x04yk"]
+
+[node name="ProloguePart2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0xp66")
+
+[node name="SceneTexture" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BlackScreen" type="TextureRect" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_x04yk")
+
+[node name="Transitions" parent="." instance=ExtResource("3_dmrjr")]
+layout_mode = 1
+
+[node name="DialogBox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 223.0
+offset_top = -338.0
+offset_right = -219.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CharPortrait" type="TextureRect" parent="DialogBox"]
+visible = false
+layout_mode = 0
+offset_left = -178.0
+offset_top = -79.0
+offset_right = 166.0
+offset_bottom = 303.0
+texture = ExtResource("1_o7ok2")
+expand_mode = 1
+
+[node name="DialogueLabel" parent="DialogBox" instance=ExtResource("2_l8ggc")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 148.0
+offset_top = 21.0
+offset_right = -55.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 40
+text = "<null>"
+messages = Array[String](["Feeling terribly weak and nauseated you make an effort to open your eyes.", "Vesper: My head hurts so much… it's like a truck ran over me.", "Unable to move you realize you’re tied to a chair with your hands behind your back.", "Vesper: Where am I? ", "Vesper: The last thing I remember… is that shadow coming at me.", "While doing your best to keep your eyes open, you analyze your surroundings.", "Vesper: I’m in some kind of basement… and it doesn’t seem abandoned. That plant was recently watered, and there’s even a bed in the other room… someone definitely lives here.", "Vesper: I wonder how long I was passed out for. Judging by the sunlight passing through those curtains… I must’ve been unconscious for hours.", "Vesper: No wonder I feel like crap, I probably have a concussion…", "Suddenly, you hear loud noises coming from the next room, emanating from two different people.", "Vesper: Wait… is that moaning? ", "Vesper: Hello!? Is anybody there? Help! Help! ", "But there’s no answer, if anything the moaning intensifies. ", "Vesper: I’m sure they can hear me, ‘cause I can hear them loud and clear.", "Vesper: They seem to be having a really good time… while I’m stuck in this chair with a migraine. ", "As the moaning gets louder the couple gets on the bed.", "Vesper: It’s as if they’re oblivious to my existence; they didn’t even bother to close the door.", "After the events last night you don’t know what’s real anymore. It’s like you were sucked into another dimension - a dark, gritty, sexual dimension.", "Your vision is still blurred, but you can make out a girl with long blond hair riding a muscular dark-haired man.", "Vesper: Is that who I think it is? It can’t be… she's alive?", "After they're done having fun, the couple approaches you.", "Woman: Is this the girl you’ve talked about? ", "Man: Yes, that’s her.", "Woman: The one who's been asking about me all over town?", "Man: Exactly.", "Woman: You didn’t tell me she was so cute.", "Man: Does it matter?", "Vesper: Hello? I’m right here.", "Man: Shut up, livestock!", "Woman: Easy… she’s already scared.", "The woman looks deeply into your eyes; you can see compassion in them.", "Woman: What is your name, honey?", "Vesper: It’s Vesper… ", "Woman: What a beautiful name. I presume you know mine.", "Vesper: Your skin is much paler than in the pictures, and your hair is longer, but I’m pretty sure you’re Helena Bergman.", "Helena: Indeed. ", "She smiles at you.", "The man on the other hand looks at you with deep hatred in his eyes.", "Helena: Now, why have you been asking about me? Haven’t I made clear I didn’t want to be found?", "Vesper: I’m a journalist, it’s my job to investigate. ", "Helena: I see. And that’s the only reason?", "She stares at you like she’s gazing at your soul. You can’t seem to lie to her.", "Vesper: ……………….", "Vesper: No.", "Vesper: I…", "Man: Enough talk, I’m getting tired of all this mumbling. Help me take her upstairs. ", "Helena: Oh, darling, please, let me have this. We can do that later. How long have we been holed up in this place all by ourselves? ", "Helena: It's been months since I’ve talked to anybody else, and those last girls could barely open their eyes, let alone speak.", "You’re too soft, Helena. Fine, I’ll take her upstairs later, when it’s dark.", "The man sneers and returns to the bedroom, slamming the door behind him. Without his menacing presence the air feels lighter.  ", "Helena: Now, beautiful, what were you saying?", "Vesper: It all started as a job. But, the closer I got to you, the more I investigated your life, it was like an obsession. I felt like I knew what you were going through.", "Vesper: I went to the same places you did, talked to the same people… I even…", "You stop your line of thought ashamed to tell her of your actions.", "Helena: You don’t have to be embarrassed, I’m loving to hear all this. Did you touch yourself thinking about me?", "Vesper: No… I went to your house and talked to your mom. When she was not looking I lay down on your bed and pretended to be you.", "She giggles.", "Helena: That’s so cute. You even talked to my mom, huh? I doubt she was of any help.", "Vesper: I’m sorry. ", "Helena: Don’t be. She was always like that. She only had eyes for my father. I was the product of her misfortune. Falling in love with a beast.", "Helena: But I guess history has a way of repeating itself.", "You notice her hands shaking.", ""])
+sound_files = Array[AudioStream]([null])
+
+[node name="NamePanel" type="Panel" parent="DialogBox"]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 129.0
+offset_top = -197.0
+offset_right = -1132.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NameLabel" type="Label" parent="DialogBox/NamePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Vesper"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EscapeOptions" type="CenterContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -232.0
+offset_right = 100.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="EscapeOptions"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="CellphoneBtn" type="Button" parent="EscapeOptions/VBoxContainer"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Try to reach for your cellphone"
+
+[node name="CallHelpBtn" type="Button" parent="EscapeOptions/VBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Call for help"
+
+[node name="GiveUpBtn" type="Button" parent="EscapeOptions/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Give up for now"
+
+[node name="HelenasOffer" type="CenterContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -232.0
+offset_right = 100.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HelenasOffer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="AcceptOfferBtn" type="Button" parent="HelenasOffer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Accept her offer."
+
+[node name="RefuseOfferBtn" type="Button" parent="HelenasOffer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Refuse her offer."
+
+[node name="DriveOption" type="CenterContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -232.0
+offset_right = 100.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DriveOption"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="DriveBtn" type="Button" parent="DriveOption/VBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "DRIVE"
+
+[node name="EatFoodOption" type="CenterContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -232.0
+offset_right = 250.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="EatFoodOption"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="EatBtn" type="Button" parent="EatFoodOption/VBoxContainer"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Eat the leftovers"
+
+[node name="DontEatBtn" type="Button" parent="EatFoodOption/VBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Don't eat the leftovers"
+
+[node name="SkipTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="SkippingPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 1492.0
+offset_top = 947.0
+offset_right = 1710.0
+offset_bottom = 992.0
+
+[node name="SkippingLabel" type="Label" parent="SkippingPanel"]
+layout_mode = 0
+offset_right = 141.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 30
+text = "Skipping in: "
+
+[connection signal="message_finished" from="DialogBox/DialogueLabel" to="." method="_on_dialogue_label_message_finished"]

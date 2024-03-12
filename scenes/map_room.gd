@@ -151,7 +151,7 @@ func _process(delta):
 	pass
 
 func _on_back_btn_pressed():
-	get_tree().change_scene_to_file("res://scenes/player_hub.tscn")
+	Events.change_scene_to_path.emit("res://scenes/player_hub.tscn")
 
 func _on_hospital_map_mouse_entered():
 	hospital_map.modulate = Color(1, 1, 1)
@@ -195,19 +195,19 @@ func _on_boutique_mouse_exited():
 
 func _on_hospital_go_btn_pressed():
 	SaveManager.save.hospital["visited"] = true
-	get_tree().change_scene_to_file("res://scenes/hospital.tscn")
+	Events.change_scene_to_path.emit("res://scenes/hospital.tscn")
 
 func _on_boutique_go_btn_pressed():
 	SaveManager.save.boutique["visited"] = true
-	get_tree().change_scene_to_file("res://scenes/boutique.tscn")
+	Events.change_scene_to_path.emit("res://scenes/boutique.tscn")
 
 func _on_bar_go_btn_pressed():
 	SaveManager.save.bar["visited"] = true
-	get_tree().change_scene_to_file("res://scenes/bar.tscn")
+	Events.change_scene_to_path.emit("res://scenes/bar.tscn")
 
 func _on_park_go_btn_pressed():
 	SaveManager.save.park["visited"] = true
-	get_tree().change_scene_to_file("res://scenes/park.tscn")
+	Events.change_scene_to_path.emit("res://scenes/park.tscn")
 
 
 func _on_old_shop_map_mouse_entered():
@@ -222,4 +222,4 @@ func _on_old_shop_map_mouse_exited():
 
 func _on_old_shop_go_btn_pressed():
 	SaveManager.save.old_shop["visited"] = true
-	get_tree().change_scene_to_file("res://scenes/old_shop.tscn")
+	Events.change_scene_to_path.emit("res://scenes/old_shop.tscn")

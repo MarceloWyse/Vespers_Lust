@@ -63,7 +63,7 @@ func _on_sound_h_bar_value_changed(value = SaveManager.settings.sound_bar_value)
 	SaveManager.settings.sound_bar_value = value
 
 func _on_button_pressed():
-	get_tree().change_scene_to_file("res://scenes/start_menu.tscn")
+	Events.change_scene_to_path.emit("res://scenes/start_menu.tscn")
 
 func _on_hidden():
 	SaveManager.save_settings()

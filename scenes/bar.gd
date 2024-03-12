@@ -18,7 +18,7 @@ func _process(delta):
 		v_box_container.show()
 
 func _on_go_home_btn_pressed():
-	get_tree().change_scene_to_file("res://scenes/player_hub.tscn")
+	Events.change_scene_to_path.emit("res://scenes/player_hub.tscn")
 
 func _on_talk_btn_pressed():
 	v_box_container.hide()
@@ -26,4 +26,4 @@ func _on_talk_btn_pressed():
 	dialogue_label.start_dialogue()
 
 func _on_information_btn_pressed():
-	get_tree().change_scene_to_file("res://scenes/lobo.tscn")
+	Events.change_scene_to_path.emit("res://scenes/lobo.tscn")

@@ -290,10 +290,10 @@ func _process(delta):
 			SaveManager.save.deckard_cg["deckard_134"] = true
 	if dialogue_label.message_id == 105 or dialogue_label.message_id == 221 \
 	or dialogue_label.message_id == 357:
-		get_tree().change_scene_to_file("res://scenes/player_hub.tscn")
+		Events.change_scene_to_path.emit("res://scenes/player_hub.tscn")
 
 func _on_deckard_option_timer_timeout():
-	get_tree().change_scene_to_file("res://scenes/sanatorium_ending.tscn")
+	Events.change_scene_to_path.emit("res://scenes/sanatorium_ending.tscn")
 
 func _on_tits_pressed():
 	if SaveManager.save.masturbation_locks["boobs"] == true:

@@ -143,4 +143,4 @@ func _process(delta):
 		if SaveManager.save.deckard_cg["deckard_92"] == false:
 			SaveManager.save.deckard_cg["deckard_92"] = true
 	if dialogue_label.message_id == 67:
-		get_tree().change_scene_to_file("res://scenes/player_hub.tscn")
+		Events.change_scene_to_path.emit("res://scenes/player_hub.tscn")

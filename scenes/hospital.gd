@@ -36,7 +36,7 @@ func _process(delta):
 		v_box_container.show()
 
 func _on_home_btn_pressed():
-	get_tree().change_scene_to_file("res://scenes/player_hub.tscn")
+	Events.change_scene_to_path.emit("res://scenes/player_hub.tscn")
 
 func _on_talk_btn_pressed():
 	dialog_box.show()
@@ -53,4 +53,4 @@ func _on_talk_btn_pressed():
 		dialogue_label.can_type = true
 		
 func _on_steal_blood_btn_pressed():
-	get_tree().change_scene_to_file("res://scenes/steal_blood.tscn")
+	Events.change_scene_to_path.emit("res://scenes/steal_blood.tscn")

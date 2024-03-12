@@ -161,7 +161,7 @@ func _on_page_6_btn_pressed():
 	page_6.show()
 
 func _on_back_button_pressed():
-	get_tree().change_scene_to_file("res://scenes/image_gallery.tscn")
+	Events.change_scene_to_path.emit("res://scenes/image_gallery.tscn")
 
 func _on_image_viewer_gui_input(event):
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):

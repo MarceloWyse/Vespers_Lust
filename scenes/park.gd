@@ -14,4 +14,4 @@ func _process(delta):
 	pass
 
 func _on_go_home_btn_pressed():
-	get_tree().change_scene_to_file("res://scenes/player_hub.tscn")
+	Events.change_scene_to_path.emit("res://scenes/player_hub.tscn")

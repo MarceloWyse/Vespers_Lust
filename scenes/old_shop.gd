@@ -95,10 +95,10 @@ func _on_talk_btn_pressed():
 		SaveManager.save.old_shop["shop"] = true
 
 func _on_go_home_pressed():
-	get_tree().change_scene_to_file("res://scenes/player_hub.tscn")
+	Events.change_scene_to_path.emit("res://scenes/player_hub.tscn")
 
 func _on_be_her_pet_pressed():
-	get_tree().change_scene_to_file("res://scenes/lily_sex_dungeon.tscn")
+	Events.change_scene_to_path.emit("res://scenes/lily_sex_dungeon.tscn")
 
 func _on_close_btn_pressed():
 #	dialogue_label.can_type = false

@@ -15,10 +15,8 @@ extends Control
 @onready var prologue_rect_8 = $Page1/PrologueRect8
 @onready var prologue_rect_9 = $Page1/PrologueRect9
 @onready var prologue_rect_10 = $Page1/PrologueRect10
-@onready var prologue_rect_10_11 = $Page1/PrologueRect10_11
 @onready var prologue_rect_11 = $Page1/PrologueRect11
 @onready var prologue_rect_12 = $Page1/PrologueRect12
-@onready var prologue_rect_12_13 = $Page1/PrologueRect12_13
 @onready var prologue_rect_13 = $Page1/PrologueRect13
 @onready var prologue_rect_14 = $Page1/PrologueRect14
 @onready var prologue_rect_15 = $Page1/PrologueRect15
@@ -33,7 +31,6 @@ extends Control
 @onready var prologue_rect_24 = $Page2/PrologueRect24
 @onready var prologue_rect_25 = $Page2/PrologueRect25
 @onready var prologue_rect_26 = $Page2/PrologueRect26
-@onready var prologue_rect_26_27 = $Page2/PrologueRect26_27
 @onready var prologue_rect_27 = $Page2/PrologueRect27
 @onready var prologue_rect_28 = $Page2/PrologueRect28
 @onready var prologue_rect_29 = $Page2/PrologueRect29
@@ -113,11 +110,6 @@ func _on_prologue_rect_10_gui_input(event):
 			image_viewer.texture = prologue_rect_10.texture
 			image_viewer.show()
 
-func _on_prologue_rect_10_11_gui_input(event):
-	if Input.is_action_just_pressed("left_click"):
-		if SaveManager.save.prologue_cg["prologue_10_11"]:
-			image_viewer.texture = prologue_rect_10_11.texture
-			image_viewer.show()
 
 func _on_prologue_rect_11_gui_input(event):
 	if Input.is_action_just_pressed("left_click"):
@@ -130,12 +122,6 @@ func _on_prologue_rect_12_gui_input(event):
 	if Input.is_action_just_pressed("left_click"):
 		if SaveManager.save.prologue_cg["prologue_12"]:
 			image_viewer.texture = prologue_rect_12.texture
-			image_viewer.show()
-
-func _on_prologue_rect_12_13_gui_input(event):
-	if Input.is_action_just_pressed("left_click"):
-		if SaveManager.save.prologue_cg["prologue_12_13"]:
-			image_viewer.texture = prologue_rect_12_13.texture
 			image_viewer.show()
 
 func _on_prologue_rect_13_gui_input(event):
@@ -228,12 +214,6 @@ func _on_prologue_rect_26_gui_input(event):
 			image_viewer.texture = prologue_rect_26.texture
 			image_viewer.show()
 
-func _on_prologue_rect_26_27_gui_input(event):
-	if Input.is_action_just_pressed("left_click"):
-		if SaveManager.save.prologue_cg["prologue_26_27"]:
-			image_viewer.texture = prologue_rect_26_27.texture
-			image_viewer.show()
-
 func _on_prologue_rect_27_gui_input(event):
 	if Input.is_action_just_pressed("left_click"):
 		if SaveManager.save.prologue_cg["prologue_27"]:
@@ -260,71 +240,65 @@ func _on_prologue_rect_30_gui_input(event):
 
 func unlock_prologue():
 	if SaveManager.save.prologue_cg["prologue_1"] == true:
-		prologue_rect_1.texture = load("res://assets/thumbnails/prologue/prologue1.png")
+		prologue_rect_1.texture = load("res://assets/thumbnails/prologue/prologue_1.png")
 	if SaveManager.save.prologue_cg["prologue_2"] == true:
-		prologue_rect_2.texture = load("res://assets/thumbnails/prologue/prologue2.png")
+		prologue_rect_2.texture = load("res://assets/thumbnails/prologue/prologue_2.png")
 	if SaveManager.save.prologue_cg["prologue_3"] == true:
-		prologue_rect_3.texture = load("res://assets/thumbnails/prologue/prologue3.png")
+		prologue_rect_3.texture = load("res://assets/thumbnails/prologue/prologue_3.png")
 	if SaveManager.save.prologue_cg["prologue_4"] == true:
-		prologue_rect_4.texture = load("res://assets/thumbnails/prologue/prologue4.png")
+		prologue_rect_4.texture = load("res://assets/thumbnails/prologue/prologue_4.png")
 	if SaveManager.save.prologue_cg["prologue_5"] == true:
-		prologue_rect_5.texture = load("res://assets/thumbnails/prologue/prologue5.png")
+		prologue_rect_5.texture = load("res://assets/thumbnails/prologue/prologue_5.png")
 	if SaveManager.save.prologue_cg["prologue_6"] == true:
-		prologue_rect_6.texture = load("res://assets/thumbnails/prologue/prologue6.png")
+		prologue_rect_6.texture = load("res://assets/thumbnails/prologue/prologue_6.png")
 	if SaveManager.save.prologue_cg["prologue_7"] == true:
-		prologue_rect_7.texture = load("res://assets/thumbnails/prologue/prologue7.png")
+		prologue_rect_7.texture = load("res://assets/thumbnails/prologue/prologue_7.png")
 	if SaveManager.save.prologue_cg["prologue_8"] == true:
-		prologue_rect_8.texture = load("res://assets/thumbnails/prologue/prologue8.png")
+		prologue_rect_8.texture = load("res://assets/thumbnails/prologue/prologue_8.png")
 	if SaveManager.save.prologue_cg["prologue_9"] == true:
-		prologue_rect_9.texture = load("res://assets/thumbnails/prologue/prologue9.png")
+		prologue_rect_9.texture = load("res://assets/thumbnails/prologue/prologue_9.png")
 	if SaveManager.save.prologue_cg["prologue_10"] == true:
-		prologue_rect_10.texture = load("res://assets/thumbnails/prologue/prologue10.png")
-	if SaveManager.save.prologue_cg["prologue_10_11"] == true:
-		prologue_rect_10_11.texture = load("res://assets/thumbnails/prologue/prologue10_11.png")
+		prologue_rect_10.texture = load("res://assets/thumbnails/prologue/prologue_10.png")
 	if SaveManager.save.prologue_cg["prologue_11"] == true:
-		prologue_rect_11.texture = load("res://assets/thumbnails/prologue/prologue11.png")
+		prologue_rect_11.texture = load("res://assets/thumbnails/prologue/prologue_11.png")
 	if SaveManager.save.prologue_cg["prologue_12"] == true:
-		prologue_rect_12.texture = load("res://assets/thumbnails/prologue/prologue12.png")
-	if SaveManager.save.prologue_cg["prologue_12_13"] == true:
-		prologue_rect_12_13.texture = load("res://assets/thumbnails/prologue/prologue12_13.png")
+		prologue_rect_12.texture = load("res://assets/thumbnails/prologue/prologue_12.png")
 	if SaveManager.save.prologue_cg["prologue_13"] == true:
-		prologue_rect_13.texture = load("res://assets/thumbnails/prologue/prologue13.png")
+		prologue_rect_13.texture = load("res://assets/thumbnails/prologue/prologue_13.png")
 	if SaveManager.save.prologue_cg["prologue_14"] == true:
-		prologue_rect_14.texture = load("res://assets/thumbnails/prologue/prologue14.png")
+		prologue_rect_14.texture = load("res://assets/thumbnails/prologue/prologue_14.png")
 	if SaveManager.save.prologue_cg["prologue_15"] == true:
-		prologue_rect_15.texture = load("res://assets/thumbnails/prologue/prologue15.png")
+		prologue_rect_15.texture = load("res://assets/thumbnails/prologue/prologue_15.png")
 	if SaveManager.save.prologue_cg["prologue_16"] == true:
-		prologue_rect_16.texture = load("res://assets/thumbnails/prologue/prologue16.png")
+		prologue_rect_16.texture = load("res://assets/thumbnails/prologue/prologue_16.png")
 	if SaveManager.save.prologue_cg["prologue_17"] == true:
-		prologue_rect_17.texture = load("res://assets/thumbnails/prologue/prologue17.png")
+		prologue_rect_17.texture = load("res://assets/thumbnails/prologue/prologue_17.png")
 	if SaveManager.save.prologue_cg["prologue_18"] == true:
-		prologue_rect_18.texture = load("res://assets/thumbnails/prologue/prologue18.png")
+		prologue_rect_18.texture = load("res://assets/thumbnails/prologue/prologue_18.png")
 	if SaveManager.save.prologue_cg["prologue_19"] == true:
-		prologue_rect_19.texture = load("res://assets/thumbnails/prologue/prologue19.png")
+		prologue_rect_19.texture = load("res://assets/thumbnails/prologue/prologue_19.png")
 	if SaveManager.save.prologue_cg["prologue_20"] == true:
-		prologue_rect_20.texture = load("res://assets/thumbnails/prologue/prologue20.png")
+		prologue_rect_20.texture = load("res://assets/thumbnails/prologue/prologue_20.png")
 	if SaveManager.save.prologue_cg["prologue_21"] == true:
-		prologue_rect_21.texture = load("res://assets/thumbnails/prologue/prologue21.png")
+		prologue_rect_21.texture = load("res://assets/thumbnails/prologue/prologue_21.png")
 	if SaveManager.save.prologue_cg["prologue_22"] == true:
-		prologue_rect_22.texture = load("res://assets/thumbnails/prologue/prologue22.png")
+		prologue_rect_22.texture = load("res://assets/thumbnails/prologue/prologue_22.png")
 	if SaveManager.save.prologue_cg["prologue_23"] == true:
-		prologue_rect_23.texture = load("res://assets/thumbnails/prologue/prologue23.png")
+		prologue_rect_23.texture = load("res://assets/thumbnails/prologue/prologue_23.png")
 	if SaveManager.save.prologue_cg["prologue_24"] == true:
-		prologue_rect_24.texture = load("res://assets/thumbnails/prologue/prologue24.png")
+		prologue_rect_24.texture = load("res://assets/thumbnails/prologue/prologue_24.png")
 	if SaveManager.save.prologue_cg["prologue_25"] == true:
-		prologue_rect_25.texture = load("res://assets/thumbnails/prologue/prologue25.png")
+		prologue_rect_25.texture = load("res://assets/thumbnails/prologue/prologue_25.png")
 	if SaveManager.save.prologue_cg["prologue_26"] == true:
-		prologue_rect_26.texture = load("res://assets/thumbnails/prologue/prologue26.png")
-	if SaveManager.save.prologue_cg["prologue_26_27"] == true:
-		prologue_rect_26_27.texture = load("res://assets/thumbnails/prologue/prologue26_27.png")
+		prologue_rect_26.texture = load("res://assets/thumbnails/prologue/prologue_26.png")
 	if SaveManager.save.prologue_cg["prologue_27"] == true:
-		prologue_rect_27.texture = load("res://assets/thumbnails/prologue/prologue27.png")
+		prologue_rect_27.texture = load("res://assets/thumbnails/prologue/prologue_27.png")
 	if SaveManager.save.prologue_cg["prologue_28"] == true:
-		prologue_rect_28.texture = load("res://assets/thumbnails/prologue/prologue28.png")
+		prologue_rect_28.texture = load("res://assets/thumbnails/prologue/prologue_28.png")
 	if SaveManager.save.prologue_cg["prologue_29"] == true:
-		prologue_rect_29.texture = load("res://assets/thumbnails/prologue/prologue29.png")
+		prologue_rect_29.texture = load("res://assets/thumbnails/prologue/prologue_29.png")
 	if SaveManager.save.prologue_cg["prologue_30"] == true:
-		prologue_rect_30.texture = load("res://assets/thumbnails/prologue/prologue30.png")
+		prologue_rect_30.texture = load("res://assets/thumbnails/prologue/prologue_30.png")
 
 func _on_page_1_btn_pressed():
 	page_1.show()
@@ -335,4 +309,4 @@ func _on_page_2_btn_pressed():
 	page_1.hide()
 
 func _on_back_button_pressed():
-	get_tree().change_scene_to_file("res://scenes/image_gallery.tscn")
+	Events.change_scene_to_path.emit("res://scenes/image_gallery.tscn")
